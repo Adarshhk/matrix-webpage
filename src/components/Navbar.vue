@@ -16,7 +16,7 @@
         <div class="md:flex justify-evenly hidden">
             <ul
                 class="px-2 flex items-center text-sm font w-full gap-2 justify-evenly text-[#D6D6D6]">
-                <li :class="{ 'bg-[#222222] text-white': activeItem == item.name }"
+                <li 
                     class=" cursor-pointer transition-all text-nowrap px-4 py-1 duration-200 hover:text-white"
                     @click="changeActiveItem(item.name)" v-for="item in navItems "><a :href="item.path">{{ item.name
                         }}</a></li>

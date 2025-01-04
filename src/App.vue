@@ -5,6 +5,7 @@
   <Why id="why"/>
   <Features id="features"/>
   <Media id="media"/>
+  <Media2/>
   <Pricing id="pricing"/>
   <Tutorial/>
   <Community />
@@ -29,5 +30,6 @@ import Community from './components/Community.vue';
 import Testimonial from './components/Testimonial.vue';
 import Plans from './components/Plans.vue';
 import Social from './components/Social.vue';
+import Media2 from './components/Media2.vue';
 
 </script>

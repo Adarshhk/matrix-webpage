@@ -8,7 +8,7 @@
             </h2>
         </div>
 
-        <div class="mx-auto gap-3 flex justify-evenly w-[95%] mt-6 flex-wrap">
+        <div class="mx-auto gap-3 grid grid-cols-1 lg:grid-cols-3  w-[95%] mt-6 ">
             <div v-for="user in intendedUsers" class="bg-[#1D2125] border text-left border-[#2F2F2F] rounded p-8">
                 <h2 class="text-white text-[24px] font-bold mb-6">
                     {{ user.name }}

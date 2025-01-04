@@ -17,53 +17,53 @@
 
     
         <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
-            <div class="flex min-w-60 mr-10 items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6 items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/indicator.svg" alt="" class="w-10">
                 <p>Indicators</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/manualtrading.svg" alt="" class="w-10">
                 <p>Manual Trading</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/screener.svg" alt="" class="w-10">
                 <p>Screeners</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/algo.svg" alt="" class="w-10">
                 <p>Algo Trading</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/webhook.svg" alt="" class="w-10">
                 <p>Webhook</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/signals.svg" alt="" class="w-10">
                 <p>Signals</p>
             </div>
         </Vue3Marquee>
         <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse" class="mt-4">
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/indicator.svg" alt="" class="w-10">
                 <p>Indicators</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/manualtrading.svg" alt="" class="w-10">
                 <p>Manual Trading</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/screener.svg" alt="" class="w-10">
                 <p>Screeners</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/algo.svg" alt="" class="w-10">
                 <p>Algo Trading</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/webhook.svg" alt="" class="w-10">
                 <p>Webhook</p>
             </div>
-            <div class="flex min-w-60 mr-10  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
                 <img src="../assets/svg/signals.svg" alt="" class="w-10">
                 <p>Signals</p>
             </div>

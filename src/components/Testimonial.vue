@@ -6,7 +6,7 @@
             <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mb-24 mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
-        <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">
+        <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">
             <div v-for="user in testimonials" class="bg-[#1D2125] min-w-96 lg:w-1/3 border text-left border-[#2F2F2F] rounded p-8">
                 
                 <p class="text-[#7F7F7F] max-w-96 text-[18px]">
@@ -18,14 +18,28 @@
                         {{ user.name }}
                     </h2>
                 </div>
-                
             </div>
-        </div>
+        </div> -->
+
+        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]"  class="mt-4">
+            <div v-for="user in testimonials" class="bg-[#1D2125] min-w-80 lg:w-1/3 border text-left border-[#2F2F2F] rounded p-8 mx-4">
+                <p class="text-[#7F7F7F] max-w-96 text-sm lg:text-[16px]">
+                    {{ user.description }}
+                </p>
+                <div class="flex items-center gap-4 mt-10">
+                    <img :src="user.img" class="w-10" alt="">
+                    <h2 class="text-white font-bold text-sm lg:text-[16px]">
+                        {{ user.name }}
+                    </h2>
+                </div>
+            </div>
+        </Vue3Marquee>
         
     </div>
 </template>
 
 <script setup>
+import { Vue3Marquee } from 'vue3-marquee';
 import profile from '../assets/img/prof.png';
 
 const testimonials = [
