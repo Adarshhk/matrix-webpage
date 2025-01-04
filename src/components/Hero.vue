@@ -7,12 +7,24 @@
     </div>
 
     <!-- Main Content -->
-    
+
     <div class="pt-24 text-center">
-      <p
-        class="text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto ">
-        Turning Investments into Achievements.
-    </p>
+      <div class="outer-heading">
+        <h1
+          class="outer-heading text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto">
+          Turning Investments into
+
+          <div class="inner-headings">
+            <span class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent ">
+              Achievements. <br/>
+              Growth. <br/>
+              Success. <br/>
+              Profit. <br/>
+            </span>
+          </div>
+        </h1>
+      </div>
+
       <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-8 w-[90%]">
         Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify
         decisions and maximize opportunities—making every move count."
@@ -73,10 +85,49 @@ const features = [
 
 </script>
 
-<style>
+<style scoped>
 .grid-background {
   display: none;
   /* Default: hide the grid on all screen sizes */
+}
+
+.inner-headings{
+  border: 0px solid #ddd;
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+}
+.inner-headings span{
+  position: relative;
+  animation: animation 10s ease infinite;
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    top: 0;
+  }
+  20% {
+    top: 0;
+  }
+  25% {
+    top: -50px;
+  }
+  45% {
+    top: -50px;
+  }
+  50% {
+    top: -100px;
+  }
+  70% {
+    top: -100px;
+  }
+  75%{
+    top: -150px;
+  }
+  95%{
+    top: -150px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -123,7 +174,7 @@ const features = [
   align-items: center;
   transition: all 0.5s ease;
   position: relative;
-  
+
 }
 
 .slide-image {
@@ -182,72 +233,5 @@ const features = [
   .swiper-slide-next {
     transform: scale(0.5);
   }
-}
-
-.title-wrap {
-  color: white;
-  font-size: 30px;
-  line-height: 34px;
-  display: flex;
-  height: 34px;
-}
-
-.left-text {
-  color: rgba(#fff, .9);
-}
-
-.right-text {
-  margin-left: 5px;
-  overflow: hidden;
-}
-
-.flip-wrap {
-  animation: flip 8s infinite;
-  margin-top: -136px;
-}
-
-.flip {
-  font-weight: bold;
-}
-
-
-@keyframes flip {
-
-  from {
-    margin-top: 0px;
-  }
-
-  3% {
-    margin-top: -34px;
-  }
-
-  25% {
-    margin-top: -34px;
-  }
-
-  28% {
-    margin-top: -68px;
-  }
-
-  50% {
-    margin-top: -68px;
-  }
-
-  53% {
-    margin-top: -102px;
-  }
-
-  75% {
-    margin-top: -102px;
-  }
-
-  78% {
-    margin-top: -136px;
-  }
-
-  to {
-    margin-top: -136px;
-  }
-
 }
 </style>
