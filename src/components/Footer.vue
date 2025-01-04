@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-20 bg-gradient-to-b py-20 from-[#0A0A0A] to-[#222426] px-20">
+    <div class="mt-20 bg-gradient-to-b py-20 from-[#0A0A0A] to-[#222426] px-7 lg:px-20">
         <div class="flex lg:flex-row justify-between flex-col mb-10">
             <div class="max-w-[26rem]">
                 <img src="/src/assets/svg/matrix-logo.svg" alt="" class="w-40">
@@ -25,7 +25,7 @@
             </div>
 
             <div>
-                <ul class="max-w-96">
+                <ul class="max-w-96 mt-4 md:mt-0">
                     <li class="text-white mb-3 font-bold">Get in touch with us</li>
                     <li
                         class="text-[#F3F8F9] flex gap-3 items-center font-light mb-2 hover:underline hover:cursor-pointer">
@@ -48,7 +48,7 @@
             </div>
 
             <div>
-                <p class="text-white mb-2 font-bold">Follow Us On</p>
+                <p class="text-white mt-4 md:mt-0 mb-2 font-bold">Follow Us On</p>
                 <div class="flex gap-2">
                     <button class="p-2 rounded-full border-2">
                         <img src="/src/assets/svg/linkedin.svg" alt="" class="w-5">
@@ -66,7 +66,7 @@
         </div>
 
         <div class="lg:p-10 border-t border-[#FFFFFF1A]">
-            <p class="text-white text-[14px] mt-10 text-center">
+            <p class="text-white text-[14px] mt-10 text-left md:text-center">
                 Message From Regulator: No need to issue cheques by investors while subscribing to IPO. Just write the
                 bank account number and sign in the application form to authorise your bank to make payment in case of
                 allotment. No worries for refund as the money remains in investor's account. 1) Message from

@@ -4,7 +4,7 @@
             <img src="/src/assets/svg/notch.svg" alt="">
             <img src="/src/assets/svg/planlogo.svg" alt="" class="absolute top-4 w-36">
 
-            <div class="absolute -top-40 -z-10 bg-[#EDA54E] rounded-full w-[36rem] h-[36rem] blurit opacity-30">
+            <div class="absolute -top-40 -z-10 bg-[#EDA54E] rounded-full w-[22rem] h-[22rem]  md:w-[36rem] md:h-[36rem] blurit opacity-30">
             </div>
         </div>
 
