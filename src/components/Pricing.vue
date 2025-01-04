@@ -6,10 +6,10 @@
         <p class="text-[#BBB8B8] text-[18px] mt-4">Empower your trading journey with confidence. Our platform equips you with insights and tools for <br> financial triumph.</p>
     </div>
 
-    <div class="w-[95%] mx-auto flex justify-evenly gap-10 mt-16 overflow-x-auto">
-        <div v-for="detail in details" class="min-w-96 border rounded border-[#2F2F2F] px-6 bg-[#1D2125]">
-            <div class="flex justify-center">
-                <div class="py-14">
+    <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+        <div v-for="detail in details" class="border rounded border-[#2F2F2F] px-6 bg-[#1D2125]">
+            <div class="flex justify-center ">
+                <div class="py-14 bg-1">
                     <img :src="detail.img" alt="pricing" class="object-cover">
                 </div>
             </div>
@@ -43,3 +43,10 @@ const details = [
 ]
 
 </script>
+
+<style scoped>
+.bg-1{
+    background-image: url('../assets/img/grid1.png');
+    background-size: contain;
+}
+</style>

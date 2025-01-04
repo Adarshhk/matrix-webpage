@@ -6,7 +6,9 @@
             <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4">Empower your trading journey with confidence.
                 Our platform equips you with insights and tools for financial triumph.</p>
         </div>
-        <swiper 
+        <div class="max-w-4xl mx-auto">
+
+          <swiper 
           :slidesPerView="slidesPerView"
           :spaceBetween="10"
           :centeredSlides="true"
@@ -17,8 +19,8 @@
           }"
           :loop="true"
           :modules="modules"
-          class="mx-auto mt-12"
-        >
+          class="mx-auto mt-12 "
+          >
           <swiper-slide class="flex flex-col space-y-2">
             <p>Indicators</p>
           </swiper-slide>
@@ -32,6 +34,7 @@
             <p>Algo Trading</p>
           </swiper-slide>
         </swiper>
+      </div>
     </div>
 </template>
 

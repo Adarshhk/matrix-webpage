@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center relative w-[95%]">
+  <div class="text-center relative w-[95%] mx-auto">
     <!-- Grid Background -->
     <div class="grid-background hidden lg:block">
       <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
@@ -7,21 +7,19 @@
     </div>
 
     <!-- Main Content -->
+    
     <div class="pt-24 text-center">
       <p
-        class="text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto py-4">
-        Turning Investments into
-      </p>
-      <p
-        class="text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto py-4">
-        Achievements.
-      </p>
+        class="text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto ">
+        Turning Investments into Achievements.
+    </p>
       <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-8 w-[90%]">
-        Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify decisions and maximize opportunities—making every move count."
+        Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify
+        decisions and maximize opportunities—making every move count."
       </p>
     </div>
 
-    <div class="swiper-container h-[110vh] w-full">
+    <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
       <swiper :slidesPerView="3" :spaceBetween="0" :centeredSlides="true" :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
@@ -68,7 +66,7 @@ const features = [
     desc: "Hosted on your own domain, marketing is made easy by a high-conversion landing page for new users.",
     img: heroimg,
   },
-  
+
 
 ];
 
@@ -77,25 +75,32 @@ const features = [
 
 <style>
 .grid-background {
-  display: none; /* Default: hide the grid on all screen sizes */
+  display: none;
+  /* Default: hide the grid on all screen sizes */
 }
 
-@media (min-width: 1024px) { /* Tailwind's lg breakpoint */
+@media (min-width: 1024px) {
+
+  /* Tailwind's lg breakpoint */
   .grid-background {
-    display: flex; /* Show the grid only on large screens */
+    display: flex;
+    /* Show the grid only on large screens */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     justify-content: space-between;
-    pointer-events: none; /* Ensures the grid does not block interactions */
-    z-index: -1; /* Sends the grid to the background */
+    pointer-events: none;
+    /* Ensures the grid does not block interactions */
+    z-index: -1;
+    /* Sends the grid to the background */
   }
 
   .grid-image {
     width: 26rem;
     object-fit: contain;
-    opacity: 0.3; /* Adjust opacity to make it less intrusive */
+    opacity: 0.3;
+    /* Adjust opacity to make it less intrusive */
   }
 }
 
@@ -104,6 +109,7 @@ const features = [
 .swiper-container {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 
 .swiper {
@@ -117,7 +123,7 @@ const features = [
   align-items: center;
   transition: all 0.5s ease;
   position: relative;
-  transform: rotateZ(30deg);
+  
 }
 
 .slide-image {
@@ -129,22 +135,22 @@ const features = [
 
 .swiper-slide-active {
   z-index: 2;
-  
+
 }
 
 .swiper-slide-active .slide-image {
   height: 90%;
   width: auto;
   max-width: none;
-  
+
 }
 
 .swiper-slide-prev,
 .swiper-slide-next {
   z-index: 1;
   opacity: 0.3;
-  
-  
+
+
 }
 
 
@@ -165,11 +171,11 @@ const features = [
 
 @media (max-width: 768px) {
   .swiper-container {
-    height: 50vh;
+    height: 32vh;
   }
 
   .swiper-slide-active .slide-image {
-    max-height: 50vh;
+    max-height: 32vh;
   }
 
   .swiper-slide-prev,
@@ -178,6 +184,70 @@ const features = [
   }
 }
 
+.title-wrap {
+  color: white;
+  font-size: 30px;
+  line-height: 34px;
+  display: flex;
+  height: 34px;
+}
 
- 
+.left-text {
+  color: rgba(#fff, .9);
+}
+
+.right-text {
+  margin-left: 5px;
+  overflow: hidden;
+}
+
+.flip-wrap {
+  animation: flip 8s infinite;
+  margin-top: -136px;
+}
+
+.flip {
+  font-weight: bold;
+}
+
+
+@keyframes flip {
+
+  from {
+    margin-top: 0px;
+  }
+
+  3% {
+    margin-top: -34px;
+  }
+
+  25% {
+    margin-top: -34px;
+  }
+
+  28% {
+    margin-top: -68px;
+  }
+
+  50% {
+    margin-top: -68px;
+  }
+
+  53% {
+    margin-top: -102px;
+  }
+
+  75% {
+    margin-top: -102px;
+  }
+
+  78% {
+    margin-top: -136px;
+  }
+
+  to {
+    margin-top: -136px;
+  }
+
+}
 </style>

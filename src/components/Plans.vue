@@ -1,5 +1,5 @@
 <template>
-    <div class=" w-[95%] border border-[#DEBB54] rounded-lg mt-24 mx-auto pb-16 overflow-hidden">
+    <div class=" w-[95%] border border-[#DEBB54] rounded-lg mt-24 mx-auto overflow-hidden">
         <div class="w-full flex justify-center relative ">
             <img src="/src/assets/svg/notch.svg" alt="">
             <img src="/src/assets/svg/planlogo.svg" alt="" class="absolute top-4 w-36">
@@ -8,68 +8,68 @@
             </div>
         </div>
 
-        <div class="text-center mt-20 px-3">
+        <div class="text-center mt-10 px-3">
             <p class="text-2xl md:text-[38px] font-bold mx-auto text-white">6 Superpowers Packed Into One</p>
 
-            <p class="text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-8">Empower your trading journey
+            <p class="text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-4">Empower your trading journey
                 with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
     
         <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
-            <div class="flex min-w-60 mr-6 items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
+            <div class="flex min-w-60 mr-4 items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
                 <img src="../assets/svg/indicator.svg" alt="" class="w-10">
                 <p>Indicators</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/manualtrading.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/manualtrading.svg" alt="" class="w-12">
                 <p>Manual Trading</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/screener.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/screener.svg" alt="" class="w-12">
                 <p>Screeners</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/algo.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/algo.svg" alt="" class="w-12">
                 <p>Algo Trading</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/webhook.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/webhook.svg" alt="" class="w-12">
                 <p>Webhook</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/signals.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/signals.svg" alt="" class="w-12">
                 <p>Signals</p>
             </div>
         </Vue3Marquee>
         <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse" class="mt-4">
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/indicator.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/indicator.svg" alt="" class="w-12">
                 <p>Indicators</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/manualtrading.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/manualtrading.svg" alt="" class="w-12">
                 <p>Manual Trading</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/screener.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/screener.svg" alt="" class="w-12">
                 <p>Screeners</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/algo.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/algo.svg" alt="" class="w-12">
                 <p>Algo Trading</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/webhook.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/webhook.svg" alt="" class="w-12">
                 <p>Webhook</p>
             </div>
-            <div class="flex min-w-60 mr-6  items-center bg-[#FFFFFF1A] px-3 gap-2 py-3 text-white font-bold rounded-md ">
-                <img src="../assets/svg/signals.svg" alt="" class="w-10">
+            <div class="flex min-w-60 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="../assets/svg/signals.svg" alt="" class="w-12">
                 <p>Signals</p>
             </div>
         </Vue3Marquee>
 
-        <div class="w-full flex justify-center mt-24 ">
+        <div class="w-full flex justify-center mt-12 pb-10 ">
             <button class="relative">
                 <img src="/src/assets/svg/plansbutton.svg" alt="">
                 <p class="absolute top-3 left-16 text-[20px] text-[#222222] font-bold">Explore Plans</p>

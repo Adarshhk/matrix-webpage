@@ -9,8 +9,8 @@
             <p class="text-[#BBB8B8] text-[18px] mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
-        <div class="gap-8 mx-auto flex justify-between w-[95%] overflow-x-auto">
-            <div v-for="user in intendedUsers" class="bg-[#1D2125] relative border text-left border-[#2F2F2F] rounded p-8 min-w-96  lg:w-1/3">
+        <div class="gap-4 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div v-for="user in intendedUsers" class="bg-[#1D2125] relative border text-left border-[#2F2F2F] rounded p-8">
                 <img :src="user.bg" class="absolute top-8 w-52" alt="">
                 <img :src="user.img" alt="" class="w-8 mb-6">
                 <h2 class="text-white text-[24px] font-bold mb-6">

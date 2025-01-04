@@ -112,11 +112,11 @@ const features = [
 
 @media (max-width: 768px) {
     .swiper-container {
-        height: 50vh;
+        height: 38vh;
     }
 
     .swiper-slide-active .slide-image {
-        max-height: 50vh;
+        max-height: 38vh;
     }
 
     .swiper-slide-prev,
