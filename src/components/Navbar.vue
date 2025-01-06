@@ -14,31 +14,33 @@
             </div>
         </div>
         <div class="md:flex justify-evenly hidden">
-            <ul
-                class="px-2 flex items-center text-sm font w-full gap-2 justify-evenly text-[#D6D6D6]">
-                <li 
-                    class=" cursor-pointer transition-all text-nowrap px-4 py-1 duration-200 hover:text-white"
+            <ul class="px-2 flex items-center text-sm font w-full gap-2 justify-evenly text-[#D6D6D6]">
+                <li class=" cursor-pointer transition-all text-nowrap px-4 py-1 duration-200 hover:text-white"
                     @click="changeActiveItem(item.name)" v-for="item in navItems "><a :href="item.path">{{ item.name
                         }}</a></li>
             </ul>
-       
-        <!-- mobile -->
-        <ul v-if="nav === true"
-            class="text-sm w-full max-w-3xl  text-[#787878] fixed z-30 bg-white top-16 rounded-md p-2">
 
-            <li :class="{ 'bg-[#222222] text-white': activeItem == item.name }"
-                class="py-2 lg:px-5 px-3 my-1 rounded-full cursor-pointer transition-all duration-200 "
-                @click="changeActiveItem(item.name)" v-for="item in navItems "><a :href="item.path">{{ item.name }}</a>
-            </li>
-        </ul>
+            <!-- mobile -->
+            <ul v-if="nav === true"
+                class="text-sm w-full max-w-3xl  text-[#787878] fixed z-30 bg-white top-16 rounded-md p-2">
 
-        <div class="flex w-full items-center">
-            <a target="_blank" href="https://app.hifiinvesting.com/"
-                class="text-[#F3F8F9] text-sm lg:px-6 px-4 py-3 rounded-full bg-[#00B852] btn btn-anim ">
-                Sign Up / Login
-            </a>
+                <li :class="{ 'bg-[#222222] text-white': activeItem == item.name }"
+                    class="py-2 lg:px-5 px-3 my-1 rounded-full cursor-pointer transition-all duration-200 "
+                    @click="changeActiveItem(item.name)" v-for="item in navItems "><a :href="item.path">{{ item.name
+                        }}</a>
+                </li>
+            </ul>
+
+            <div class="flex w-full items-center">
+                <a target="_blank" href="https://app.hifiinvesting.com/"
+                    class="text-[#F3F8F9] animate text-sm lg:px-6 px-4 py-3 rounded-full bg-[#00B852] btn btn-anim">
+                    <div class="content vertical flex justify-center">
+                        <div class="text">Sign Up / Login</div>
+                        <div class="hover-text">Click Here</div>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
     </nav>
 </template>
 
@@ -50,7 +52,7 @@ const navItems = [
     { name: 'Product', path: '#features' },
     { name: 'Contact Us', path: '#why' },
     { name: 'News', path: '#media' },
-    
+
 ]
 
 const activeItem = ref('Home')
@@ -66,3 +68,35 @@ const toggleNav = () => {
     console.log(nav.value)
 }
 </script>
+
+<style scoped>
+
+.content {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.text,
+.hover-text {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vertical .text,
+.vertical .hover-text {
+  transform: translateY(0%);
+}
+.hover-text {
+  position: absolute;
+}
+
+.vertical .hover-text {
+  bottom: -100%;
+}
+a:hover .vertical .hover-text,
+a:hover .vertical .text {
+  transform: translateY(-100%);
+}
+
+</style>

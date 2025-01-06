@@ -24,7 +24,10 @@
 
         <div class="w-full text-center mt-10">
             <button class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] ">
-                Get Started
+                <div class="content vertical flex justify-center">
+                        <div class="text">Get Started</div>
+                        <div class="hover-text">Click Here</div>
+                    </div>
             </button>
         </div>
     </div>
@@ -62,3 +65,35 @@ const intendedUsers = [
 ]
 
 </script>
+
+<style scoped>
+
+.content {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.text,
+.hover-text {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vertical .text,
+.vertical .hover-text {
+  transform: translateY(0%);
+}
+.hover-text {
+  position: absolute;
+}
+
+.vertical .hover-text {
+  bottom: -100%;
+}
+button:hover .vertical .hover-text,
+button:hover .vertical .text {
+  transform: translateY(-100%);
+}
+
+</style>

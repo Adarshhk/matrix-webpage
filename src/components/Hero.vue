@@ -14,7 +14,7 @@
           class="outer-heading text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto">
           Turning Investments into
 
-          <div class="inner-headings">
+          <div class="inner-headings mt-2">
             <span class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent ">
               Achievements. <br/>
               Growth. <br/>
@@ -25,13 +25,16 @@
         </h1>
       </div>
 
-      <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-8 w-[90%]">
+      <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mt-8 w-[90%]">
         Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify
         decisions and maximize opportunities—making every move count."
       </p>
     </div>
+    <div class="my-5">
+        <Hero3 :images="[heroimg , heroimg , heroimg]"/>
 
-    <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
+    </div>
+    <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
       <swiper :slidesPerView="3" :spaceBetween="0" :centeredSlides="true" :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
@@ -41,18 +44,21 @@
           <img :src="item.img" :alt="item.title" class="slide-image" />
         </swiper-slide>
       </swiper>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script setup>
 import heroimg from '../assets/img/heroimg.png'
+import heroimg2 from '../assets/img/heroimg2.png'
+import heroimg3 from '../assets/img/heroimg3.png'
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Hero3 from './Hero3.vue';
 
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];
@@ -66,12 +72,12 @@ const features = [
   {
     title: "Admin Console",
     desc: "Get full access to manage users, brokers, and trades from a centralized console.",
-    img: heroimg,
+    img: heroimg2,
   },
   {
     title: "Landing Page",
     desc: "Hosted on your own domain, marketing is made easy by a high-conversion landing page for new users.",
-    img: heroimg,
+    img: heroimg3,
   },
   {
     title: "Landing Page",

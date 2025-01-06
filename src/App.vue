@@ -1,18 +1,19 @@
-<template >
-  <Social/>
+<template>
+  <Social />
   <Navbar />
-  <Hero id="hero"/>
-  <Why id="why"/>
-  <Features id="features"/>
-  <Media id="media"/>
-  <Media2/>
-  <Pricing id="pricing"/>
-  <Tutorial/>
+  <Hero id="hero" />
+  <!-- <Hero2 /> -->
+  <Why id="why" />
+  <Features id="features" />
+  <Media id="media" />
+  <!-- <Media2 /> -->
+  <Pricing id="pricing" />
+  <Tutorial />
   <Community />
-  <Testimonial/>
-  <Plans/>
-  <FAQ id="faq"/>
-  <Footer id="footer"/>
+  <Testimonial />
+  <Plans />
+  <FAQ id="faq" />
+  <Footer id="footer" />
 </template>
 
 <script setup>
@@ -31,5 +32,7 @@ import Testimonial from './components/Testimonial.vue';
 import Plans from './components/Plans.vue';
 import Social from './components/Social.vue';
 import Media2 from './components/Media2.vue';
+import Hero2 from './components/Hero2.vue';
+import SliderText from './components/SliderText.vue';
 
 </script>

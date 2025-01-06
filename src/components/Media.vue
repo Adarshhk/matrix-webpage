@@ -6,123 +6,120 @@
             <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4">Empower your trading journey with confidence.
                 Our platform equips you with insights and tools for financial triumph.</p>
         </div>
-        <div class="max-w-4xl mx-auto">
+        <div class="my-10">
+            <!-- <SliderText/>
+          <SliderVid/> -->
 
-          <swiper 
-          :slidesPerView="slidesPerView"
-          :spaceBetween="10"
-          :centeredSlides="true"
-          :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-            reverseDirection: false,
-          }"
-          :loop="true"
-          :modules="modules"
-          class="mx-auto mt-12 "
-          >
-          <swiper-slide class="flex flex-col space-y-2">
-            <p>Indicators</p>
-          </swiper-slide>
-          <swiper-slide class="flex flex-col space-y-2">
-            <p>Algo Trading</p>
-          </swiper-slide>
-          <swiper-slide class="flex flex-col space-y-2">
-            <p>Manual Trading</p>
-          </swiper-slide>
-          <swiper-slide class="flex flex-col space-y-2">
-            <p>Algo Trading</p>
-          </swiper-slide>
-        </swiper>
-      </div>
+            <!-- <div class="w-32 text-center border overflow-hidden text-nowrap">
+                <div class="anime">
+                    <span class="p-4">Algo Trading</span>
+                    <span class="p-4 ">Indicators</span>
+                    <span class="p-4">Manual Trading</span>
+                </div>
+
+            </div> -->
+
+            <swiper :slidesPerView="size"  :centeredSlides="true" :autoplay="{
+                delay: 3000,
+                disableOnInteraction: false,
+                reverseDirection: false,
+            }" :loop="true" :modules="modules" class="mySwiper w-[95%] md:w-[60%] text-nowrap text-center ">
+                <swiper-slide class="flex flex-col space-y-2" v-for="item in features">
+
+                    <h3 class=" text-white text-[23px]">
+                        {{ item.title }}
+                    </h3>
+
+                </swiper-slide>
+            </swiper>
+        </div>
     </div>
 </template>
 
 <script setup>
-import { ref } from "vue";
+import SliderText from './SliderText.vue';
+import SliderVid from './SliderVid.vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { computed } from 'vue';
 
 // Register the modules to be used in the Swiper
+
+const size = computed(() => {
+    if(window.innerWidth < 1024) return 1 
+    
+    else return 3
+})
 const modules = [Autoplay];
+const features = [
+    {
+        title: "Copy Trade",
+        desc: "Mirror trades across different accounts automatically.",
+        img: "/images/whiteLabel/svg/pie-chart.svg",
+    },
+    {
+        title: "Admin Console",
+        desc: "Get full access to manage users, brokers, and trades from a centralized console.",
+        img: "/images/whiteLabel/svg/stock.svg",
+    },
+    {
+        title: "Landing Page",
+        desc: "Hosted on your own domain, marketing is made easy by a high-conversion landing page for new users.",
+        img: "/images/whiteLabel/svg/development.svg",
+    },
+    {
+        title: "Webhooks",
+        desc: "Hosted on your own domain, marketing is made easy by a high-conversion landing page for new users.",
+        img: "/images/whiteLabel/svg/development.svg",
+    },
 
-// Set responsive slidesPerView
-const slidesPerView = ref(3);
+];
 
-const updateSlidesPerView = () => {
-  if (window.innerWidth < 768) {
-    slidesPerView.value = 1; // 1 slide per view on smaller screens
-  } else if (window.innerWidth < 1024) {
-    slidesPerView.value = 2; // 2 slides per view on medium screens
-  } else {
-    slidesPerView.value = 3; // 3 slides per view on larger screens
-  }
-};
-
-// Update slidesPerView on window resize
-window.addEventListener("resize", updateSlidesPerView);
-
-// Set initial value for slidesPerView
-updateSlidesPerView();
 </script>
 
 <style scoped>
-.swiper {
-    max-width: 100%; /* Full width */
-}
-
-.swiper-slide-active {
+.swiper-slide-active h3 {
+    transform: scale(1.1);
     font-size: 38px;
-    max-width: 48rem; /* 3xl */
-    font-weight: bold;
+    /* md:text-[55px] */
+    font-weight: 700;
+    /* font-bold */
     background: linear-gradient(to right, #00B852, #5BC9F9);
+    /* bg-gradient-to-r from-[#00B852] to-[#5BC9F9] */
     -webkit-background-clip: text;
-    background-clip: text;
+    /* bg-clip-text */
     color: transparent;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: nowrap;
-    transform: scale(1.1); /* Scale up the active slide */
-    opacity: 100%;
+    /* text-transparent */
 }
 
-.swiper-slide-prev,
-.swiper-slide-next {
+
+.swiper-slide-prev h3 {
     font-size: 38px;
-    max-width: 48rem; /* 3xl */
-    font-weight: bold;
-    background: linear-gradient(to right, #161a1e, white);
+    /* md:text-[55px] */
+    font-weight: 700;
+    /* font-bold */
+    background: linear-gradient(to right, #161a1e 15%, white);
+    /* bg-gradient-to-r from-[#00B852] to-[#5BC9F9] */
     -webkit-background-clip: text;
-    background-clip: text;
+    /* bg-clip-text */
     color: transparent;
-    margin-left: auto;
-    margin-right: auto;
-    white-space: nowrap;
+    /* text-transparent */
 }
-
-@media (max-width: 1024px) {
-    .swiper-container {
-        height: 70vh;
-    }
-
-    .swiper-slide-prev,
-    .swiper-slide-next {
-        transform: scale(0.6);
-    }
-}
-
-@media (max-width: 768px) {
-    .swiper-container {
-        height: 50vh;
-    }
-
-    .swiper-slide-prev,
-    .swiper-slide-next {
-        transform: scale(0.5);
-    }
+.swiper-slide-next h3{
+    font-size: 38px;
+    /* md:text-[55px] */
+    font-weight: 700;
+    /* font-bold */
+    
+    background: linear-gradient(to left, #161a1e 15%, white);
+    /* bg-gradient-to-r from-[#00B852] to-[#5BC9F9] */
+    -webkit-background-clip: text;
+    /* bg-clip-text */
+    color: transparent;
+    /* text-transparent */
 }
 </style>

@@ -7,22 +7,23 @@
     </div>
 
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-        <div v-for="detail in details" class="border rounded border-[#2F2F2F] px-6 bg-[#1D2125]">
-            <div class="flex justify-center ">
-                <div class="py-14 bg-1">
-                    <img :src="detail.img" alt="pricing" class="object-cover">
-                </div>
-            </div>
-            <div class="text-left py-16">
-                <h3 class="text-[23px] font-bold text-white">{{ detail.title }}</h3>
-                <p class="text-[#7F7F7F] text-[18px] max-w-6xl mx-auto mt-4">{{ detail.description }}</p>
-            </div>
+        
+        <div class="border rounded border-[#2F2F2F]">
+            <LottieComponent animationPath="/src/assets/json/1.json" />
+        </div>
+        <div class="border rounded border-[#2F2F2F]">
+            <LottieComponent animationPath="/src/assets/json/1.json" />
+        </div>
+        <div class="border rounded border-[#2F2F2F]">
+            <LottieComponent animationPath="/src/assets/json/1.json" />
         </div>
     </div>
 </template>
 
 <script setup>
+import LottieComponent from './utils/LottieComponent.vue';
 import img1 from '../assets/img/pricing1.png';
+import asdjfkl from '/src/assets/json/1.json'
 
 const details = [
     {

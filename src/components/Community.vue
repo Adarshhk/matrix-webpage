@@ -8,7 +8,10 @@
                 Be a part of a vibrant community where people live the markets! Engage with like-minded users and request features that you want
             </p>
             <button class="bg-white rounded w-80 mt-10 font-bold text-[#00B852] py-3">
-                Join Now
+                <div class="content vertical flex justify-center">
+                        <div class="text">Join Now</div>
+                        <div class="hover-text">Click Here</div>
+                    </div>
             </button>
         </div>
         <div class="md:flex h-full gap-2 relative hidden">
@@ -93,3 +96,35 @@
 import { Vue3Marquee } from 'vue3-marquee';
 
 </script>
+
+<style scoped>
+
+.content {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+}
+
+.text,
+.hover-text {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vertical .text,
+.vertical .hover-text {
+  transform: translateY(0%);
+}
+.hover-text {
+  position: absolute;
+}
+
+.vertical .hover-text {
+  bottom: -100%;
+}
+button:hover .vertical .hover-text,
+button:hover .vertical .text {
+  transform: translateY(-100%);
+}
+
+</style>
