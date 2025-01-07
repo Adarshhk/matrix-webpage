@@ -25,13 +25,13 @@
         </h1>
       </div>
 
-      <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mt-8 w-[90%]">
+      <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mt-8 w-[90%] font-openSans">
         Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify
         decisions and maximize opportunities—making every move count."
       </p>
     </div>
     <div class="my-5">
-        <Hero3 :images="[heroimg , heroimg , heroimg]"/>
+        <Hero3 :images="[heroimg , heroimg , heroimg , heroimg]" :radius="rad"/>
 
     </div>
     <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
@@ -52,16 +52,20 @@
 import heroimg from '../assets/img/heroimg.png'
 import heroimg2 from '../assets/img/heroimg2.png'
 import heroimg3 from '../assets/img/heroimg3.png'
-import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import Hero3 from './Hero3.vue';
+import { computed, ref, watch } from 'vue';
 
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];
+const rad = computed(() => {
+  if(window.innerWidth < 768) return 150
+  else return 600
+})
 
 const features = [
   {

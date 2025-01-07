@@ -3,7 +3,7 @@
         <div class="text-center">
             <p class="text-[38px] font-bold mx-auto text-white">Innovate Your Trading Experience</p>
 
-            <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4">Empower your trading journey with confidence.
+            <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4 font-openSans">Empower your trading journey with confidence.
                 Our platform equips you with insights and tools for financial triumph.</p>
         </div>
         <div class="my-10">
@@ -32,6 +32,7 @@
 
                 </swiper-slide>
             </swiper>
+            <Media2/>
         </div>
     </div>
 </template>
@@ -46,6 +47,7 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { computed } from 'vue';
+import Media2 from './Media2.vue';
 
 // Register the modules to be used in the Swiper
 

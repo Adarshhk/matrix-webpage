@@ -31,14 +31,15 @@
                 </li>
             </ul>
 
-            <div class="flex w-full items-center">
+            <div class="flex w-full items-center relative">
                 <a target="_blank" href="https://app.hifiinvesting.com/"
-                    class="text-[#F3F8F9] animate text-sm lg:px-6 px-4 py-3 rounded-full bg-[#00B852] btn btn-anim">
+                    class="text-[#F3F8F9] animate text-sm lg:px-6 px-4 py-3 rounded-full bg-[#00B852] btn btn-anim shadow-md shadow-[#00b8539e]">
                     <div class="content vertical flex justify-center">
                         <div class="text">Sign Up / Login</div>
                         <div class="hover-text">Click Here</div>
                     </div>
                 </a>
+                
             </div>
         </div>
     </nav>

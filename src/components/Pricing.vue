@@ -3,7 +3,7 @@
         <h2 class="text-[38px] font-bold pb-6 text-white">
             Your Ultimate Toolkit for Trading Success
         </h2>
-        <p class="text-[#BBB8B8] text-[18px] mt-4">Empower your trading journey with confidence. Our platform equips you with insights and tools for <br> financial triumph.</p>
+        <p class="text-[#BBB8B8] font-openSans text-[18px] mt-4">Empower your trading journey with confidence. Our platform equips you with insights and tools for <br> financial triumph.</p>
     </div>
 
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
@@ -12,10 +12,10 @@
             <LottieComponent animationPath="/src/assets/json/1.json" />
         </div>
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/src/assets/json/1.json" />
+            <LottieComponent animationPath="/src/assets/json/3.json" />
         </div>
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/src/assets/json/1.json" />
+            <LottieComponent animationPath="/src/assets/json/4.json" />
         </div>
     </div>
 </template>

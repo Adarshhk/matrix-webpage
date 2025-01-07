@@ -6,7 +6,7 @@
             <h2 class="text-[38px] font-bold text-white">
                 Simple Steps to Access Your Account
             </h2>
-            <p class="text-[#BBB8B8] text-[18px] mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="font-openSans text-[#BBB8B8] text-[18px] mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
         <div class="gap-4 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -23,7 +23,7 @@
         </div>
 
         <div class="w-full text-center mt-10">
-            <button class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] ">
+            <button class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
                 <div class="content vertical flex justify-center">
                         <div class="text">Get Started</div>
                         <div class="hover-text">Click Here</div>

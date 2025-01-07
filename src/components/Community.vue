@@ -4,7 +4,7 @@
             <h2 class="text-3xl md:text-[38px] font-bold text-white">
                 Join our Matrix Community
             </h2>
-            <p class="text-[#F3F8F9] text-[16px] mt-8">
+            <p class="text-[#F3F8F9] text-[16px] mt-8 font-openSans">
                 Be a part of a vibrant community where people live the markets! Engage with like-minded users and request features that you want
             </p>
             <button class="bg-white rounded w-80 mt-10 font-bold text-[#00B852] py-3">
@@ -15,7 +15,7 @@
             </button>
         </div>
         <div class="md:flex h-full gap-2 relative hidden">
-            <div class="absolute z-30 top-1/3 border-t border-b text-white py-3 text-center w-full bg-gradient-to-r from-transparent via-[#00B852] to-transparent flex flex-col justify-center items-center">
+            <div class="absolute z-30 top-1/3  text-white py-3 text-center w-full bg-gradient-to-r from-transparent via-[#00B852] to-transparent flex flex-col justify-center items-center">
                 <h2 class="font-bold text-[38px]">
                     7000+
                 </h2>

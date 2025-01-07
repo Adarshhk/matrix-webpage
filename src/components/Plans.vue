@@ -13,7 +13,7 @@
         <div class="text-center mt-10 px-3">
             <p class="text-2xl md:text-[38px] font-bold mx-auto text-white">6 Superpowers Packed Into One</p>
 
-            <p class="text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-4">Empower your trading journey
+            <p class="font-openSans text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-4">Empower your trading journey
                 with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
@@ -117,7 +117,7 @@ import { onMounted, ref } from 'vue';
     left: -4px; /* Adjusted for proper alignment */
     width: calc(100% + 8px); /* Ensure consistent padding */
     height: calc(100% + 8px); 
-    background-image: conic-gradient(from var(--angle), #ff4545 , #00ff99 , #006aff , #ff0095);
+    background-image: conic-gradient(from var(--angle), #EDA54E , #9D5500 ,#F6AF5A);
     z-index: -1; /* Place the pseudo-element behind the .card */
     border-radius: 8px;
     box-sizing: border-box;

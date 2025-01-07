@@ -3,7 +3,7 @@
         <div class="text-center">
             <p class="text-[38px] font-bold mx-auto text-white">Why People Trust us?</p>
 
-            <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mb-24 mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="font-openSans text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mb-24 mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">

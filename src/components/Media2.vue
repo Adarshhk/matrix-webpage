@@ -1,12 +1,14 @@
 <template>
-    <div class="swiper-container h-[110vh] w-full -mt-20 lg:-mt-36">
-        <swiper :slidesPerView="3" :spaceBetween="0" :centeredSlides="true" :autoplay="{
-            delay: 2500,
+    <div class="swiper-container h-[90vh] max-w-7xl mt-10 mx-auto ">
+        <swiper :slidesPerView="1" :centeredSlides="true" :autoplay="{
+            delay: 3000,
             disableOnInteraction: false,
             reverseDirection: false,
-        }" :loop="true" :modules="modules" class="h-full w-full">
-            <swiper-slide v-for="(item, index) in features" :key="index" class="swiper-slide">
-                <img :src="item.img" :alt="item.title" class="slide-image" />
+        }" :loop="true" :modules="modules" class="">
+            <swiper-slide class="" v-for="item in features">
+
+                <img :src="item.img" alt="" class="w-[80%]">
+
             </swiper-slide>
         </swiper>
     </div>
@@ -51,7 +53,7 @@ const features = [
 
 </script>
 
-<style scoped> 
+<style scoped>
 .swiper-container {
     position: relative;
     overflow: hidden;

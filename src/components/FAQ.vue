@@ -4,7 +4,7 @@
         <h2 class="text-3xl font-semibold mb-2 text-white">
           Frequently asked question's
         </h2>
-        <p class="text-white mt-8">
+        <p class="text-white mt-8 font-openSans">
           Let our bot do trading for you, you just chill and relax
         </p>
       </div>

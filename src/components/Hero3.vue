@@ -67,6 +67,15 @@
     transition: transform 1.2s cubic-bezier(0.68, 0.08, 0.27, 0.96);    
   }
   
+  @media (max-width: 768px) {
+    .slider {
+    width: 95%;
+    height: 50vh;
+    perspective: 1000px;
+
+  }
+  }
+
   .slider__image {
     display: inline-block;
     position: absolute;
