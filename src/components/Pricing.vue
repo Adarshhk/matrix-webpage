@@ -9,13 +9,13 @@
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/public/json/4.json" />
+            <LottieComponent animationPath="/json/4.json" />
         </div>
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/public/json/2.json" />
+            <LottieComponent animationPath="/json/2.json" />
         </div>
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/public/json/1.json" />
+            <LottieComponent animationPath="/json/1.json" />
         </div>
     </div>
 </template>
