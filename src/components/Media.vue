@@ -38,8 +38,8 @@
 </template>
 
 <script setup>
-import SliderText from './SliderText.vue';
-import SliderVid from './SliderVid.vue';
+import SliderText from './utils/SliderText.vue';
+import SliderVid from './utils/SliderVid.vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper/modules";
 

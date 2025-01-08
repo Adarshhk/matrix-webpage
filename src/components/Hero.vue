@@ -31,7 +31,7 @@
       </p>
     </div>
     <div class="my-5">
-        <Hero3 :images="[heroimg , heroimg , heroimg , heroimg]" :radius="rad"/>
+        <AnimatedHero :images="[heroimg , heroimg , heroimg , heroimg]" :radius="rad"/>
 
     </div>
     <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
@@ -57,13 +57,13 @@ import { Autoplay } from "swiper/modules";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import Hero3 from './Hero3.vue';
 import { computed, ref, watch } from 'vue';
+import AnimatedHero from './utils/AnimatedHero.vue';
 
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];
 const rad = computed(() => {
-  if(window.innerWidth < 768) return 150
+  if(window.innerWidth < 768) return 250
   else return 600
 })
 

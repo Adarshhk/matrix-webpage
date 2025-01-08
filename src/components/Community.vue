@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto px-16 flex flex-wra items-center lg:justify-between justify-center h-[60vh]">
-        <div class="max-w-3xl">
-            <h2 class="text-3xl md:text-[38px] font-bold text-white">
+    <div class="bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto flex h-[60vh] flex-wrap items-center lg:justify-between justify-center ">
+        <div class="max-w-3xl text-center xl:text-left xl:px-10">
+            <h2 class="text-3xl xl:text-[38px] font-bold text-white">
                 Join our Matrix Community
             </h2>
             <p class="text-[#F3F8F9] text-[16px] mt-8 font-openSans">
@@ -14,7 +14,7 @@
                     </div>
             </button>
         </div>
-        <div class="md:flex h-full gap-2 relative hidden">
+        <div class="xl:flex xl:px-4 hidden h-full gap-2 relative ">
             <div class="absolute z-30 top-1/3  text-white py-3 text-center w-full bg-gradient-to-r from-transparent via-[#00B852] to-transparent flex flex-col justify-center items-center">
                 <h2 class="font-bold text-[38px]">
                     7000+
@@ -24,7 +24,7 @@
                 </p>
             </div>
             <div>
-                <Vue3Marquee :duration="25" :vertical="true" class="max-w-16" :gradient="true" :gradientColor="[0, 184, 82, 1]">
+                <Vue3Marquee :duration="25" :vertical="true" class="max-w-16" :gradient="true" :gradientColor="[0, 184, 82, 1]" >
                     <img src="/src/assets/img/community/1 (1).png" alt="" class="my-2" >
                     <img src="/src/assets/img/community/1 (2).png" alt="" class="my-2" >
                     <img src="/src/assets/img/community/1 (3).png" alt="" class="my-2" >

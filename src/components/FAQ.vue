@@ -1,7 +1,7 @@
 <template>
     <div class="mx-auto px-4 py-12 mt-10">
       <div class="text-center mb-12">
-        <h2 class="text-3xl font-semibold mb-2 text-white">
+        <h2 class="text-[18px] font-openSans font-semibold mb-2 text-white">
           Frequently asked question's
         </h2>
         <p class="text-white mt-8 font-openSans">
@@ -9,7 +9,7 @@
         </p>
       </div>
   
-      <div class="space-y-4 w-[90%] mx-auto">
+      <div class="space-y-4 w-[90%] mx-auto text-[18px]">
         <div v-for="(faq, index) in faqs" :key="index" class="">
           <button
             @click="toggleFaq(index)"
