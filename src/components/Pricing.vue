@@ -9,13 +9,13 @@
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/src/assets/json/1.json" />
+            <LottieComponent animationPath="/public/json/4.json" />
         </div>
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/src/assets/json/3.json" />
+            <LottieComponent animationPath="/public/json/2.json" />
         </div>
         <div class="border rounded border-[#2F2F2F]">
-            <LottieComponent animationPath="/src/assets/json/4.json" />
+            <LottieComponent animationPath="/public/json/1.json" />
         </div>
     </div>
 </template>
@@ -23,7 +23,6 @@
 <script setup>
 import LottieComponent from './utils/LottieComponent.vue';
 import img1 from '../assets/img/pricing1.png';
-import asdjfkl from '/src/assets/json/1.json'
 
 const details = [
     {

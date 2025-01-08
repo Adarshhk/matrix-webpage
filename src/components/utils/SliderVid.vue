@@ -17,6 +17,7 @@
   </template>
   
   <script setup>
+  
   import { ref, computed, onMounted, onUnmounted } from 'vue';
   import img1 from '../../assets/img/heroimg.png'
   const cards = ref([

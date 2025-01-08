@@ -47,7 +47,6 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
-
 const navItems = [
     { name: 'Pricing', path: '#hero' },
     { name: 'Product', path: '#features' },

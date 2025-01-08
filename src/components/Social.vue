@@ -3,6 +3,7 @@
         <img src="/src/assets/svg/whatsapp.svg" alt="" class="p-2" >
         <img src="/src/assets/svg/telegram.svg" alt="" class="p-2">
         <img src="/src/assets/svg/mail.svg" alt="" class="p-2">
+        
     </div>
 </template>
 
