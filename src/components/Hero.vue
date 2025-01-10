@@ -12,22 +12,21 @@
       <div class="outer-heading">
         <h1
           class="outer-heading text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto">
-          Turning Investments into
+          Turning Opportunities into
 
           <div class="inner-headings mt-2">
             <span class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent ">
-              Achievements. <br/>
-              Growth. <br/>
-              Success. <br/>
+              Outcomes. <br/>
+              Achievement. <br/>
               Profit. <br/>
+              Success. <br/>
             </span>
           </div>
         </h1>
       </div>
 
       <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mt-8 w-[90%] font-openSans">
-        Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify
-        decisions and maximize opportunities—making every move count."
+        Empowering your trading journey with advanced solutions. From seamless automation to innovative tools, we simplify strategies and amplify possibilities— make every decision a step towards your success.
       </p>
     </div>
     <div class="my-5">

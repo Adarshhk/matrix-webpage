@@ -1,7 +1,7 @@
 <template>
-  <Social />
+  <!-- <Social /> -->
   <Navbar />
-  <Counter/>
+  <!-- <Counter/> -->
   <Hero id="hero" />
   <!-- <Hero2 /> -->
   <Why id="why" />
@@ -15,6 +15,7 @@
   <Plans />
   <FAQ id="faq" />
   <Footer id="footer" />
+  <!-- <Temp/> -->
 </template>
 
 <script setup>
@@ -33,5 +34,6 @@ import Testimonial from './components/Testimonial.vue';
 import Plans from './components/Plans.vue';
 import Social from './components/Social.vue';
 import Counter from './components/utils/Counter.vue';
+import Temp from './components/Temp.vue';
 
 </script>

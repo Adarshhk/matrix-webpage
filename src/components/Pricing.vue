@@ -3,7 +3,7 @@
         <h2 class="text-[38px] font-bold pb-6 text-white">
             Your Ultimate Toolkit for Trading Success
         </h2>
-        <p class="text-[#BBB8B8] font-openSans text-[18px] mt-4">Empower your trading journey with confidence. Our platform equips you with insights and tools for <br> financial triumph.</p>
+        <p class="max-w-5xl text-[#BBB8B8] font-openSans text-[18px] mt-4">Explore the full potential of your trading journey with personalized support. Our platform equips you with the resources and insights to confidently navigate every decision with clarity and precision.</p>
     </div>
 
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">

@@ -4,9 +4,9 @@
         <div class="pt-24 pb-20 w-[95%] mx-auto ">
             
             <h2 class="text-[38px] font-bold text-white">
-                Simple Steps to Access Your Account
+                Steps to Access Your Account
             </h2>
-            <p class="font-openSans text-[#BBB8B8] text-[18px] mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="font-openSans text-[#BBB8B8] text-[18px] mt-8">Follow these simple steps to quickly and securely log into your account and start your trading journey without any hassle.</p>
         </div>
 
         <div class="gap-4 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -25,8 +25,8 @@
         <div class="w-full text-center mt-10">
             <button class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
                 <div class="content vertical flex justify-center">
-                        <div class="text">Get Started</div>
-                        <div class="hover-text">Click Here</div>
+                        <div class="text font-semibold text-base">Join Now</div>
+                        <div class="hover-text font-semibold  text-base">Get Started</div>
                     </div>
             </button>
         </div>
@@ -46,20 +46,20 @@ const intendedUsers = [
         name: 'Register', 
         img : login,
         bg : bg1,
-        description : "Host your strategies in our platform and enjoy automated trading from our platform in just few simple steps." 
+        description : "Sign up in just a few clicks by providing required details. It’s simple, quick, and secure; it sets the foundation for your trading journey." 
     },
 
     { 
         name: 'Connect Broker',
         img : link,
         bg : bg2,
-        description: "Host your strategies in our platform and enjoy automated trading from our platform in just few simple steps.",
+        description: "Connect your broker account seamlessly to enable automatic trading and execute your strategies with ease. We ensure smooth integration for hassle-free operation.",
     },
     { 
         name: 'Trade',
         img : rocket,
         bg : bg3,
-        description: "Host your strategies in our platform and enjoy automated trading from our platform in just few simple steps.",
+        description: "Once set up, begin executing trades and using our powerful tools. With everything ready, you’re all set to make confident and informed decisions in the market.",
     },
     
 ]
@@ -95,5 +95,6 @@ button:hover .vertical .hover-text,
 button:hover .vertical .text {
   transform: translateY(-100%);
 }
+
 
 </style>

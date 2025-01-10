@@ -1,10 +1,9 @@
 <template>
     <div class="my-20">
         <div class="text-center">
-            <p class="text-[38px] font-bold mx-auto text-white">Innovate Your Trading Experience</p>
+            <p class="text-[38px] font-bold mx-auto text-white">Transform Your Trading Approach</p>
 
-            <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4 font-openSans">Empower your trading journey with confidence.
-                Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4 font-openSans">Innovate your trading experience with ease and precision. Our platform provides powerful tools and actionable insights to help you achieve your goals effortlessly.</p>
         </div>
         <div class="my-10">
             <!-- <SliderText/>

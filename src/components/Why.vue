@@ -4,7 +4,7 @@
         <div class="mx-auto justify-center flex lg:gap-4 max-w-4xl items-center w-[95%]">
             <img src="/src/assets/svg/Diamond.svg" alt="" class="w-20 ">
             <h2 class="lg:text-[38px] text-3xl font-bold text-white ">
-                Intended Users of This Platform
+                For Whom This Platform Is Designed
             </h2>
         </div>
 
@@ -34,17 +34,17 @@
 
 const intendedUsers = [
     {
-        name: 'For Scalper',
-        description: "Take creativity a step further with the transformative power of our Image Generation tool. It's not just about bringing your concepts to life"
+        name: 'The Scalper',
+        description: " Designed for individuals who thrive on accuracy and swiftness in constantly evolving markets. With real-time tools and effortless execution, this platform ensures you stay ahead of the curve in high-frequency trading scenarios."
     },
 
     {
-        name: 'For Trader',
-        description: "Take creativity a step further with the transformative power of our Image Generation tool. It's not just about bringing your concepts to life",
+        name: 'The Traders',
+        description: "Whether day trading or swing trading, this platform gives traders the strategic insights and automation you need to make smart decisions. It's an ideal companion for individuals navigating market volatility and capitalizing on short- to medium-term trends.",
     },
     {
-        name: 'For Investor',
-        description: "Take creativity a step further with the transformative power of our Image Generation tool. It's not just about bringing your concepts to life",
+        name: 'The Investors',
+        description: "For long-term planners focused on building a portfolio, the platform delivers intelligent tools for assessing opportunities, managing risk, and tracking progress. It empowers investors to turn their strategies into steady growth and sustainable achievements.",
     },
 
 ]

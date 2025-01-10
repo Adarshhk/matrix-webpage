@@ -1,11 +1,11 @@
 <template>
     <div class="mx-auto px-4 py-12 mt-10">
       <div class="text-center mb-12">
-        <h2 class="text-[18px] font-openSans font-semibold mb-2 text-white">
-          Frequently asked question's
+        <h2 class="text-[34px] font-openSans font-semibold mb-2 text-white">
+          FAQ's
         </h2>
-        <p class="text-white mt-8 font-openSans">
-          Let our bot do trading for you, you just chill and relax
+        <p class="text-white mt-4 font-openSans">
+          Find answers to common questions and get the clarity you need to make the most of our platform.
         </p>
       </div>
   
@@ -39,28 +39,28 @@
   
   const faqs = ref([
     {
-      question: 'What is algorithmic trading?',
-      answer: 'Algorithmic trading uses automated strategies to execute trades based on market data and trends.',
+      question: 'Do I need trading experience to use algo trading?',
+      answer: 'No, algo trading platforms are designed for both beginners and experienced traders. They automate strategies, making it user-friendly for everyone.',
       isOpen: false
     },
     {
-      question: 'How do I get started with HiFi Investment?',
-      answer: 'Getting started is easy! Create an account, complete your profile, and follow our step-by-step guide to begin trading.',
+      question: 'Can I test the algo without risking real money?',
+      answer: 'Yes, we offer a paper trading feature to simulate trades without risking actual funds.',
       isOpen: false
     },
     {
-      question: 'Can I customize my trading strategies?',
-      answer: 'Yes, you can customize and fine-tune your trading strategies to match your investment goals and risk tolerance.',
+      question: 'How much can I earn with algo trading?',
+      answer: 'Earnings depend on market conditions, the strategy used, and investment size. Algo trading optimizes opportunities but doesn’t guarantee profits.',
       isOpen: false
     },
     {
-      question: 'Do I need to have previous trading experience?',
-      answer: 'No prior trading experience is required. Our platform is designed to be accessible for both beginners and experienced traders.',
+      question: 'Can I customize my trading strategies in algo trading?',
+      answer: 'Yes, our platform allows you to create, modify, and automate your own trading strategies to suit your goals.',
       isOpen: false
     },
     {
-      question: 'What markets can I trade on HiFi Investing?',
-      answer: 'We offer access to a wide range of markets including stocks, cryptocurrencies, forex, and commodities.',
+      question: 'Is algo trading better than manual trading?',
+      answer: 'Algo trading removes emotional bias, improves execution speed, and is more efficient than manual trading for most traders.',
       isOpen: false
     }
   ])

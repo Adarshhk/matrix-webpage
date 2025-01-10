@@ -11,10 +11,10 @@
 
         
         <div class="text-center mt-10 px-3">
-            <p class="text-2xl md:text-[38px] font-bold mx-auto text-white">6 Superpowers Packed Into One</p>
+            <p class="text-2xl md:text-[38px] font-bold mx-auto text-white">6 Power Packed Plan in a Single Place</p>
 
-            <p class="font-openSans text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-4">Empower your trading journey
-                with confidence. Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="font-openSans text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-4">Explore a range of powerful solutions designed to meet your trading needs—all in one single platform.
+            </p>
         </div>
 
     
@@ -74,7 +74,7 @@
         <div class="w-full flex justify-center mt-12 pb-10 ">
             <button class="relative">
                 <img src="/src/assets/svg/plansbutton.svg" alt="">
-                <p class="absolute top-3 left-16 text-[20px] text-[#222222] font-bold">Explore Plans</p>
+                <p class=" absolute top-3 left-16 text-[20px] text-[#222222] font-bold">Explore Plans</p>
             </button>
         </div>
 
