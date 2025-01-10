@@ -47,7 +47,7 @@
 
        <!-- Bag Platform Card -->
             <div class="flex gap-2">
-         <img src="/src/assets/svg/group.svg" alt="" >
+         <img src="/src/assets/svg/Group.svg" alt="" >
             </div>
           </div>
           <h3 class="text-2xl font-bold text-white">Portfolio Optimization Tools</h3>
