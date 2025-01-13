@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-[95vh] bg-gradient-to-b from-[#161a1e] via-transparent to-transparent overflow-hidden">
+  <div class="relative w-full h-[95vh]  bg-gradient-to-b from-[#161a1e] via-transparent to-transparent overflow-hidden">
     <!-- Background Grid Pattern Container -->
     <div class="absolute inset-0 flex justify-between -z-10">
       <!-- Left Grid Pattern -->
@@ -21,7 +21,7 @@
         <div class="ml-0 xl:ml-10 xl:w-[70%] 2xl:w-[50%] z-10">
 
           <h1
-            class="text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] w-[200%]">
+            class="pt-28 text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] w-[200%]">
             <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
               When Seconds Matter,
             </span>
