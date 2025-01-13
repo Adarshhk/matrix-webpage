@@ -78,7 +78,7 @@
     <!-- Mobile Menu -->
     <Transition name="slide-fade">
       <div v-if="isNavOpen"
-        class="fixed top-14 left-1/2 transform -translate-x-1/2 border-[#2f2f2f] rounded w-[95%] max-w-md border bg-[#1D2125] z-40 flex flex-col overflow-y-auto text-[16px] pb-32 max-h-[calc(100vh-3.5rem)]">
+        class="fixed top-14 left-1/2 transform -translate-x-1/2 border-[#2f2f2f] rounded w-[95%] max-w-md border bg-[#1D2125] z-40 flex flex-col overflow-y-auto text-[16px] pb-32 h-[90vh]">
         <div class="flex flex-col items-start justify-start flex-1 p-4">
           <ul class="flex flex-col items-start gap-6 pt-2 text-[#D6D6D6] w-full">
             <li v-for="item in navItems" :key="item.name"
