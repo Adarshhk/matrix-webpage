@@ -1,62 +1,40 @@
 <template>
-  <div class="px-0 2xl:px-24 ">
-    <div class="bg-gradient-to-t from-black/60 to-transparent bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto h-[190px] md:h-[30vh] xl:h-[70vh] relative overflow-hidden">
-      <!-- Grid Background Pattern -->
-      <img 
-        src="/src/assets/img/grid-pattern.png" 
-        alt="Grid Pattern"
-        class="w-full h-full object-cover"
-      />
-
-      <!-- Grouped Dashboard Image - Visible on mobile and tablet, hidden on desktop -->
-      <img 
-        src="/src/assets/img/groupdash.png" 
-        alt="Dashboard Interface"
-        class="block xl:hidden absolute bottom-0 right-0 w-[45%] md:w-[45%]"
-      />
-      
-      <!-- Left Top UI - Profile Details -->
-      <img 
-        src="/src/assets/img/profile-ui.webp" 
-        alt="Profile Interface"
-        class="absolute w-[450px] hidden xl:block
-          xl:top-[-20px] xl:left-[-20px]
-          2xl:top-[-40px] 2xl:left-[-40px]"
-      />
-      
-      <!-- Left Bottom UI - Trading View -->
-      <img 
-        src="/src/assets/img/trading-ui.webp" 
-        alt="Trading Interface"
-        class="absolute w-[400px] 2xl:w-[450px] hidden xl:block
-          xl:bottom-[-96px] xl:left-[48px]
-          2xl:bottom-[-28px] 2xl:left-[96px]"
-      />
-
-      <!-- Right Bottom UI - Dashboard -->
-      <img 
-        src="/src/assets/img/dashboard-bottom.webp" 
-        alt="Dashboard Interface"
-        class="absolute w-[450px] hidden xl:block
-          xl:bottom-[-20px] xl:right-[-20px]
-          2xl:bottom-[-40px] 2xl:right-[-40px]"
-      />
-      
-      <!-- Content Overlay -->
-      <div class="absolute inset-0 flex flex-col justify-center pl-6 md:pl-16 xl:items-center xl:justify-center xl:pl-0">
-        <div class="max-w-[200px] md:max-w-none  flex flex-col items-start xl:items-center">
-          <h1 class="text-md md:text-[32px] 2xl:text-5xl font-bold text-white mb-4 md:mb-8 text-left xl:text-center leading-tight">
-            Trade with precision,<br> trade with us
-          </h1>
-          <button class="bg-white w-26 md:w-auto text-[#00B852] px-3  py-1 rounded-md font-extrabold text-[8px] md:text-lg hover:bg-opacity-90 transition-colors duration-300">
-  Trade Smarter Today
-</button>
-
+  <div class="px-0 2xl:px-24">
+    <div
+      class="bg-gradient-to-t from-black/60 to-transparent bg-[#00B852] rounded-lg mt-24 mx-auto h-[40vh] md:h-[30vh] xl:h-[55vh] 2xl:h-[60vh] relative overflow-hidden">
+      <!-- Grid Pattern Container -->
+      <div class="absolute inset-0 flex justify-between">
+        <!-- Left Grid Pattern -->
+        <div class="w-1/2 md:w-1/3">
+          <img src="/src/assets/img/divleft.png" alt="Left Grid Pattern"
+            class="w-full h-full object-cover xl:object-contain  opacity-50 md:opacity-100" />
         </div>
+
+        <!-- Right Grid Pattern -->
+        <div class="w-1/2 md:w-1/3">
+          <img src="/src/assets/img/divright.png" alt="Right Grid Pattern"
+            class="w-full h-full object-cover xl:object-contain opacity-50 md:opacity-100" />
+        </div>
+      </div>
+
+      <!-- Content Overlay -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+        <h1
+          class="text-3xl sm:text-4xl md:text-[38px] 2xl:text-5xl font-bold text-white mb-6 md:mb-10 text-center leading-tight px-4">
+          Trade with precision,<br> trade with us
+        </h1>
+
+        <button class="bg-white rounded w-80 font-bold text-[#00B852] py-3">
+                <div class="content vertical flex justify-center">
+                        <div class="text">Trade Smarter Today</div>
+                        
+                    </div>
+            </button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+// Component logic can be added here if needed
 </script>

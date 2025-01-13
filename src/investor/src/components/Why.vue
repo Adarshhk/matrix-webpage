@@ -43,12 +43,13 @@
   
   <!-- Get Started Button -->
   <div class="flex justify-center  mb-40  ">
-    <button class="btn btn-anim text-[#F3F8F9] text-sm sm:text-base md:text-lg w-2/3 sm:w-1/2 md:w-1/3 max-w-[300px] py-3 sm:py-4 rounded-full bg-[#00B852] hover:bg-[#009944] transition-colors duration-300">
-      <div class="content vertical flex justify-center relative overflow-hidden">
-        <div class="text">Get Started</div>
-        <div class="hover-text">Click Here</div>
-      </div>
-    </button>
+    <button
+            class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
+            <div class="content vertical flex justify-center">
+              <div class="text font-semibold text-base">Join Now</div>
+              <div class="hover-text font-semibold  text-base">Get Started</div>
+            </div>
+          </button>
   </div>
 </template>
 

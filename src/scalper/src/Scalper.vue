@@ -7,13 +7,10 @@
   <Testimonial/>
   <Features id="features"/>
 
-  <FAQ id="faq"/>
-
 </template>
 
 <script setup>
 
-import FAQ from './components/FAQ.vue';
 import Features from './components/Features.vue';
 
 import Hero from './components/Hero.vue';

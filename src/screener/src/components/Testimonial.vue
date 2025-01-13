@@ -2,7 +2,7 @@
 <!-- call Correctly -->
 <template>
     <div class="my-20 px-0 2xl:px-28">
-        <div class="text-center pt-0 xl:pt-24  w-[95%] mx-auto ">
+        <div class="text-center pt-0 xl:pt-24  mx-auto ">
             <p class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white mb-3">Why People Trust us?</p>
 
             <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto px-0 md:px-40 mb-14 mt-8">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>

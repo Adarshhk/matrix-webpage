@@ -19,9 +19,9 @@
     <div class="mx-auto  h-full flex items-center">
       <div class="flex flex-col lg:flex-row">
         <!-- Text Content (40% width) -->
-        <div class="lg:w-2/5 space-y-8 ml-4 md:ml-10 z-20 mt-0 xl:mt-64">
-          <p class="text-white my-5">Home <span class="mx-1">></span> Investors  </p>
-          <h1 class="text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] w-[200%]">
+        <div class="lg:w-2/5 space-y-8 ml-4 md:ml-10 z-20 mt-0 xl:mt-48 ">
+          
+          <h1 class=" text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] w-[200%]">
             <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
               Investing Doesn't Have to
               <p class="bg-gradient-to-r from-[#00b853] to-[#2fc1a7] bg-clip-text text-transparent">Be Complicated</p>
@@ -36,8 +36,8 @@
 
           <button class="btn btn-anim text-[#F3F8F9] text-sm w-1/3 py-3 rounded-full bg-[#00B852]">
             <div class="content vertical flex justify-center">
-              <div class="text">Try Free Demo</div>
-              <div class="hover-text">Click Here</div>
+              <div class="text font-semibold">Try Free Demo</div>
+              <div class="hover-text font-semibold">Click Here</div>
             </div>
           </button>
         </div>

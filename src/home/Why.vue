@@ -8,8 +8,8 @@
             </h2>
         </div>
 
-        <div class="mx-auto gap-12 grid grid-cols-1 lg:grid-cols-3  w-[95%] mt-6 ">
-            <div 
+        <div class="mx-auto gap-2 grid grid-cols-1 lg:grid-cols-3  w-[95%] mt-6 ">
+            <button @click="() => {router.push(user.path)}"
                 v-for="user in intendedUsers" 
                 :key="user.name"
                 class="bg-[#1D2125] border text-left border-[#2F2F2F] rounded p-8 hover:bg-[#252A30] transition-all duration-300 hover:scale-110"
@@ -24,27 +24,33 @@
                 <p class="text-[#7F7F7F] max-w-96 font-openSans">
                     {{ user.description }}
                 </p>
-            </div>
+            </button>
         </div>
 
     </div>
 </template>
 
 <script setup>
+import {  useRouter } from 'vue-router';
 
+
+const router = useRouter();
 const intendedUsers = [
     {
         name: 'The Scalper',
-        description: " Designed for individuals who thrive on accuracy and swiftness in constantly evolving markets. With real-time tools and effortless execution, this platform ensures you stay ahead of the curve in high-frequency trading scenarios."
+        description: "Designed for precision and speed, this platform offers real-time tools and seamless execution for high-frequency trading.",
+        path : '/scalper'
     },
 
     {
         name: 'The Traders',
-        description: "Whether day trading or swing trading, this platform gives traders the strategic insights and automation you need to make smart decisions. It's an ideal companion for individuals navigating market volatility and capitalizing on short- to medium-term trends.",
+        description: "Perfect for day or swing traders, it provides strategic insights and automation to tackle market volatility and seize short- to medium-term trends.",
+        path : '/trader'
     },
     {
         name: 'The Investors',
-        description: "For long-term planners focused on building a portfolio, the platform delivers intelligent tools for assessing opportunities, managing risk, and tracking progress. It empowers investors to turn their strategies into steady growth and sustainable achievements.",
+        description: "Empowering long-term planners with tools to assess opportunities, manage risks, and achieve steady portfolio growth.",
+        path : '/investor'
     },
 
 ]

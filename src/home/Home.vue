@@ -8,7 +8,6 @@
     <Community />
     <Testimonial />
     <Plans />
-    <FAQ id="faq" />
 </template>
 
 <script setup>
@@ -21,7 +20,6 @@ import Why from './Why.vue';
 import Community from './Community.vue';
 import Testimonial from './Testimonial.vue';
 import Plans from './Plans.vue';
-import FAQ from './FAQ.vue';
 
 
 </script>

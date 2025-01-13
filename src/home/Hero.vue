@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center relative w-[95%] mx-auto">
+  <div class="text-center relative  w-[95%] mx-auto">
     <!-- Grid Background -->
     <div class="grid-background hidden lg:block">
       <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
@@ -8,10 +8,10 @@
 
     <!-- Main Content -->
 
-    <div class="pt-24 text-center">
+    <div class="pt-24 text-center ">
       <div class="outer-heading">
         <h1
-          class="outer-heading text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto">
+          class="mt-14 outer-heading text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto py-1 ">
           Turning Opportunities into
 
           <div class="inner-headings mt-2">

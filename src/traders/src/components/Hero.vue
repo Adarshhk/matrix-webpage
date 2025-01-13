@@ -1,19 +1,6 @@
 <template>
-  <div class="relative w-full bg-gradient-to-b from-[#161a1e] via-transparent to-transparent overflow-hidden">
+  <div class="bg relative w-full h-[95vh] overflow-hidden">
     
-        <!-- Grid Background Images -->
-        <div class="absolute inset-0 hidden lg:block">
-      <img 
-        src="/src/assets/img/Grid.png" 
-        alt="Grid Pattern Left" 
-        class="absolute left-0 top-20"
-      />
-      <img 
-        src="/src/assets/img/Grid.png" 
-        alt="Grid Pattern Right" 
-        class="absolute right-0 top-[-90px] "
-      />
-    </div>
 
     
     <div class=" mx-auto px-4 h-full flex items-center">
@@ -22,7 +9,7 @@
         
         <!-- Text Content -->
         <div class="ml-0 xl:ml-10 xl:w-[70%] 2xl:w-[50%] z-10"> 
-          <p class="text-white my-5">Home <span class="mx-1">></span> Traders</p>
+          
           <h1 class="text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] w-[200%]"> 
             <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
               When Seconds Matter, 
@@ -35,18 +22,17 @@
             fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
 
-          <button class="btn btn-anim text-[#F3F8F9] text-lg md:text-xl w-36 py-2 rounded-full bg-[#00B852] mt-8">
+          <button
+            class="mt-6 btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
             <div class="content vertical flex justify-center">
-              <div class="text">Get Started</div>
-              <div class="hover-text">Click Here</div>
+              <div class="text font-semibold text-base">Get Started</div>
+              <div class="hover-text font-semibold  text-base">Join Now</div>
             </div>
           </button>
         </div>
 
         <!-- Image Container -->
-        <div class="lg:w-1/2 mt-8 lg:mt-0">
-          <img src="/src/assets/heroimg1.webp" alt="Trading Dashboard" class="w-full relative " />
-        </div>
+      
       </div>
     </div>
   </div>
@@ -57,6 +43,12 @@
 </script>
 
 <style scoped>
+.bg{
+  background: url('/src/assets/img/traderbg.png');
+  
+background-size: cover;
+background-position: center;
+}
 .content {
   position: relative;
   overflow: hidden;

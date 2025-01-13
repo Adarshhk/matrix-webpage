@@ -6,7 +6,7 @@
         <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white mb-3">
           Why Traders Love Our Screener
         </h2>
-        <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto px-0 md:px-40 mb-10 mt-8">
+        <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto px-0 md:px-40 mb-14 mt-8">
           Our demo trading account can be your "secret weapon" to test out strategies
           and hone your skills with zero risk. Here's how you'll benefit:
         </p>
@@ -20,10 +20,10 @@
             <img 
               src="/src/assets/img/filters.png" 
               alt="Filters interface"
-              class="w-full object-cover p-4 mt-6"
+              class="w-full object-cover p-4 mt-6 "
             />
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1d2125] opacity-95"></div>
-            <div class="absolute bottom-2 left-3 right-3 p-3">
+            <div class=" absolute bottom-2 left-3 right-3 p-3">
               <h3 class="text-lg md:text-xl font-bold text-white mb-1">Filters for Every Trader</h3>
               <p class="text-[#BBB8B8] text-xs md:text-sm mb-0 xl:mb-10 2xl:mb-10">Whether you're a beginner or expert, tailor the screener to your needs.</p>
             </div>
