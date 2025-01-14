@@ -3,9 +3,7 @@
     :class="{ 'bg-gradient-to-b from-[#161a1e] to-transparent': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
     <!-- Left section -->
     <div class="flex items-center gap-3">
-      <button @click="toggleNav" class="md:hidden">
-        <img :src="isNavOpen ? '/src/assets/svg/X.svg' : '/src/assets/svg/ham.svg'" alt="" class="w-5">
-      </button>
+      
       <RouterLink to="/">
         <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-20 md:w-40">
       </RouterLink>
@@ -34,8 +32,8 @@
           <a class="flex items-center gap-1">
             {{ item.name }}
             <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg"
-              class="transition-all duration-150 w-4 h-4"
-              :class="{ 'rotate-180': showProductMenu && item.name === 'Product' }" />
+              class="transition-all duration-150 w-4 h-4 rotate-180"
+              :class="{ 'rotate-0': showProductMenu && item.name === 'Product' }" />
           </a>
         </li>
       </ul>
@@ -59,16 +57,16 @@
             <button @click="showProductMenu = false"><img src="/src/assets/svg/X.svg" alt="" class="w-4 h-4"></button>
           </div>
           <div class="grid grid-cols-3 gap-8">
-            <RouterLink :to="item.path" v-for="item in productItems" :key="item.title"
-              class="p-2 py-4 flex rounded-md gap-6 border border-[#1a1a1a] items-start hover:border-[#2F2F2F] hover:bg-[#1D2125] transition-all duration-200">
+            <button @click="handleRouteChange(item.path)" v-for="item in productItems" :key="item.title"
+              class="p-2 py-4 flex rounded-md gap-6 border border-[#1a1a1a] items-start hover:border-[#2F2F2F] hover:scale-110 hover:bg-[#1D2125] transition-all duration-200 justify-start">
               <img :src="item.icon" alt="" class="">
-              <div>
+              <div class="text-left">
                 <h2 class="text-white text-[16px] font-semibold">{{ item.title }}</h2>
                 <p class="text-[#D6D6D6] text-[14px] font-openSans mt-3">
                   {{ item.description }}
                 </p>
               </div>
-            </RouterLink>
+            </button>
           </div>
           <img src="/src/assets/img/productbanner.png" alt="" class="my-10">
         </div>
@@ -86,45 +84,54 @@
               :class="{ 'text-white': activeItem === item.name }">
               <div class="flex items-center justify-between gap-1" @click="toggleProductMenu(item)">
                 {{ item.name }}
-                <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg" class="w-4 h-4"
-                  :class="{ 'rotate-180': showMobileProductMenu && item.name === 'Product' }" />
+                <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg" class="rotate-180 w-4 h-4"
+                  :class="{ 'rotate-0': showMobileProductMenu && item.name === 'Product' }" />
               </div>
               <Transition name="slide-down">
                 <div v-if="showMobileProductMenu && item.name === 'Product'">
                   <ul class="mt-4">
                     <li v-for="product in productItems" :key="product.title" class="mb-2 py-2 w-full">
-                      <RouterLink :to="product.path" class="flex gap-2 justify-start border-[#2f2f2f]">
+                      <button @click="handleMobileRouteChange(product.path)" class="flex gap-2 justify-start border-[#2f2f2f] ">
                         <div class="mt-1">
                           <img :src="product.icon" alt="" class="w-10">
                         </div>
-                        <div>
+                        <div class="text-left">
                           <span class="text-[white] font-semibold">{{ product.title }}</span>
                           <p class="text-[#D6D6D6] text-sm">{{ product.description }}</p>
                         </div>
-                      </RouterLink>
+                      </button>
                     </li>
                   </ul>
-                  
+
                 </div>
               </Transition>
             </li>
           </ul>
+          <div class="flex mt-4">
+            <a href="#" target="_blank"
+              class="text-[#F3F8F9] text-sm px-6 py-3 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
+              <div class="content vertical flex justify-center">
+                <div class="text">Sign Up / Login</div>
+                <div class="hover-text">Click Here</div>
+              </div>
+            </a>
+          </div>
+
         </div>
       </div>
     </Transition>
-    <a href="#" target="_blank"
-      class="md:hidden text-[#F3F8F9] font-light font-openSans text-xs px-3 py-2 ml-full rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
-      <div class="content vertical flex justify-center">
-        <div class="text">Sign Up / Login</div>
-        <div class="hover-text">Click Here</div>
-      </div>
-    </a>
+    <div class="mr-2">
+      <button @click="toggleNav" class="md:hidden">
+        <img :src="isNavOpen ? '/src/assets/svg/X.svg' : '/src/assets/svg/ham.svg'" alt="" class="w-5">
+      </button>
+    </div>
+
   </nav>
 </template>
 
 <script setup>
 import { ref, watch } from 'vue'
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 import icon1 from '/src/assets/producticons/producticon (1).svg'
 import icon2 from '/src/assets/producticons/producticon (2).svg'
 import icon3 from '/src/assets/producticons/producticon (3).svg'
@@ -192,6 +199,28 @@ const handleItemClick = (item) => {
     showProductMenu.value = false
     isNavOpen.value = false
   }
+}
+
+const router = useRouter()
+
+const handleRouteChange = (path) => {
+
+  router.push(path);
+  showProductMenu.value = false
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Smooth scrolling
+  })
+}
+const handleMobileRouteChange = (path) => {
+  console.log(path)
+  router.push(path);
+  isNavOpen.value = false;
+  showMobileProductMenu.value = false
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth', // Smooth scrolling
+  })
 }
 
 const toggleNav = () => {

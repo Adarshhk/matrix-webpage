@@ -7,7 +7,7 @@
             <h2 class="text-3xl md:text-[38px] font-bold text-white">
                 Join our Matrix Community
             </h2>
-            <p class="text-[#F3F8F9] text-[16px] mt-8">
+            <p class="text-[#F3F8F9] text-[16px] mt-8 font-openSans">
                 Be a part of a vibrant community where people live the markets! Engage with like-minded users and request features that you want
             </p>
             <button class="bg-white rounded w-80 mt-10 font-bold text-[#00B852] py-3">

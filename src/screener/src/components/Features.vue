@@ -23,7 +23,7 @@
           class="text-3xl sm:text-4xl md:text-[38px] 2xl:text-5xl font-bold text-white mb-6 md:mb-10 text-center leading-tight px-4">
           Join our Matrix Community
         </h1>
-        <p class="text-white text-base sm:text-[18px] mx-4 sm:mx-10 md:mx-36 xl:mx-64 2xl:mx-96 text-center mb-5">
+        <p class="text-white text-base sm:text-[18px] mx-4 sm:mx-10 md:mx-36 xl:mx-64 2xl:mx-96 text-center mb-5 font-openSans">
           Be a part of a vibrant community where people live the markets! Engage with like-minded users
           and request features that you want
         </p>

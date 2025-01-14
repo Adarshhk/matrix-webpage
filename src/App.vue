@@ -1,5 +1,5 @@
 <template>
-    <!-- <MouseEffect /> -->
+    <MouseEffect />
     <Navbar />
     <RouterView />
     <FAQ />

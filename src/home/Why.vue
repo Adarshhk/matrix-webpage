@@ -9,7 +9,7 @@
         </div>
 
         <div class="mx-auto gap-2 grid grid-cols-1 lg:grid-cols-3  w-[95%] mt-6 ">
-            <button @click="() => {router.push(user.path)}"
+            <button @click="handleChange(user.path)"
                 v-for="user in intendedUsers" 
                 :key="user.name"
                 class="bg-[#1D2125] border text-left border-[#2F2F2F] rounded p-8 hover:bg-[#252A30] transition-all duration-300 hover:scale-110"
@@ -35,6 +35,14 @@ import {  useRouter } from 'vue-router';
 
 
 const router = useRouter();
+
+const handleChange = (path) => {
+    router.push(path);
+    window.scrollTo({
+        top : 0,
+        behavior : 'smooth'
+    })
+}
 const intendedUsers = [
     {
         name: 'The Scalper',
