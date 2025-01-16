@@ -1,6 +1,6 @@
 <template>
-  <div class="min-h-screen w-full bg-[#161a1e] relative mt-24 pt-16 ">
-    <div class="mx-5 flex flex-col lg:flex-row gap-8 px-0 2xl:px-28 ">
+  <div class="min-h-screen  w-full relative pt-40">
+    <div class="mx-5 flex flex-col lg:flex-row gap-8 px-0">
 
 
       <!-- Grid Background Images -->
@@ -20,19 +20,19 @@
       <!-- Left Column (100% on md and below, 70% on lg and above) -->
       <div class="w-full  p-8  xl:p-2 2xl:p-4 z-10 ">
         <div class="mb-12">
-          <h1 class="text-4xl font-semibold mb-4">
+          <h1 class="text-[40px] font-extrabold mb-4">
             <span class="bg-gradient-to-r from-[#00b853] to-[#2fc1a7] bg-clip-text text-transparent">
               About Webhooks
             </span>
           </h1>
-          <p class="text-[#BBB8B8] text-lg">
+          <p class="text-[#BBB8B8] text-[18px]">
             Webhooks allow you to send a POST request to a certain URL every time the alert is triggered. This feature can be
             enabled when you create or edit an alert. Add the correct URL for your app and we will send a POST request as soon
             as the alert is triggered, with the alert message in the body of the request. If the alert message is valid JSON, we will
             send a request with an "application/json" content-type header. Otherwise, we will send "text/plain" as a content-type
             header.
           </p>
-          <p class="text-[#BBB8B8] text-lg mt-4">
+          <p class="text-[#BBB8B8] text-[18px] mt-4">
             Important Security Notice: When configuring webhooks, ensure that you do not include sensitive information such as
             login credentials or passwords in the webhook body. Transmitting sensitive data through webhooks can expose it to
             unauthorized parties and lead to security vulnerabilities. Always use secure, authenticated endpoints and encrypt
@@ -92,7 +92,7 @@
 
       <!-- Right Column (30%) - Sticky Form (visible only on lg and above) -->
       <div class="hidden lg:block ">
-        <div class="sticky top-20 rounded-lg overflow-hidden shadow-xl" style="width: 385px; height: 619px ">
+        <div class="sticky top-24 rounded-lg overflow-hidden shadow-xl" style="width: 385px; height: 619px ">
           <div class="relative h-full">
             <!-- Background Image -->
             <img 
