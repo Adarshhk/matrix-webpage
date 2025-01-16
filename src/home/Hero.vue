@@ -8,32 +8,63 @@
 
     <!-- Main Content -->
 
-    <div class="pt-24 text-center ">
-      <div class="outer-heading">
-        <h1
-          class="mt-14 outer-heading text-4xl md:text-[55px] max-w-3xl font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto py-1 ">
+    <div class="pt-24  text-center ">
+      
+      <div class=" flex justify-center mt-24">
+        <p class=" border rounded-3xl font-semibold  border-[#FFCA28] px-2 py-1 text-[14px] bg-gradient-to-b from-[#FFCA28] to-[#997918] bg-clip-text 
+      text-transparent">#1 &nbsp; One stop solution for your Trading needs</p>
+      </div>
+      <div class="outer-heading ">
+        <h1 class=" outer-heading text-[27px] md:text-[55px] max-w-3xl font-bold 
+      bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
+      text-transparent mx-auto py-1">
           Turning Opportunities into
-
-          <div class="inner-headings mt-2">
-            <span class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent ">
-              Outcomes. <br/>
-              Achievement. <br/>
-              Profit. <br/>
-              Success. <br/>
+          <div class="inner-headings -mt-2 md:mt-0">
+            <span class="
+          bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
+          text-transparent">
+              Outcomes. <br />
+              Achievement. <br />
+              Profit. <br />
+              Success. <br />
             </span>
           </div>
         </h1>
       </div>
 
-      <p class="text-[#BBB8B8] text-[18px] max-w-4xl mx-auto mt-8 w-[90%] font-openSans">
-        Empowering your trading journey with advanced solutions. From seamless automation to innovative tools, we simplify strategies and amplify possibilities— make every decision a step towards your success.
-      </p>
-    </div>
-    <div class="my-5">
-        <AnimatedHero :images="[heroimg , heroimg , heroimg , heroimg]" :radius="rad"/>
+      <!-- <div class="pt-24 text-center  md:hidden">
+        <div class="outer-heading">
+          <h1 class="mt-14 outer-heading text-4xl md:text-[55px] max-w-3xl font-bold 
+      bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
+      text-transparent mx-auto py-1">
+            Turning Opportunities
+            <div class="flex justify-center border mx-auto w-[95%] p-1 gap-3 ">
+              <span class="mt-1 ">into</span>
+              <div class="inner-headings text-left">
 
-    </div>
-    <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
+                <span class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent ">
+                  Outcomes. <br />
+                  Achievement. <br />
+                  Profit. <br />
+                  Success. <br />
+                </span>
+              </div>
+            </div>
+          </h1>
+          </div>
+        </div> -->
+
+
+        <p class="text-[#BBB8B8] text-[1rem] max-w-4xl mx-auto md:mt-8 w-[90%] font-openSans">
+          Empowering your trading journey with advanced solutions. From seamless automation to innovative tools, we
+          simplify strategies and amplify possibilities— make every decision a step towards your success.
+        </p>
+      </div>
+      <div class="md:my-5">
+        <AnimatedHero :images="[heroimg, heroimg, heroimg, heroimg]" :radius="rad" />
+
+      </div>
+      <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
       <swiper :slidesPerView="3" :spaceBetween="0" :centeredSlides="true" :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
@@ -44,7 +75,7 @@
         </swiper-slide>
       </swiper>
     </div> -->
-  </div>
+    </div>
 </template>
 
 <script setup>
@@ -62,7 +93,7 @@ import AnimatedHero from './utils/AnimatedHero.vue';
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];
 const rad = computed(() => {
-  if(window.innerWidth < 768) return 250
+  if (window.innerWidth < 768) return 200
   else return 600
 })
 
@@ -100,41 +131,50 @@ const features = [
   /* Default: hide the grid on all screen sizes */
 }
 
-.inner-headings{
+.inner-headings {
   border: 0px solid #ddd;
   height: 50px;
   line-height: 50px;
   overflow: hidden;
 }
-.inner-headings span{
+
+.inner-headings span {
   position: relative;
   animation: animation 10s ease infinite;
 }
 
 @keyframes animation {
+
   0%,
   100% {
     top: 0;
   }
+
   20% {
     top: 0;
   }
+
   25% {
     top: -50px;
   }
+
   45% {
     top: -50px;
   }
+
   50% {
     top: -100px;
   }
+
   70% {
     top: -100px;
   }
-  75%{
+
+  75% {
     top: -150px;
   }
-  95%{
+
+  95% {
     top: -150px;
   }
 }

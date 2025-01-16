@@ -1,15 +1,13 @@
 <template>
-  <div class="bg-[#161a1e] py-20 ">
+  <div class="mt-16 lg:mt-32 ">
     <div class=" px-3 2xl:px-32 mx-auto">
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px]
- font-bold text-white mb-4">
- Expanded Features Section
+        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
+            Expanded Features Section
         </h2>
-        <p class="text-[#BBB8B8] text-md md:text-md 2xl:text-lg mx-auto">
-          Empower your trading journey with confidence. Our platform equips<br/>
-          you with insights and tools for financial triumph.
+        <p class="text-[#BBB8B8] text-md md:text-md 2xl:text-lg mx-auto max-w-2xl">
+          Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.
         </p>
       </div>
 

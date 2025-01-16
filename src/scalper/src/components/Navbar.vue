@@ -1,35 +1,36 @@
 <template>
-  <nav class="flex justify-between items-center p-2 md:p-4 w-full z-40 fixed top-0"
-    :class="{ 'bg-gradient-to-b from-[#161a1e] to-transparent': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
+  <nav class="flex justify-between items-center p-2 md:p-4 w-full z-40 fixed top-0 "
+    :class="{ 'bg-gradient-to-b from-[#161a1e] to-[#161a1e]': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
     <!-- Left section -->
     <div class="flex items-center gap-3">
       
       <RouterLink to="/">
-        <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-20 md:w-40">
+        <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-28 md:w-40">
       </RouterLink>
-      <div class="md:flex bg-[#1D2125] rounded-full hidden md:p-2 items-center">
+      <!-- <div class="md:flex bg-[#1D2125] rounded-full hidden md:p-2 items-center">
         <img src="/src/assets/svg/sebi.svg" alt="SEBI logo" class="w-8 md:w-10">
         <div class="text-white text-xs ml-2 font-bold pl-1 pr-3">
           <p>SEBI Registered</p>
           <p>INH000019035</p>
         </div>
       </div>
-      <div class="md:hidden flex items-center gap-2">
+      <div class="md:hidden bg-[#1D2125] rounded-full px-2 pr-4 py-1 flex items-center gap-1">
         <img src="/src/assets/svg/sebi.svg" alt="SEBI logo" class="w-6">
         <div class="text-white text-[10px]">
           <p>SEBI Registered</p>
           <p>INH000019035</p>
         </div>
-      </div>
+      </div> -->
+      <img src="/src/assets/svg/sebii.svg" alt="" class="w-44">
     </div>
 
     <!-- Desktop Menu -->
-    <div class="md:flex items-center justify-end flex-1 gap-6 hidden">
-      <ul class="flex items-center gap-6 text-[16px] text-[#D6D6D6]">
+    <div class="lg:flex items-center justify-end flex-1 gap-6 hidden">
+      <ul class="flex items-center gap-12 text-[16px] text-[#D6D6D6]">
         <li v-for="item in navItems" :key="item.name"
           class="cursor-pointer transition-all duration-200 hover:text-white relative"
           :class="{ 'text-white': activeItem === item.name }" @click="handleItemClick(item)">
-          <a class="flex items-center gap-1">
+          <a class="flex items-center gap-1 font-openSans">
             {{ item.name }}
             <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg"
               class="transition-all duration-150 w-4 h-4 rotate-180"
@@ -39,10 +40,10 @@
       </ul>
 
       <a href="https://app.hifiinvesting.com/" target="_blank"
-        class="text-[#F3F8F9] text-sm px-6 py-3 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
+        class="text-[#F3F8F9] btn btn-anim text-sm px-6 py-3 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
         <div class="content vertical flex justify-center">
-          <div class="text">Sign Up / Login</div>
-          <div class="hover-text">Click Here</div>
+          <div class="text font-openSans">Sign Up / Login</div>
+          <div class="hover-text font-openSans">Sign Up / Login</div>
         </div>
       </a>
     </div>
@@ -76,7 +77,7 @@
     <!-- Mobile Menu -->
     <Transition name="slide-fade">
       <div v-if="isNavOpen"
-        class="fixed top-14 left-1/2 transform -translate-x-1/2 border-[#2f2f2f] rounded w-[95%] max-w-md border bg-[#1D2125] z-40 flex flex-col overflow-y-auto text-[16px] pb-32 h-[90vh]">
+        class="fixed top-16 md:top-20 left-1/2 transform -translate-x-1/2 border-[#2f2f2f] rounded w-[95%] border bg-[#1D2125] z-40 flex flex-col overflow-y-auto text-[16px] pb-32 h-[90vh]">
         <div class="flex flex-col items-start justify-start flex-1 p-4">
           <ul class="flex flex-col items-start gap-6 pt-2 text-[#D6D6D6] w-full">
             <li v-for="item in navItems" :key="item.name"
@@ -110,8 +111,8 @@
           <div class="flex mt-4">
             <a href="#" target="_blank"
               class="text-[#F3F8F9] text-sm px-6 py-3 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
-              <div class="content vertical flex justify-center">
-                <div class="text">Sign Up / Login</div>
+              <div class="content vertical flex justify-center ">
+                <div class="text ">Sign Up / Login</div>
                 <div class="hover-text">Click Here</div>
               </div>
             </a>
@@ -121,7 +122,7 @@
       </div>
     </Transition>
     <div class="mr-2">
-      <button @click="toggleNav" class="md:hidden">
+      <button @click="toggleNav" class="lg:hidden">
         <img :src="isNavOpen ? '/src/assets/svg/X.svg' : '/src/assets/svg/ham.svg'" alt="" class="w-5">
       </button>
     </div>
@@ -143,7 +144,8 @@ const navItems = [
   { name: 'Product', path: '#features' },
   { name: 'Pricing', path: '#hero' },
   { name: 'Contact Us', path: '#why' },
-  { name: 'News', path: '#media' },
+  { name: 'Blogs & Insights', path: '/blogs' },
+  { name: 'About Us', path: '/about' },
 ]
 
 const productItems = [
@@ -198,6 +200,7 @@ const handleItemClick = (item) => {
     activeItem.value = item.name
     showProductMenu.value = false
     isNavOpen.value = false
+    router.push(item.path);
   }
 }
 

@@ -1,10 +1,10 @@
 <template>
-    <div class="px-4 py-20 bg-[#161a1e]">
+    <div class="px-4 mt-32">
       <div class="mx-auto">
         <!-- Header Section -->
         <div class="text-center mb-16">
           <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px]
- font-bold text-white mb-8">
+ font-bold text-white mb-4">
             Why Investors Choose Us
           </h2>
           <p class="text-gray-400 text-lg max-w-2xl mx-auto">

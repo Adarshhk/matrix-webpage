@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-[#161a1e] py-0 md:py-16">
+  <div class="bg-[#161a1e] pt-24 lg:pt-32">
     <div class="mx-4 md:mx-10">
       <!-- Header Section -->
-      <div class="text-center mb-12">
-        <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white mb-3">
+      <div class="text-center mb-24">
+        <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white">
           Why Traders Love Our Screener
         </h2>
         <p class="text-[#BBB8B8] text-[18px] max-w-5xl mx-auto px-0 md:px-40 mb-14 mt-8 font-openSans">

@@ -1,7 +1,7 @@
 
 <!-- call Correctly -->
 <template>
-    <div class="my-20 px-0 2xl:px-28">
+    <div class="my-32 px-0 2xl:px-28">
         <div class="text-center ">
             <p class="text-[32px] md:text-[38px] 2xl:text-[48px]
  font-bold text-white mb-4">Why People Trust us?</p>

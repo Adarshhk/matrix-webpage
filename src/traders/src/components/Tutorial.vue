@@ -1,10 +1,9 @@
 <template>
-  <div class="px-4 py-20 bg-[#161a1e]">
-    <div class="mx-auto">
+  <div class="">
+    <div class="mx-auto w-[95%] mt-32">
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px]
-font-bold text-white mb-8">
+        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
           Why Investors Choose Us
         </h2>
         <p class="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -20,7 +19,7 @@ font-bold text-white mb-8">
           <div class="flex justify-center mb-6">
             <img :src="clockIcon" alt="" class="w-8 h-8"/>
           </div> 
-          <h3 class="text-2xl font-bold text-white text-center mb-4 max-w-[200px]">
+          <h3 class="text-[20px] font-bold text-white text-center mb-4 max-w-[200px]">
             Market Timing Made Easy.
           </h3>
           <span class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[70%] border-r border-dashed border-gray-600"></span>
@@ -31,7 +30,7 @@ font-bold text-white mb-8">
           <div class="flex justify-center mb-6">
             <img :src="shieldIcon" alt="" class="w-8 h-8"/>
           </div>
-          <h3 class="text-2xl font-bold text-white text-center mb-4 max-w-[300px]">
+          <h3 class="text-[20px] font-bold text-white text-center mb-4 max-w-[300px]">
             Trusted by thousands of high-frequency traders.
           </h3>
           <span class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[70%] border-r border-dashed border-gray-600"></span>
@@ -42,7 +41,7 @@ font-bold text-white mb-8">
           <div class="flex justify-center mb-6">
             <img :src="gridIcon" alt="" class="w-8 h-8"/>
           </div>
-          <h3 class="text-2xl font-bold text-white text-center mb-4 max-w-[300px]">
+          <h3 class="text-[20px] font-bold text-white text-center mb-4 max-w-[300px]">
             Built for scalpers, by traders who understand the game.
           </h3>
         </div>

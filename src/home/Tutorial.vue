@@ -1,19 +1,19 @@
 <template>
     <div class="">
         
-        <div class="pt-24 pb-20 w-[95%] mx-auto ">
+        <div class="pt-24 pb-16 w-[95%] mx-auto text-center">
             
-            <h2 class="text-[38px] font-bold text-white">
+            <h2 class="md:text-[38px] text-[27px] font-bold text-white">
                 Steps to Access Your Account
             </h2>
-            <p class="font-openSans text-[#BBB8B8] text-[18px] mt-8">Follow these simple steps to quickly and securely log into your account and start your trading journey without any hassle.</p>
+            <p class="font-openSans text-[#BBB8B8] text-[16px] md:text-[18px] md:mt-4 mt-8 text-center">Follow these simple steps to quickly and securely log into your account and start your trading journey without any hassle.</p>
         </div>
 
         <div class="gap-4 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            <div v-for="user in intendedUsers" class="bg-[#1D2125] relative border text-left border-[#2F2F2F] rounded p-8">
+            <div v-for="user in intendedUsers" class="bg-[#1D2125] relative border text-left border-[#2F2F2F] rounded-xl p-6 md:p-8">
                 <img :src="user.bg" class="absolute top-8 w-52" alt="">
                 <img :src="user.img" alt="" class="w-8 mb-6">
-                <h2 class="text-white text-[24px] font-bold mb-6">
+                <h2 class="text-white text-[24px] font-bold mb-4">
                     {{ user.name }}
                 </h2>
                 <p class="text-[#7F7F7F] max-w-96 text-[18px]">
@@ -23,10 +23,10 @@
         </div>
 
         <div class="w-full text-center mt-10">
-            <button class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
+            <button class="btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
                 <div class="content vertical flex justify-center">
-                        <div class="text font-semibold text-base">Join Now</div>
-                        <div class="hover-text font-semibold  text-base">Get Started</div>
+                        <div class="text font-semibold text-base font-openSans">Join Now</div>
+                        <div class="hover-text font-semibold  text-base font-openSans">Get Started</div>
                     </div>
             </button>
         </div>
@@ -46,20 +46,20 @@ const intendedUsers = [
         name: 'Register', 
         img : login,
         bg : bg1,
-        description : "Sign up in just a few clicks by providing required details. It’s simple, quick, and secure; it sets the foundation for your trading journey." 
+        description : "Sign up quickly and securely to begin your trading journey." 
     },
 
     { 
         name: 'Connect Broker',
         img : link,
         bg : bg2,
-        description: "Connect your broker account seamlessly to enable automatic trading and execute your strategies with ease. We ensure smooth integration for hassle-free operation.",
+        description: "Link your account for seamless strategy execution.",
     },
     { 
         name: 'Trade',
         img : rocket,
         bg : bg3,
-        description: "Once set up, begin executing trades and using our powerful tools. With everything ready, you’re all set to make confident and informed decisions in the market.",
+        description: "Start trading confidently using our powerful tools.",
     },
     
 ]

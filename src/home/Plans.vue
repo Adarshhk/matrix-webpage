@@ -19,8 +19,8 @@
 
     
         <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
-            <div class="flex min-w-52 mr-4 items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/indicator.svg" alt="" class="w-10">
+            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="/src/assets/svg/indicator.svg" alt="" class="w-12">
                 <p>Indicators</p>
             </div>
             <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
@@ -42,6 +42,10 @@
             <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
                 <img src="/src/assets/svg/signals.svg" alt="" class="w-12">
                 <p>Signals</p>
+            </div>
+            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="/src/assets/svg/screener.svg" alt="" class="w-12">
+                <p>Screeners</p>
             </div>
         </Vue3Marquee>
         <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse" class="mt-4">
@@ -68,6 +72,10 @@
             <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
                 <img src="/src/assets/svg/signals.svg" alt="" class="w-12">
                 <p>Signals</p>
+            </div>
+            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
+                <img src="/src/assets/svg/screener.svg" alt="" class="w-12">
+                <p>Screeners</p>
             </div>
         </Vue3Marquee>
 

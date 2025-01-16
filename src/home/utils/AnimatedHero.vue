@@ -33,7 +33,7 @@ const props = defineProps({
   },
   radius: {
     type: Number,
-    default: 400
+    default: 350
   }
 });
 
@@ -71,7 +71,7 @@ onMounted(() => {
 @media (max-width: 768px) {
   .slider {
     width: 95%;
-    height: 50vh;
+    height: 40vh;
     perspective: 1000px;
   }
 }
@@ -88,6 +88,7 @@ onMounted(() => {
   width: 100%;
   height: 100%;
   display: flex;
+  
   align-items: center;
   justify-content: center;
   font: 300 48px/1 Menlo, monospace;

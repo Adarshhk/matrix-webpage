@@ -4,6 +4,8 @@
     <RouterView />
     <FAQ />
     <Footer />
+    <Card/>
+
   </template>
   
   <script setup>
@@ -13,6 +15,8 @@
   import Footer from './component/Footer.vue';
   import Promotion from './component/Promotion.vue';
   import MouseEffect from './component/MouseEffect.vue';
+import Card from './component/Card.vue';
+
   </script>
   
   <style>

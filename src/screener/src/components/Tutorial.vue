@@ -1,9 +1,9 @@
 <template>
-    <div class="px-0 2xl:px-16 my-0 md:my-24 mb-40">
+    <div class="mt-32">
         
         <div class=" pt-0 2xl:pt-1  w-[95%] mx-auto ">
             
-            <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white m-20 xl:mb-14  mx-auto flex text-center justify-center ">
+            <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white mb-16  mx-auto flex text-center justify-center ">
                 Your Roadmap to Effortless Stock Analysis
             </h2>
            

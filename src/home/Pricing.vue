@@ -1,12 +1,12 @@
 <template>
-    <div class="p-10">
-        <h2 class="text-[38px] font-bold pb-6 text-white">
+    <div class="p-4">
+        <h2 class="md:text-[38px] text-[27px] font-bold text-white text-center mx-auto">
             Your Ultimate Toolkit for Trading Success
         </h2>
-        <p class="max-w-5xl text-[#BBB8B8] font-openSans text-[18px] mt-4">Explore the full potential of your trading journey with personalized support. Our platform equips you with the resources and insights to confidently navigate every decision with clarity and precision.</p>
+        <p class="max-w-5xl text-[#BBB8B8] font-openSans mt-4 text-center mx-auto text-[16px] md:text-[18px] ">Explore the full potential of your trading journey with personalized support. Our platform equips you with the resources and insights to confidently navigate every decision with clarity and precision.</p>
     </div>
 
-    <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+    <div class="w-[95%] mx-auto gap-4 mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         
         <div class="border rounded border-[#2F2F2F]">
             <LottieComponent animationPath="/json/4.json" />

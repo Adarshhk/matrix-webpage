@@ -1,11 +1,11 @@
 <template>
-    <div class="my-20">
+    <div class="mt-16 md:mt-32 my-20">
         <div class="text-center">
-            <p class="text-[38px] font-bold mx-auto text-white">Transform Your Trading Approach</p>
+            <p class="text-[27px] md:text-[38px] font-bold mx-auto text-white">Transform Your Trading Approach</p>
 
-            <p class="text-[#BBB8B8] text-[18px] max-w-6xl mx-auto mt-4 font-openSans">Innovate your trading experience with ease and precision. Our platform provides powerful tools and actionable insights to help you achieve your goals effortlessly.</p>
+            <p class="text-[#BBB8B8] text-[16px] md:text-[18px] max-w-6xl p-2 mx-auto mt-4 font-openSans">Innovate your trading experience with ease and precision. Our platform provides powerful tools and actionable insights to help you achieve your goals effortlessly.</p>
         </div>
-        <div class="my-10">
+        <div class="my-10 mt-24">
             <!-- <SliderText/>
           <SliderVid/> -->
 

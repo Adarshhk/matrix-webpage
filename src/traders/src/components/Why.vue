@@ -1,9 +1,9 @@
 <template>
-  <div class="bg-[#161a1e] py-20">
+  <div class="mt-32">
     <div class="px-2 2xl:px-20 mx-auto"> 
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-8">
+        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
           Case studies
         </h2>
         <p class="text-[#BBB8B8] text-md md:text-md 2xl:text-lg mx-auto">

@@ -1,6 +1,6 @@
 <template>
-  <div class="pt-28">
-    <h2 class="text-3xl md:text-[38px] font-bold text-white text-center mb-10">
+  <div class="mt-16 lg:mt-32">
+    <h2 class="text-[27px] md:text-[38px] font-bold text-white text-center mb-16 z-30">
       Our Trusted Brokers
     </h2>
     <div class="flex justify-center">
@@ -21,7 +21,7 @@ const brokerImages=  [
         { src: '/src/assets/img/broker/broker (1).png', alt: 'Broker 1' },
         { src: '/src/assets/img/broker/broker (1).webp', alt: 'Broker 1' },
         { src: '/src/assets/img/broker/broker (2).png', alt: 'Broker 2' },
-        { src: '/src/assets/img/broker/broker (2).webp', alt: 'Broker 2' },
+        
         { src: '/src/assets/img/broker/broker (3).png', alt: 'Broker 3' },
         { src: '/src/assets/img/broker/broker (4).png', alt: 'Broker 4' },
         { src: '/src/assets/img/broker/broker (5).png', alt: 'Broker 5' },

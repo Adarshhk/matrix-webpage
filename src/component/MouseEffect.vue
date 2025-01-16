@@ -60,16 +60,17 @@ onUnmounted(() => {
 .cursor-shine {
   pointer-events: none;
   position: fixed;
-  width: 500px;
-  height: 500px;
+  width: 800px;
+  height: 800px;
   background: radial-gradient(
     circle,
-    rgba(144, 238, 144, 0.219) 10%,
-    rgba(144, 238, 144, 0.137) 30%,
-    rgba(144, 238, 144, 0) 70%
+    #067e483d 1%,
+    #04462974 10%,
+    
+    #00000000 50%
   );
   border-radius: 50%;
-  z-index: 10;
+  z-index: -1;
   will-change: transform;
 }
 

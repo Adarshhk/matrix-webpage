@@ -28,13 +28,13 @@
             <p class="bg-gradient-to-r from-[#00b853] to-[#51c7e6] bg-clip-text text-transparent">We Deliver</p>
           </h1>
 
-          <p class="text-[#BBB8B8] text-md md:text-xl 2xl:text-xl leading-relaxed tracking-wide mt-6">
+          <p class="text-[#BBB8B8] text-[16px] leading-relaxed tracking-wide mt-6 font-openSans">
             Scalping is all about speed and precision, and our platform is built to match your pace. From lightning-
             fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
 
           <button
-            class="mt-6 btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
+            class="mt-10 btn btn-anim text-[#F3F8F9] text-sm w-1/2 max-w-48 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
             <div class="content vertical flex justify-center">
               <div class="text font-semibold text-base">Get Started</div>
               <div class="hover-text font-semibold  text-base">Join Now</div>
