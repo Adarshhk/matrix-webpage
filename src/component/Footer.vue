@@ -1,11 +1,11 @@
 <template>
-    <footer class="px-5 lg:px-10 xl:px-20 pt-16 ">
+    <footer class=" w-[95%] mx-auto pt-16 ">
         <div class="mx-auto">
             <div
-                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 place-items-start justify-items-start lg:justify-items-center">
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 place-items-stretch justify-items-between lg:justify-items-center">
                 <div class="space-y-5">
                     <img src="/src/assets/svg/matrix-logo.svg" alt="Logo" class="mx-auto md:mx-0 w-40" />
-                    <p class="font-ProximaNova text-white text-[16px] text-center md:text-left">
+                    <p class="font-openSans text-white text-[16px] text-center md:text-left">
                         Our platform offers you an opportunity to fully automate any of our
                         strategies in your trading account and experience its accomplishment
                         in the live market. We also provide the opportunity to automate your
@@ -15,7 +15,7 @@
 
                 <div class="text-white text-[16px] space-y-5  lg:text-left ">
                     <p class="font-CabinetGrotesk font-bold">Quick Links</p>
-                    <div class="font-ProximaNova space-y-3">
+                    <div class="font-openSans space-y-3">
                         <p>Terms & Conditions</p>
                         <p>Privacy Policy</p>
                         <p>Disclaimer</p>
@@ -24,7 +24,7 @@
 
                 <div class="text-white text-[16px] space-y-5">
                     <p class="font-CabinetGrotesk font-bold">Get in touch with us</p>
-                    <div class="font-dm-sans space-y-6">
+                    <div class="font-openSans space-y-6">
                         <a class="flex gap-2">
                             <img src="/src/assets/svg/call.svg" alt="Phone Icon" />
                             +91 8962336003
@@ -62,8 +62,8 @@
 
             <hr class="border border-white opacity-10 mt-10" />
 
-            <div class="mt-10 w-[85%] mx-auto">
-                <p class="font-ProximaNova text-white text-center text-[13px] hidden xl:flex">
+            <div class="mt-10 w-[95%] mx-auto">
+                <p class="font-openSans text-white text-center text-[13px] hidden xl:flex">
                     Message From Regulator: No need to issue cheques by investors while
                     subscribing to IPO. Just write the bank account number and sign in the
                     application form to authorise your bank to make payment in case of

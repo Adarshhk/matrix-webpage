@@ -13,7 +13,7 @@
       </div>
 
       <!-- Grid Section -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[95%] mx-auto">
         <!-- First Case Study Card -->
         <div class="relative rounded-2xl bg-[#1d2125] p-14">
           <div class="flex justify-start mb-8">

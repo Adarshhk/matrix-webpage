@@ -3,7 +3,8 @@
     <Navbar />
     <RouterView />
     <FAQ />
-    <Footer />
+    <!-- <Footer /> -->
+     <Footer/>
     <Card/>
 
   </template>
@@ -12,10 +13,11 @@
   import { RouterView } from 'vue-router';
   import Navbar from './scalper/src/components/Navbar.vue';
   import FAQ from './component/FAQ.vue';
-  import Footer from './component/Footer.vue';
+
   import Promotion from './component/Promotion.vue';
   import MouseEffect from './component/MouseEffect.vue';
 import Card from './component/Card.vue';
+import Footer from './investor/src/components/Footer.vue';
 
   </script>
   

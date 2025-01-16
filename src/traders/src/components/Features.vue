@@ -1,8 +1,8 @@
 
 
 <template>
-  <div class="px-0 2xl:px-24">
-    <div class="bg-gradient-to-t from-black/60 to-transparent bg-[#00B852] rounded-lg mt-24 mx-auto h-[40vh] md:h-[30vh] xl:h-[55vh] 2xl:h-[60vh] relative overflow-hidden">
+  <div class="w-[95%] mt-32 mx-auto">
+    <div class=" bg-[#00B852] rounded-lg mx-auto h-[75vh] relative overflow-hidden">
       <!-- Grid Pattern Container -->
       <div class="absolute inset-0 flex justify-between">
         <!-- Left Grid Pattern -->

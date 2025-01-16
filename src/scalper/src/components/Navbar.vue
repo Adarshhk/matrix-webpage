@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center p-2 md:p-4 w-full z-40 fixed top-0 "
+  <nav class="flex justify-between items-center p-2 px-4 md:p-4 w-full z-40 fixed top-0 "
     :class="{ 'bg-gradient-to-b from-[#161a1e] to-[#161a1e]': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
     <!-- Left section -->
     <div class="flex items-center gap-3">
@@ -51,15 +51,15 @@
     <!-- Product Dropdown (Desktop) -->
     <Transition name="fade">
       <div v-if="showProductMenu"
-        class="left-0 right-0 top-20 bg-[#161a1e] fixed inset-0 z-40 hidden md:block border-t border-[#2F2F2F]">
-        <div class="bg-[#161a1e] p-5 rounded-b-md">
+        class="left-0 right-0 top-20 bg-black bg-opacity-80 inset-0 fixed z-20 hidden md:block border-t border-[#2F2F2F]">
+        <div class="bg-[#161a1e] p-5 rounded-b-md pb-10">
           <div class="w-full flex justify-between items-center py-4">
             <h2 class="text-white font-bold text-[20px]">Products</h2>
-            <button @click="showProductMenu = false"><img src="/src/assets/svg/X.svg" alt="" class="w-4 h-4"></button>
+            <button @click="showProductMenu = false"><img src="/src/assets/svg/X.svg" alt="" class="w-4 h-4 mr-3"></button>
           </div>
           <div class="grid grid-cols-3 gap-8">
             <button @click="handleRouteChange(item.path)" v-for="item in productItems" :key="item.title"
-              class="p-2 py-4 flex rounded-md gap-6 border border-[#1a1a1a] items-start hover:border-[#2F2F2F] hover:scale-110 hover:bg-[#1D2125] transition-all duration-200 justify-start">
+              class="p-2 py-4 flex rounded-md gap-6 border border-[#1a1a1a] items-start hover:border-[#2F2F2F] hover:bg-[#1D2125] transition-all duration-200 justify-start hover:scale-105">
               <img :src="item.icon" alt="" class="">
               <div class="text-left">
                 <h2 class="text-white text-[16px] font-semibold">{{ item.title }}</h2>
@@ -69,7 +69,7 @@
               </div>
             </button>
           </div>
-          <img src="/src/assets/img/productbanner.png" alt="" class="my-10">
+          <img src="/src/assets/img/productbanner.png" alt="" class="mt-6">
         </div>
       </div>
     </Transition>

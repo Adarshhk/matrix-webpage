@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto px-4 py-12 mt-10">
+    <div class="mx-auto px-4 my-32">
       <div class="text-center mb-12">
         <h2 class="text-[34px] font-openSans font-semibold mb-2 text-white">
           FAQ's
@@ -9,7 +9,7 @@
         </p>
       </div>
   
-      <div class="space-y-4 w-[90%] mx-auto text-[18px]">
+      <div class="space-y-4 w-[90%] max-w-4xl mx-auto text-[18px]">
         <div v-for="(faq, index) in faqs" :key="index" class="">
           <button
             @click="toggleFaq(index)"

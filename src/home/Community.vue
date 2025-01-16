@@ -21,7 +21,7 @@
                     </div>
             </button>
         </div>
-        <div class="xl:flex xl:px-4 hidden h-full gap-2 relative mr-10">
+        <div class="xl:flex xl:px-4 hidden h-full gap-2 relative mr-6">
             <div class="absolute z-30 top-1/3  text-white py-3 text-center w-full bg-gradient-to-r from-transparent via-[#00B852] to-transparent flex flex-col justify-center items-center">
                 <h2 class="font-bold text-[38px]">
                     7000+
@@ -30,8 +30,8 @@
                     People Already Joined
                 </p>
             </div>
-            <div>
-                <Vue3Marquee :duration="25" :vertical="true" class="max-w-16" :gradient="true" :gradientColor="[0, 184, 82, 1]" >
+            <div class="hidden 2xl:block">
+                <Vue3Marquee :duration="25" :vertical="true" class="max-w-16 " :gradient="true" :gradientColor="[0, 184, 82, 1]" >
                     <img src="/src/assets/img/community/1 (1).png" alt="" class="my-2" >
                     <img src="/src/assets/img/community/1 (2).png" alt="" class="my-2" >
                     <img src="/src/assets/img/community/1 (3).png" alt="" class="my-2" >

@@ -3,8 +3,8 @@
   <Hero id="hero"/>
   <Media id="media"/>
   <Tutorial/>
-  <Testimonial/>
   <Why id="why"/>
+  <Testimonial/>
   <Features id="features"/>
 
 </template>
