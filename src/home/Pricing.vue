@@ -54,11 +54,13 @@ const details = [
 <!--Not needed -->
 
 <template>
-    <div class="p-10">
-        <h2 class="text-[38px] font-bold pb-6 text-white">
+    <div class="p-4 mt-24 lg:mt-32">
+        <h2 class="md:text-[38px] text-[27px] font-bold text-white text-center mx-auto">
             Your Ultimate Toolkit for Trading Success
         </h2>
-        <p class="text-[#BBB8B8] text-[18px] mt-4 max-w-4xl">Explore the full potential of your trading journey with personalized support. Our platform equips you with the resources and insights to confidently navigate every decision with clarity and precision.</p>
+        <p class="max-w-5xl text-[#BBB8B8] font-openSans mt-4 text-center mx-auto text-[16px] md:text-[18px] ">Explore
+            the full potential of your trading journey with personalized support. Our platform equips you with the
+            resources and insights to confidently navigate every decision with clarity and precision.</p>
     </div>
 
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
@@ -100,7 +102,7 @@ const details = [
 </script>
 
 <style scoped>
-.bg-1{
+.bg-1 {
     background-image: url('/src/assets/img/grid1.png');
     background-size: contain;
 }

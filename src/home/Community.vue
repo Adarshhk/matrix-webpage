@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto flex h-[60vh] flex-wrap items-center lg:justify-between justify-center ">
+    <div class="bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto flex h-[60vh] md:h-[40vh] lg:h-[60vh] flex-wrap items-center lg:justify-between justify-center ">
         <div class="max-w-3xl text-center xl:text-left xl:px-10 px-4">
             
             <div class=" flex lg:justify-start mb-4 items-center justify-center">
