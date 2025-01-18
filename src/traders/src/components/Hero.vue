@@ -18,14 +18,16 @@
             Scalping is all about speed and precision, and our platform is built to match your pace. From lightning-
             fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
-
-          <button
+          <div class="flex justify-center lg:justify-start">
+            <button
             class="mt-10 btn btn-anim text-[#F3F8F9] text-sm w-1/2 max-w-48 py-2 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
             <div class="content vertical flex justify-center">
               <div class="text font-semibold text-base">Get Started</div>
               <div class="hover-text font-semibold  text-base">Join Now</div>
             </div>
           </button>
+          </div>
+          
         </div>
 
         <!-- Image Container -->

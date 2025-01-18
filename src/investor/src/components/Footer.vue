@@ -68,7 +68,7 @@
         </div>
 
         <div class="lg:p-10 border-t border-[#FFFFFF1A]">
-            <p class="text-white text-[14px] mt-10 text-left md:text-center">
+            <p class="text-white text-[14px] mt-10 text-center">
                 Message From Regulator: No need to issue cheques by investors while subscribing to IPO. Just write the
                 bank account number and sign in the application form to authorise your bank to make payment in case of
                 allotment. No worries for refund as the money remains in investor's account. 1) Message from

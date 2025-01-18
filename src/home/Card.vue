@@ -127,7 +127,7 @@ onUnmounted(() => {
   }
 
   #trade-cards {
-    gap: 10vw;
+    gap: 48vw;
   }
 
 
