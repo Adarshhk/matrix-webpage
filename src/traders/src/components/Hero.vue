@@ -1,18 +1,20 @@
 <template>
-  <div class="bg relative w-full h-[100vh] overflow-hidden">
-    <div class="mx-auto px-4 h-full flex items-center ">
-      <div class="flex flex-col lg:flex-row justify-between items-center  w-full">
+  <div class="bg relative w-full h-[70dvh] md:h-[60vh] lg:h-[100dvh] overflow-hidden pt-24 md:pt-0">
+    <div class="mx-auto lg:px-4 h-full flex items-center ">
+      <div class="flex flex-col lg:flex-row justify-between items-left  w-full">
         <!-- Text Content -->
-        <div class=""> 
+        <div class="px-8"> 
           
-          <h1 class="text-[32px] md:text-[48px] 2xl:text-[60px] font-bold "> 
+          <h1 class="text-[32px] md:text-[48px] lg:leading-[50px] font-bold text-center md:text-left "> 
             <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
-              When Seconds Matter, <br/>
-              We Deliver
+              When Seconds Matter,
+              <p class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
+                We Deliver
+              </p>
             </span>
           </h1>
           
-          <p class="text-[#D6D6D6] max-w-3xl mt-6 text-[16px] font-openSans">
+          <p class="text-[#D6D6D6] md:max-w-lg lg:max-w-2xl mt-6 text-[16px] font-openSans text-center md:text-left ">
             Scalping is all about speed and precision, and our platform is built to match your pace. From lightning-
             fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
@@ -41,8 +43,17 @@
 .bg{
   background: url('/src/assets/img/traderbg.png');
   
-background-size: cover;
-background-position: center;
+  background-size: cover;
+  background-position: left;
+}
+@media (min-width: 768px) {
+  .bg {
+    background-position: center;
+  }
+}
+
+@media lg {
+  
 }
 .content {
   position: relative;

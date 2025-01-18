@@ -1,8 +1,8 @@
 
 <!-- call Correctly -->
 <template>
-    <div class="mt-20  px-7 lg:px-20">
-        <div class="flex lg:flex-row justify-between flex-col mb-10">
+    <div class="mt-20 md:mt-40 px-7 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-10">
             <div class="max-w-[26rem]">
                 <img src="/src/assets/svg/matrix-logo.svg" alt="" class="w-40">
                 <p class="my-6 text-[16px] font-light text-[#F3F8F9] ">Our platform offers you an opportunity to fully
@@ -12,7 +12,7 @@
 
             </div>
 
-            <div class="">
+            <div class="flex flex-col justify-center md:items-center">
                 <ul>
                     <li class="text-white font-bold mb-2 ">Quick Links</li>
                     <li class="text-[#F3F8F9] font-light mb-2 hover:underline hover:cursor-pointer"><a
@@ -26,7 +26,7 @@
                 </ul>
             </div>
 
-            <div>
+            <div class="flex flex-col justify-center md:items-center">
                 <ul class="max-w-96 mt-4 md:mt-0">
                     <li class="text-white mb-3 font-bold">Get in touch with us</li>
                     <li
@@ -49,8 +49,8 @@
                 </ul>
             </div>
 
-            <div>
-                <p class="text-white mt-4 md:mt-0 mb-2 font-bold">Follow Us On</p>
+            <div class="flex flex-col  md:items-center">
+                <p class="text-white lg:mt-8 mb-2 font-bold">Follow Us On</p>
                 <div class="flex gap-2">
                     <button class="p-2 rounded-full border-2">
                         <img src="/src/assets/svg/linkedin.svg" alt="" class="w-5">

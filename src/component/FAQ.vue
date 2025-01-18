@@ -1,10 +1,10 @@
 <template>
-    <div class="mx-auto px-4 my-32">
+    <div class="mx-auto px-4 mt-24 lg:my-32 lg:mb-40">
       <div class="text-center mb-12">
-        <h2 class="text-[34px] font-openSans font-semibold mb-2 text-white">
+        <h2 class="text-[27px] font-openSans font-semibold mb-2 text-white">
           FAQ's
         </h2>
-        <p class="text-white mt-4 font-openSans">
+        <p class="text-white mt-4 font-openSans text-md">
           Find answers to common questions and get the clarity you need to make the most of our platform.
         </p>
       </div>

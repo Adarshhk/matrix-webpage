@@ -1,12 +1,9 @@
-
-<!-- call Correctly -->
 <template>
-    <div class="my-20 px-0 2xl:px-28">
-        <div class="text-center ">
-            <p class="text-[32px] md:text-[38px] 2xl:text-[48px]
- font-bold text-white mb-4">Why People Trust us?</p>
+    <div class="mt-24 md:mt-32">
+        <div class="text-center">
+            <p class="lg:text-[38px] font-bold mx-auto max-w-xl w-[80%] text-white text-[27px]">Know Why People Trust Us?</p>
 
-            <p class="text-gray-400 text-lg max-w-2xl mx-auto py-5 px-5 mb-10">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="font-openSans text-[#BBB8B8] lg:text-[16px] max-w-2xl  w-[80%] mx-auto mb-16 mt-8 text-[16px]">Our commitment to innovation, transparency, and delivering results has earned us the trust of traders worldwide. Experience a platform designed with your success in mind.</p>
         </div>
 
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">
@@ -24,13 +21,12 @@
             </div>
         </div> -->
 
-        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]"  class="mt-4">
+        <Vue3Marquee :duration="80" :gradient="true" :gradientColor="[22, 26, 30, 1]" >
             <div v-for="user in testimonials" class="bg-[#1D2125] min-w-80 lg:w-1/3 border text-left border-[#2F2F2F] rounded p-8 mx-4">
-                <p class="text-white max-w-96 text-sm lg:text-[16px]">
+                <p class="text-[white] max-w-96 text-sm lg:text-[16px] font-openSans">
                     {{ user.description }}
                 </p>
-                <div class="flex items-center gap-4 mt-10">
-                    <img :src="user.img" class="w-10" alt="">
+                <div class="mt-10">
                     <h2 class="text-white font-bold text-sm lg:text-[16px]">
                         {{ user.name }}
                     </h2>
@@ -47,23 +43,47 @@ import profile from '/src/assets/img/prof.png';
 
 const testimonials = [
     { 
-        name: 'Anirudh Tiwari, Delhi', 
-        img : profile,
-        description : "PromptVault has become my go-to resource for sparking creativity in ChatGPT. The diverse range of prompts has not only saved me time but has elevated the quality of my content. A must-have for any content creator." 
+        name: 'Rahul Mehta, Mumbai', 
+        description: "It has revolutionized the way I trade, and all thanks to Matrix Trading Tech. Because of algorithmic trading I can focus on my work without worrying about missing out on profitable trades. Highly recommended!"
     },
+    { 
+        name: 'Priya Singh, New Delhi', 
+        description: "Being a busy professional, I found it hard to take out time to trade. Matrix Trading Tech had changed the way I saw trading. The algo trading feature is incredible and has significantly boosted my returns."
+    },
+    { 
+        name: 'Anil Kumar, Bangalore', 
+        description: "I was not sure in the beginning about algo trading, but Matrix Trading Tech has exceeded my expectations. The platform is user-friendly, and the support team is always available to assist with any queries."
+    },
+    { 
+        name: 'Sneha Shah, Ahmedabad', 
+        description: "Matrix Trading Tech's automated trading has saved me so much time. I no longer have to monitor the markets constantly, and the returns have been impressive. It's a must-have for anyone serious about trading."
+    },
+    { 
+        name: 'Ramesh Verma, Hyderabad', 
+        description: "The best part about Matrix Trading Tech is its reliability. The platform executes trades flawlessly, and I have complete peace of mind knowing my investments are in good hands."
+    },
+    { 
+        name: 'Kavita Rao, Chennai', 
+        description: "Thanks to Matrix Trading Tech, I've been able to balance my work and trading easily. The automated system is efficient, and the customer service is excellent. I couldn't be happier!"
+    },
+    { 
+        name: 'Arjun Patel, Pune', 
+        description: "Matrix Trading Tech has revolutionized my trading strategy. The algorithms are incredibly accurate, and the platform is easy to use. I've seen a significant increase in my trading profits."
+    },
+    { 
+        name: 'Anjali Gupta, Kolkata', 
+        description: "I love how Matrix Trading Tech takes the stress out of trading. The automated trades are executed perfectly, and the platform's analytics have helped me make informed decisions. It's a game-changer!"
+    },
+    { 
+        name: 'Vikram Iyer, Kochi', 
+        description: "Matrix Trading Tech has been a great addition to my trading toolkit. The automated system is reliable and efficient, and the returns have been consistently impressive. Highly recommended!"
+    },
+    { 
+        name: 'Neha Desai, Jaipur', 
+        description: "I've been using Matrix Trading Tech for a few months now, and it has significantly improved my trading performance. The platform is user-friendly, and the automated trading feature is a lifesaver for someone with a busy schedule."
+    }
+];
 
-    { 
-        name: 'Anirudh Tiwari, Delhi', 
-        img : profile,
-        description: "PromptVault has become my go-to resource for sparking creativity in ChatGPT. The diverse range of prompts has not only saved me time but has elevated the quality of my content. A must-have for any content creator.",
-    },
-    { 
-        name: 'Anirudh Tiwari, Delhi', 
-        img : profile,
-        description: "PromptVault has become my go-to resource for sparking creativity in ChatGPT. The diverse range of prompts has not only saved me time but has elevated the quality of my content. A must-have for any content creator.",
-    },
-    
-]
 
 </script>
 

@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-32">
+  <div class="mt-24 md:mt-32">
     <div class="px-2 2xl:px-20 mx-auto"> 
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
+        <h2 class="text-[27px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
           Case studies
         </h2>
         <p class="text-[#BBB8B8] text-md md:text-md 2xl:text-lg mx-auto">
@@ -15,7 +15,7 @@
       <!-- Grid Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[95%] mx-auto">
         <!-- First Case Study Card -->
-        <div class="relative rounded-2xl bg-[#1d2125] p-14">
+        <div class="relative rounded-2xl bg-[#1d2125] p-6 lg:p-14">
           <div class="flex justify-start mb-8">
             <img src="/src/assets/img/ellipse.jpg" alt="Profile" class="rounded-full w-16 h-16">
           </div>
@@ -29,7 +29,7 @@
         </div>
 
         <!-- Second Case Study Card -->
-        <div class="relative rounded-2xl bg-[#1d2125] p-14">
+        <div class="relative rounded-2xl bg-[#1d2125] p-6 lg:p-14">
           <div class="flex justify-start mb-8">
             <img src="/src/assets/img/ellipse.jpg" alt="Profile" class="rounded-full w-16 h-16">
           </div>

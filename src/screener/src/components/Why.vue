@@ -1,19 +1,19 @@
 <template>
-  <div class="bg-[#161a1e] pt-24 lg:pt-32">
-    <div class="mx-4 md:mx-10">
+  <div class="mt-16 lg:mt-32">
+    <div class="mx-4 md:mx-10 ">
       <!-- Header Section -->
-      <div class="text-center mb-24">
-        <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white">
+      <div class="text-center mb-16 w-full">
+        <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white max-w-md mx-auto">
           Why Traders Love Our Screener
         </h2>
-        <p class="text-[#BBB8B8] text-[18px] max-w-5xl mx-auto px-0 md:px-40 mb-14 mt-8 font-openSans">
+        <p class="text-[#BBB8B8] text-[16px] max-w-xl mx-auto mt-8 font-openSans ">
           Our demo trading account can be your "secret weapon" to test out strategies
           and hone your skills with zero risk. Here's how you'll benefit:
         </p>
       </div>
 
       <!-- Grid Section -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 2xl:gap-8 px-0 2xl:px-16 mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-6 mx-auto">
         <!-- Filters Card -->
         <div :class="[containerClasses, 'group rounded-lg overflow-hidden bg-[#1d2125] transition-all duration-300 hover:scale-[1.02] flex flex-col border border-[#2f2f2f]']">
           <div class="relative overflow-hidden flex-1">

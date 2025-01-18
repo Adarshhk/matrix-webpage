@@ -1,10 +1,10 @@
 <template>
     <div class=" text-white text-center mt-24 ">
       
-      <main class="w-[85%] mx-auto">
+      <main class="w-[95%] mx-auto">
         <ul id="cards" ref="cardsWrapper" class="list-none grid grid-cols-1 gap-[4vw] pb-[calc(var(--numcards)*var(--card-top-offset))] mb-[4vw]">
           <li v-for="(card, index) in cards" :key="card.id" :id="`card_${index + 1}`" class="card sticky top-24 transform-gpu will-change-transform" :style="{ paddingTop: `calc(${index + 1} * var(--card-top-offset))` }">
-            <div class="card__content bg-white text-[#0a0507] rounded-2xl overflow-hidden shadow-lg grid grid-cols-2 items-stretch">
+            <div class="card__content bg-gradient-to-r from-[#1D2125] to-[#1F0B03] text-[#0a0507] rounded-md overflow-hidden shadow-lg grid grid-cols-2 items-stretch">
               <div class="w-4/5 place-self-center text-left grid gap-4 place-items-start">
                 <h2 class="font-light text-4xl">{{ card.title }}</h2>
                 <p class="font-sans font-light leading-[1.42]">{{ card.description }}</p>

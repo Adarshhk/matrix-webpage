@@ -1,12 +1,12 @@
 
 <!-- call Correctly -->
 <template>
-    <div class="mt-24 md:mt-32 px-0 2xl:px-28">
+    <div class="my-20 px-0 2xl:px-28">
         <div class="text-center ">
-            <p class="text-[27px] md:text-[38px] 2xl:text-[48px]
+            <p class="text-[32px] md:text-[38px] 2xl:text-[48px]
  font-bold text-white mb-4">Why People Trust us?</p>
 
-            <p class="text-gray-400 text-md max-w-2xl mx-auto py-5 px-5 mb-10">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
+            <p class="text-gray-400 text-lg max-w-2xl mx-auto py-5 px-5 mb-10">Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.</p>
         </div>
 
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">

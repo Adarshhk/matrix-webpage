@@ -1,9 +1,9 @@
 <template>
-  <div class="mt-32">
+  <div class="mt-10 lg:mt-32">
     <div class=" px-3 2xl:px-32 mx-auto">
       <!-- Header Section -->
       <div class="text-center mb-16">
-        <h2 class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
+        <h2 class="text-[27px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-4">
           Expanded Features Section
         </h2>
         <p class="text-[#BBB8B8] text-md md:text-md 2xl:text-lg mx-auto max-w-2xl">
@@ -15,7 +15,7 @@
       <!-- Grid Section -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[95%] mx-auto ">
         <!-- Grow Card -->
-        <div class="relative rounded-2xl bg-[#1d2125] p-8 border border-[#2F2F2F] ">
+        <div class="relative rounded-2xl bg-[#1d2125]  p-4 md:p-8  border border-[#2F2F2F] ">
           <div class="flex justify-start mb-8 ">
 
             <img src="/src/assets/svg/verify.svg" alt="">
@@ -27,7 +27,7 @@
           </p>
         </div>
         <!-- Laptop Platform Card -->
-        <div class="relative rounded-2xl bg-[#1d2125] p-8  border border-[#2F2F2F]">
+        <div class="relative rounded-2xl bg-[#1d2125] p-4 md:p-8 border border-[#2F2F2F]">
           <div class="flex justify-start mb-8">
 
             <img src="/src/assets/svg/rupees-coin.svg" alt="">
@@ -40,7 +40,7 @@
         </div>
 
 
-        <div class="relative rounded-2xl bg-[#1d2125] p-8  border border-[#2F2F2F]  ">
+        <div class="relative rounded-2xl bg-[#1d2125] p-4 md:p-8 border border-[#2F2F2F]  ">
           <div class="flex justify-start mb-8">
 
 
@@ -55,7 +55,7 @@
           </p>
         </div>
 
-        <div class="relative rounded-2xl bg-[#1d2125] p-8  border border-[#2F2F2F]  ">
+        <div class="relative rounded-2xl bg-[#1d2125] p-4 md:p-8  border border-[#2F2F2F]  ">
           <div class="flex justify-start mb-8">
 
             <div class="flex gap-2">

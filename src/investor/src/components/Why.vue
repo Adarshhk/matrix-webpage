@@ -1,19 +1,16 @@
 <template>
-  <div class="flex justify-center items-center w-full px-4 sm:px-6 md:px-8 lg:px-24 bg-[#161a1e]">
-    <div class="relative max-w-[1200px] w-full flex items-center justify-center py-8 sm:py-12 md:py-16 lg:py-20">
+  <div class="flex justify-center items-center w-[95%] mx-auto mt-16 md:mt-32 ">
+    <div class="relative w-[100%] flex items-center justify-center ">
       <!-- Left Arrow - Visible on all screen sizes -->
       <div class="absolute -left-2 sm:-left-6 md:-left-8 lg:-left-12  mt-16 sm:mt-20 md:mt-24 lg:mt-28">
-        <img 
-          src="/src/assets/svg/growth1.svg " 
-          alt="" 
-          class="w-12 sm:w-16 md:w-20 lg:w-24 hidden md:flex"
-        >
+        <img src="/src/assets/svg/growth1.svg " alt="" class="w-12 sm:w-16 md:w-20 lg:w-24 hidden md:flex">
       </div>
 
       <!-- Main Quote Container -->
       <div class="max-w-full md:px-12 lg:px-16 text-center">
         <h2 class="text-2xl  md:text-4xl lg:text-5xl font-bold">
-          <div class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent inline-flex items-center flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+          <div
+            class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent inline-flex items-center flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
             <span>"Imagine watching your portfolio</span>
             <img src="/src/assets/svg/growth3.svg" alt="" class="w-8 sm:w-10 md:w-12 lg:w-14 inline-block">
             <span>grow</span>
@@ -31,25 +28,21 @@
 
       <!-- Right Arrow - Visible on all screen sizes -->
       <div class="absolute -right-2 sm:-right-6 md:-right-8 lg:-right-12 bottom-0 mb-16 sm:mb-20 md:mb-24 lg:mb-28">
-        <img 
-          src="/src/assets/svg/growth1.svg" 
-          alt="" 
-          class="w-12 sm:w-16 md:w-20 lg:w-24 hidden md:flex"
-          style="transform: rotate(250deg);"
-        >
+        <img src="/src/assets/svg/growth1.svg" alt="" class="w-12 sm:w-16 md:w-20 lg:w-24 hidden md:flex"
+          style="transform: rotate(250deg);">
       </div>
     </div>
   </div>
-  
+
   <!-- Get Started Button -->
-  <div class="flex justify-center  mb-40  ">
+  <div class="flex justify-center mt-8 lg:mt-16">
     <button
-            class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
-            <div class="content vertical flex justify-center">
-              <div class="text font-semibold text-base">Join Now</div>
-              <div class="hover-text font-semibold  text-base">Get Started</div>
-            </div>
-          </button>
+      class="mt-12 btn btn-anim text-[#F3F8F9] text-sm w-1/2 md:w-1/3 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
+      <div class="content vertical flex justify-center">
+        <div class="text font-semibold text-base">Get Started</div>
+        <div class="hover-text font-semibold  text-base">Join Now</div>
+      </div>
+    </button>
   </div>
 </template>
 

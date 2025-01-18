@@ -1,29 +1,27 @@
 <template>
-  <div class="relative w-[100%] bg h-[95vh]">
+  <div class="relative bg h-[80dvh] md:h-[60dvh] lg:h-[95dvh]">
     <!-- Background Grid Pattern Container -->
-    
 
     <!-- Main Content -->
-
-    <div class="mx-auto px-4 h-full flex items-center ">
-      <div class="flex flex-col lg:flex-row justify-between items-center w-full">
+    <div class="mx-auto px-4 h-full flex items-end">
+      <div class="flex flex-col lg:flex-row justify-between items-center w-full pb-14 md:pb-20 lg:pb-0">
         <!-- Text Content -->
-        <div class="ml-0 xl:ml-10 xl:w-[70%] 2xl:w-[50%] z-10"> 
+        <div class="max-w-3xl z-10 text-center lg:text-left"> 
           
-          <h1 class="text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] "> 
-            <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
-              When Seconds Matter, 
-            </span>
-            <p class="bg-gradient-to-r from-[#00b853] to-[#51c7e6] bg-clip-text text-transparent">We Deliver</p>
+          <h1 class=" text-[35px] md:text-[55px]  font-bold leading-tight pt-24">
+            <span class="inline-block bg-gradient-to-r from-[#00b853] to-[#51c7e6] bg-clip-text text-transparent">
+              When Seconds Matter, <br> We Deliver
+            </span> 
+            
           </h1>
           
-          <p class="text-[#BBB8B8] text-md md:text-xl 2xl:text-xl leading-relaxed tracking-wide mt-6">
+          <p class="text-[#BBB8B8] md:max-w-xl lg:max-w-3xl text-md md:text-xl 2xl:text-xl leading-relaxed tracking-wide mt-6">
             Scalping is all about speed and precision, and our platform is built to match your pace. From lightning-
             fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
 
           <button
-            class="mt-6 btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
+            class="mt-12 btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
             <div class="content vertical flex justify-center">
               <div class="text font-semibold text-base">Get Started</div>
               <div class="hover-text font-semibold  text-base">Join Now</div>
@@ -45,10 +43,15 @@
 <style scoped>
 
 .bg{
-
-background-image:url('/src/assets/img/investorbg4.png');
-background-size: cover;
-background-position: center;
+  background: url('/src/assets/img/investorbg4.png');
+  
+  background-size: cover;
+  background-position: left;
+}
+@media (min-width: 1024px) {
+  .bg {
+    background-position: center;
+  }
 }
 
 .content {

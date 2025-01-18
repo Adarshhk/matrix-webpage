@@ -56,8 +56,14 @@ onMounted(() => {
 <style scoped>
 .slider {
   width: 70%;
-  height: 90vh;
+  height: 40vh;
   perspective: 1000px;
+}
+
+@media (min-width: 1024px) {
+ .slider{
+  height: 90vh;
+ } 
 }
 
 .slider__viewport {

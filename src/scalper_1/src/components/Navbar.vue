@@ -1,8 +1,8 @@
 <template>
-  <nav class="flex justify-between items-center p-2 md:pr-10 w-full z-40 fixed top-0 "
+  <nav class="flex justify-between items-center p-2 md:p-4 w-full z-40 fixed top-0 "
     :class="{ 'bg-gradient-to-b from-[#161a1e] to-[#161a1e]': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
     <!-- Left section -->
-    <div class="flex items-center gap-3 pl-1 xl:pl-5 ">
+    <div class="flex items-center gap-3 pl-2">
       
       <RouterLink to="/">
         <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-28 md:w-40">
@@ -52,7 +52,7 @@
     <Transition name="fade">
       <div v-if="showProductMenu"
         class="left-0 right-0 top-20 bg-black bg-opacity-80 inset-0 fixed z-20 hidden md:block border-t border-[#2F2F2F]">
-        <div class="bg-[#161a1e] p-5 rounded-b-md pb-10">
+        <div class="bg-[#161a1e] p-5 rounded-b-md pb-8">
           <div class="w-full flex justify-between items-center py-4">
             <h2 class="text-white font-bold text-[20px]">Products</h2>
             <button @click="showProductMenu = false"><img src="/src/assets/svg/X.svg" alt="" class="w-4 h-4 mr-3"></button>
@@ -77,7 +77,7 @@
     <!-- Mobile Menu -->
     <Transition name="slide-fade">
       <div v-if="isNavOpen"
-        class="fixed top-16 md:top-20 left-1/2 transform -translate-x-1/2 border-[#2f2f2f] rounded w-[95%] border bg-[#1D2125] z-40 flex flex-col overflow-y-auto text-[16px] pb-32 h-[90vh]">
+        class="fixed top-20 md:top-20 left-1/2 transform -translate-x-1/2 border-[#2f2f2f] rounded w-[95%] border bg-[#1D2125] z-40 flex flex-col overflow-y-auto text-[16px] pb-32 h-[85dvh]">
         <div class="flex flex-col items-start justify-start flex-1 p-4">
           <ul class="flex flex-col items-start gap-6 pt-2 text-[#D6D6D6] w-full">
             <li v-for="item in navItems" :key="item.name"
@@ -121,9 +121,10 @@
         </div>
       </div>
     </Transition>
-    <div class="mr-2">
+    <div class="">
       <button @click="toggleNav" class="lg:hidden">
-        <img :src="isNavOpen ? '/src/assets/svg/X.svg' : '/src/assets/svg/ham.svg'" alt="" class="w-5">
+        <img v-if="isNavOpen" src='/src/assets/svg/X.svg' alt="" class="w-4">
+        <img v-if="!isNavOpen" src='/src/assets/svg/ham.svg' alt="" class="w-7">
       </button>
     </div>
 

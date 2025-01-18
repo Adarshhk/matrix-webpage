@@ -1,15 +1,15 @@
 <template>
-    <div class="mt-32">
+    <div class="mt-24 md:mt-32">
         
-        <div class=" pt-0 2xl:pt-1  w-[95%] mx-auto ">
+        <div class=" pt-0 2xl:pt-1 w-[95%] mx-auto">
             
-            <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white mb-16  mx-auto flex text-center justify-center ">
+            <h2 class="text-[27px] md:text-[34px] 2xl:text-[42px] font-bold text-white mb-8 md:mb-16  mx-auto flex text-center justify-center max-w-xl w-[90%]">
                 Your Roadmap to Effortless Stock Analysis
             </h2>
            
         </div>
 
-        <div class="gap-4 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="gap-8 md:gap-6 mx-auto w-[95%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             <div v-for="user in intendedUsers" class="bg-[#1D2125] relative border text-left border-[#2F2F2F] rounded p-8">
                 <img :src="user.bg" class="absolute top-8 w-52" alt="">
                 <img :src="user.img" alt="" class="w-8 mb-6">

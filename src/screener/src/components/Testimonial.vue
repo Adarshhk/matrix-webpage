@@ -1,9 +1,9 @@
 <template>
-    <div class="mt-32">
+    <div class="mt-24 md:mt-32">
         <div class="text-center">
-            <p class="lg:text-[38px] font-bold mx-auto text-white text-[27px]">Know Why People Trust Us?</p>
+            <p class="lg:text-[38px] font-bold mx-auto max-w-xl w-[80%] text-white text-[27px]">Know Why People Trust Us?</p>
 
-            <p class="font-openSans text-[#BBB8B8] lg:text-[18px] max-w-4xl mx-auto mb-16 mt-8 text-[16px] px-2">Our commitment to innovation, transparency, and delivering results has earned us the trust of traders worldwide. Experience a platform designed with your success in mind.</p>
+            <p class="font-openSans text-[#BBB8B8] lg:text-[16px] max-w-2xl  w-[80%] mx-auto mb-16 mt-8 text-[16px]">Our commitment to innovation, transparency, and delivering results has earned us the trust of traders worldwide. Experience a platform designed with your success in mind.</p>
         </div>
 
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">

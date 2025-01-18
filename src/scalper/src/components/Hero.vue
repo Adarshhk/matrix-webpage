@@ -1,50 +1,56 @@
 <template>
-  <div class="relative w-full h-[95vh]  bg-gradient-to-b from-[#161a1e] via-transparent to-transparent overflow-hidden">
+  <div class="relative w-full  overflow-hidden  ">
     <!-- Background Grid Pattern Container -->
-    <div class="absolute inset-0 flex justify-between -z-10">
+    <div class="absolute inset-0 flex justify-between z-[-2]">
       <!-- Left Grid Pattern -->
       <div class="w-full xl:w-1/3">
-        <img src="/src/assets/img/Grid.png" alt="Background Grid Left"
-          class="w-full h-full object-contain -mt-44 md:-mt-64 xl:mt-0" />
+        <img 
+          src="/src/assets/img/Grid.png" 
+          alt="Background Grid Left"
+          class="w-full h-full object-contain opacity-50" 
+        />
       </div>
 
       <!-- Right Grid Pattern -->
-      <div class="w-1/3">
-        <img src="/src/assets/img/Grid.png" alt="Background Grid Right"
-          class="hidden md:flex w-full h-full object-contain" />
+      <div class="hidden xl:block w-1/3">
+        <img 
+          src="/src/assets/img/Grid.png" 
+          alt="Background Grid Right"
+          class="w-full h-full object-contain opacity-50" 
+        />
       </div>
     </div>
 
-    <div class="mx-auto px-4 h-full flex items-center mt-0 md:mt-10">
-      <div class="flex flex-col lg:flex-row justify-between items-center w-full">
+    <div class="container mx-auto lg:h-screen z-10 ">
+      <div class="flex flex-col lg:flex-row items-center justify-between h-full pt-20 lg:pt-0 ">
         <!-- Text Content -->
-        <div class="ml-0 xl:ml-10 xl:w-[70%] 2xl:w-[50%] z-10">
-
-          <h1
-            class="pt-28 text-[32px] md:text-[48px] 2xl:text-[60px] font-extrabold leading-[35px] md:leading-[55px] xl:leading-[40px] 2xl:leading-[70px] w-[200%]">
-            <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
-              When Seconds Matter,
-            </span>
-            <p class="bg-gradient-to-r from-[#00b853] to-[#51c7e6] bg-clip-text text-transparent">We Deliver</p>
+        <div class="w-full lg:w-1/2  px-4 space-y-8 xl:-mt-20 ml-0 xl:ml-5 mt-10 text-center lg:text-left">
+          <h1 class=" text-[35px] md:text-[55px] font-bold leading-tight">
+            <span class="inline-block bg-gradient-to-r from-[#00b853] to-[#51c7e6] bg-clip-text text-transparent">
+              When Seconds Matter, <br> We Deliver
+            </span> 
+            
           </h1>
 
-          <p class="text-[#BBB8B8] text-[16px] leading-relaxed tracking-wide mt-6 font-openSans">
-            Scalping is all about speed and precision, and our platform is built to match your pace. From lightning-
-            fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
+          <p class="text-[#BBB8B8] text-lg leading-relaxed xl:max-w-2xl">
+            Scalping is all about speed and precision, and our platform is built to match your pace. From lightning-fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
 
-          <button
-            class="mt-10 btn btn-anim text-[#F3F8F9] text-sm w-1/2 max-w-48 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
+          <button class="btn btn-anim bg-[#00B852] text-white px-10 py-3 rounded-full shadow-lg shadow-[#00b8539e] hover:bg-[#00a048] transition-all duration-300">
             <div class="content vertical flex justify-center">
               <div class="text font-semibold text-base">Get Started</div>
-              <div class="hover-text font-semibold  text-base">Join Now</div>
+              <div class="hover-text font-semibold text-base">Join Now</div>
             </div>
           </button>
         </div>
 
-        <!-- Image Container -->
-        <div class="-mt-10 md:-mt-20 z-10">
-          <img src="/src/assets/img/Graphbg.png" alt="Trading Dashboard" class="w-full h-auto xl:flex" />
+        <!-- Graph Image -->
+        <div class="w-full lg:w-1/2 lg:mt-0 p-2 md:p-0 z-[-2]">
+          <img 
+            src="/src/assets/img/graphh.png" 
+            alt="Trading Dashboard" 
+            class=" md:max-w-4xl object-contain xl:mt-32 mt-10 md:mt-0 "
+          />
         </div>
       </div>
     </div>

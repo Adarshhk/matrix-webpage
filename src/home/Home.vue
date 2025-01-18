@@ -2,7 +2,8 @@
     <Hero id="hero" />
     <Why id="why" />
     <Features id="features" />
-    <Media id="media" />
+    <!-- <Media id="media" /> -->
+    <Card/>
     <Pricing id="pricing" />
     <Tutorial />
     <Community />
@@ -20,6 +21,7 @@ import Why from './Why.vue';
 import Community from './Community.vue';
 import Testimonial from './Testimonial.vue';
 import Plans from './Plans.vue';
+import Card from './Card.vue';
 
 
 </script>

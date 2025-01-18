@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center items-center w-full px-4 sm:px-6 md:px-8 lg:px-24 mt-20 md:mt-32">
+  <div class="flex justify-center items-center w-full px-4 sm:px-6 md:px-8 lg:px-24  bg-[#161a1e]">
     <div class="relative max-w-[1200px] w-full flex items-center justify-center">
       <!-- Left Arrow - Closer positioning -->
       <div class="absolute -left-2 sm:-left-6 top-0  md:-left-6 lg:-left-8 mt-20 sm:mt-24 md:mt-28 lg:mt-32">
@@ -36,7 +36,7 @@
   </div>
 
   <!-- Get Started Button -->
-  <div class="flex justify-center mt-10 "> ">
+  <div class="flex justify-center mt-14 mb-40"> ">
     <button
       class="btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
       <div class="content vertical flex justify-center">
