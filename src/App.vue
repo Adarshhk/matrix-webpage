@@ -5,19 +5,16 @@
     <FAQ />
     <!-- <Footer /> -->
      <Footer/>
-    <Card/>
-
   </template>
   
   <script setup>
   import { RouterView } from 'vue-router';
-  import Navbar from './scalper/src/components/Navbar.vue';
   import FAQ from './component/FAQ.vue';
 
   import Promotion from './component/Promotion.vue';
   import MouseEffect from './component/MouseEffect.vue';
-import Card from './component/Card.vue';
 import Footer from './investor/src/components/Footer.vue';
+import Navbar from './component/Navbar.vue';
 
   </script>
   
