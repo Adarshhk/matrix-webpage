@@ -17,12 +17,12 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-
+import img1 from '/src/assets/img/heroimg.png'
 const images = ref([
-  { id: 1, url: '/src/assets/img/heroimg.png', alt: 'Image 1' },
-  { id: 2, url: '/src/assets/img/heroimg.png', alt: 'Image 2' },
-  { id: 3, url: '/src/assets/img/heroimg.png', alt: 'Image 3' },
-  { id: 4, url: '/src/assets/img/heroimg.png', alt: 'Image 4' },
+  { id: 1, url: img1, alt: 'Image 1' },
+  { id: 2, url: img1, alt: 'Image 2' },
+  { id: 3, url: img1, alt: 'Image 3' },
+  { id: 4, url: img1, alt: 'Image 4' },
 ]);
 
 const currentIndex = ref(0);

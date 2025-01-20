@@ -241,13 +241,16 @@ onUnmounted(() => {
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
 import { scroll, animate } from 'motion';
+import homecard1 from '/src/assets/img/homecard1.png'
+import manualicon from '/src/assets/svg/manual.svg'
+import homecard2 from '/src/assets/img/homecard2.png'
 
 const tradeCardsWrapper = ref(null);
 const tradeCards = ref([
   { 
     id: 1, 
     title: 'Manual Trade', 
-    icon: '/src/assets/svg/manual.svg', 
+    icon: manualicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
@@ -255,12 +258,12 @@ const tradeCards = ref([
       'Get insights of what you achieved today'
     ], 
     description: "Top-grade information makes a world of difference to a trader. That's why we work with the best institutional data partners on the world's most famous street, and far far beyond it.", 
-    image: '/src/assets/img/homecard1.png'
+    image: homecard1
   },
   { 
     id: 2, 
     title: 'Trade Card Two', 
-    icon: '/src/assets/svg/manualtrading.svg', 
+    icon: manualicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
@@ -268,12 +271,12 @@ const tradeCards = ref([
       'Get insights of what you achieved today'
     ], 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
-    image: '/src/assets/img/homecard2.png'
+    image: homecard2
   },
   { 
     id: 3, 
     title: 'Trade Card Three', 
-    icon: '/src/assets/svg/manualtrading.svg', 
+    icon: manualicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
@@ -281,12 +284,12 @@ const tradeCards = ref([
       'Get insights of what you achieved today'
     ], 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
-    image: '/src/assets/img/homecard1.png'
+    image: homecard1
   },
   { 
     id: 4, 
     title: 'Trade Card Four', 
-    icon: '/src/assets/svg/manualtrading.svg', 
+    icon: manualicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
@@ -294,7 +297,7 @@ const tradeCards = ref([
       'Get insights of what you achieved today'
     ], 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
-    image: '/src/assets/img/homecard1.png'
+    image: homecard1
   }
 ]);
 
