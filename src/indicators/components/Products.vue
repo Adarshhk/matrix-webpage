@@ -36,7 +36,7 @@
 <script setup>
 
 import { ref, computed } from "vue";
-
+import graphimg from '/src/assets/img/trade.png'
 
 const active = ref("Large Cap Stocks");
 const plans = ["Large Cap Stocks", "Perfect Sell (short)", "Profit Jump by 200%", "Low debt companies"];
@@ -53,32 +53,32 @@ const getButtonClass = (plan) => ({
 
 const indicators = [
     {
-        img: '/src/assets/img/trade.png',
+        img: graphimg,
         title: 'Smoothed Gaussian Trend Filter [AlgoAlpha]',
         description: 'Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!'
     },
     {
-        img: '/src/assets/img/trade.png',
+        img: graphimg,
         title: 'Smoothed Gaussian Trend Filter [AlgoAlpha]',
         description: 'Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!'
     },
     {
-        img: '/src/assets/img/trade.png',
+        img: graphimg,
         title: 'Smoothed Gaussian Trend Filter [AlgoAlpha]',
         description: 'Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!'
     },
     {
-        img: '/src/assets/img/trade.png',
+        img: graphimg,
         title: 'Smoothed Gaussian Trend Filter [AlgoAlpha]',
         description: 'Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!'
     },
     {
-        img: '/src/assets/img/trade.png',
+        img: graphimg,
         title: 'Smoothed Gaussian Trend Filter [AlgoAlpha]',
         description: 'Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!'
     },
     {
-        img: '/src/assets/img/trade.png',
+        img: graphimg,
         title: 'Smoothed Gaussian Trend Filter [AlgoAlpha]',
         description: 'Experience seamless trend detection and market analysis with the Smoothed Gaussian Trend Filter by AlgoAlpha!'
     }
