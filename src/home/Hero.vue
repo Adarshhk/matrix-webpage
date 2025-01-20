@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center relative  w-[95%] mx-auto">
+  <div class="text-center relative mx-auto">
     <!-- Grid Background -->
     <div class="grid-background hidden lg:block">
       <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
@@ -60,9 +60,19 @@
           simplify strategies and amplify possibilities— make every decision a step towards your success.
         </p>
       </div>
-      <div class="md:my-5">
-        <AnimatedHero :images="[heroimg, heroimg, heroimg, heroimg]" :radius="rad" />
+      <!-- <div class="md:my-5">
+        <div class="flex">
+          <img src="/src/assets/img/homehero2.png" alt="" class="absolute bottom-0 left-0 z-[-1] w-[70vh]">
+          <img src="/src/assets/img/homehero1.png" alt="" class="absolute bottom-0 right-0 z-[-1] w-[95vh]">
 
+        </div>
+        <img src="/src/assets/img/homehero2.png" alt="absolute top-0 right-0 z-[-1]">
+        <AnimatedHero :images="[heroimg, heroimg, heroimg, heroimg]" :radius="rad" />
+        
+      </div> -->
+      <div class="lg:mt-16 mt-4">
+
+        <AnimatedHero2 />
       </div>
       <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
       <swiper :slidesPerView="3" :spaceBetween="0" :centeredSlides="true" :autoplay="{
@@ -89,6 +99,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { computed, ref, watch } from 'vue';
 import AnimatedHero from './utils/AnimatedHero.vue';
+import AnimatedHero2 from './utils/AnimatedHero2.vue';
 
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];
@@ -129,6 +140,14 @@ const features = [
 .grid-background {
   display: none;
   /* Default: hide the grid on all screen sizes */
+}
+
+.bg{
+
+  background-image: url('/src/assets/img/homebg1.png');
+  background-position: center;
+  background-size: cover;
+
 }
 
 .inner-headings {

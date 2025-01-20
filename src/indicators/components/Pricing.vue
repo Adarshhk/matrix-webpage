@@ -1,13 +1,5 @@
 <template>
-    <div class="w-full flex justify-center -mt-7">
-        <div class="flex justify-between border border-[#00B852] bg-[#161A1E] max-w-3xl rounded-3xl py-3 px-6">
-            <div class="flex gap-2 items-center">
-                <img src="/src/assets/img/play.png" alt="Play Icon" class="w-5 h-5" />
-                <p class="text-white text-[14px] md:text-[16px] font-openSans">Know How to use screener?</p>
-                <a href="#" class="text-[#E3E093] text-[14px] md:text-[16px] underline font-openSans">Watch Now</a>
-            </div>
-        </div>
-    </div>
+
 
     <div class="text-center mt-24 lg:mt-32 w-[95%] mx-auto">
         <h2
@@ -29,7 +21,7 @@
             </div>
             <!-- Image on the right -->
             <img src="/src/assets/svg/savemore.svg" alt="Info Icon"
-                class="absolute right-[-55px] md:right-[-100px] top-3 md:top-6 transform -translate-y-1/2 w-28 md:w-32 -rotate-12 md:rotate-0" />
+                class="absolute right-[-45px] md:right-[-100px] top-3 md:top-6 transform -translate-y-1/2 w-28 md:w-32 -rotate-[24deg] md:rotate-0" />
         </div>
 
 
@@ -110,24 +102,21 @@
 </template>
 
 
-<script>
+<script setup>
 import { ref, computed } from "vue";
 
-export default {
-    setup() {
-        const active = ref("Monthly");
-        const plans = ["Monthly", "Quarterly", "Yearly"];
 
-        const toggleActive = (name) => {
-            active.value = name;
-        };
+const active = ref("Monthly");
+const plans = ["Monthly", "Quarterly", "Yearly"];
 
-        const getButtonClass = (plan) => ({
-            "text-white font-semibold bg-[#00B852] ": active.value === plan,
-            "text-[#F9F2F2] ": active.value !== plan,
-        });
-
-        return { active, plans, toggleActive, getButtonClass };
-    },
+const toggleActive = (name) => {
+    active.value = name;
 };
+
+const getButtonClass = (plan) => ({
+    "text-white font-semibold bg-[#00B852] ": active.value === plan,
+    "text-[#F9F2F2] ": active.value !== plan,
+});
+
+
 </script>

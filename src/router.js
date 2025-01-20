@@ -7,6 +7,7 @@ import Investor from './investor/src/Investor.vue';
 import Webhook from './webhook/Webhook.vue';
 import Blogs from './blogs/Blogs.vue';
 import About from './aboutus/About.vue';
+import Indicators from './indicators/Indicators.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -17,6 +18,7 @@ const routes = [
   { path : '/webhook' , component : Webhook},
   { path : '/about' , component : About},
   { path : '/blogs' , component : Blogs},
+  { path : '/indicator' , component : Indicators}
 
 ]
 

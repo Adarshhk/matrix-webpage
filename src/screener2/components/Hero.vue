@@ -17,19 +17,19 @@
 
         </div> -->
 
-        <div class="grid grid-cols-1 lg:grid-cols-2 w-[95%] mx-auto lg:h-[85vh]">
-            <div class="flex flex-col justify-end mt-16 lg:mt-0 text-center lg:text-left">
+        <div class="grid grid-cols-1 lg:grid-cols-2 w-[95%] mx-auto">
+            <div class="flex flex-col justify-end mt-16 2xl:mt-0 text-center lg:text-left">
                 <h2
-                    class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-[38px] font-extrabold mb-6">
+                    class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-[27px] lg:text-[38px] font-extrabold mb-6">
                     Here’s How Screener Can Help You</h2>
-                <p class="text-[#BBB8B8] text-[18px] max-w-3xl mb-5">
+                <p class="text-[#BBB8B8] text-[16px] lg:text-[18px] max-w-3xl mb-5">
                     Navigating the stock market can be overwhelming, but Screener simplifies the process. Whether you’re
                     a beginner or a seasoned investor, our tools are designed to help you make informed decisions and
                     find the best opportunities in the market.
                 </p>
 
                 <div class="mt-3">
-                    <div class="flex items-start gap-3 mb-5">
+                    <div class="flex items-start gap-3 mb-5 ">
                         <img src="/src/assets/svg/cloud.svg" alt="">
                         <div>
                             <h3 class="text-white font-bold text-[18px] text-left">Real-Time Data</h3>
@@ -71,7 +71,7 @@
 
             </div>
             <div class="grid-cols-1">
-                <img src="/src/assets/img/screenerhero.png" alt="">
+                <img src="/src/assets/img/screenerhero.png" alt="" class="-mt-12 lg:mt-0">
             </div>
         </div>
     </div>
