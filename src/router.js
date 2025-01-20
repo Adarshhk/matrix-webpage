@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from './home/Home.vue';
 import Scalper from './scalper/src/Scalper.vue';
 import Trader from './traders/src/Trader.vue';
-import Screener from './screener/src/Screener.vue';
+import Screener from './screener2/Screener.vue';
 import Investor from './investor/src/Investor.vue';
 import Webhook from './webhook/Webhook.vue';
 import Blogs from './blogs/Blogs.vue';

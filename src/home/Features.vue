@@ -18,14 +18,14 @@
 <script setup>
 import { Vue3Marquee } from 'vue3-marquee';
 const brokerImages=  [
-        { src: '/src/assets/img/broker/broker (1).png', alt: 'Broker 1' },
-        { src: '/src/assets/img/broker/broker (1).webp', alt: 'Broker 1' },
-        { src: '/src/assets/img/broker/broker (2).png', alt: 'Broker 2' },
+        { src: '/broker/broker (1).png', alt: 'Broker 1' },
+        { src: '/broker/broker (1).webp', alt: 'Broker 1' },
+        { src: '/broker/broker (2).png', alt: 'Broker 2' },
         
-        { src: '/src/assets/img/broker/broker (3).png', alt: 'Broker 3' },
-        { src: '/src/assets/img/broker/broker (4).png', alt: 'Broker 4' },
-        { src: '/src/assets/img/broker/broker (5).png', alt: 'Broker 5' },
-        { src: '/src/assets/img/broker/broker (6).png', alt: 'Broker 6' },
+        { src: '/broker/broker (3).png', alt: 'Broker 3' },
+        { src: '/broker/broker (4).png', alt: 'Broker 4' },
+        { src: '/broker/broker (5).png', alt: 'Broker 5' },
+        { src: '/broker/broker (6).png', alt: 'Broker 6' },
       ]
 
 
