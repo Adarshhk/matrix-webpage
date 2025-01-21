@@ -30,7 +30,7 @@
 
 </script>
 
-<style setup>
+<style scoped>
 
 .bg{
     background-image: url('/src/assets/img/screenerhow.png');

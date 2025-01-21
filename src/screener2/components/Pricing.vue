@@ -68,7 +68,7 @@
                 class="border col-span-10 lg:col-span-6 bg-[#1D2125] rounded-lg border-[#FFF5A8] border-t-[16px] text-center">
                 <div class="bg-[#FFF5A8] rounded-b-xl">
                     <h2
-                        class="text-[18px] rounded-t-xl font-openSans text-white font-bold py-6 tracking-widest border border-[#2f2f2f] bg-[#1d2125]">
+                        class="text-[18px] rounded-t-xl font-openSans text-white font-bold py-6 tracking-widest border-b border-[#2f2f2f] bg-[#1d2125]">
                         STANDARD</h2>
                 </div>
 

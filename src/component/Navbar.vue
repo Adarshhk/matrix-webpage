@@ -163,7 +163,7 @@ const productItems = [
     title: 'Manual Trade',
     description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
     icon: icon4,
-    path: "/trader"
+    path: "/manualtrade"
   },
   {
     title: 'Signals',
