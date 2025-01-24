@@ -34,10 +34,10 @@
                 <p class="mb-4">We strongly encourage our visitors and potential clients to:</p>
                 <ul class="list-disc pl-6 space-y-2">
                     <li>Review all information regarding our services and the support we provide to clients.</li>
-                    <li>Familiarize themselves with our <a href="#" class="text-blue-600 underline">Terms and
+                    <li>Familiarize themselves with our <a href="#" class="text-[#00b852] underline">Terms and
                             Conditions</a>.</li>
-                    <li>Read our <a href="#" class="text-blue-600 underline">Privacy Policy</a> and <a href="#"
-                            class="text-blue-600 underline">Refund Policy</a>.</li>
+                    <li>Read our <a href="#" class="text-[#00b852] underline">Privacy Policy</a> and <a href="#"
+                            class="text-[#00b852] underline">Refund Policy</a>.</li>
                     <li>Understand that refunds are not possible under any circumstances.</li>
                 </ul>
             </div>
