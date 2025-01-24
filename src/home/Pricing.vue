@@ -100,19 +100,19 @@ const details = [
     {
         title: 'Expert Support',
         img: img1,
-        description: 'Get expert help for setup, troubleshooting, and strategy optimization anytime.',
+        description: 'Receive personalized assistance from specialists for setup, troubleshooting, and strategy optimization, ensuring you’re always supported.',
         btn: 'Schedule a call'
     },
     {
         title: 'Free Demo',
         img: img2,
-        description: 'Explore features and test strategies risk-free to build confidence before live trading.',
+        description: 'A risk-free demo allows you to test strategies, explore features, and gain confidence before diving into live trading.',
         btn: 'Get Started'
     },
     {
         title: 'Live Sessions',
         img: img3,
-        description: 'Attend real-time webinars for tips, insights, and skill enhancement in trading.',
+        description: 'You get access to real-time webinars and workshops with expert insights, tips, and strategy refinements to enhance your trading skills.',
         btn: 'Book a Webinar'
     }
 ]
