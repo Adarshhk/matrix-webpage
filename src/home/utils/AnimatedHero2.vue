@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-screen flex items-center justify-center overflow-hidden">
-    <div class="relative w-full max-w-6xl aspect-square overflow-visible">
+  <div class="w-full h-[35vh] md:h-[60vh] p-6 xl:h-[80vh] flex items-center justify-center xl:overflow-visible overflow-hidden">
+    <div class="relative w-full max-w-4xl aspect-square overflow-visible">
       <TransitionGroup name="carousel" tag="div" class="relative h-full">
         <div
           v-for="(image, index) in images"
@@ -8,7 +8,7 @@
           class="absolute top-0 left-0 w-full h-full transition-all duration-500 ease-in-out"
           :style="getImageStyle(index)"
         >
-          <img :src="image.url" :alt="image.alt" class="w-full h-full object-contain rounded-lg " />
+          <img :src="image.url" :alt="image.alt" class="h-full object-contain rounded-3xl " />
         </div>
       </TransitionGroup>
     </div>
@@ -17,12 +17,15 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import img1 from '/src/assets/img/heroimg.png'
+import hero1 from '/src/assets/img/hero/hero (1).webp'
+import hero2 from '/src/assets/img/hero/hero (2).webp'
+import hero3 from '/src/assets/img/hero/hero (3).webp'
+import hero4 from '/src/assets/img/hero/hero (4).webp'
 const images = ref([
-  { id: 1, url: img1, alt: 'Image 1' },
-  { id: 2, url: img1, alt: 'Image 2' },
-  { id: 3, url: img1, alt: 'Image 3' },
-  { id: 4, url: img1, alt: 'Image 4' },
+  { id: 1, url: hero1, alt: 'Image 1' },
+  { id: 2, url: hero2, alt: 'Image 2' },
+  { id: 3, url: hero3, alt: 'Image 3' },
+  { id: 4, url: hero4, alt: 'Image 4' },
 ]);
 
 const currentIndex = ref(0);

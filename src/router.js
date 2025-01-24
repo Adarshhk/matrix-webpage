@@ -9,6 +9,11 @@ import Blogs from './blogs/Blogs.vue';
 import About from './aboutus/About.vue';
 import Indicators from './indicators/Indicators.vue';
 import ManualTrade from './manualtrade/ManualTrade.vue';
+import Disclosure from './termsandcondition/disclosure/Disclosure.vue';
+import TermsandCondition from './termsandcondition/t&c/TermsandCondition.vue';
+import Disclaimer from './termsandcondition/disclaimer/Disclaimer.vue';
+import RefundPolicy from './termsandcondition/refundpolicy/RefundPolicy.vue';
+import PrivacyPolicy from './termsandcondition/privacypolicy/PrivacyPolicy.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -21,6 +26,11 @@ const routes = [
   { path : '/blogs' , component : Blogs},
   { path : '/indicator' , component : Indicators},
   { path : '/manualtrade' , component : ManualTrade},
+  { path : '/disclosure' , component : Disclosure},
+  { path : '/t&c' , component : TermsandCondition},
+  { path : '/disclaimer' , component : Disclaimer},
+  { path : '/refund-policy' , component : RefundPolicy},
+  { path : '/privacy-policy' , component : PrivacyPolicy},
 
 ]
 

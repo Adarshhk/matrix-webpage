@@ -1,22 +1,21 @@
 <template>
-  <nav class="flex justify-between items-center p-2 md:p-4 w-full z-40 fixed top-0"
+  <nav class="flex justify-between items-center p-2 md:p-4 md:px-24 w-full z-50 fixed top-0"
     :class="{ 'bg-gradient-to-b from-[#161a1e] to-[#161a1e]': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
     <!-- Left section -->
-    <div class="flex items-center gap-3 pl-2">
-      <RouterLink to="/">
-        <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-28 md:w-40">
-      </RouterLink>
-      <img src="/src/assets/svg/sebii.svg" alt="" class="w-44">
-    </div>
+    <RouterLink to="/">
+      <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-28 md:w-32">
+    </RouterLink>
+
 
     <!-- Desktop Menu -->
     <div class="lg:flex items-center justify-end flex-1 gap-6 hidden">
-      <ul class="flex items-center gap-12 text-[16px] text-[#D6D6D6]">
+      <ul class="flex items-center gap-8 text-sm text-[#D6D6D6]">
         <li v-for="item in navItems" :key="item.name"
           class="cursor-pointer transition-all duration-200 hover:text-white relative"
           :class="{ 'text-white': activeItem === item.name }"
-          @click="handleNavigation(item)">
-          <a class="flex items-center gap-1 font-openSans">
+          @mouseenter="item.name === 'Product' ? handleProductMouseEnter() : null"
+          @mouseleave="item.name === 'Product' ? handleProductMouseLeave() : null">
+          <a class="flex items-center gap-2 font-openSans">
             {{ item.name }}
             <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg"
               class="transition-all duration-150 w-4 h-4 rotate-180"
@@ -26,7 +25,7 @@
       </ul>
 
       <a href="https://app.hifiinvesting.com/" target="_blank"
-        class="text-[#F3F8F9] btn btn-anim text-sm px-6 py-3 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
+        class="text-[#F3F8F9] btn btn-anim text-sm px-6 py-2 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
         <div class="content vertical flex justify-center">
           <div class="text font-openSans">Sign Up / Login</div>
           <div class="hover-text font-openSans">Sign Up / Login</div>
@@ -36,25 +35,34 @@
 
     <!-- Product Dropdown (Desktop) -->
     <Transition name="fade">
-      <div v-if="showProductMenu"
-        class="left-0 right-0 top-20 bg-black bg-opacity-80 inset-0 fixed z-20 hidden md:block border-t border-[#2F2F2F]">
-        <div class="bg-[#161a1e] p-5 rounded-b-md pb-8">
-          <div class="w-full flex justify-between items-center py-4">
-            <h2 class="text-white font-bold text-[20px]">Products</h2>
-            <button @click="closeProductMenu"><img src="/src/assets/svg/X.svg" alt="" class="w-4 h-4 mr-3"></button>
-          </div>
-          <div class="grid grid-cols-3 gap-8">
-            <button v-for="item in productItems" :key="item.title"
-              class="p-2 py-4 flex rounded-md gap-6 border border-[#1a1a1a] items-start hover:border-[#2F2F2F] hover:bg-[#1D2125] transition-all duration-200 justify-start hover:scale-105"
-              @click="handleProductClick(item.path)">
+      <div v-if="showProductMenu" class="left-0 right-0 top-16 inset-0 fixed hidden md:block "
+        @mouseenter="handleProductMouseEnter">
+        <div @mouseleave="handleProductMouseLeave"
+          class="bg-[#161a1e] p-5 pt-4 rounded-b-md pb-8 max-w-[1280px] mx-auto mt-4 rounded">
+          <h2 class="text-white font-bold text-[20px]">Products</h2>
+          <hr class="h-px my-4 border-0  bg-[#373636] bg-opacity-50">
+          <div class="grid grid-cols-3 gap-8 ">
+            <div v-for="(item, index) in productItems" :key="item.title"
+              class="p-2 py-4 flex gap-6 items-start group justify-start"
+              :class="{ 'border-r border-[#373636] border-opacity-50 relative': index != 3 || index != 5, }"
+              >
               <img :src="item.icon" alt="" class="">
               <div class="text-left">
                 <h2 class="text-white text-[16px] font-semibold">{{ item.title }}</h2>
-                <p class="text-[#D6D6D6] text-[14px] font-openSans mt-3">
-                  {{ item.description }}
+                <p class="text-[#D6D6D6] text-[14px] font-openSans mt-1 ">                 
+                    {{ item.description }}
                 </p>
+                
+                <div class="inset-0 backdrop-blur-sm absolute group-hover:opacity-100 opacity-0 left-0 bottom-0  text-sm font-semibold mt-2 transition-all flex justify-center items-center">
+                  <button @click="handleProductClick(item.path)" class="text-[#161A1E] bg-white px-8 py-1 rounded-full">
+                    
+                    know more
+                  </button>
+                </div>
+                
               </div>
-            </button>
+            </div>
+
           </div>
           <img src="/src/assets/img/productbanner.png" alt="" class="mt-6">
         </div>
@@ -79,7 +87,8 @@
                 <div v-if="showMobileProductMenu && item.name === 'Product'">
                   <ul class="mt-4">
                     <li v-for="product in productItems" :key="product.title" class="mb-2 py-2 w-full">
-                      <button @click="handleProductClick(product.path)" class="flex gap-2 justify-start border-[#2f2f2f]">
+                      <button @click="handleProductClick(product.path)"
+                        class="flex gap-2 justify-start border-[#2f2f2f]">
                         <div class="mt-1">
                           <img :src="product.icon" alt="" class="w-10">
                         </div>
@@ -137,37 +146,37 @@ const navItems = [
 const productItems = [
   {
     title: 'Screener',
-    description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
+    description: 'Discover trading opportunities quickly.',
     icon: icon6,
     path: "/screener"
   },
   {
     title: 'Indicator',
-    description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
+    description: ' Decode trends with smart insights.',
     icon: icon1,
     path: "/indicator"
   },
   {
     title: 'Algo Trading',
-    description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
+    description: 'Automate strategies for smarter trading.',
     icon: icon2,
     path: "/screener"
   },
   {
     title: 'Webhook',
-    description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
+    description: 'Automate workflows with seamless integration.',
     icon: icon3,
     path: "/webhook"
   },
   {
     title: 'Manual Trade',
-    description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
+    description: 'Execute trades your way, confidently.',
     icon: icon4,
     path: "/manualtrade"
   },
   {
     title: 'Signals',
-    description: 'Lorem ipsum dolor sit amet consectetur. Et males usda lacinia consectetur in aliquet.',
+    description: 'Act fast with real-time expert signals.',
     icon: icon5,
     path: "/signals"
   },
@@ -179,6 +188,7 @@ const activeItem = ref('Home')
 const isNavOpen = ref(false)
 const showProductMenu = ref(false)
 const showMobileProductMenu = ref(false)
+const isHoveringProduct = ref(false);
 
 // Navigation handlers
 const handleNavigation = (item) => {
@@ -187,7 +197,7 @@ const handleNavigation = (item) => {
     isNavOpen.value = false
     return
   }
-  
+
   navigateToPath(item.path)
   updateNavigationState(item.name)
 }
@@ -197,7 +207,7 @@ const handleMobileNavClick = (item) => {
     showMobileProductMenu.value = !showMobileProductMenu.value
     return
   }
-  
+
   navigateToPath(item.path)
   updateNavigationState(item.name)
 }
@@ -205,6 +215,24 @@ const handleMobileNavClick = (item) => {
 const handleProductClick = (path) => {
   navigateToPath(path)
   closeAllMenus()
+}
+
+const handleProductMenuLeave = () => {
+  setTimeout(() => {
+    if (!isHoveringProduct.value) {
+      showProductMenu.value = false;
+    }
+  }, 100);
+}
+
+const handleProductMouseEnter = () => {
+  isHoveringProduct.value = true;
+  showProductMenu.value = true;
+}
+
+const handleProductMouseLeave = () => {
+  isHoveringProduct.value = false;
+  handleProductMenuLeave();
 }
 
 // Helper functions
@@ -222,10 +250,6 @@ const closeAllMenus = () => {
   isNavOpen.value = false
   showMobileProductMenu.value = false
   resetBodyOverflow()
-}
-
-const closeProductMenu = () => {
-  showProductMenu.value = false
 }
 
 const toggleNav = () => {
@@ -300,18 +324,18 @@ a:hover .vertical .text {
 
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 
 .slide-fade-enter-active,
 .slide-fade-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.1s ease, transform 0.1s ease;
 }
 
 .slide-fade-enter-from,
@@ -322,7 +346,7 @@ a:hover .vertical .text {
 
 .slide-down-enter-active,
 .slide-down-leave-active {
-  transition: all 0.3s ease-out;
+  transition: all 0.1s ease-out;
   max-height: 1000px;
 }
 

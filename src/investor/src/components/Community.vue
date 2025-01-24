@@ -3,7 +3,7 @@
 <template>
     
     <div class="bg-[#00B852]  w-[95%] rounded-lg mt-24 mx-auto px-16 flex flex-wra items-center lg:justify-between justify-center h-[60vh]">
-        <div class="max-w-3xl">
+        <div class="">
             <h2 class="text-3xl md:text-[38px] font-bold text-white">
                 Join our Matrix Community
             </h2>

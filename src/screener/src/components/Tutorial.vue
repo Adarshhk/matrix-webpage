@@ -16,7 +16,7 @@
                 <h2 class="text-white text-[24px] font-bold mb-6">
                     {{ user.name }}
                 </h2>
-                <p class="text-[#7F7F7F] max-w-96 text-[18px]">
+                <p class="text-[#dfdfdf] max-w-96 text-[18px]">
                     {{ user.description }}
                 </p>
             </div>

@@ -9,7 +9,7 @@
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">
             <div v-for="user in testimonials" class="bg-[#1D2125] min-w-96 lg:w-1/3 border text-left border-[#2F2F2F] rounded p-8">
                 
-                <p class="text-[#7F7F7F] max-w-96 text-[18px]">
+                <p class="text-[#dfdfdf] max-w-96 text-[18px]">
                     {{ user.description }}
                 </p>
                 <div class="flex items-center gap-4 mt-10">
@@ -22,15 +22,25 @@
         </div> -->
 
         <Vue3Marquee :duration="80" :gradient="true" :gradientColor="[22, 26, 30, 1]" >
-            <div v-for="user in testimonials" class="bg-[#1D2125] min-w-80 lg:w-1/3 border text-left border-[#2F2F2F] rounded p-8 mx-4">
-                <p class="text-[white] max-w-96 text-sm lg:text-[16px] font-openSans">
+            <div v-for="user in testimonials" class=" min-w-80 lg:w-1/3  text-left border-[#2F2F2F] rounded p-8 mx-4 flex flex-col items-start space-y-4 ">
+                
+                <img src="/src/assets/svg/comma.svg" alt="" class="w-16">
+                <p class="text-[#dfdfdf] max-w-96 text-sm lg:text-[16px] font-openSans">
                     {{ user.description }}
                 </p>
-                <div class="mt-10">
-                    <h2 class="text-white font-bold text-sm lg:text-[16px]">
+                
+                
+                <div class="flex gap-3 border-t border-[#2F2F2F] w-full">
+                    <h2 class=" pt-4 text-white font-bold text-sm lg:text-[16px] text-nowrap">
                         {{ user.name }}
-                    </h2>
+                    </h2>   
+                    <div class=" h-12">
+
+                        <LottieComponent animationPath="/json/5star.json" />
+                    </div>
                 </div>
+                
+                
             </div>
         </Vue3Marquee>
         
@@ -40,6 +50,7 @@
 <script setup>
 import { Vue3Marquee } from 'vue3-marquee';
 import profile from '/src/assets/img/prof.png';
+import LottieComponent from './utils/LottieComponent.vue';
 
 const testimonials = [
     { 
@@ -88,5 +99,7 @@ const testimonials = [
 </script>
 
 <style>
+
+
 
 </style>

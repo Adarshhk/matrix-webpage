@@ -8,12 +8,15 @@
 
     <!-- Main Content -->
 
-    <div class="pt-24  text-center ">
-      
+    <div class="lg:pt-24  text-center ">
+
       <div class=" flex justify-center mt-24">
-        <p class=" border rounded-3xl font-semibold  border-[#FFCA28] px-2 py-1 text-[14px] bg-gradient-to-b from-[#FFCA28] to-[#997918] bg-clip-text 
-      text-transparent">#1 &nbsp; One stop solution for your Trading needs</p>
+        <p class=" border rounded-3xl font-semibold border-[#FFCA28] px-2 py-1 text-[11px] text-[#FFCA28] bg-[#FFCA28] bg-opacity-10">#1 One stop solution for your Trading needs</p>
       </div>
+      <!-- <div class="flex  justify-center items-center gap-2 mt-4">
+        <Odometer/>
+        <p class="text-[white]">User Joined</p>
+      </div> -->
       <div class="outer-heading ">
         <h1 class=" outer-heading text-[27px] md:text-[55px] max-w-3xl font-bold 
       bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
@@ -55,12 +58,21 @@
         </div> -->
 
 
-        <p class="text-[#BBB8B8] text-[1rem] max-w-4xl mx-auto md:mt-8 w-[90%] font-openSans">
-          Empowering your trading journey with advanced solutions. From seamless automation to innovative tools, we
-          simplify strategies and amplify possibilities— make every decision a step towards your success.
-        </p>
-      </div>
-      <!-- <div class="md:my-5">
+      <p class="text-[#dfdfdf] text-[1rem] max-w-4xl mx-auto md:mt-8 w-[90%] font-openSans ">
+        Empowering your trading journey with advanced solutions. From seamless automation to innovative tools, we
+        simplify strategies and amplify possibilities— make every decision a step towards your success.
+      </p>
+      <button
+        class=" mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48">
+        <div class="content vertical flex justify-center">
+          <div class="text font-semibold text-base font-openSans">Get Started</div>
+          <div class="hover-text font-semibold  text-base font-openSans">Get Started</div>
+        </div>
+      </button>
+
+      
+    </div>
+    <!-- <div class="md:my-5">
         <div class="flex">
           <img src="/src/assets/img/homehero2.png" alt="" class="absolute bottom-0 left-0 z-[-1] w-[70vh]">
           <img src="/src/assets/img/homehero1.png" alt="" class="absolute bottom-0 right-0 z-[-1] w-[95vh]">
@@ -70,11 +82,18 @@
         <AnimatedHero :images="[heroimg, heroimg, heroimg, heroimg]" :radius="rad" />
         
       </div> -->
-      <div class="lg:mt-16 mt-4">
+    <div class="mt-8 lg:mt-16 relative ">
 
-        <AnimatedHero2 />
+      <AnimatedHero2 />
+      <div
+        class="hidden lg:block absolute bg-gradient-to-t from-[#161a1e] via-[#161a1e] to-transparent h-[40vh] w-full z-40 bottom-0">
+
       </div>
-      <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
+      <div
+        class="block lg:hidden absolute bg-gradient-to-t from-[#161a1e] via-[#161a1e] to-transparent h-[10vh] w-full z-40 bottom-0">
+      </div>
+    </div>
+    <!-- <div class="h-[50vh] md:h-[80vh] lg:h-[110vh] ">
       <swiper :slidesPerView="3" :spaceBetween="0" :centeredSlides="true" :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
@@ -85,7 +104,7 @@
         </swiper-slide>
       </swiper>
     </div> -->
-    </div>
+  </div>
 </template>
 
 <script setup>
@@ -100,6 +119,7 @@ import "swiper/css/pagination";
 import { computed, ref, watch } from 'vue';
 import AnimatedHero from './utils/AnimatedHero.vue';
 import AnimatedHero2 from './utils/AnimatedHero2.vue';
+import Odometer from '../component/Odometer.vue';
 
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];
@@ -142,7 +162,7 @@ const features = [
   /* Default: hide the grid on all screen sizes */
 }
 
-.bg{
+.bg {
 
   background-image: url('/src/assets/img/homebg1.png');
   background-position: center;
@@ -223,83 +243,33 @@ const features = [
   }
 }
 
-
-
-.swiper-container {
+.content {
   position: relative;
   overflow: hidden;
-  width: 100%;
-}
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
-  position: relative;
+  text-align: center;
 
 }
 
-.slide-image {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  transition: all 0.5s ease;
+.text,
+.hover-text {
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.swiper-slide-active {
-  z-index: 2;
-
+.vertical .text,
+.vertical .hover-text {
+  transform: translateY(0%);
 }
 
-.swiper-slide-active .slide-image {
-  height: 90%;
-  width: auto;
-  max-width: none;
-
+.hover-text {
+  position: absolute;
 }
 
-.swiper-slide-prev,
-.swiper-slide-next {
-  z-index: 1;
-  opacity: 0.3;
-
-
+.vertical .hover-text {
+  bottom: -100%;
 }
 
-
-@media (max-width: 1024px) {
-  .swiper-container {
-    height: 70vh;
-  }
-
-  .swiper-slide-active .slide-image {
-    max-height: 70vh;
-  }
-
-  .swiper-slide-prev,
-  .swiper-slide-next {
-    transform: scale(0.6);
-  }
-}
-
-@media (max-width: 768px) {
-  .swiper-container {
-    height: 32vh;
-  }
-
-  .swiper-slide-active .slide-image {
-    max-height: 32vh;
-  }
-
-  .swiper-slide-prev,
-  .swiper-slide-next {
-    transform: scale(0.5);
-  }
+button:hover .vertical .hover-text,
+button:hover .vertical .text {
+  transform: translateY(-100%);
 }
 </style>

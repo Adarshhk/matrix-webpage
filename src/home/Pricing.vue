@@ -64,46 +64,59 @@ const details = [
     </div>
 
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-        <div v-for="detail in details" class="border rounded border-[#2F2F2F] px-6 bg-[#1D2125]">
-            <div class="flex justify-center ">
-                <div class="py-14 bg-1">
+        <div v-for="detail, in details" class="pb-5 rounded-xl px-6 bg-[#1D2125]">
+            <div class="flex justify-center h-[45vh]">
+                <div class=" flex items-center">
                     <img :src="detail.img" alt="pricing" class="object-cover">
                 </div>
             </div>
-            <div class="text-left py-16">
-                <h3 class="text-[23px] font-bold text-white">{{ detail.title }}</h3>
-                <p class="text-[#7F7F7F] text-[18px] max-w-6xl mx-auto mt-4">{{ detail.description }}</p>
+            <div class="text-left group">
+                <h3 class="text-[23px] font-bold text-white group-hover:-translate-y-4 transition-all duration-200">{{
+                    detail.title }}</h3>
+                <p
+                    class="group-hover:-translate-y-4 transition-all duration-200 text-[#dfdfdf] text-[16px] max-w-6xl font-openSans mx-auto mt-2">
+                    {{ detail.description }}</p>
+                <button
+                    class="hidden  lg:flex translate-y-4 opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 text-[#00B852] font-bold gap-1">
+                    {{ detail.btn }}
+                    <img src="/src/assets/svg/arrow.svg" alt="">
+                </button>
+                <button class="lg:hidden text-[#00B852] flex gap-1 font-bold mt-3">
+                    {{ detail.btn }}
+                    <img src="/src/assets/svg/arrow.svg" alt="">
+                </button>
             </div>
+
         </div>
     </div>
 </template>
 
 <script setup>
 import img1 from '/src/assets/img/pricing1.png';
+import img2 from '/src/assets/img/pricing2.png';
+import img3 from '/src/assets/img/pricing3.png';
 
 const details = [
     {
-        title: 'Expert Support:',
+        title: 'Expert Support',
         img: img1,
-        description: 'Get expert help for setup, troubleshooting, and strategy optimization anytime.'
+        description: 'Get expert help for setup, troubleshooting, and strategy optimization anytime.',
+        btn: 'Schedule a call'
     },
     {
-        title: 'Free Demo:',
-        img: img1,
-        description: 'Explore features and test strategies risk-free to build confidence before live trading.'
+        title: 'Free Demo',
+        img: img2,
+        description: 'Explore features and test strategies risk-free to build confidence before live trading.',
+        btn: 'Get Started'
     },
     {
-        title: 'Live Sessions:',
-        img: img1,
-        description: 'Attend real-time webinars for tips, insights, and skill enhancement in trading.'
+        title: 'Live Sessions',
+        img: img3,
+        description: 'Attend real-time webinars for tips, insights, and skill enhancement in trading.',
+        btn: 'Book a Webinar'
     }
 ]
 
 </script>
 
-<style scoped>
-.bg-1 {
-    background-image: url('/src/assets/img/grid1.png');
-    background-size: contain;
-}
-</style>
+<style scoped></style>

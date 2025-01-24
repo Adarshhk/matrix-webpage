@@ -12,7 +12,7 @@
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">
             <div v-for="user in testimonials" class="bg-[#1D2125] min-w-96 lg:w-1/3 border text-left border-[#2F2F2F] rounded p-8">
                 
-                <p class="text-[#7F7F7F] max-w-96 text-[18px]">
+                <p class="text-[#dfdfdf] max-w-96 text-[18px]">
                     {{ user.description }}
                 </p>
                 <div class="flex items-center gap-4 mt-10">

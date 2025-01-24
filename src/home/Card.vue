@@ -165,12 +165,12 @@ onUnmounted(() => {
 
 
  <template>
-  <div class="text-white text-center mt-24 md:mt-12 lg:mt-[76px] mx-2">
+  <div class="text-[#dfdfdf] text-center mt-16 lg:mt-32 mx-2">
     <div class="text-center">
-      <p class="text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] font-bold mx-auto text-white font-proxima leading-tight">
+      <p class="text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] font-bold mx-auto text-white leading-tight">
         Transform Your Trading Approach
       </p>
-      <p class="text-[#BBB8B8] mb-8 sm:mb-12 md:mb-16 text-base sm:text-lg md:text-[17px] leading-relaxed w-[95%] max-w-6xl p-2 mx-auto mt-4 font-proxima">
+      <p class="text-[#dfdfdf] mb-8 sm:mb-12 md:mb-16 text-base sm:text-lg md:text-[16px] leading-relaxed w-[95%] max-w-6xl p-2 mx-auto mt-4 font-openSans">
         Innovate your trading experience with ease and precision. Our platform provides powerful tools and actionable insights to help you achieve your goals effortlessly.
       </p>
     </div>
@@ -187,9 +187,9 @@ onUnmounted(() => {
               paddingTop: `calc(${index + 1} * var(--trade-card-top-offset))`,
               left: index === 0 ? '0' : 'auto'
             }">
-          <div class="trade-card__content border border-[#2F2F2F] bg-gradient-to-r from-[#1D2125] to-[#1e1e1e] rounded-md overflow-hidden shadow-lg flex flex-col md:flex-row">
-            <div class="trade-card__text px-4 p-14 2xl:py-16 md:w-1/2  ml-16   ">
-              <div class="flex items-center gap-4">
+          <div class="trade-card__content border-[#2F2F2F] bg-gradient-to-r from-[#1D2125] to-[#1e1e1e] rounded-md overflow-hidden shadow-lg flex flex-col md:flex-row">
+            <div class="trade-card__text 2xl:py-16 md:w-1/2 ml-4 p-4 pt-8  lg:p-10 flex flex-col justify-center ">
+              <div class="flex items-center gap-4 ">
                 <img :src="tradeCard.icon" alt="" class="w-12  ">
                 <div class="text-left">
                   <h3 class="text-white text-lg sm:text-xl md:text-[18px] lg:text-[20px] font-cabinet-grotesk">{{ tradeCard.title }}</h3>
@@ -198,24 +198,24 @@ onUnmounted(() => {
               </div>
               <hr class="h-px my-4 mb-6 bg-[#373636] border-0">
               <div class="text-left">
-                <p class="text-white text-base sm:text-lg md:text-[16px] lg:text-[18px] leading-relaxed font-proxima">{{ tradeCard.description }}</p>
+                <p class="text-[#dfdfdf] text-base sm:text-lg md:text-[16px] lg:text-[16px] leading-relaxed font-openSans">{{ tradeCard.description }}</p>
               </div>
 
               <div class="mt-6">
                 <div v-for="(feat, featIndex) in tradeCard.features" 
                      :key="featIndex"
-                     class="flex items-start md:items-center my-3 gap-3">
-                  <img src="/src/assets/svg/cloud.svg" alt="" class="w-4 h-4 sm:w-5 sm:h-5 mt-1 md:mt-0">
-                  <p class="text-white font-proxima text-base sm:text-lg md:text-[16px] lg:text-[18px] leading-relaxed text-left">
-                    <template v-if="feat.includes('Integrate')">
-                      <strong>Integrate</strong> with platform across your business
-                    </template>
-                    <template v-else-if="feat.includes('Discover')">
-                      Discover actionable <strong>strategies </strong> 
-                    </template>
-                    <template v-else>
-                      <strong>Get insights</strong> of what you achieved today
-                    </template>
+                     class="flex gap-2 justify-start items-start my-3 max-h-20">
+                  <!-- <img src="/src/assets/svg/cloud.svg" alt="" class="w-4 h-4 sm:w-5 sm:h-5 mt-1 md:mt-0"> -->
+
+                <div class="w-[10%] lg:w-[5%] ">
+
+                  <LottieComponent animationPath="/json/tick.json" />
+                </div>
+  
+                  <p class="text-left font-openSans text-[16px] text-[#dfdfdf]">
+                    
+                      {{ feat }}
+                    
                   </p>
                 </div>
               </div>
@@ -243,7 +243,12 @@ import { ref, onMounted, onUnmounted } from 'vue';
 import { scroll, animate } from 'motion';
 import homecard1 from '/src/assets/img/homecard1.png'
 import manualicon from '/src/assets/svg/manual.svg'
+import signalicon from '/src/assets/producticons/producticon (5).svg'
+import webhookicon from '/src/assets/producticons/producticon (3).svg'
+import algotradingicon from '/src/assets/producticons/producticon (2).svg'
+import screenericon from '/src/assets/producticons/producticon (6).svg'
 import homecard2 from '/src/assets/img/homecard2.png'
+import LottieComponent from '/src/home/utils/LottieComponent.vue'
 
 const tradeCardsWrapper = ref(null);
 const tradeCards = ref([
@@ -254,47 +259,60 @@ const tradeCards = ref([
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
-      'Discover actionable strategies', 
-      'Get insights of what you achieved today'
+      'Integrate with platform across your business', 
+      'Integrate with platform across your business'
     ], 
     description: "Top-grade information makes a world of difference to a trader. That's why we work with the best institutional data partners on the world's most famous street, and far far beyond it.", 
     image: homecard1
   },
   { 
     id: 2, 
-    title: 'Trade Card Two', 
-    icon: manualicon, 
+    title: 'Signals', 
+    icon: signalicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
-      'Discover actionable strategies', 
-      'Get insights of what you achieved today'
+      'Integrate with platform across your business', 
+      'Integrate with platform across your business'
     ], 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
     image: homecard2
   },
   { 
     id: 3, 
-    title: 'Trade Card Three', 
-    icon: manualicon, 
+    title: 'Webhooks', 
+    icon: webhookicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
-      'Discover actionable strategies', 
-      'Get insights of what you achieved today'
+      'Integrate with platform across your business', 
+      'Integrate with platform across your business'
     ], 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
     image: homecard1
   },
   { 
     id: 4, 
-    title: 'Trade Card Four', 
-    icon: manualicon, 
+    title: 'Algo Trading', 
+    icon: algotradingicon, 
     subtitle:'Trade Your Way', 
     features: [
       'Integrate with platform across your business', 
-      'Discover actionable strategies', 
-      'Get insights of what you achieved today'
+      'Integrate with platform across your business ', 
+      'Integrate with platform across your business'
+    ], 
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
+    image: homecard1
+  },
+  { 
+    id: 4, 
+    title: 'Screener', 
+    icon: screenericon, 
+    subtitle:'Trade Your Way', 
+    features: [
+      'Integrate with platform across your business', 
+      'Integrate with platform across your business ', 
+      'Integrate with platform across your business'
     ], 
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
     image: homecard1
@@ -415,6 +433,7 @@ onUnmounted(() => {
 @media (min-width: 768px) and (max-width: 1024px) {
   .trade-card__text {
     padding-right: 1rem;
+    
   }
   
   .trade-card__image {

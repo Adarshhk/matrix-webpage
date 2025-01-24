@@ -21,7 +21,7 @@
             <img src="/src/assets/svg/verify.svg" alt="">
           </div>
           <h1 class="text-xl font-bold text-white">Long-Term Growth Signals</h1>
-          <p class="text-[#7F7F7F] text-[16px] leading-relaxed">
+          <p class="text-[#dfdfdf] text-[16px] leading-relaxed">
 
             Carefully selected opportunities for sustainable wealth.
           </p>
@@ -33,7 +33,7 @@
             <img src="/src/assets/svg/rupees-coin.svg" alt="">
           </div>
           <h1 class="text-xl font-bold text-white">Insightful Market Reports</h1>
-          <p class="text-[#7F7F7F] text-[16px] leading-relaxed">
+          <p class="text-[#dfdfdf] text-[16px] leading-relaxed">
 
             Regular updates tailored to your investment strategy.
           </p>
@@ -50,7 +50,7 @@
             </div>
           </div>
           <h3 class="text-xl font-bold text-white">Portfolio Optimization Tools</h3>
-          <p class="text-[#7F7F7F] text-[16px] leading-relaxed">
+          <p class="text-[#dfdfdf] text-[16px] leading-relaxed">
             Get personalized diversification recommendations.s
           </p>
         </div>
@@ -63,7 +63,7 @@
             </div>
           </div>
           <h3 class="text-xl font-bold text-white">One-Click Simplicity</h3>
-          <p class="text-[#7F7F7F] text-[16px] leading-relaxed">
+          <p class="text-[#dfdfdf] text-[16px] leading-relaxed">
             Place trades without complex manual entries.
           </p>
         </div>

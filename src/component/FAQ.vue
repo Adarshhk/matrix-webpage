@@ -1,31 +1,31 @@
 <template>
     <div class="mx-auto px-4 mt-24 lg:my-32 lg:mb-40">
-      <div class="text-center mb-12">
-        <h2 class="text-[27px] font-openSans font-semibold mb-2 text-white">
-          FAQ's
+      <div class="text-center mb-24">
+        <h2 class="text-[27px] lg:text-[38px] font-semibold mb-2 text-white">
+          Frequently Asked Questions
         </h2>
         <p class="text-white mt-4 font-openSans text-md">
           Find answers to common questions and get the clarity you need to make the most of our platform.
         </p>
       </div>
   
-      <div class="space-y-4 w-[90%] max-w-4xl mx-auto text-[18px]">
-        <div v-for="(faq, index) in faqs" :key="index" class="">
+      <div class="space-y-4 w-[90%]  mx-auto text-[18px]">
+        <div v-for="(faq, index) in faqs" :key="index" class="border-b border-[#FFFFFF11]">
           <button
             @click="toggleFaq(index)"
-            class="bg-[#1D2125] rounded-sm w-full px-6 py-4 text-left flex justify-between items-center hover:bg-[#2b3137] transition-colors duration-200 "
+            class=" rounded-sm w-full px-6 py-4 text-left flex justify-between items-center  transition-colors duration-200 "
           >
-            <span class="font-medium text-white">{{ faq.question }}</span>
+            <span class="font-medium text-white text-[19px]">{{ faq.question }}</span>
             <img src="/src/assets/svg/faqcross.svg"
               :class="[
-                'w-5 h-5 transition-transform duration-200',
+                'w-10 h-10 transition-transform duration-200',
                 { 'rotate-45': faq.isOpen }
               ]"
             />
           </button>
           <div
             v-show="faq.isOpen"
-            class="bg-[#1D2125] py-4 px-6 pb-4 text-[#787878]"
+            class="py-4 px-6 pb-4 text-[#dfdfdf]"
           >
             {{ faq.answer }}
           </div>

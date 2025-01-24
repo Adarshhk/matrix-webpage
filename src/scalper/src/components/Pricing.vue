@@ -17,7 +17,7 @@
             </div>
             <div class="text-left py-16">
                 <h3 class="text-[23px] font-bold text-white">{{ detail.title }}</h3>
-                <p class="text-[#7F7F7F] text-[18px] max-w-6xl mx-auto mt-4">{{ detail.description }}</p>
+                <p class="text-[#dfdfdf] text-[18px] max-w-6xl mx-auto mt-4">{{ detail.description }}</p>
             </div>
         </div>
     </div>

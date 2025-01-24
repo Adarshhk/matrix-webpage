@@ -1,5 +1,6 @@
 <template>
     <footer class=" w-[95%] mx-auto pt-16 ">
+        
         <div class="mx-auto">
             <div
                 class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 place-items-stretch justify-items-between lg:justify-items-center">
