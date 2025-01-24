@@ -5,6 +5,7 @@
     <!-- <Media id="media" /> -->
     <Card/>
     <Pricing id="pricing" />
+    <Video/>
     <Tutorial />
     <Community />
     <Testimonial />
@@ -22,6 +23,7 @@ import Community from './Community.vue';
 import Testimonial from './Testimonial.vue';
 import Plans from './Plans.vue';
 import Card from './Card.vue';
+import Video from './Video.vue';
 
 
 </script>

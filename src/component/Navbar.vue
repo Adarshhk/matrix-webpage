@@ -15,8 +15,9 @@
           :class="{ 'text-white': activeItem === item.name }"
           @mouseenter="item.name === 'Product' ? handleProductMouseEnter() : null"
           @mouseleave="item.name === 'Product' ? handleProductMouseLeave() : null">
-          <a class="flex items-center gap-2 font-openSans">
+          <a class="flex items-center gap-2 font-openSans" @click="handleNavigation(item)">
             {{ item.name }}
+            
             <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg"
               class="transition-all duration-150 w-4 h-4 rotate-180"
               :class="{ 'rotate-0': showProductMenu && item.name === 'Product' }" />
@@ -193,8 +194,7 @@ const isHoveringProduct = ref(false);
 // Navigation handlers
 const handleNavigation = (item) => {
   if (item.name === 'Product') {
-    showProductMenu.value = !showProductMenu.value
-    isNavOpen.value = false
+    
     return
   }
 

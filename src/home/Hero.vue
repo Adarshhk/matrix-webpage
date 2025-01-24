@@ -11,7 +11,9 @@
     <div class="lg:pt-24  text-center ">
 
       <div class=" flex justify-center mt-24">
-        <p class=" border rounded-3xl font-semibold border-[#FFCA28] px-2 py-1 text-[11px] text-[#FFCA28] bg-[#FFCA28] bg-opacity-10">#1 One stop solution for your Trading needs</p>
+        <p
+          class=" border rounded-3xl font-semibold border-[#FFCA28] px-2 py-1 text-[11px] text-[#FFCA28] bg-[#FFCA28] bg-opacity-10">
+          #1 One stop solution for your Trading needs</p>
       </div>
       <!-- <div class="flex  justify-center items-center gap-2 mt-4">
         <Odometer/>
@@ -62,15 +64,31 @@
         Empowering your trading journey with advanced solutions. From seamless automation to innovative tools, we
         simplify strategies and amplify possibilities— make every decision a step towards your success.
       </p>
-      <button
-        class=" mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48">
-        <div class="content vertical flex justify-center">
-          <div class="text font-semibold text-base font-openSans">Get Started</div>
-          <div class="hover-text font-semibold  text-base font-openSans">Get Started</div>
-        </div>
-      </button>
-
       
+      
+          <button
+          class=" mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48 ">
+          <div class="content vertical flex justify-center">
+            <div class="text font-semibold text-base font-openSans">Get Started</div>
+            <div class="hover-text font-semibold  text-base font-openSans">Get Started</div>
+          </div>
+        </button>        
+        
+
+
+      <div
+        class=" mx-auto flex justify-start border border-[#00B852] shadow-lg shadow-[#40BB8622] bg-[#0B291C] w-max rounded-full px-3 pr-4 items-center">
+        <div class="flex items-center">
+          <div class="w-12">
+            <LottieComponent animationPath="/json/blink-loading.json" />
+
+          </div>
+          <p class="text-[#51c735] text-[14px] font-openSans text-left">Free Webinar :Getting started with Matrix
+            Trading Tech &nbsp;|&nbsp; Every Wednesday, Time: 3:00 PM IST</p>
+          <a href="#"
+            class="text-[#E3E093] text-[14px]  underline font-openSans text-nowrap ml-8">Register Now</a>
+        </div>
+      </div>
     </div>
     <!-- <div class="md:my-5">
         <div class="flex">
@@ -112,6 +130,7 @@ import heroimg from '/src/assets/img/heroimg.png'
 import heroimg2 from '/src/assets/img/heroimg2.png'
 import heroimg3 from '/src/assets/img/heroimg3.png'
 import { Autoplay } from "swiper/modules";
+import LottieComponent from './utils/LottieComponent.vue';
 
 // Import Swiper styles
 import "swiper/css";
@@ -238,7 +257,7 @@ const features = [
   .grid-image {
     width: 26rem;
     object-fit: contain;
-    opacity: 0.3;
+    opacity: 1;
     /* Adjust opacity to make it less intrusive */
   }
 }
