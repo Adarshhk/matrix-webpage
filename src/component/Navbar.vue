@@ -139,7 +139,7 @@ import icon6 from '/src/assets/producticons/producticon (6).svg'
 const navItems = [
   { name: 'Product', path: '#features' },
   { name: 'Pricing', path: '#hero' },
-  { name: 'Contact Us', path: '#why' },
+  { name: 'Contact Us', path: '/contact' },
   { name: 'Blogs & Insights', path: '/blogs' },
   { name: 'About Us', path: '/about' },
 ]
@@ -161,7 +161,7 @@ const productItems = [
     title: 'Algo Trading',
     description: 'Automate strategies for smarter trading.',
     icon: icon2,
-    path: "/screener"
+    path: "/algo-trading"
   },
   {
     title: 'Webhook',

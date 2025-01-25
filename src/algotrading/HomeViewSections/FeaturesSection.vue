@@ -1,0 +1,183 @@
+<script setup>
+import { ref, onMounted, computed } from "vue";
+import animation from "../animation.vue";
+import LottieComponent from "../../home/utils/LottieComponent.vue";
+
+const selectedFeature = ref("paperTrading");
+const animationLoaded = ref(false);
+
+const features = [
+  {
+    id: "paperTrading",
+    title: "Dive into Paper Trading",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    buttonText: "Explore Paper Trading",
+    animationPath: "/json/PaperTrading.json",
+    imagePath: "/src/assets/img/algotradingpic1.png",
+  },
+  {
+    id: "multipleAccount",
+    title: "Multiple Account Management",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/MultipleAccounts.json",
+    imagePath: "",
+  },
+  {
+    id: "demoAccount",
+    title: "Demo Account",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/UI_07.json",
+    imagePath: "",
+  },
+  {
+    id: "createStrategies",
+    title: "Create Strategies",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/CreateStrategies.json",
+    imagePath: "",
+  },
+  {
+    id: "definedStrategies",
+    title: "Pre Defined Strategies",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/PredefinedStrategies.json",
+    imagePath: "",
+  },
+  {
+    id: "notifications",
+    title: "Notifications",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/Notifications.json",
+    imagePath: "",
+  },
+  {
+    id: "support",
+    title: "Constant Support",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/ConstantSupport.json",
+    imagePath: "",
+  },
+  {
+    id: "setup",
+    title: "One Time Setup",
+    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    animationPath: "/json/OneTimeSetup.json",
+    imagePath: "",
+  },
+];
+
+const filteredFeatures = computed(() => {
+  return features.filter(feature => feature.id === selectedFeature.value);
+});
+
+const onAnimationLoaded = () => {
+  animationLoaded.value = true;
+};
+
+const selectFeature = (feature) => {
+  selectedFeature.value = feature;
+};
+
+const simulateAnimationLoading = () => {
+  setTimeout(() => {
+    onAnimationLoaded();
+  }, 100); // Simulated delay
+};
+
+simulateAnimationLoading();
+</script>
+
+<template>
+  <section class="">
+    <div class="text-center mx-auto w-full space-y-4 xl:w-[60%]">
+      <div class="flex items-center justify-center">
+        <div class="w-[10%]">
+          <LottieComponent animationPath="/json/money.json" />
+        </div>
+        <h1 class="font-semibold text-white text-[27x] xl:text-[38px]">
+          What are the <span class="text-matrix-green">features?</span>
+        </h1>
+      </div>
+      <p class="font-openSans text-[#dfdfdf] text-[18px]">
+        Empower your trading journey with confidence. Our platform equips you
+        with insights and tools for financial triumph.
+      </p>
+    </div>
+
+    <div class=" my-24 ">
+      <div v-for="feature in filteredFeatures" :key="feature.id" class="grid grid-cols-1 lg:grid-cols-12 h-[70vh]">
+        <div class="col-span-6  text-center flex items-center xl:text-left">
+          <div>
+            <h1 class=" font-semibold text-white text-[27px] xl:text-[38px] mb-4">
+              {{ feature.title }}
+            </h1>
+            <p class="font-openSans text-[14px] md:text-[16px] text-[#dfdfdf]">
+              {{ feature.description }}
+            </p>
+          </div>
+
+          
+        </div>
+
+        <div class=" col-span-6 flex justify-center">
+
+          <div class="border w-[50%]">
+            <img v-if="feature.imagePath" :src="feature.imagePath" alt="" class=""  />
+
+            <animation v-else :animationPath="feature.animationPath" />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- !Buttons -->
+
+    <div class="flex items-center justify-between space-x-3 overflow-x-auto w-full text-white no-scrollbar">
+      <div v-for="feature in features" :key="feature.id" class="flex flex-col items-center">
+        <button @click="selectFeature(feature.id)" :class="[
+          'flex items-center gap-4 border-2 rounded-xl px-6 pr-16 py-2 whitespace-nowrap',
+          selectedFeature === feature.id
+            ? 'border-matrix-green bg-matrix-green border-b-4 bg-opacity-10'
+            : 'border-gray-500 bg-transparent',
+        ]">
+          <img src="/images/svg/PaperTrading.svg" alt="" />
+          <p class="font-CabinetGrotesk font-bold text-[16px]">
+            {{ feature.title }}
+          </p>
+        </button>
+        <div v-if="selectedFeature === feature.id" class="trapezoid"></div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<style scoped>
+.trapezoid {
+  border-top: 6px solid #00b852;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  height: 0;
+  width: 90px;
+}
+
+.animation-placeholder {
+  width: 100%;
+  height: 650px;
+  /* Adjust height as needed */
+  background-color: transparent;
+  /* Placeholder background color */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+</style>

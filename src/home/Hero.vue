@@ -66,7 +66,7 @@
       </p>
       
       
-          <button
+        <button
           class=" mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48 ">
           <div class="content vertical flex justify-center">
             <div class="text font-semibold text-base font-openSans">Get Started</div>
@@ -76,8 +76,8 @@
         
 
 
-      <div
-        class=" mx-auto flex justify-start border border-[#00B852] shadow-lg shadow-[#40BB8622] bg-[#0B291C] w-max rounded-full px-3 pr-4 items-center">
+      <!-- <div
+        class="mx-auto w-max max-w-[95%] justify-start border border-[#00B852] shadow-lg shadow-[#40BB8622] bg-[#0B291C]  rounded-full px-3 pr-4 items-center">
         <div class="flex items-center">
           <div class="w-12">
             <LottieComponent animationPath="/json/blink-loading.json" />
@@ -88,7 +88,7 @@
           <a href="#"
             class="text-[#E3E093] text-[14px]  underline font-openSans text-nowrap ml-8">Register Now</a>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- <div class="md:my-5">
         <div class="flex">
@@ -100,7 +100,7 @@
         <AnimatedHero :images="[heroimg, heroimg, heroimg, heroimg]" :radius="rad" />
         
       </div> -->
-    <div class="mt-8 lg:mt-16 relative ">
+    <div class="mt-8 lg:mt-16 relative">
 
       <AnimatedHero2 />
       <div

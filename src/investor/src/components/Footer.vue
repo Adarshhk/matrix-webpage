@@ -173,7 +173,7 @@ call Correctly
             
         </div>
         <div class="py-2 border-b border-[#FFFFFF1A]">
-            <div class="w-full text-[#ffffff55] font-openSans text-[14px] flex justify-evenly">
+            <div class="w-full text-[#ffffff55] font-openSans text-[14px] flex flex-wrap gap-2 justify-evenly">
                 <button >
                     Services
                 </button>

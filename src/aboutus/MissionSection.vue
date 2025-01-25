@@ -1,16 +1,16 @@
 <script setup></script>
 
 <template>
-  <section class="p-8 md:p-20 ">
-    <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center">
+  <section class="">
+    <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center mb-10 md:mt-0">
       <div class="text-white space-y-8">
         <h1
-          class="font-CabinetGrotesk font-extrabold text-center xl:text-left text-[35px] md:text-[47px]"
+          class="font-CabinetGrotesk font-semibold text-center xl:text-left text-[27px] md:text-[38px]"
         >
           Our Mission
         </h1>
         <p
-          class="font-openSans text-[#787878] text-center xl:text-left text-[18px]"
+          class="font-openSans text-[#dfdfdf] text-center xl:text-left md:text-[16px] text-[14px]"
         >
           At SpeedBot, we see a future in which everything is systematic and
           automated by bots and when it comes to systematic trading, there will
@@ -19,7 +19,7 @@
           Entrepreneur from India.
         </p>
         <p
-          class="font-openSans text-[#787878] mt-10 text-center xl:text-left text-[18px]"
+          class="font-openSans text-[#dfdfdf] mt-10 text-center xl:text-left md:text-[16px] text-[14px]"
         >
           SpeedBot is a platform focusing on algorithmic trading for all. From
           an idea brought by our team of expert traders and successful business
@@ -32,7 +32,7 @@
           making money in the market.
         </p>
       </div>
-      <div class="">
+      <div class="hidden md:block">
         <img src="/src/assets/img/rocket.png" alt="" />
       </div>
     </div>

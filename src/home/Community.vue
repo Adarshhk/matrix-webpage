@@ -1,6 +1,6 @@
 <template>
     <div class="bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto flex h-[60vh] md:h-[40vh] lg:h-[60vh] flex-wrap items-center xl:justify-between justify-center">
-        <div class="max-w-xl text-center xl:text-left xl:px-10 px-4 ml-10">
+        <div class="text-center xl:text-left xl:px-10 px-4 xl:ml-10 xl:w-[50%]">
             
             <div class=" flex xl:justify-start items-center justify-center">
                 <p class=" rounded-3xl font-semibold bg-white bg-opacity-10 border-[white] px-2 py-1 text-[14px] text-white mb-6">
@@ -14,7 +14,7 @@
             <p class="text-[#F3F8F9] text-[16px] font-openSans">
                 Be a part of a vibrant community where people live the markets! Engage with like-minded users and request features that you want
             </p>
-            <button class="bg-white rounded w-80 mt-10 font-bold text-[#00B852] py-3">
+            <button class="bg-white rounded w-[80%] max-w-60 mt-10 font-bold text-[#00B852] py-3">
                 <div class="content vertical flex justify-center">
                         <div class="text font-openSans">Join Now</div>
                         <div class="hover-text font-openSans">Click Here</div>

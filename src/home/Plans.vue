@@ -148,7 +148,7 @@ import icon6 from '/src/assets/producticons/producticon (6).svg'
 </style> -->
 
 <template>
-    <div class="w-[95%] bg-[#161a1e] card rounded-lg mt-24 mx-auto relative ">
+    <div class="w-[90%] bg-[#161a1e] card rounded-lg mt-24 mx-auto relative ">
         <div class=" overflow-hidden w-full h-full absolute flex justify-center">
             <div class="absolute bottom-44 bg-[#EDA54E] rounded-full w-[10rem] h-[10rem]  md:w-[36rem] md:h-[36rem] blurit opacity-20">
             </div>

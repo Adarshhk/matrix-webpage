@@ -1,19 +1,19 @@
 <template>
-    <div class="mx-auto px-4 mt-24 lg:my-32 lg:mb-40">
-      <div class="text-center mb-24">
+    <div class="mx-auto lg:px-4 mt-24 lg:my-32 lg:mb-40 px-4">
+      <div class="text-center mb-16 lg:mb-24">
         <h2 class="text-[27px] lg:text-[38px] font-semibold mb-2 text-white">
           Frequently Asked Questions
         </h2>
-        <p class="text-white mt-4 font-openSans text-md">
+        <p class="text-white mt-4 font-openSans text-md ">
           Find answers to common questions and get the clarity you need to make the most of our platform.
         </p>
       </div>
   
-      <div class="space-y-4 w-[90%]  mx-auto text-[18px]">
+      <div class="space-y-4 mx-auto text-[18px]">
         <div v-for="(faq, index) in faqs" :key="index" class="border-b border-[#FFFFFF11]">
           <button
             @click="toggleFaq(index)"
-            class=" rounded-sm w-full px-6 py-4 text-left flex justify-between items-center  transition-colors duration-200 "
+            class=" rounded-sm w-full lg:px-6 py-4 text-left flex justify-between items-center  transition-colors duration-200 "
           >
             <span class="font-medium text-white text-[19px]">{{ faq.question }}</span>
             <img src="/src/assets/svg/faqcross.svg"

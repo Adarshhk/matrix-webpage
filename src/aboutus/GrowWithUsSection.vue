@@ -8,7 +8,7 @@
         <img src="/src/assets/img/waves.png" alt="" >
     </div>
     <div class="">
-      <h1 class="font-CabinetGrotesk font-extrabold text-[35px] md:text-[43px] xl:text-[47px] mb-12">
+      <h1 class="font-CabinetGrotesk font-semibold text-[27px] md:text-[38px] mb-6">
         We are growing , come grow with us!
       </h1>
       <p class="font-openSans text-[16px] xl:text-[18px] w-[95%] xl:w-[80%] mx-auto mb-12">
@@ -22,7 +22,7 @@
         cumbersome.
       </p>
       <button
-        class="bg-white text-[#00B852] font-bold rounded-3xl px-8 py-2 "
+        class="bg-white text-[#00B852] font-bold rounded-3xl px-12 py-2 "
       >
         Join Us
       </button>

@@ -58,16 +58,16 @@ const details = [
         <h2 class="md:text-[38px] text-[27px] font-bold text-white text-center mx-auto">
             Your Ultimate Toolkit for Trading Success
         </h2>
-        <p class="max-w-5xl text-[#BBB8B8] font-openSans mt-4 text-center mx-auto text-[16px] md:text-[18px] ">Explore
+        <p class="max-w-5xl text-[#BBB8B8] font-openSans mt-4 text-center mx-auto text-[14px] md:text-[18px] ">Explore
             the full potential of your trading journey with personalized support. Our platform equips you with the
             resources and insights to confidently navigate every decision with clarity and precision.</p>
     </div>
 
     <div class="w-[95%] mx-auto gap-4 mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-        <div v-for="detail, in details" class="pb-5 rounded-xl px-6 bg-[#1D2125]">
-            <div class="flex justify-center h-[45vh]">
+        <div v-for="(detail , index) in details" class="pb-5 rounded-xl px-6 bg-[#1D2125]">
+            <div class="flex justify-center">
                 <div class=" flex items-center">
-                    <img :src="detail.img" alt="pricing" class="object-cover">
+                    <img :src="detail.img" alt="pricing" class="object-contain" :class="{'pt-7' : index === 2}">
                 </div>
             </div>
             <div class="text-left group">

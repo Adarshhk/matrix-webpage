@@ -9,7 +9,7 @@ import WhyJoinUsSection from './WhyJoinUsSection.vue';
 </script>
 
 <template>
-    <main class="pt-48">
+    <main class="pt-24 lg:pt-48 px-4">
         <AboutUsHeroSection/>
         <MissionSection/>
         <CultureSection/>

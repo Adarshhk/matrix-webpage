@@ -1,15 +1,19 @@
 <template>
-    <Hero id="hero" />
-    <Why id="why" />
-    <Features id="features" />
-    <!-- <Media id="media" /> -->
-    <Card/>
-    <Pricing id="pricing" />
-    <Video/>
-    <Tutorial />
-    <Community />
-    <Testimonial />
-    <Plans />
+    <div class="">
+
+        <Hero id="hero" />
+        <Why id="why" />
+        <Features id="features" />
+        <!-- <Media id="media" /> -->
+        <Card/>
+        <CardMobile/>
+        <Pricing id="pricing" />
+        <Video/>
+        <Tutorial />
+        <Community />
+        <Testimonial />
+        <Plans />
+    </div>
 </template>
 
 <script setup>
@@ -24,6 +28,7 @@ import Testimonial from './Testimonial.vue';
 import Plans from './Plans.vue';
 import Card from './Card.vue';
 import Video from './Video.vue';
+import CardMobile from './CardMobile.vue';
 
 
 </script>
