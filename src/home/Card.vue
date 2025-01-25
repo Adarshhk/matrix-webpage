@@ -98,11 +98,12 @@ const tradeCards = ref([
     icon: manualicon, 
     subtitle:'Trade Your Way', 
     features: [
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business'
+      'Complete Control over trade execution and strategy.', 
+      'Quickly respond to market changes and news.', 
+      'Hands-on trading enhances learning and experience.',
+      'No need for expensive software or programming.'
     ], 
-    description: "Top-grade information makes a world of difference to a trader. That's why we work with the best institutional data partners on the world's most famous street, and far far beyond it.", 
+    description: "You can actively monitor the financial markets, execute trades personally, analyse data, and make decisions to buy or sell based on your own strategies, insights, and market knowledge.", 
     image: homecard1
   },
   { 
@@ -111,11 +112,12 @@ const tradeCards = ref([
     icon: signalicon, 
     subtitle:'Trade Your Way', 
     features: [
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business'
+      'Offers precise, well-analyzed trade recommendations.', 
+      'Provides timely updates for quick action.', 
+      'Integrates with platforms for instant execution.',
+      'Guides new traders in learning strategies.'
     ], 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
+    description: 'Signals are alerts or recommendations to buy or sell financial assets like stocks or forex. They provide precise entry and exit points to guide you. Signals can be automated or manual.', 
     image: homecard2
   },
   { 
@@ -124,11 +126,12 @@ const tradeCards = ref([
     icon: webhookicon, 
     subtitle:'Trade Your Way', 
     features: [
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business'
+      'Connects platforms for smooth workflow.', 
+      'Designs actions to specific strategies.', 
+      'Reduces errors by automating tasks.',
+      'Easily handles large-scale, high-frequency tasks.',
     ], 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
+    description: 'Webhook enables automated communication between two platforms in real-time. It works by sending data or triggering actions when specific events occur. ', 
     image: homecard1
   },
   { 
@@ -137,11 +140,12 @@ const tradeCards = ref([
     icon: algotradingicon, 
     subtitle:'Trade Your Way', 
     features: [
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business ', 
-      'Integrate with platform across your business'
+      'Executes trades instantly.', 
+      'Avoids emotional decisions with strict rules.', 
+      'Reduces need for constant monitoring.',
+      'Tests strategies on historical data.',
     ], 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
+    description: 'Algo trading uses predefined criteria, such as price, volume, timing, or other market indicators, to identify opportunities and execute trades faster and more efficiently.', 
     image: algocard
   },
   { 
@@ -150,11 +154,12 @@ const tradeCards = ref([
     icon: screenericon, 
     subtitle:'Trade Your Way', 
     features: [
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business ', 
-      'Integrate with platform across your business'
+      'Quickly finds assets meeting specific criteria.', 
+      'Reduces the need for manual analysis.', 
+      'Provides updated results as market conditions change.',
+      'Scans across multiple markets and sectors.',
     ], 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
+    description: 'A screener filters stocks, options, or assets based on specific criteria like price, volume, or technical indicators, helping you identify opportunities more efficiently.', 
     image: screenerCard
   },
   { 
@@ -163,11 +168,12 @@ const tradeCards = ref([
     icon: indicatoricon, 
     subtitle:'Trade Your Way', 
     features: [
-      'Integrate with platform across your business', 
-      'Integrate with platform across your business ', 
-      'Integrate with platform across your business'
+      'Enables informed, data-driven decisions.', 
+      'Identifies market trends and reversals.', 
+      'Helps set stop-loss and manage risk.',
+      'Removes emotional bias from decisions.'
     ], 
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', 
+    description: 'Indicators are used to analyze market data like price and volume. It helps identify trends, momentum, volatility, and market conditions, aiding decision-making and price movement forecasting.', 
     image: indicatorCard
   }
 ]);
