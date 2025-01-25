@@ -60,20 +60,20 @@ const intendedUsers = [
     {
         name: 'The Scalper',
         img : s,
-        description: "Designed for precision and speed, this platform offers real-time tools and seamless execution for high-frequency trading.",
+        description: "Get precision and speed with real-time insights and seamless execution to keep you ahead in fast-moving markets.",
         path : '/scalper'
     },
 
     {
         name: 'The Traders',
         img : t,
-        description: "Perfect for day or swing traders, it provides strategic insights and automation to tackle market volatility and seize short- to medium-term trends.",
+        description: "Get strategic insights and automation so you can navigate market volatility and seize short-term opportunities.",
         path : '/trader'
     },
     {
         name: 'The Investors',
         img : i,
-        description: "Empowering long-term planners with tools to assess opportunities, manage risks, and achieve steady portfolio growth.",
+        description: "Get the tools to assess opportunities, manage risks, and achieve steady, long-term portfolio growth with confidence.",
         path : '/investor'
     },
 

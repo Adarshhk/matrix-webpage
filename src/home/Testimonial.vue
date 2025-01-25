@@ -3,7 +3,7 @@
         <div class="text-center">
             <p class="lg:text-[38px] font-bold mx-auto text-white text-[27px]">Know Why People Trust Us?</p>
 
-            <p class="font-openSans text-[#BBB8B8] lg:text-[18px] max-w-4xl mx-auto mb-16 mt-8 text-[16px] px-2">Our commitment to innovation, transparency, and delivering results has earned us the trust of traders worldwide. Experience a platform designed with your success in mind.</p>
+            <p class="font-openSans text-[#BBB8B8] lg:text-[18px] max-w-4xl mx-auto mb-16 mt-8 text-[16px] px-2">  Our platform is trusted by traders worldwide for its commitment to innovation, transparency, and delivering results. Designed with your success in mind, it’s built to help you achieve your goals.</p>
         </div>
 
         <!-- <div class="gap-4 mx-auto flex justify-evenly w-[95%] mt-6 overflow-x-auto">
