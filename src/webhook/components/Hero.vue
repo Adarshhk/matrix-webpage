@@ -1,7 +1,6 @@
 <template>
-  <div class="min-h-screen  w-full relative pt-40">
+  <div class="min-h-screen pt-40 w-full">
     <div class="mx-5 flex flex-col lg:flex-row gap-8 px-0">
-
 
       <!-- Grid Background Images -->
     <div class="absolute inset-0 hidden lg:block">
@@ -91,8 +90,8 @@
       </div>
 
       <!-- Right Column (30%) - Sticky Form (visible only on lg and above) -->
-      <div class="hidden lg:block ">
-        <div class="sticky top-24 rounded-lg overflow-hidden shadow-xl" style="width: 385px; height: 619px ">
+      <div class="hidden lg:block lg:w-[30%]">
+        <div class="sticky  top-24 rounded-lg overflow-hidden shadow-xl" style="width: 385px; height: 619px ">
           <div class="relative h-full">
             <!-- Background Image -->
             <img 

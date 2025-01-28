@@ -1,8 +1,11 @@
 <template>
-  <Hero id="hero" />
+  <div>
+    <Hero  />
   <Community />
   <Testimonial />
   <Plans />
+  </div>
+  
 </template>
 
 <script setup>

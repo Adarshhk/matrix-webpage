@@ -137,25 +137,25 @@
       </div>
 
       <!-- Default Layout for EDGE  -->
-      <div v-if="selectedPlan === 'Matrix EDGE'" class="mt-12">
-        <div class="bg-[#1d2125] rounded-lg p-6 grid grid-cols-1 md:grid-cols-3">
+      <div v-if="selectedPlan === 'Matrix EDGE'" class="mt-12 ">
+        <div class="bg-[#1d2125] rounded-lg p-6 gap-2 grid grid-cols-1 md:grid-cols-3">
           <!-- Pricing Card -->
-          <div>
-            <div>
+          <div class="">
+            <div class="">
               <h3 class="text-white text-[20px] font-bold mb-4">
                 Features of Matrix Algo
               </h3>
             </div>
 
             <!-- plan list -->
-            <div class="flex flex-col justify-evenly gap-2 mr-2">
+            <div class="flex flex-col justify-evenly gap-2 ">
 
               <!-- plan 1 -->
 
-              <div @click="changePlan('indicator' , 0)"
-                class="flex justify-between items-center gap-3 rounded border-[#ffffff22] p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'indicator' }">
-                <!-- Radio  and Indicator Section -->
+              <!-- <div @click="changePlan('indicator' , 0)"
+                class="flex justify-between items-center gap-3 rounded  p-2 py-4 border"
+                :class="{'border-[#dfdfdf]': activePlan.name == 'indicator' , 'border-[#ffffff22]' : activePlan.name != 'indicator' }">
+                
                 <div class="flex items-center gap-2">
 
                   <div class="flex flex-col items-start">
@@ -166,20 +166,20 @@
 
                   </div>
                 </div>
-                <!-- Pricing Section -->
+                
                 <div class="flex flex-col items-end">
                   <p class="text-[22px] font-bold text-white ">
                     FREE
                   </p>
                   <p class="text-sm font-semibold text-[#BBB8B8] ">In-app Purchase</p>
-                </div>
+                </div> 
 
-              </div>
+              </div>-->
 
               <!-- second item -->
               <div @click="changePlan('signals' , 1000)"
-                class="flex justify-between items-center gap-3 rounded border-[#ffffff22] p-2 py-4 border "
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'signals' }">
+                class="flex justify-between items-center gap-3 rounded p-2 py-4 border "
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'signals' , 'border-[#ffffff22]' : activePlan.name != 'signals' }">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
@@ -202,8 +202,8 @@
 
 
               <div @click="changePlan('screener' , 2000)"
-                class="flex justify-between items-center gap-3 rounded border-[#ffffff22] p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'screener' }">
+                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'screener'  , 'border-[#ffffff22]' : activePlan.name != 'screener'}">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
@@ -225,8 +225,8 @@
               </div>
 
               <div @click="changePlan('webhook' , 4000)"
-                class="flex justify-between items-center gap-3 rounded border-[#ffffff22] p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'webhook' }">
+                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'webhook'  , 'border-[#ffffff22]' : activePlan.name != 'webhook'}">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
@@ -248,9 +248,9 @@
               </div>
 
               <button @click="addToCart({name : activePlan.name , price : activePlan.price})"
-                class="text-[#272727] font-openSans font-bold bg-[#dfdfdf] rounded border-[#ffffff22] p-2 py-4 border" :class="{'border-[#ff2c30] bg-[#ff2c3022]' : isInCart({name:activePlan.name , price : activePlan.price})}"> 
+                class="text-[#272727] font-openSans font-bold bg-[#dfdfdf] rounded border-[#ffffff22] p-2 py-4 border" :class="{'border-[#ff2c30] bg-[#ff2c3022]' : isInCart(activePlan.name)}"> 
                 
-                <p v-if="isInCart({name : activePlan.name , price : activePlan.price})" class="text-[#ff2c30]">Remove From Cart</p>
+                <p v-if="isInCart(activePlan.name)" class="text-[#ff2c30]">Remove From Cart</p>
                 <p v-else>+ Add To Cart</p>
 
               </button>
@@ -260,37 +260,11 @@
           </div>
 
           <!-- Feature Lists -->
-          <div class="md:border-l border-[#2C2C2C] md:pl-6">
-            <h3 class="text-white text-xl font-bold mb-4">
-              Features of Matrix Algo
-            </h3>
-            <ul class="space-y-4 ">
-              <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.active" src="../../assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
-                <img v-else src="../../assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
-                  {{ feature.text }}
-                </span>
-              </li>
-            </ul>
+          <div class=" col-span-2 border-[#2C2C2C]">
+            
           </div>
 
-          <div class="md:border-l border-[#2C2C2C] md:pl-6">
-            <h3 class="text-white text-xl font-bold mb-4">
-              Products Included
-            </h3>
-            <ul class="flex flex-wrap gap-4">
-              <li v-for="(feature, i) in features.column2" :key="i" class="">
-                <img v-if="i == 0" src="/pricingproduct/Logo 1.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 1" src="/pricingproduct/Logo 2.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 2" src="/pricingproduct/Logo 3.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 3" src="/pricingproduct/Logo 4.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 4" src="/pricingproduct/Logo 5.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 5" src="/pricingproduct/Logo 6.svg" alt="" class="w-16 h-16" />
-
-              </li>
-            </ul>
-          </div>
+         
         </div>
       </div>
 
@@ -363,7 +337,7 @@
 
 <script setup>
 import { ref } from "vue";
-
+import Indicator from './Plans/Indicator.vue'
 const selectedPlan = ref("Matrix ONE");
 const billingPeriod = ref("Monthly");
 
@@ -376,6 +350,7 @@ const props = defineProps({
 const activePlan = ref({name : 'indicator' , price : 0});
 
 const changePlan = (name , price) => {
+
   activePlan.value.name = name;
   activePlan.value.price = price;
 }

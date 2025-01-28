@@ -5,7 +5,6 @@
   <Features id="features" />
   <Comparison />
   <Globe />
-
   <Insights />
   <Cart :cart="cart" :addToCart="toggleCartItem"/>
 
@@ -22,6 +21,7 @@ import Insights from "./Insights.vue";
 import Globe from "./Globe.vue";
 import Cart from "./Cart.vue";
 import { ref } from "vue";
+
 
 
 const cart = ref([]);

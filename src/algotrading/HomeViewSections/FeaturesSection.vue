@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, computed } from "vue";
+import { ref, onMounted, computed, watch, onUnmounted } from "vue";
 import animation from "../animation.vue";
 import LottieComponent from "../../home/utils/LottieComponent.vue";
 
@@ -84,7 +84,27 @@ const simulateAnimationLoading = () => {
   }, 100); // Simulated delay
 };
 
-simulateAnimationLoading();
+const cycleFeatures = () => {
+  const currentIndex = features.findIndex(f => f.id === selectedFeature.value);
+  const nextIndex = (currentIndex + 1) % features.length;
+  selectedFeature.value = features[nextIndex].id;
+};
+
+let cycleInterval;
+
+onMounted(() => {
+  simulateAnimationLoading();
+  cycleInterval = setInterval(cycleFeatures, 5000); // Cycle every 5 seconds
+});
+
+onUnmounted(() => {
+  clearInterval(cycleInterval);
+});
+
+watch(selectedFeature, () => {
+  clearInterval(cycleInterval);
+  cycleInterval = setInterval(cycleFeatures, 5000);
+});
 </script>
 
 <template>
@@ -104,47 +124,50 @@ simulateAnimationLoading();
       </p>
     </div>
 
-    <div class=" my-24 ">
-      <div v-for="feature in filteredFeatures" :key="feature.id" class="grid grid-cols-1 lg:grid-cols-12 h-[70vh]">
-        <div class="col-span-6  text-center flex items-center xl:text-left">
-          <div>
-            <h1 class=" font-semibold text-white text-[27px] xl:text-[38px] mb-4">
-              {{ feature.title }}
-            </h1>
-            <p class="font-openSans text-[14px] md:text-[16px] text-[#dfdfdf]">
-              {{ feature.description }}
-            </p>
+    <div class="my-24">
+      <Transition name="fade" mode="out-in">
+        <div :key="selectedFeature" class="grid grid-cols-1 lg:grid-cols-12 h-[70vh]">
+          <div v-for="feature in filteredFeatures" :key="feature.id" class="col-span-12 lg:col-span-6 text-center flex items-center xl:text-left">
+            <div>
+              <h1 class="font-semibold text-white text-[27px] xl:text-[38px] mb-4">
+                {{ feature.title }}
+              </h1>
+              <p class="font-openSans text-[14px] md:text-[16px] text-[#dfdfdf]">
+                {{ feature.description }}
+              </p>
+            </div>
           </div>
 
-          
-        </div>
-
-        <div class=" col-span-6 flex justify-center">
-
-          <div class=" w-[80%]">
-            <img v-if="feature.imagePath" :src="feature.imagePath" alt="" class=""  />
-
-            <animation v-else :animationPath="feature.animationPath" />
+          <div v-for="feature in filteredFeatures" :key="feature.id" class="col-span-12 lg:col-span-6 flex justify-center">
+            <div class="w-[80%]">
+              <img v-if="feature.imagePath" :src="feature.imagePath" alt="" class="" />
+              <animation v-else :animationPath="feature.animationPath" />
+            </div>
           </div>
-
         </div>
-      </div>
+      </Transition>
     </div>
 
-    <!-- !Buttons -->
-
+    <!-- Buttons -->
     <div class="flex items-center justify-between space-x-3 overflow-x-auto w-full text-white no-scrollbar">
       <div v-for="feature in features" :key="feature.id" class="flex flex-col items-center">
-        <button @click="selectFeature(feature.id)" :class="[
-          'flex items-center gap-4 border-2 rounded-xl px-6 pr-16 py-2 whitespace-nowrap',
-          selectedFeature === feature.id
-            ? 'border-[#00B852] bg-[#00B852] border-b-4 bg-opacity-10'
-            : 'border-gray-500 bg-transparent',
-        ]">
+        <button 
+          @click="selectFeature(feature.id)" 
+          :class="[
+            'flex items-center border-2 rounded-xl min-w-56 px-2 py-2 relative ',
+            selectedFeature === feature.id
+              ? 'border-[#00B852] bg-[#00B852] border-b-4 bg-opacity-10'
+              : 'border-gray-500 bg-transparent',
+          ]"
+        >
           <img src="/images/svg/PaperTrading.svg" alt="" />
-          <p class="font-CabinetGrotesk font-bold text-[16px]">
+          <p class="font-CabinetGrotesk font-bold text-[16px] relative z-10">
             {{ feature.title }}
           </p>
+          <div 
+            v-if="selectedFeature === feature.id" 
+            class="absolute left-0 top-0 bottom-0 bg-[#00B852] opacity-25 loading-animation"
+          ></div>
         </button>
         <div v-if="selectedFeature === feature.id" class="trapezoid"></div>
       </div>
@@ -164,20 +187,39 @@ simulateAnimationLoading();
 .animation-placeholder {
   width: 100%;
   height: 650px;
-  /* Adjust height as needed */
   background-color: transparent;
-  /* Placeholder background color */
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
   -ms-overflow-style: none;
-  /* IE and Edge */
   scrollbar-width: none;
-  /* Firefox */
+}
+
+.loading-animation {
+  animation: loading 5s linear;
+}
+
+@keyframes loading {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
+
