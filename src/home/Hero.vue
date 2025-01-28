@@ -15,10 +15,7 @@
           class=" border rounded-3xl font-semibold border-[#FFCA28] px-2 py-1 text-[11px] text-[#FFCA28] bg-[#FFCA28] bg-opacity-10">
           #1 One stop solution for your Trading needs</p>
       </div>
-      <!-- <div class="flex  justify-center items-center gap-2 mt-4">
-        <Odometer/>
-        <p class="text-[white]">User Joined</p>
-      </div> -->
+      
       <div class="outer-heading ">
         <h1 class=" outer-heading text-[27px] md:text-[55px] max-w-3xl font-bold 
       bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
@@ -138,7 +135,7 @@ import "swiper/css/pagination";
 import { computed, ref, watch } from 'vue';
 import AnimatedHero from './utils/AnimatedHero.vue';
 import AnimatedHero2 from './utils/AnimatedHero2.vue';
-import Odometer from '../component/Odometer.vue';
+
 
 // Register the modules to be used in the Swiper
 const modules = [Autoplay];

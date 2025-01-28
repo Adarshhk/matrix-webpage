@@ -2,11 +2,11 @@
   <!-- <Social/> -->
   
   <Navbar />
+  
   <MouseEffect />
   <div class="max-w-[1280px] mx-auto">
     <RouterView />
     <FAQ />
-
     <Footer />
   </div>
 
@@ -16,11 +16,13 @@
 import { RouterView } from 'vue-router';
 import FAQ from './component/FAQ.vue';
 
+
 import MouseEffect from './component/MouseEffect.vue';
 import Footer from './investor/src/components/Footer.vue';
 import Navbar from './component/Navbar.vue';
 import Social from './home/Social.vue';
-import Odometer from './component/Odometer.vue';
+import LottieComponent from './home/utils/LottieComponent.vue';
+
 
 </script>
 

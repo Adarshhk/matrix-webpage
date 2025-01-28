@@ -138,7 +138,7 @@ import icon6 from '/src/assets/producticons/producticon (6).svg'
 // Navigation data
 const navItems = [
   { name: 'Product', path: '#features' },
-  { name: 'Pricing', path: '#hero' },
+  { name: 'Pricing', path: '/pricing' },
   { name: 'Contact Us', path: '/contact' },
   { name: 'Blogs & Insights', path: '/blogs' },
   { name: 'About Us', path: '/about' },

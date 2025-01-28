@@ -16,6 +16,7 @@ import RefundPolicy from './termsandcondition/refundpolicy/RefundPolicy.vue';
 import PrivacyPolicy from './termsandcondition/privacypolicy/PrivacyPolicy.vue';
 import Contact from './component/Contact.vue';
 import AlgoTrading from './algotrading/AlgoTrading.vue';
+import Pricing from './pricing/Pricing.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -35,6 +36,7 @@ const routes = [
   { path : '/privacy-policy' , component : PrivacyPolicy},
   { path : '/contact' , component : Contact},
   { path : '/algo-trading' , component : AlgoTrading},
+  { path : '/pricing' , component : Pricing},
 
 ]
 

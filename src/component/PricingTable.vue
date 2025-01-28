@@ -4,6 +4,25 @@ import { useRouter } from "vue-router";
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 
+const features = {
+  column1: [
+    { text: "20,000+ of PNG & SVG graphics", active: true },
+    { text: "Switch or cancel anytime", active: true },
+    { text: "Scalable plans for beginners to pros", active: true },
+    { text: "Advanced analytics tools", active: false },
+    { text: "Custom integrations", active: false },
+    { text: "Priority support", active: false },
+  ],
+  column2: [
+    { text: "Real-time market data", active: true },
+    { text: "Multi-device sync", active: true },
+    { text: "API access", active: true },
+    { text: "White-label solutions", active: false },
+    { text: "Dedicated account manager", active: false },
+    { text: "Custom reporting", active: false },
+  ],
+};
+
 const router = useRouter();
 
 const goToHome = () => {
@@ -460,389 +479,65 @@ function toggle(button) {
 
 <template>
   <main class="">
-    <section>
-      <div
-        class="flex justify-center gap-x-5 text-white font-ProximaNova mx-auto bg-[#353535] w-[70%] md:w-[40%] xl:w-[25%] py-1 rounded-3xl mt-8"
-      >
-        <button
-          :class="[
-            'w-[50%] h-[35px] rounded-3xl text-sm ml-1 xxl:text-base',
-            {
-              'bg-matrixgreen': isTabActive === 'Matrix',
-              inactive: isTabActive !== 'Matrix',
-            },
-          ]"
-          @click="toggle('Matrix')"
-        >
-          Matrix
-        </button>
-        <button
-          :class="[
-            'w-[50%] h-[35px] rounded-3xl text-sm mr-1 xxl:text-base',
-            {
-              'bg-matrixgreen': isTabActive === 'Webhook',
-              inactive: isTabActive !== 'Webhook',
-            },
-          ]"
-          @click="toggle('Webhook')"
-        >
-          Webhook
-        </button>
-      </div>
-    </section>
 
-    <section class="hidden md:flex justify-center mt-9 px-4 relative">
-      <DataTable
-        :value="explorePlans"
-        showGridlines
-        stripedRows
-        class=" overflow-x-auto  bg-[#151719] text-white"
-      >
-        <Column
-          header=""
-          field="base"
-          class="sticky left-0 z-10 border border-white border-opacity-25 text-center p-6 bg-[#151719]"
-          
-        ></Column>
-
-        <Column
-          header="Free"
-          field="title1"
-          class="border border-white border-opacity-25 text-center py-6 px-8 "
-          headerClass="p-column-header-content"
-        >
-          <template #body="slotProps">
-            <img :src="slotProps.data.title1.img" alt="" class="mx-auto" />
-            <p class="font-CabinetGrotesk font-bold text-[30px] whitespace-nowrap">
-                  <span v-if="slotProps.data.title1.charges">&#x20b9;</span
-                  >{{ slotProps.data.title1.charges
-                  }}<span
-                    v-if="slotProps.data.title1.charges"
-                    class="text-[18px]"
-                    >+0 brokerage</span
-                  >
-                </p>
-            <p class="font-CabinetGrotesk font-bold">
-              {{ slotProps.data.title1.name }}
+    <div  class="mt-12">
+        <div class="bg-[#1d2125] rounded-lg p-6 grid grid-cols-1 md:grid-cols-3">
+          <!-- Pricing Card -->
+          <div>
+            <h3 class="text-[#dfdfdf] text-2xl font-bold mb-2">Freebie</h3>
+            <p class="text-gray-400 text-[16px] mb-4">
+              Ideal for individuals who need quick access to basic features
             </p>
-            <button
-              v-if="slotProps.data.title1.button"
-              class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2 whitespace-nowrap"
-            >
-              {{ slotProps.data.title1.button }}
+
+            <div class="bg-[#00693B] rounded-full px-3 py-0.5 inline-block mb-6">
+              <span class="text-[#00B852] text-xs">Get 20% off</span>
+              <span class="text-[#dfdfdf] text-xs ml-1">when billed annually</span>
+            </div>
+
+            <div class="flex items-baseline mb-6">
+              <span class="text-4xl font-bold text-[#dfdfdf]">$0</span>
+              <span class="text-gray-400 ml-2 text-sm">/ Month</span>
+            </div>
+
+            <button class="w-[60%] py-2 rounded-lg mb-8 bg-[#dfdfdf] text-black hover:bg-gray-100 transition-all">
+              Buy Now
             </button>
-          </template>
-        </Column>
+          </div>
 
-        <Column
-          header="Essential"
-          field="title2"
-          class="border border-white border-opacity-25 text-center py-6 px-8"
-        >
-          <template #body="slotProps">
-            <img :src="slotProps.data.title2.img" alt="" class="mx-auto" />
-            <p class="font-CabinetGrotesk font-bold text-[30px] whitespace-nowrap">
-                  <span v-if="slotProps.data.title2.charges">&#x20b9;</span
-                  >{{ slotProps.data.title2.charges
-                  }}<span
-                    v-if="slotProps.data.title2.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-            <p class="font-CabinetGrotesk font-bold">
-              {{ slotProps.data.title2.name }}
-            </p>
-            <button
-              v-if="slotProps.data.title2.button"
-              class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2 whitespace-nowrap"
-            >
-              {{ slotProps.data.title2.button }}
-            </button>
-          </template>
-        </Column>
+          <!-- Feature Lists -->
+          <div class="md:border-l border-[#2C2C2C] md:pl-6">
+            <h3 class="text-white text-xl font-bold mb-4">
+              Features of Matrix Algo
+            </h3>
+            <ul class="space-y-4 ">
+              <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
+                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
+                <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
+                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
+                  {{ feature.text }}
+                </span>
+              </li>
+            </ul>
+          </div>
 
-        <Column
-          header="Evolution"
-          field="title3"
-          class="border border-white border-opacity-25 text-center py-6 px-8"
-        >
-          <template #body="slotProps">
-            <img :src="slotProps.data.title3.img" alt="" class="mx-auto" />
-            <p class="font-CabinetGrotesk font-bold text-[30px] whitespace-nowrap">
-                  <span v-if="slotProps.data.title3.charges">&#x20b9;</span
-                  >{{ slotProps.data.title3.charges
-                  }}<span
-                    v-if="slotProps.data.title3.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-            <p class="font-CabinetGrotesk font-bold">
-              {{ slotProps.data.title3.name }}
-            </p>
-            <button
-              v-if="slotProps.data.title3.button"
-              class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2 whitespace-nowrap"
-            >
-              {{ slotProps.data.title3.button }}
-            </button>
-          </template>
-        </Column>
+          <div class="md:border-l border-[#2C2C2C] md:pl-6">
+            <h3 class="text-white text-xl font-bold mb-4">
+              Products Included
+            </h3>
+            <ul class="flex flex-wrap gap-4">
+              <li v-for="(feature, i) in features.column2" :key="i" class="">
+                <img v-if="i == 0" src="/pricingproduct/Logo 1.svg" alt="" class="w-16 h-16" />
+                <img v-if="i == 1" src="/pricingproduct/Logo 2.svg" alt="" class="w-16 h-16" />
+                <img v-if="i == 2" src="/pricingproduct/Logo 3.svg" alt="" class="w-16 h-16" />
+                <img v-if="i == 3" src="/pricingproduct/Logo 4.svg" alt="" class="w-16 h-16" />
+                <img v-if="i == 4" src="/pricingproduct/Logo 5.svg" alt="" class="w-16 h-16" />
+                <img v-if="i == 5" src="/pricingproduct/Logo 6.svg" alt="" class="w-16 h-16" />
 
-        <Column
-          header="Elite"
-          field="title4"
-          class="border border-white bg-matrix-green border-opacity-25 text-center py-6 px-8"
-        >
-          <template #body="slotProps">
-            <img :src="slotProps.data.title4.img" alt="" class="mx-auto" />
-            <p class="font-CabinetGrotesk font-bold text-[30px] whitespace-nowrap">
-                  <span v-if="slotProps.data.title4.charges">&#x20b9;</span
-                  >{{ slotProps.data.title4.charges
-                  }}<span
-                    v-if="slotProps.data.title4.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-            <p class="font-CabinetGrotesk font-bold">
-              {{ slotProps.data.title4.name }}
-            </p>
-            <button
-              v-if="slotProps.data.title4.button"
-              class="font-semibold bg-white text-black px-6 py-2 whitespace-nowrap"
-            >
-              {{ slotProps.data.title4.button }}
-            </button>
-          </template>
-        </Column>
-
-        <Column
-          header="HNI"
-          field="title5"
-          class="border border-white border-opacity-25 text-center py-6 px-8"
-        >
-          <template #body="slotProps">
-            <img :src="slotProps.data.title5.img" alt="" class="mx-auto" />
-            <p class="font-CabinetGrotesk font-bold text-[30px] whitespace-nowrap">
-                  <span v-if="slotProps.data.title5.charges">&#x20b9;</span
-                  >{{ slotProps.data.title5.charges
-                  }}<span
-                    v-if="slotProps.data.title5.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-            <p class="font-CabinetGrotesk font-bold">
-              {{ slotProps.data.title5.name }}
-            </p>
-            <button
-              v-if="slotProps.data.title5.button"
-              class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2 whitespace-nowrap"
-            >
-              {{ slotProps.data.title5.button }}
-            </button>
-          </template>
-        </Column>
-      </DataTable>
-    </section>
-
-    <!-- Mobile Plans Section -->
-
-    <section class="px-2 mt-8 flex items-center justify-center overflow-x-auto md:hidden">
-      <div class="flex w-full gap-4">
-        <div class="w-full flex-shrink-0">
-          <DataTable
-            :value="explorePlans"
-            showGridlines
-            stripedRows
-            class="border border-white border-opacity-25 overflow-x-auto w-full"
-          >
-            <Column
-              header="Free"
-              field="title1"
-              class="border border-white border-opacity-25 text-center py-6 px-8"
-            >
-              <template #body="slotProps">
-                <p class="font-ProximaNova mb-1">{{ slotProps.data.base }}</p>
-                <img :src="slotProps.data.title1.img" alt="" class="mx-auto" />
-                <p class="font-CabinetGrotesk font-bold text-[30px]">
-                  <span v-if="slotProps.data.title1.charges">&#x20b9;</span
-                  >{{ slotProps.data.title1.charges
-                  }}<span
-                    v-if="slotProps.data.title1.charges"
-                    class="text-[18px]"
-                    >+0 brokerage</span
-                  >
-                </p>
-                <p class="font-CabinetGrotesk font-bold text-[18px]">
-                  {{ slotProps.data.title1.name }}
-                </p>
-                <button
-                  v-if="slotProps.data.title1.button"
-                  class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2"
-                >
-                  {{ slotProps.data.title1.button }}
-                </button>
-              </template>
-            </Column>
-          </DataTable>
-        </div>
-
-        <div class="w-full flex-shrink-0">
-          <DataTable
-            :value="explorePlans"
-            showGridlines
-            stripedRows
-            class="border border-white border-opacity-25 overflow-x-auto bg-[#151719] w-full"
-          >
-            <Column
-              header="Essential"
-              field="title2"
-              class="border border-white border-opacity-25 text-center py-6 px-8"
-            >
-              <template #body="slotProps">
-                <p class="font-ProximaNova mb-1">{{ slotProps.data.base }}</p>
-                <img :src="slotProps.data.title2.img" alt="" class="mx-auto" />
-                <p class="font-CabinetGrotesk font-bold text-[30px]">
-                  <span v-if="slotProps.data.title2.charges">&#x20b9;</span
-                    >{{ slotProps.data.title2.charges
-                  }}<span
-                    v-if="slotProps.data.title2.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-                <p class="font-CabinetGrotesk font-bold text-[18px]">
-                  {{ slotProps.data.title2.name }}
-                </p>
-                <button
-                  v-if="slotProps.data.title2.button"
-                  class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2"
-                >
-                  {{ slotProps.data.title2.button }}
-                </button>
-              </template>
-            </Column>
-          </DataTable>
-        </div>
-
-        <div class="w-full flex-shrink-0">
-          <DataTable
-            :value="explorePlans"
-            showGridlines
-            stripedRows
-            class="border border-white border-opacity-25 overflow-x-auto bg-[#151719] w-full"
-          >
-            <Column
-              header="Evolution"
-              field="title3"
-              class="border border-white border-opacity-25 text-center py-6 px-8"
-            >
-              <template #body="slotProps">
-                <p class="font-ProximaNova mb-1">{{ slotProps.data.base }}</p>
-                <img :src="slotProps.data.title3.img" alt="" class="mx-auto" />
-                <p class="font-CabinetGrotesk font-bold text-[30px]">
-                  <span v-if="slotProps.data.title3.charges">&#x20b9;</span
-                    >{{ slotProps.data.title3.charges
-                  }}<span
-                    v-if="slotProps.data.title3.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-                <p class="font-CabinetGrotesk font-bold text-[18px]">
-                  {{ slotProps.data.title3.name }}
-                </p>
-                <button
-                  v-if="slotProps.data.title3.button"
-                  class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2"
-                >
-                  {{ slotProps.data.title3.button }}
-                </button>
-              </template>
-            </Column>
-          </DataTable>
-        </div>
-
-        <div class="w-full flex-shrink-0 h-full">
-          <DataTable
-            :value="explorePlans"
-            showGridlines
-            stripedRows
-            class="border border-white border-opacity-25 overflow-x-auto bg-matrixgreen w-full"
-          >
-            <Column
-              header="Elite"
-              field="title4"
-              class="bg-matrix-green text-center py-6 px-8"
-            >
-              <template #body="slotProps">
-                <p class="font-ProximaNova mb-1">{{ slotProps.data.base }}</p>
-                <img :src="slotProps.data.title4.img" alt="" class="mx-auto" />
-                <p class="font-CabinetGrotesk font-bold text-[30px]">
-                  <span v-if="slotProps.data.title4.charges">&#x20b9;</span
-                    >{{ slotProps.data.title4.charges
-                  }}<span
-                    v-if="slotProps.data.title4.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-                <p class="font-CabinetGrotesk font-bold text-[18px]">
-                  {{ slotProps.data.title4.name }}
-                </p>
-                <button
-                  v-if="slotProps.data.title4.button"
-                  class="font-ProximaNova font-bold bg-white text-black px-6 py-2"
-                >
-                  {{ slotProps.data.title4.button }}
-                </button>
-              </template>
-            </Column>
-          </DataTable>
-        </div>
-
-        <div class="w-full flex-shrink-0">
-          <DataTable
-            :value="explorePlans"
-            showGridlines
-            stripedRows
-            class="border border-white border-opacity-25 overflow-x-auto bg-[#151719] w-full"
-          >
-            <Column
-              header="HNI"
-              field="title5"
-              class="border border-white border-opacity-25 text-center py-6 px-8"
-            >
-              <template #body="slotProps">
-                <p class="font-ProximaNova mb-1">{{ slotProps.data.base }}</p>
-                <img :src="slotProps.data.title5.img" alt="" class="mx-auto" />
-                <p class="font-CabinetGrotesk font-bold text-[30px]">
-                  <span v-if="slotProps.data.title5.charges">&#x20b9;</span
-                    >{{ slotProps.data.title5.charges
-                  }}<span
-                    v-if="slotProps.data.title5.charges"
-                    class="text-[18px]"
-                    >+GST</span
-                  >
-                </p>
-                <p class="font-CabinetGrotesk font-bold text-[18px]">
-                  {{ slotProps.data.title5.name }}
-                </p>
-                <button
-                  v-if="slotProps.data.title5.button"
-                  class="font-ProximaNova font-bold bg-matrixgreen px-6 py-2"
-                >
-                  {{ slotProps.data.title5.button }}
-                </button>
-              </template>
-            </Column>
-          </DataTable>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
   </main>
 </template>
 

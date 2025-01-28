@@ -59,11 +59,11 @@ const reviews = [
 <template>
   <section
     ref="observedSection"
-    class="p-8 md:p-20 bg-[#ECF6F6] flex items-center justify-between"
+    class="mt-16 lg:mt-24 flex items-center justify-between"
   >
     <div class="flex flex-col justify-between items-center xl:flex-row">
       <h1
-        class="font-CabinetGrotesk font-extrabold text-black mx-auto text-[31px] w-full md:text-[38px] md:w-[70%] xl:hidden"
+        class="font-bold text-white mx-auto text-[27x] w-full md:text-[38px] md:w-[70%] xl:hidden"
       >
         We are loved by people from all parts of India
       </h1>
@@ -73,7 +73,7 @@ const reviews = [
       <div class="flex flex-col items-center xl:items-start justify-start w-full xl:w-[35%]">
         <div class="">
           <h1
-            class="font-CabinetGrotesk font-extrabold text-black text-[38px] hidden xl:flex"
+            class="font-bold text-white text-[38px] hidden xl:flex"
           >
             We are loved by people from all parts of India
           </h1>
@@ -89,7 +89,7 @@ const reviews = [
       <img :src="item.img" alt="" class="w-[31px] md:w-[52px] xl:w-[40px]"/>
       <div>
         <p
-          class="font-CabinetGrotesk font-extrabold text-black text-[27px] md:text-[34px]"
+          class="font-bold text-[#dfdfdf] text-[27px] md:text-[34px]"
         >
           <Vue3Autocounter
             v-if="isInView"
@@ -100,7 +100,7 @@ const reviews = [
             decimalSeparator="."
           />
         </p>
-        <p class="font-ProximaNova text-[16px] md:text-[18px] whitespace-nowrap">
+        <p class="font-openSans text-[#dfdfdf] text-[14px] md:text-[16px] whitespace-nowrap">
           {{ item.desc }}
         </p>
       </div>
