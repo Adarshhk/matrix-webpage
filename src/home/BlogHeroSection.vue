@@ -5,17 +5,7 @@ import Breadcrumb from '/src/component/Breadcrumb.vue'
 
 <template>
     <section class="mx-auto mb-10">
-        <Breadcrumb :items="[{
-                    title: 'Home',
-                    disabled: false,
-                    href: '/'
-                },
-                {
-                    title: 'Blogs',
-                    disabled: false,
-                    href: '/blogs'
-                },
-                ]" />
+        
         <div class="mx-auto text-center w-full py-4 lg:py-24">
             
 

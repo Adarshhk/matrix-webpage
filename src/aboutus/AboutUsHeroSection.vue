@@ -1,6 +1,6 @@
 <script setup>
 import { Vue3Marquee } from "vue3-marquee";
-
+import Breadcrumb from '/src/component/Breadcrumb.vue'
 const imgArray = [
   "/src/assets/img/about/c1 (5).png",
   "/src/assets/img/about/c1 (6).png",
@@ -14,8 +14,24 @@ const imgArray = [
 </script>
 
 <template>
-  <section class="w-[95%] mx-auto mb-10 ">
-    <div class="mx-auto text-center w-full xl:w-[80%] mb-16">
+
+  <section class="w-[95%] mx-auto mt-20 px-4">
+    <Breadcrumb :items="[{
+            title: 'Home',
+            disabled: false,
+            href: '/'
+          },
+          {
+            title: 'About Us',
+            disabled: false,
+            href: '/about'
+          },
+          ]" />
+
+   
+    <div class="mx-auto text-center w-full xl:w-[80%] mb-16 mt-24">
+
+
       
       <h1
         class="text-[27px] md:text-[55px] font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent leading-tight "

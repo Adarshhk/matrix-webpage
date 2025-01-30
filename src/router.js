@@ -18,6 +18,8 @@ import Contact from './component/Contact.vue';
 import AlgoTrading from './algotrading/AlgoTrading.vue';
 import Pricing from './pricing/Pricing.vue';
 import BlogDetails from './blog details/BlogDetails.vue';
+import { Signal } from 'lucide-vue-next';
+import Signals from './signals/Signals.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -38,7 +40,8 @@ const routes = [
   { path : '/contact' , component : Contact},
   { path : '/algo-trading' , component : AlgoTrading},
   { path : '/pricing' , component : Pricing},
-  { path : '/blog-details/:id' , component : BlogDetails}
+  { path : '/blog-details/:id' , component : BlogDetails},
+  { path : '/signals' , component : Signals}
 
 ]
 

@@ -1,6 +1,18 @@
 <template>
-  <div class="min-h-screen pt-40 w-full">
-    <div class="mx-5 flex flex-col lg:flex-row gap-8 px-0">
+  <div class="min-h-screen pt-24 w-full">
+    <Breadcrumb :items="[{
+            title: 'Home',
+            disabled: false,
+            href: '/'
+          },
+          {
+            title: 'Webhook',
+            disabled: false,
+            href: '/webhook'
+          },
+          ]" />
+    <div class="flex flex-col lg:flex-row gap-8 px-0">
+
 
       <!-- Grid Background Images -->
     <div class="absolute inset-0 hidden lg:block">
@@ -17,7 +29,9 @@
     </div>
     
       <!-- Left Column (100% on md and below, 70% on lg and above) -->
-      <div class="w-full  p-8  xl:p-2 2xl:p-4 z-10 ">
+      <div class="w-full z-10">
+        
+      
         <div class="mb-12">
           <h1 class="text-[40px] font-extrabold mb-4">
             <span class="bg-gradient-to-r from-[#00b853] to-[#2fc1a7] bg-clip-text text-transparent">
@@ -164,6 +178,8 @@
 
 <script setup>
 import { ref } from 'vue';
+
+import Breadcrumb from '/src/component/Breadcrumb.vue'
 
 const showPopup = ref(false);
 </script>

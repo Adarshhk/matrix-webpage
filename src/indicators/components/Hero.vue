@@ -1,10 +1,21 @@
 <template>
     <div class="w-[95%]  mx-auto mt-24 ">
-        <div class="grid-background hidden lg:block -z-10">
+        <Breadcrumb :items="[{
+                        title: 'Home',
+                        disabled: false,
+                        href: '/' 
+                    },
+                    {
+                        title: 'Indicator',
+                        disabled: false,
+                        href: '/indicators' 
+                    },
+                ]"/>
+        <div class="grid-background hidden lg:block -z-10 ">
             <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
             <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
         </div>
-        <div>
+        <div class="mt-4">
             <img src="/src/assets/img/indicatorbanner.png" alt="">
         </div>
         <!-- <div class="rounded-md bg-[#68B2D7] h-48 grid grid-cols-4 ">
@@ -18,6 +29,8 @@
         </div> -->
 
         <div class="mt-16">
+
+                
                 <h2
                     class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-[27px] lg:text-[38px] font-extrabold mb-6">
                     List of indicator you may to boost your trading skills</h2>
@@ -29,6 +42,8 @@
 </template>
 
 <script setup>
+import Breadcrumb from '../../component/Breadcrumb.vue';
+
 
 </script>
 

@@ -2,11 +2,12 @@
   <!-- <Social/> -->
   
   <Navbar />
-  
   <MouseEffect />
+
   <div class="max-w-[1280px] mx-auto">
     <RouterView />
     <FAQ />
+    <Sebi/>
     <Footer />
   </div>
 
@@ -22,6 +23,9 @@ import Footer from './investor/src/components/Footer.vue';
 import Navbar from './component/Navbar.vue';
 import Social from './home/Social.vue';
 import LottieComponent from './home/utils/LottieComponent.vue';
+import Test from './Test.vue';
+import Sebi from './component/Sebi.vue';
+import TechText from './component/TechText.vue';
 
 
 </script>

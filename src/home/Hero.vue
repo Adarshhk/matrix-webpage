@@ -16,13 +16,13 @@
           #1 One stop solution for your Trading needs</p>
       </div>
       
-      <div class="outer-heading ">
-        <h1 class=" outer-heading text-[27px] md:text-[55px] max-w-3xl font-bold 
+      <div class="text-container">
+        <h1 class=" text-[27px] md:text-[64px] max-w-3xl font-extrabold 
       bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
-      text-transparent mx-auto py-1">
+      text-transparent mx-auto py-1 text-gradient">
           Turning Opportunities into
-          <div class="inner-headings -mt-2 md:mt-0">
-            <span class="
+          <div class="inner-headings  -mt-2 md:mt-0">
+            <span class=" 
           bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text 
           text-transparent">
               Outcomes. <br />
@@ -63,8 +63,8 @@
       </p>
       
       
-        <button
-          class=" mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48 ">
+        <button 
+          class="z-40 mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48 ">
           <div class="content vertical flex justify-center">
             <div class="text font-semibold text-base font-openSans">Get Started</div>
             <div class="hover-text font-semibold  text-base font-openSans">Get Started</div>
@@ -173,6 +173,54 @@ const features = [
 </script>
 
 <style scoped>
+.text-container {
+  padding: 0;
+  text-align: center;
+}
+
+.text-container h2 {
+  font-size: 6em;
+  text-transform: uppercase;
+  font-family: 'Fredoka One', cursive;
+}
+
+.text-container .text-gradient {  
+  color: transparent;
+  background-image: linear-gradient(to left, #7B68EE, #3498db, #2ecc71, #7B68EE, #3498db, #2ecc71);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: color 5s linear infinite; 
+  background-size: 500%;  
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+.text-container .text-pattern {  
+  color: transparent;
+  background-color: #DC143C;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 25px,
+    rgba(255,255,255,.5) 25px,
+    rgba(255,255,255,.5) 50px
+  );
+  -webkit-background-clip: text;
+  background-clip: text;   
+  animation: color 50s linear infinite; 
+  background-size: 200%;  
+  -webkit-transform: translate3d(0,0,0);
+  -webkit-backface-visibility: hidden;
+}
+
+@keyframes color {
+  from { 
+    background-position: 0% 50%;
+  }
+  to { 
+    background-position: 100% 50%; 
+  }
+}
 .grid-background {
   display: none;
   /* Default: hide the grid on all screen sizes */

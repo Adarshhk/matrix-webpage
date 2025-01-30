@@ -4,8 +4,19 @@
             <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
             <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
         </div>
+        <Breadcrumb :items="[{
+            title: 'Home',
+            disabled: false,
+            href: '/'
+          },
+          {
+            title: 'Screener',
+            disabled: false,
+            href: '/screener'
+          },
+          ]" />
         <div>
-            <img src="/src/assets/img/screenerbanner.png" alt="">
+            <img src="/src/assets/img/screenerbanner.png" alt="" class="mt-4">
         </div>
         <!-- <div class="rounded-md bg-[#68B2D7] h-48 grid grid-cols-4 ">
             <div>
@@ -78,6 +89,8 @@
 </template>
 
 <script setup>
+
+import Breadcrumb from '/src/component/Breadcrumb.vue'
 
 </script>
 

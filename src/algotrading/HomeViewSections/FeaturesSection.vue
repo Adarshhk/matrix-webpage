@@ -74,9 +74,27 @@ const onAnimationLoaded = () => {
   animationLoaded.value = true;
 };
 
+const buttonContainerRef = ref(null);
+
+const scrollToActiveButton = () => {
+  const activeButton = document.querySelector(`button[data-feature="${selectedFeature.value}"]`);
+  if (activeButton && buttonContainerRef.value) {
+    const container = buttonContainerRef.value;
+    const buttonRect = activeButton.getBoundingClientRect();
+    const containerRect = container.getBoundingClientRect();
+
+    if (buttonRect.right > containerRect.right || buttonRect.left < containerRect.left) {
+      container.scrollTo({
+        left: activeButton.offsetLeft - container.clientWidth / 2 + activeButton.clientWidth / 2,
+        behavior: 'smooth'
+      });
+    }
+  }
+};
 const selectFeature = (feature) => {
   selectedFeature.value = feature;
 };
+
 
 const simulateAnimationLoading = () => {
   setTimeout(() => {
@@ -95,6 +113,7 @@ let cycleInterval;
 onMounted(() => {
   simulateAnimationLoading();
   cycleInterval = setInterval(cycleFeatures, 5000); // Cycle every 5 seconds
+  setTimeout(scrollToActiveButton, 50); // Small delay to ensure DOM update
 });
 
 onUnmounted(() => {
@@ -104,6 +123,7 @@ onUnmounted(() => {
 watch(selectedFeature, () => {
   clearInterval(cycleInterval);
   cycleInterval = setInterval(cycleFeatures, 5000);
+  setTimeout(scrollToActiveButton, 50); // Small delay to ensure DOM update
 });
 </script>
 
@@ -127,7 +147,8 @@ watch(selectedFeature, () => {
     <div class="my-24">
       <Transition name="fade" mode="out-in">
         <div :key="selectedFeature" class="grid grid-cols-1 lg:grid-cols-12 h-[70vh]">
-          <div v-for="feature in filteredFeatures" :key="feature.id" class="col-span-12 lg:col-span-6 text-center flex items-center xl:text-left">
+          <div v-for="feature in filteredFeatures" :key="feature.id"
+            class="col-span-12 lg:col-span-6 text-center flex items-center xl:text-left">
             <div>
               <h1 class="font-semibold text-white text-[27px] xl:text-[38px] mb-4">
                 {{ feature.title }}
@@ -138,7 +159,8 @@ watch(selectedFeature, () => {
             </div>
           </div>
 
-          <div v-for="feature in filteredFeatures" :key="feature.id" class="col-span-12 lg:col-span-6 flex justify-center">
+          <div v-for="feature in filteredFeatures" :key="feature.id"
+            class="col-span-12 lg:col-span-6 flex justify-center">
             <div class="w-[80%]">
               <img v-if="feature.imagePath" :src="feature.imagePath" alt="" class="" />
               <animation v-else :animationPath="feature.animationPath" />
@@ -149,29 +171,30 @@ watch(selectedFeature, () => {
     </div>
 
     <!-- Buttons -->
-    <div class="flex items-center justify-between space-x-3 overflow-x-auto w-full text-white no-scrollbar">
-      <div v-for="feature in features" :key="feature.id" class="flex flex-col items-center">
-        <button 
-          @click="selectFeature(feature.id)" 
-          :class="[
-            'flex items-center border-2 rounded-xl min-w-56 px-2 py-2 relative ',
-            selectedFeature === feature.id
-              ? 'border-[#00B852] bg-[#00B852] border-b-4 bg-opacity-10'
-              : 'border-gray-500 bg-transparent',
-          ]"
-        >
-          <img src="/images/svg/PaperTrading.svg" alt="" />
-          <p class="font-CabinetGrotesk font-bold text-[16px] relative z-10">
-            {{ feature.title }}
-          </p>
-          <div 
-            v-if="selectedFeature === feature.id" 
-            class="absolute left-0 top-0 bottom-0 bg-[#00B852] opacity-25 loading-animation"
-          ></div>
-        </button>
-        <div v-if="selectedFeature === feature.id" class="trapezoid"></div>
-      </div>
+    <div ref="buttonContainerRef" class="flex items-center justify-between space-x-3 overflow-x-auto w-full text-white no-scrollbar">
+    <div v-for="feature in features" :key="feature.id" class="flex flex-col items-center">
+      <button 
+        @click="selectFeature(feature.id)" 
+        :class="[
+          'flex items-center border-2 rounded-xl min-w-max py-2 gap-4  px-2  relative ',
+          selectedFeature === feature.id
+            ? 'border-[#00B852] bg-[#00B852] border-b-4 bg-opacity-10'
+            : 'border-gray-500 bg-transparent',
+        ]"
+        :data-feature="feature.id"
+      >
+        <img src="/images/svg/PaperTrading.svg" alt="" />
+        <p class="font-CabinetGrotesk text-nowrap font-bold text-[16px] relative z-10">
+          {{ feature.title }}
+        </p>
+        <div 
+          v-if="selectedFeature === feature.id" 
+          class="absolute left-0 top-0 bottom-0 bg-[#00B852] opacity-25 loading-animation"
+        ></div>
+      </button>
+      <div v-if="selectedFeature === feature.id" class="trapezoid"></div>
     </div>
+  </div>
   </section>
 </template>
 
@@ -207,6 +230,7 @@ watch(selectedFeature, () => {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -222,4 +246,3 @@ watch(selectedFeature, () => {
   opacity: 0;
 }
 </style>
-

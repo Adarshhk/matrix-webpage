@@ -9,13 +9,14 @@ import LovedByPeopleSection from "./HomeViewSections/LovedByPeopleSection.vue"
 import JoinCommunitySection from "./HomeViewSections/JoinCommunitySection.vue"
 import GalleriaComponent from '/src/component/galleryComponent.vue'; 
 
-
+import Temp from "./HomeViewSections/Temp.vue"
 </script>
 
 
 <template>
     <main class="mt-24 px-4">
-        <HeroSection/>
+        
+        <Temp/>
         <ConfidentTraderSection/>
         <FeaturesSection/>
         <PricingSection/>

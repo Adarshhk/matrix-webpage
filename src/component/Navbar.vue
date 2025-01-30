@@ -18,6 +18,7 @@
           <a class="flex items-center gap-2 font-openSans" @click="handleNavigation(item)">
             {{ item.name }}
             
+          <p v-if="item.name==='Indicators'"class="text-[8px] text-[#00b852] tracking-widest font-semibold">NEW</p>
             <img v-if="item.name === 'Product'" src="/src/assets/svg/toggle.svg"
               class="transition-all duration-150 w-4 h-4 rotate-180"
               :class="{ 'rotate-0': showProductMenu && item.name === 'Product' }" />
@@ -36,7 +37,7 @@
 
     <!-- Product Dropdown (Desktop) -->
     <Transition name="fade">
-      <div v-if="showProductMenu" class="left-0 right-0 top-16 inset-0 fixed hidden md:block "
+      <div v-if="showProductMenu" class="left-0 right-0 top-16 inset-0 fixed bg-black bg-opacity-80 hidden md:block "
         @mouseenter="handleProductMouseEnter">
         <div @mouseleave="handleProductMouseLeave"
           class="bg-[#161a1e] p-5 pt-4 rounded-b-md pb-8 max-w-[1280px] mx-auto mt-4 rounded">
@@ -138,6 +139,7 @@ import icon6 from '/src/assets/producticons/producticon (6).svg'
 // Navigation data
 const navItems = [
   { name: 'Product', path: '#features' },
+  {name : 'Indicators' , path : '/indicator'},
   { name: 'Pricing', path: '/pricing' },
   { name: 'Contact Us', path: '/contact' },
   { name: 'Blogs & Insights', path: '/blogs' },
@@ -151,12 +153,7 @@ const productItems = [
     icon: icon6,
     path: "/screener"
   },
-  {
-    title: 'Indicator',
-    description: ' Decode trends with smart insights.',
-    icon: icon1,
-    path: "/indicator"
-  },
+  
   {
     title: 'Algo Trading',
     description: 'Automate strategies for smarter trading.',
@@ -355,4 +352,5 @@ a:hover .vertical .text {
   opacity: 0;
   max-height: 0;
 }
+
 </style>

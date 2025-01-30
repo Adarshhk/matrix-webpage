@@ -8,7 +8,7 @@
       <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" class="">
         <div v-for="(image, index) in brokerImages" :key="index"
           class="mx-6">
-          <img :src="image.src" :alt="image.alt" class="max-h-full max-w-full object-cover" />
+          <img :src="image.src" :alt="image.alt" class=" w-32 object-cover" />
         </div>
       </Vue3Marquee>
     </div>

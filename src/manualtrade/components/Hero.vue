@@ -17,9 +17,23 @@
     
     <!-- Main Content -->
     <div class="mx-auto h-full flex items-center mt-0">
+      
       <div class="flex flex-col lg:flex-row">
+        
         <!-- Text Content (40% width) -->
+         
         <div class="lg:w-3/5 space-y-8 ml-4 md:ml-10 z-20 mt-24 md:mt-32 xl:mt-48 ">
+          <Breadcrumb :items="[{
+            title: 'Home',
+            disabled: false,
+            href: '/'
+          },
+          {
+            title: 'Manual Trade',
+            disabled: false,
+            href: '/manualtrade'
+          },
+          ]" />
           
           <h1 class="text-[32px] md:text-[48px] leading-[50px] font-bold text-center lg:text-left "> 
             <span class="bg-gradient-to-r from-[#00b853] to-[rgb(81,199,230)] bg-clip-text text-transparent">
@@ -73,6 +87,7 @@ move count."
 
 <script setup>
 // No additional script needed
+import Breadcrumb from '/src/component/Breadcrumb.vue'
 </script>
 
 <style scoped>

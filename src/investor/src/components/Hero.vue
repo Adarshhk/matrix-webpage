@@ -1,13 +1,26 @@
 <template>
   <div class="relative bg h-[80dvh] md:h-[60dvh] lg:h-[95dvh]">
     <!-- Background Grid Pattern Container -->
-
+   
     <!-- Main Content -->
     <div class="mx-auto px-4 h-full flex items-end">
+      
       <div class="flex flex-col lg:flex-row justify-between items-center w-full pb-14 md:pb-20 lg:pb-0">
         <!-- Text Content -->
+         
         <div class="max-w-3xl z-10 text-center lg:text-left"> 
           
+          <Breadcrumb :items="[{
+            title: 'Home',
+            disabled: false,
+            href: '/'
+          },
+          {
+            title: 'Investor',
+            disabled: false,
+            href: '/investor'
+          },
+          ]" />
           <h1 class=" text-[35px] md:text-[55px]  font-bold leading-tight pt-24">
             <span class="inline-block bg-gradient-to-r from-[#00b853] to-[#51c7e6] bg-clip-text text-transparent">
               When Seconds Matter, <br> We Deliver
@@ -38,6 +51,7 @@
 
 <script setup>
 // No additional script needed
+import  Breadcrumb  from '/src/component/Breadcrumb.vue';
 </script>
 
 <style scoped>

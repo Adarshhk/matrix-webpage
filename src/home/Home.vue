@@ -13,10 +13,13 @@
         <Community />
         <Testimonial />
         <Plans />
+        <BlogHeroSection/>
+        <SuggestedArticlesSectionCopy/>
     </div>
 </template>
 
 <script setup>
+
 import Features from './Features.vue';
 import Hero from './Hero.vue';
 import Media from './Media.vue';
@@ -29,6 +32,8 @@ import Plans from './Plans.vue';
 import Card from './Card.vue';
 import Video from './Video.vue';
 import CardMobile from './CardMobile.vue';
+import BlogHeroSection from './BlogHeroSection.vue';
+import SuggestedArticlesSectionCopy from './SuggestedArticlesSection copy.vue';
 
 
 </script>

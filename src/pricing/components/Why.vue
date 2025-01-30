@@ -1,8 +1,22 @@
 <template>
   <div class="min-h-screen mt-24 font-openSans  overflow-x-hidden ">
 
-
+          
+    <Breadcrumb :items="[{
+            title: 'Home',
+            disabled: false,
+            href: '/'
+          },
+          {
+            title: 'Pricing',
+            disabled: false,
+            href: '/pricing'
+          },
+          ]" />
+      
     <div class=" py-20 ">
+
+
       <div>
         <div class="grid-background hidden lg:block ">
           <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
@@ -340,6 +354,7 @@ import { ref } from "vue";
 import Indicator from './Plans/Indicator.vue'
 const selectedPlan = ref("Matrix ONE");
 const billingPeriod = ref("Monthly");
+import Breadcrumb from '/src/component/Breadcrumb.vue'
 
 const props = defineProps({
   addToCart: Function,
