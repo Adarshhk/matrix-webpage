@@ -1,6 +1,5 @@
 <template>
     <div class="">
-
         <Hero id="hero" />
         <Why id="why" />
         <Features id="features" />
@@ -9,6 +8,7 @@
         <CardMobile/>
         <Pricing id="pricing" />
         <Video/>
+        <VideoAd />
         <Tutorial />
         <Community />
         <Testimonial />
@@ -34,6 +34,7 @@ import Video from './Video.vue';
 import CardMobile from './CardMobile.vue';
 import BlogHeroSection from './BlogHeroSection.vue';
 import SuggestedArticlesSectionCopy from './SuggestedArticlesSection copy.vue';
+import VideoAd from './utils/VideoAd.vue';
 
 
 </script>

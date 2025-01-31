@@ -1,5 +1,6 @@
 <template>
   <!-- <Hero id="hero" /> -->
+   <SnowFall/>
   <Why :addToCart="toggleCartItem" :cart="cart" :isInCart="isInCart"/>
   <Tutorial />
   <Features id="features" />
@@ -21,6 +22,7 @@ import Insights from "./Insights.vue";
 import Globe from "./Globe.vue";
 import Cart from "./Cart.vue";
 import { ref } from "vue";
+import SnowFall from "./SnowFall.vue";
 
 
 

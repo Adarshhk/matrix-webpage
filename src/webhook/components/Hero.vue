@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen pt-24 w-full">
+  <div class=" pt-24 w-full">
     <Breadcrumb :items="[{
             title: 'Home',
             disabled: false,

@@ -3,7 +3,7 @@
         <div class=" max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 p-4">
             <!-- Left Content -->
             <div class="flex flex-col items-center md:items-start justify-center p-4 ">
-                <h1 class="text-2xl sm:text-4xl font-bold mb-6 md:mb-10 text-center md:text-left leading-tight">
+                <h1 class="text-2xl sm:text-4xl font-extrabold mb-6 md:mb-10 text-center md:text-left leading-tight">
                     Learn, Trade, and Grow with Expert Insights
                 </h1>
                 <p class="text-[16px] mb-8 text-center md:text-left font-openSans ">
@@ -11,13 +11,13 @@
                     trends, and tips to maximize your success. Watch and
                     empower your journey.
                 </p>
-                <button
-                    class="btn btn-anim text-[#F3F8F9] text-sm w-[95%] py-2 rounded-full bg-[#00B852] max-w-48">
+                <a target="_blank"  href="https://www.youtube.com/@MatrixTradingTech"
+                    class="cursor-pointer btn btn-anim text-[#F3F8F9] text-sm w-[95%] py-2 rounded-full bg-[#00B852] max-w-48">
                     <div class="content vertical flex justify-center">
-                        <div class="text font-semibold text-base font-openSans">Get Started</div>
-                        <div class="hover-text font-semibold  text-base font-openSans">Get Started</div>
+                        <div class="text font-semibold text-base font-openSans">Subscribe</div>
+                        <div class="hover-text font-semibold  text-base font-openSans">Subscribe</div>
                     </div>
-                </button>
+                </a>
             </div>
 
             <!-- Right Content - Video Grid -->

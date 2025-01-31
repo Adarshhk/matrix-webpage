@@ -1,7 +1,7 @@
 <template>
-    <div class="mx-auto lg:px-4 mt-24 lg:my-32 lg:mb-40 px-4">
+    <div class="mx-auto w-[95%] mt-24 lg:mt-32 mb-24">
       <div class="text-center mb-16 lg:mb-24">
-        <h2 class="text-[27px] lg:text-[38px] font-semibold mb-2 text-white">
+        <h2 class="text-[27px] lg:text-[38px] font-extrabold mb-2 text-white">
           Frequently Asked Questions
         </h2>
         <p class="text-white mt-4 font-openSans text-md ">

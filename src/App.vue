@@ -3,8 +3,9 @@
   
   <Navbar />
   <MouseEffect />
-
-  <div class="max-w-[1280px] mx-auto">
+  <Chatbot />
+  
+  <div class="max-w-[90%] mx-auto">
     <RouterView />
     <FAQ />
     <Sebi/>
@@ -26,6 +27,8 @@ import LottieComponent from './home/utils/LottieComponent.vue';
 import Test from './Test.vue';
 import Sebi from './component/Sebi.vue';
 import TechText from './component/TechText.vue';
+import Chatbot from './component/Chatbot.vue';
+import { ref } from 'vue';
 
 
 </script>

@@ -3,11 +3,11 @@
  <template>
   <div class="text-[#dfdfdf] text-center mt-16 lg:mt-32 mx-2 hidden md:block">
     <div class="text-center">
-      <p class="text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] font-bold mx-auto text-white leading-tight">
-        Transform Your Trading Approach
+      <p class="text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] font-extrabold mx-auto text-white leading-tight">
+        You’re in Charge—Trade with Confidence
       </p>
       <p class="text-[#dfdfdf] mb-8 sm:mb-12 md:mb-16 text-base sm:text-lg md:text-[16px] leading-relaxed w-[95%] max-w-6xl p-2 mx-auto mt-4 font-openSans">
-        Innovate your trading experience with ease and precision. Our platform provides powerful tools and actionable insights to help you achieve your goals effortlessly.
+        Want to control your financial future? Our platform gives you the insights, speed, and flexibility to trade on your terms and maximize your success.
       </p>
     </div>
     
@@ -89,28 +89,43 @@ import indicatorCard from '/src/assets/img/indicatorcard.png'
 import algocard from '/src/assets/img/algocard.png'
 import screenerCard from '/src/assets/img/screenercard.png'
 import LottieComponent from '/src/home/utils/LottieComponent.vue'
+import webhookcard from '/src/assets/img/webhookcard.webp'
 
 const tradeCardsWrapper = ref(null);
 const tradeCards = ref([
+{ 
+    id: 4, 
+    title: 'Algo Trading', 
+    icon: algotradingicon, 
+    subtitle:'Automate strategies for smarter trading.', 
+    features: [
+      'Executes trades instantly.', 
+      'Avoids emotional decisions with strict rules.', 
+      'Reduces need for constant monitoring.',
+      'Tests strategies on historical data.',
+    ], 
+    description: 'Algo trading uses predefined criteria, such as price, volume, timing, or other market indicators, to identify opportunities and execute trades faster and more efficiently.', 
+    image: algocard
+  },
   { 
     id: 1, 
     title: 'Manual Trade', 
     icon: manualicon, 
-    subtitle:'Trade Your Way', 
+    subtitle:'Execute trades your way, confidently.', 
     features: [
-      'Complete Control over trade execution and strategy.', 
-      'Quickly respond to market changes and news.', 
-      'Hands-on trading enhances learning and experience.',
-      'No need for expensive software or programming.'
+      'Your Strategy, Your Rules – No bots, just your instincts and insights.', 
+      'Fast Market Response – Stay ahead of trends and react instantly.', 
+      'Skill & Experience Boost – The more you trade, the sharper you get.',
+      'No Extra Costs – No fancy software or coding required.'
     ], 
-    description: "You can actively monitor the financial markets, execute trades personally, analyse data, and make decisions to buy or sell based on your own strategies, insights, and market knowledge.", 
+    description: "Tired of relying on automated systems? Take control with Manual Trade, where you call the shots. Analyze trends, execute trades, and make decisions that fit your strategy.", 
     image: homecard1
   },
   { 
     id: 2, 
     title: 'Signals', 
     icon: signalicon, 
-    subtitle:'Trade Your Way', 
+    subtitle:'Act fast with real-time expert signals.', 
     features: [
       'Offers precise, well-analyzed trade recommendations.', 
       'Provides timely updates for quick action.', 
@@ -124,7 +139,7 @@ const tradeCards = ref([
     id: 3, 
     title: 'Webhooks', 
     icon: webhookicon, 
-    subtitle:'Trade Your Way', 
+    subtitle:'Automate workflows with seamless integration.', 
     features: [
       'Connects platforms for smooth workflow.', 
       'Designs actions to specific strategies.', 
@@ -132,27 +147,14 @@ const tradeCards = ref([
       'Easily handles large-scale, high-frequency tasks.',
     ], 
     description: 'Webhook enables automated communication between two platforms in real-time. It works by sending data or triggering actions when specific events occur. ', 
-    image: homecard1
+    image: webhookcard
   },
-  { 
-    id: 4, 
-    title: 'Algo Trading', 
-    icon: algotradingicon, 
-    subtitle:'Trade Your Way', 
-    features: [
-      'Executes trades instantly.', 
-      'Avoids emotional decisions with strict rules.', 
-      'Reduces need for constant monitoring.',
-      'Tests strategies on historical data.',
-    ], 
-    description: 'Algo trading uses predefined criteria, such as price, volume, timing, or other market indicators, to identify opportunities and execute trades faster and more efficiently.', 
-    image: algocard
-  },
+  
   { 
     id: 5, 
     title: 'Screener', 
     icon: screenericon, 
-    subtitle:'Trade Your Way', 
+    subtitle:'Discover trading opportunities quickly.', 
     features: [
       'Quickly finds assets meeting specific criteria.', 
       'Reduces the need for manual analysis.', 

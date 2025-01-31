@@ -93,9 +93,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class=" w-full h-[80vh] flex items-center justify-center ">
+  <div class=" w-full py-10 flex items-center justify-center ">
     <div 
-      class="matrix-text text-2xl text-[84px] text-gray-100 font-bold"
+      class="text-[44px] lg:text-[84px] text-gray-100 font-bold"
       v-html="displayText"
     ></div>
 

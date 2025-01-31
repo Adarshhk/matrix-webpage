@@ -1,19 +1,19 @@
 <template>
   <div class="min-h-screen mt-24 font-openSans  overflow-x-hidden ">
 
-          
+
     <Breadcrumb :items="[{
-            title: 'Home',
-            disabled: false,
-            href: '/'
-          },
-          {
-            title: 'Pricing',
-            disabled: false,
-            href: '/pricing'
-          },
-          ]" />
-      
+      title: 'Home',
+      disabled: false,
+      href: '/'
+    },
+    {
+      title: 'Pricing',
+      disabled: false,
+      href: '/pricing'
+    },
+    ]" />
+
     <div class=" py-20 ">
 
 
@@ -23,7 +23,8 @@
           <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
         </div>
         <div class="text-white">
-          <h1 class="font-bold text-[47px] text-center leading-[60px]">Choose the Plan That Fits Your <br /> Trading
+          <h1 class="font-extrabold text-[47px] text-center leading-[60px]">Choose the Plan That Fits Your <br />
+            Trading
             Goals</h1>
 
 
@@ -54,7 +55,7 @@
           <button v-for="plan in ['Matrix ONE', 'Matrix EDGE', 'Matrix ALGO']" :key="plan" :class="[
             'px-6 py-2 font-openSans text-[16px] rounded-full transition-all whitespace-nowrap text-sm md:text-base',
             selectedPlan === plan ? 'bg-[#00B852] text-white' : 'text-gray-400',
-          ]" @click="selectedPlan = plan">
+          ]" @click="changeActive(plan)">
             {{ plan }}
           </button>
         </div>
@@ -77,7 +78,7 @@
             class="h-8 md:h-12" />
 
           <div class="bg-[#1d2125] rounded-full p-1.5 inline-flex">
-            <button v-for="period in ['Monthly', 'Quarterly', 'Yearly']" :key="period" :class="[
+            <button v-for="period in ['Quarterly', 'Yearly']" :key="period" :class="[
               'px-4 font-openSans text-[16px]  md:px-6 py-2 rounded-full transition-all whitespace-nowrap text-sm md:text-base min-w-[80px] md:min-w-[100px]',
               billingPeriod === period ? 'bg-[#00B852] text-[#dfdfdf]' : 'text-gray-400',
             ]" @click="billingPeriod = period">
@@ -85,9 +86,7 @@
             </button>
           </div>
         </div>
-        <div class="w-full  flex justify-end">
-          <img src="../assets/img/upto-2.png" alt="Save up to 24%" class="w-32 flex md:hidden" />
-        </div>
+        
       </div>
 
       <!-- Matrix ONE Layout -->
@@ -118,7 +117,7 @@
           <!-- Feature Lists -->
           <div class="md:border-l border-[#2C2C2C] md:pl-6">
             <h3 class="text-white text-xl font-bold mb-4">
-              Features of Matrix Algo
+              Featured Products
             </h3>
             <ul class="space-y-4 ">
               <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
@@ -157,7 +156,7 @@
           <div class="">
             <div class="">
               <h3 class="text-white text-[20px] font-bold mb-4">
-                Features of Matrix Algo
+                Featured Products
               </h3>
             </div>
 
@@ -191,16 +190,16 @@
               </div>-->
 
               <!-- second item -->
-              <div @click="changePlan('signals' , 1000)"
-                class="flex justify-between items-center gap-3 rounded p-2 py-4 border "
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'signals' , 'border-[#ffffff22]' : activePlan.name != 'signals' }">
+              <div @click="changePlan('signals', 1000)"
+                class="relative  flex justify-between items-center gap-3 rounded p-2 py-4 pt-8 border "
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'signals', 'border-[#ffffff22]': activePlan.name != 'signals' }">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Signals</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
+                    <div class="bg-[#E3DB98] top-0 left-2 rounded-b absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
                   </div>
@@ -208,16 +207,18 @@
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
                   <p class="text-[22px] font-bold text-white ">
-                    <span>₹</span>10,740
+                    <span class="text-[14px] text-[#ffffff55] font-bold ">
+                      Starting from
+                    </span>₹300
                   </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+
                 </div>
               </div>
 
 
-              <div @click="changePlan('screener' , 2000)"
+              <div @click="changePlan('screener', 2000)"
                 class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'screener'  , 'border-[#ffffff22]' : activePlan.name != 'screener'}">
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'screener', 'border-[#ffffff22]': activePlan.name != 'screener' }">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
@@ -238,9 +239,9 @@
                 </div>
               </div>
 
-              <div @click="changePlan('webhook' , 4000)"
+              <div @click="changePlan('webhook', 4000)"
                 class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'webhook'  , 'border-[#ffffff22]' : activePlan.name != 'webhook'}">
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'webhook', 'border-[#ffffff22]': activePlan.name != 'webhook' }">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
@@ -261,85 +262,186 @@
                 </div>
               </div>
 
-              <button @click="addToCart({name : activePlan.name , price : activePlan.price})"
-                class="text-[#272727] font-openSans font-bold bg-[#dfdfdf] rounded border-[#ffffff22] p-2 py-4 border" :class="{'border-[#ff2c30] bg-[#ff2c3022]' : isInCart(activePlan.name)}"> 
-                
+              <!-- <button @click="addToCart({ name: activePlan.name, price: activePlan.price })"
+                class="text-[#272727] font-openSans font-bold bg-[#dfdfdf] rounded border-[#ffffff22] p-2 py-4 border"
+                :class="{ 'border-[#ff2c30] bg-[#ff2c3022]': isInCart(activePlan.name) }">
+
                 <p v-if="isInCart(activePlan.name)" class="text-[#ff2c30]">Remove From Cart</p>
                 <p v-else>+ Add To Cart</p>
 
-              </button>
+              </button> -->
             </div>
 
 
           </div>
 
-          <!-- Feature Lists -->
-          <div class=" col-span-2 border-[#2C2C2C]">
-            
+          <div class="col-span-2 lg:px-4 lg:border-l border-[#ffffff22] mx-2">
+            <SignalPlan v-if="activePlan.name === 'signals'" />
           </div>
 
-         
+
         </div>
       </div>
 
       <!-- Default Layout for ALGO -->
 
-      <div v-if="selectedPlan === 'Matrix ALGO'" class="mt-12">
-        <div class="bg-[#1d2125] rounded-lg p-6 grid grid-cols-1 md:grid-cols-3">
+      <div v-if="selectedPlan === 'Matrix ALGO'" class="mt-12 ">
+        <div class="bg-[#1d2125] rounded-lg p-6 gap-2 grid grid-cols-1 md:grid-cols-3">
           <!-- Pricing Card -->
-          <div>
-            <h3 class="text-[#dfdfdf] text-2xl font-bold mb-2">Freebie</h3>
-            <p class="text-gray-400 text-[16px] mb-4">
-              Ideal for individuals who need quick access to basic features
-            </p>
-
-            <div class="bg-[#00693B] rounded-full px-3 py-0.5 inline-block mb-6">
-              <span class="text-[#00B852] text-xs">Get 20% off</span>
-              <span class="text-[#dfdfdf] text-xs ml-1">when billed annually</span>
+          <div class="">
+            <div class="">
+              <h3 class="text-white text-[20px] font-bold mb-4">
+                Featured Products
+              </h3>
             </div>
 
-            <div class="flex items-baseline mb-6">
-              <span class="text-4xl font-bold text-[#dfdfdf]">$0</span>
-              <span class="text-gray-400 ml-2 text-sm">/ Month</span>
+            <!-- plan list -->
+            <div class="flex flex-col justify-evenly gap-2 ">
+
+              <!-- plan 1 -->
+
+              <!-- <div @click="changePlan('indicator' , 0)"
+                class="flex justify-between items-center gap-3 rounded  p-2 py-4 border"
+                :class="{'border-[#dfdfdf]': activePlan.name == 'indicator' , 'border-[#ffffff22]' : activePlan.name != 'indicator' }">
+                
+                <div class="flex items-center gap-2">
+
+                  <div class="flex flex-col items-start">
+                    <h3 class="text-white text-[20px] font-bold">Indicator</h3>
+                    <div class="bg-[#E3DB98] rounded-full px-2">
+                      <span class="font-semibold text-xs">50% Off</span>
+                    </div>
+
+                  </div>
+                </div>
+                
+                <div class="flex flex-col items-end">
+                  <p class="text-[22px] font-bold text-white ">
+                    FREE
+                  </p>
+                  <p class="text-sm font-semibold text-[#BBB8B8] ">In-app Purchase</p>
+                </div> 
+
+              </div>-->
+
+              <!-- second item -->
+              <div @click="changePlan('essential', 1000)"
+                class="relative  flex justify-between items-center gap-3 rounded p-2 py-4 pt-8 border "
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'essential', 'border-[#ffffff22]': activePlan.name != 'essential' }">
+                <!-- Radio div and Indicator Section -->
+                <div class="flex items-center gap-2">
+
+                  <div class="flex flex-col items-start">
+                    <h3 class="text-white text-[20px] font-bold">Essential</h3>
+                    <div class="bg-[#E3DB98] top-0 left-2 rounded-b absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Pricing Section -->
+                <div class="flex flex-col items-end">
+                  <p class="text-[22px] font-bold text-white ">
+                    <span class="text-[14px] text-[#ffffff55] font-bold ">
+                      Starting from
+                    </span>₹17000
+                  </p>
+
+                </div>
+              </div>
+
+
+              <div @click="changePlan('evaluation', 2000)"
+                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'evaluation', 'border-[#ffffff22]': activePlan.name != 'evaluation' }">
+                <!-- Radio div and Indicator Section -->
+                <div class="flex items-center gap-2">
+
+                  <div class="flex flex-col items-start">
+                    <h3 class="text-white text-[20px] font-bold">Evaluation</h3>
+                    <div class="bg-[#E3DB98] rounded-full px-2">
+                      <span class="font-semibold text-xs">50% Off</span>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Pricing Section -->
+                <div class="flex flex-col items-end">
+                  <p class="text-[22px] font-bold text-white ">
+                    <span>₹</span>10,740
+                  </p>
+                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+                </div>
+              </div>
+
+              <div @click="changePlan('elite', 4000)"
+                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'elite', 'border-[#ffffff22]': activePlan.name != 'elite' }">
+                <!-- Radio div and Indicator Section -->
+                <div class="flex items-center gap-2">
+
+                  <div class="flex flex-col items-start">
+                    <h3 class="text-white text-[20px] font-bold">Elite</h3>
+                    <div class="bg-[#E3DB98] rounded-full px-2">
+                      <span class="font-semibold text-xs">50% Off</span>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Pricing Section -->
+                <div class="flex flex-col items-end">
+                  <p class="text-[22px] font-bold text-white ">
+                    <span>₹</span>10,740
+                  </p>
+                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+                </div>
+              </div>
+              <div @click="changePlan('hni', 4000)"
+                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
+                :class="{ 'border-[#dfdfdf]': activePlan.name === 'hni', 'border-[#ffffff22]': activePlan.name != 'hni' }">
+                <!-- Radio div and Indicator Section -->
+                <div class="flex items-center gap-2">
+
+                  <div class="flex flex-col items-start">
+                    <h3 class="text-white text-[20px] font-bold">HNI</h3>
+                    <div class="bg-[#E3DB98] rounded-full px-2">
+                      <span class="font-semibold text-xs">50% Off</span>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Pricing Section -->
+                <div class="flex flex-col items-end">
+                  <p class="text-[22px] font-bold text-white ">
+                    <span>₹</span>10,740
+                  </p>
+                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+                </div>
+              </div>
+
+
+
+              <!-- <button @click="addToCart({ name: activePlan.name, price: activePlan.price })"
+                class="text-[#272727] font-openSans font-bold bg-[#dfdfdf] rounded border-[#ffffff22] p-2 py-4 border"
+                :class="{ 'border-[#ff2c30] bg-[#ff2c3022]': isInCart(activePlan.name) }">
+
+                <p v-if="isInCart(activePlan.name)" class="text-[#ff2c30]">Remove From Cart</p>
+                <p v-else>+ Add To Cart</p>
+
+              </button> -->
             </div>
 
-            <button class="w-[60%] py-2 rounded-lg mb-8 bg-[#dfdfdf] text-black hover:bg-gray-100 transition-all">
-              Buy Now
-            </button>
+
           </div>
 
-          <!-- Feature Lists -->
-          <div class="md:border-l border-[#2C2C2C] md:pl-6">
-            <h3 class="text-white text-xl font-bold mb-4">
-              Features of Matrix Algo
-            </h3>
-            <ul class="space-y-4 ">
-              <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.active" src="../../assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
-                <img v-else src="../../assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
-                  {{ feature.text }}
-                </span>
-              </li>
-            </ul>
+          <div class="col-span-2 px-4 lg:border-l border-[#ffffff22] mx-2">
+            <Essential v-if="activePlan.name === 'essential'" />
+            <Evaluation v-if="activePlan.name === 'evaluation'" />
+            <Elite v-if="activePlan.name === 'elite'" />
+            <HNI v-if="activePlan.name === 'hni'" />
           </div>
 
-          <div class="md:border-l border-[#2C2C2C] md:pl-6">
-            <h3 class="text-white text-xl font-bold mb-4">
-              Products Included
-            </h3>
-            <ul class="flex flex-wrap gap-4">
-              <li v-for="(feature, i) in features.column2" :key="i" class="">
-                <img v-if="i == 0" src="/pricingproduct/Logo 1.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 1" src="/pricingproduct/Logo 2.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 2" src="/pricingproduct/Logo 3.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 3" src="/pricingproduct/Logo 4.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 4" src="/pricingproduct/Logo 5.svg" alt="" class="w-16 h-16" />
-                <img v-if="i == 5" src="/pricingproduct/Logo 6.svg" alt="" class="w-16 h-16" />
 
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -353,8 +455,13 @@
 import { ref } from "vue";
 import Indicator from './Plans/Indicator.vue'
 const selectedPlan = ref("Matrix ONE");
-const billingPeriod = ref("Monthly");
+const billingPeriod = ref("Quarterly");
 import Breadcrumb from '/src/component/Breadcrumb.vue'
+import SignalPlan from "./Plans/SignalPlan.vue";
+import Essential from "./Plans/Essential.vue";
+import Evaluation from "./Plans/Evaluation.vue";
+import Elite from "./Plans/Elite.vue";
+import HNI from "./Plans/HNI.vue";
 
 const props = defineProps({
   addToCart: Function,
@@ -362,9 +469,9 @@ const props = defineProps({
   isInCart: Function
 })
 
-const activePlan = ref({name : 'indicator' , price : 0});
+const activePlan = ref({ name: 'signals', price: 0 });
 
-const changePlan = (name , price) => {
+const changePlan = (name, price) => {
 
   activePlan.value.name = name;
   activePlan.value.price = price;
@@ -389,6 +496,16 @@ const features = {
     { text: "Custom reporting", active: false },
   ],
 };
+
+const changeActive = (plan) => {
+
+  selectedPlan.value = plan
+
+  if (selectedPlan.value === 'Matrix ALGO') {
+    activePlan.value.name = 'essential'
+  }
+  else activePlan.value.name = 'signals'
+}
 </script>
 
 <style>

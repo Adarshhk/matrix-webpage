@@ -35,7 +35,7 @@ const articles = [
 </script>
 
 <template>
-  <section class="mx-auto">
+  <section class="mx-auto w-[95%]">
     <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-10 xl:gap-8">
       <RouterLink :to="`/blog-details/${id}`" v-for="(item,id) in articles" class=" space-y-3">
         <div class="">

@@ -2,10 +2,11 @@
   
   <Hero id="hero" />
   <Why id="why" />
-  <Tutorial />
   <Comparison />
+  <Tutorial />
 
   <Features id="features" />
+  <Testimonial/>
 </template>
 
 <script setup>
@@ -16,4 +17,5 @@ import Tutorial from "./components/Tutorial.vue";
 import Why from "./components/Why.vue";
 
 import Comparison from "./components/Comparison.vue";
+import Testimonial from "./components/Testimonial.vue";
 </script>

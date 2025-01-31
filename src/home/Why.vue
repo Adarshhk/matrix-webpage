@@ -3,7 +3,7 @@
 
         <div class="mx-auto justify-center flex lg:gap-4 max-w-4xl items-center w-[95%]">
             <!-- <img src="/src/assets/svg/Diamond.svg" alt="" class="w-20 "> -->
-            <h2 class="lg:text-[38px] text-[27px] font-bold text-white ">
+            <h2 class="lg:text-[38px] text-[27px] font-extrabold text-white ">
                 For Whom This Platform Is Designed
             </h2>
         </div>

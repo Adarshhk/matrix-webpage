@@ -20,6 +20,9 @@ import Pricing from './pricing/Pricing.vue';
 import BlogDetails from './blog details/BlogDetails.vue';
 import { Signal } from 'lucide-vue-next';
 import Signals from './signals/Signals.vue';
+import Webinar from './webinar/Webinar.vue';
+import Demo from './demo/Demo.vue';
+import IndicatorDetails from './indicatordetails/IndicatorDetails.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -41,7 +44,11 @@ const routes = [
   { path : '/algo-trading' , component : AlgoTrading},
   { path : '/pricing' , component : Pricing},
   { path : '/blog-details/:id' , component : BlogDetails},
-  { path : '/signals' , component : Signals}
+  { path : '/signals' , component : Signals},
+  { path : '/webinar' , component : Webinar},
+  { path : '/demo' , component : Demo},
+  { path : '/indicator-details/:id' , component : IndicatorDetails},
+
 
 ]
 

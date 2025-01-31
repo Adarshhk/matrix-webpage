@@ -1,41 +1,45 @@
-
-
 <template>
-  <div class="w-[95%] mt-32 mx-auto">
-    <div class=" bg-[#00B852] rounded-lg mx-auto h-[40vh] md:h-[30vh] lg:h-[60vh] relative overflow-hidden">
-      <!-- Grid Pattern Container -->
+  <div class="container mx-auto px-4 mt-32">
+    <div class="bg-[#00B852] rounded-lg relative overflow-hidden h-[60vh]">
+      <!-- Grid Patterns -->
       <div class="absolute inset-0 flex justify-between">
-        <!-- Left Grid Pattern -->
         <div class="w-1/2 md:w-1/3">
           <img 
             src="/src/assets/img/divleft.png" 
             alt="Left Grid Pattern"
-            class="w-full h-full object-cover xl:object-contain  opacity-100 "
+            class="w-full h-full object-cover xl:object-contain"
           />
         </div>
-        
-        <!-- Right Grid Pattern -->
         <div class="w-1/2 md:w-1/3">
           <img 
             src="/src/assets/img/divright.png" 
             alt="Right Grid Pattern"
-            class="w-full h-full object-cover xl:object-contain opacity-100 "
+            class="w-full h-full object-cover xl:object-contain"
           />
         </div>
       </div>
       
-      <!-- Content Overlay -->
-      <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
-        <h1 class="text-3xl sm:text-4xl md:text-[38px] 2xl:text-5xl font-bold text-white mb-6 md:mb-10 text-center leading-tight px-4">
-          Trade with precision,<br> trade with us
-        </h1>
-        
-        <button class="bg-white rounded w-80 font-bold text-[#00B852] py-3">
-                <div class="content vertical flex justify-center">
-                        <div class="text">Trade Smarter Today</div>
-                        
-                    </div>
-            </button>
+      <div class="grid lg:grid-cols-2 h-full">
+        <!-- Content Section -->
+        <div class="flex flex-col justify-center px-4 xl:px-10 xl:ml-10 text-center xl:text-left">
+          <h2 class="text-2xl xl:text-4xl font-bold text-white leading-tight">
+            Start Trading Smarter with Matrix Trading Tech
+          </h2>
+          <p class="text-[#F3F8F9] text-base font-openSans mt-4">
+            Ready to take control of your trading? Get started with Matrix Trading Tech today and enjoy the freedom of manual trading with all the tools you need in one place.
+          </p>
+          <button class="relative mx-auto lg:mx-0 bg-white rounded w-full max-w-60 mt-10 py-3 overflow-hidden group">
+            <div class="font-bold text-[#00B852]">
+              <span class="block group-hover:-translate-y-full transition-transform duration-300">Join Now</span>
+              <span class="block absolute inset-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300">Click Here</span>
+            </div>
+          </button>
+        </div>
+
+        <!-- Image Section -->
+        <div class="hidden lg:flex items-end justify-end">
+          <img src="/src/assets/svg/businessman.svg" alt="Businessman illustration" class="h-full">
+        </div>
       </div>
     </div>
   </div>

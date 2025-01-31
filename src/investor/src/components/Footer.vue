@@ -1,6 +1,6 @@
 call Correctly
 <template>
-    <div class="mt-20 md:mt-16 px-7 lg:px-20">
+    <div class="mt-20 md:mt-16 w-[95%] mx-auto">
 
         <div class="rounded-md bg-[#01B852] flex flex-col xl:flex-row mb-24">
             <!-- First main div -->

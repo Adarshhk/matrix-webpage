@@ -1,111 +1,58 @@
 <template>
-  <div class=" py-20 mx-5">
-    <div class="px-3 2xl:px-32 mx-auto">
-      <!-- Header Section -->
-      <div class="text-center mb-16">
-        <h2
-          class="text-[32px] md:text-[38px] 2xl:text-[48px] font-bold text-white mb-8"
-        >
-          What Sets Us Apart?
-        </h2>
+  <div class="text-center mt-24 lg:mt-32">
+      <h2 class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-[27px] lg:text-[38px] font-extrabold max-w-xl mx-auto">
+        Key Features of our manual trading
+      </h2>
+      <p class="text-[#dfdfdf] text-[1rem] max-w-2xl mx-auto md:mt-8 w-[90%] font-openSans ">
+        Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.
+      </p>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4  md:grid-cols-2 gap-4 my-16 lg:my-24">
+          <div v-for="feat in features" class="  flex flex-col space-y-4 p-4">
+              <img :src="feat.img" alt="" class="w-24" >
+              <h4 class="text-left text-white text-[24px] font-bold leading-tight">{{ feat.title }}</h4>
+              <hr class="border-1  border-[#ffffff22]">
+              <p class="text-[#dfdfdf] font-openSans text-[16px] text-left" >{{ feat.description }}</p>
+          </div>
       </div>
-
-      <!-- Grid Section -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <!-- Grow Card -->
-        <div class="relative rounded-2xl bg-[#1d2125] p-8">
-          <div class="flex justify-end mb-8">
-            <img src="/src/assets/svg/brush.svg" class="w-10 md:w-12" alt="" />
-          </div>
-          <h1 class="text-2xl font-bold text-white">
-            Long-Term Growth Signals
-          </h1>
-          <p class="text-[#BBB8B8] text-lg leading-relaxed">
-            Carefully selected opportunities for sustainable wealth.
-          </p>
-        </div>
-        <!-- Laptop Platform Card -->
-        <div class="relative rounded-2xl bg-[#1d2125] p-8">
-          <div class="flex justify-end mb-8 mt-4">
-            <img src="/src/assets/svg/signal.svg" class="w-10 md:w-12" alt="" />
-          </div>
-          <h1 class="text-2xl font-bold text-white">
-            Insightful Market Reports
-          </h1>
-          <p class="text-[#BBB8B8] text-lg leading-relaxed">
-            Regular updates tailored to your investment strategy.
-          </p>
-        </div>
-
-        <div class="relative rounded-2xl bg-[#1d2125] p-8">
-          <div class="flex justify-end mb-8">
-            <!-- Bag Platform Card -->
-            <div class="flex gap-2">
-              <img src="/src/assets/svg/batch.svg" class="w-10 md:w-12" alt="" />
-            </div>
-          </div>
-          <h3 class="text-2xl font-bold text-white">
-            Portfolio Optimization Tools
-          </h3>
-          <p class="text-[#BBB8B8] text-lg leading-relaxed">
-            Get personalized diversification recommendations.
-          </p>
-        </div>
-
-        <div class="relative rounded-2xl bg-[#1d2125] p-8">
-          <div class="flex justify-end mb-8">
-            <div class="flex gap-2">
-              <img src="/src/assets/svg/call.svg" class="w-10 md:w-12" alt="" />
-            </div>
-          </div>
-          <h3 class="text-2xl font-bold text-white">One-Click Simplicity</h3>
-          <p class="text-[#BBB8B8] text-lg leading-relaxed">
-            Place trades without complex manual entries.
-          </p>
-        </div>
-       
-      </div>
-      <div class="flex justify-center mt-10">
-          <button
-            class="btn btn-anim text-[#F3F8F9] text-sm w-full max-w-48 py-2 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]"
-          >
-            <div class="content vertical flex justify-center w-full">
-              <div class="text font-semibold text-base">Start Trading Now</div>
-              <div class="hover-text font-semibold text-base">Join Now</div>
-            </div>
-          </button>
-        </div>
-    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import img1 from '/src/assets/svg/manualfeature (3).svg'
+import img2 from '/src/assets/svg/manualfeature (1).svg'
+import img3 from '/src/assets/svg/manualfeature (2).svg'
+import img4 from '/src/assets/svg/manualfeature (4).svg'
 
-<style scoped>
-.content {
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
 
-.text,
-.hover-text {
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
-}
+const features = [
+  {
+      img : img1,
+      title : 'Custom Watchlists',
+      description : 'To Stay Informed, Track Your Favorite Stocks, and Gain Insights into Market Trends Effortlessly.',
 
-.vertical .text,
-.vertical .hover-text {
-  transform: translateY(0%);
-}
-.hover-text {
-  position: absolute;
-}
+  },
+  {
+      img : img2,
+      title : 'Instant Order Execution',
+      description : 'Experience Seamless Trading with One-Click Execution for Fast and Efficient Transactions.',
+      
+  },
+  {
+      img : img3,
+      title : 'Real-Time Data ',
+      description : 'Empowering You to Monitor Live Market Trends and Make Swift, Informed Decisions as the Market Moves.',
+      
+  },
+  {
+      img : img4,
+      title : 'Multi-Broker Support ',
+      description : 'Manage All Your Trading Accounts in One Dashboard for Easy, Streamlined Access to Multiple Brokers.',
+      
+  },
+  
+]
 
-.vertical .hover-text {
-  bottom: -100%;
-}
-button:hover .vertical .hover-text,
-button:hover .vertical .text {
-  transform: translateY(-100%);
-}
-</style>
+
+
+</script>

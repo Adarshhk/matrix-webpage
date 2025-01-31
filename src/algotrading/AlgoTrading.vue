@@ -14,8 +14,8 @@ import Temp from "./HomeViewSections/Temp.vue"
 
 
 <template>
-    <main class="mt-24 px-4">
-        
+    <main class="mt-24 px-4 w-[95%] mx-auto">
+        <HeroSection/>
         <Temp/>
         <ConfidentTraderSection/>
         <FeaturesSection/>

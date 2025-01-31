@@ -13,56 +13,56 @@ const features = [
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     buttonText: "Explore Paper Trading",
     animationPath: "/json/PaperTrading.json",
-    imagePath: "/src/assets/img/algotrading (1).png",
+    imagePath: "/src/assets/img/algotrading (2).png",
   },
   {
     id: "multipleAccount",
     title: "Multiple Account Management",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     animationPath: "/json/MultipleAccounts.json",
-    imagePath: "/src/assets/img/algotrading (2).png",
+    imagePath: "/src/assets/img/algotrading (3).png",
   },
   {
     id: "demoAccount",
     title: "Demo Account",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     animationPath: "/json/UI_07.json",
-    imagePath: "/src/assets/img/algotrading (3).png",
+    imagePath: "/src/assets/img/algotrading (4).png",
   },
   {
     id: "createStrategies",
     title: "Create Strategies",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     animationPath: "/json/CreateStrategies.json",
-    imagePath: "/src/assets/img/algotrading (4).png",
+    imagePath: "/src/assets/img/algotrading (5).png",
   },
   {
     id: "definedStrategies",
     title: "Pre Defined Strategies",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     animationPath: "/json/PredefinedStrategies.json",
-    imagePath: "/src/assets/img/algotrading (5).png",
+    imagePath: "/src/assets/img/algotrading (6).png",
   },
   {
     id: "notifications",
     title: "Notifications",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     animationPath: "/json/Notifications.json",
-    imagePath: "/src/assets/img/algotrading (6).png",
+    imagePath: "/src/assets/img/algotrading (7).png",
   },
   {
     id: "support",
     title: "Constant Support",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
     animationPath: "/json/ConstantSupport.json",
-    imagePath: "/src/assets/img/algotrading (7).png",
+    imagePath: "/src/assets/img/algotrading (8).png",
   },
   {
     id: "setup",
     title: "One Time Setup",
     description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
-    animationPath: "/src/assets/img/algotrading (8).png",
-    imagePath: "/src/assets/img/algotrading (8).png",
+    animationPath: "/src/assets/img/algotrading (1).png",
+    imagePath: "/src/assets/img/algotrading (1).png",
   },
 ];
 
@@ -176,14 +176,14 @@ watch(selectedFeature, () => {
       <button 
         @click="selectFeature(feature.id)" 
         :class="[
-          'flex items-center border-2 rounded-xl min-w-max py-2 gap-4  px-2  relative ',
+          'flex items-center border-2 rounded-xl min-w-max p-4 gap-4  relative ',
           selectedFeature === feature.id
             ? 'border-[#00B852] bg-[#00B852] border-b-4 bg-opacity-10'
             : 'border-gray-500 bg-transparent',
         ]"
         :data-feature="feature.id"
       >
-        <img src="/images/svg/PaperTrading.svg" alt="" />
+       
         <p class="font-CabinetGrotesk text-nowrap font-bold text-[16px] relative z-10">
           {{ feature.title }}
         </p>

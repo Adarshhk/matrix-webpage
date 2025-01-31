@@ -8,26 +8,25 @@
           <div  class="text-container ">
               <h1
               class=" text-center text-gradient md:text-left outer-heading text-[38px] md:text-[64px] max-w-3xl font-extrabold mx-auto leading-tight">
-              Get Sure-Shot Signals. Trade with Confidence.
+              Let Your Trades Work While You Relax!
           </h1>
           </div>
 
 
           <p class=" text-center md:text-left text-[#dfdfdf] font-openSans text-[14px] lg:text-[16px] ">
-              Receive expert-verified trading calls with precise entry and exit points. guesswork—just
-              actionable insights.
+            Our Algo Trading platform is designed to make trading stress-free and profitable for you.
           </p>
 
           <div
               class="flex flex-col md:flex-row border-t border-[#ffffff33] pt-6 gap-2 md:gap-10 font-openSans text-[16px] font-semibold text-white ">
               <p class="font-openSans text-[14px] text-center">
-                  <span class="text-[24px]">🚀</span> Instant Alerts
+                  <span class="text-[24px]">🚀</span> Effortless Automation 
               </p>
               <p class="font-openSans text-[14px] text-center">
-                  <span class="text-[24px]">🏆</span> High Accuracy
+                  <span class="text-[24px]">🏆</span> Save Time
               </p>
               <p class="font-openSans text-[14px] text-center">
-                  <span class="text-[24px]">🌟</span> One-Click Execution
+                  <span class="text-[24px]">🌟</span> Boost Your Profits
               </p>
           </div>
       </div>

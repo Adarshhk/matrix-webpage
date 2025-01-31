@@ -3,7 +3,7 @@
 
     <div class="text-center mt-24 lg:mt-32 w-[95%] mx-auto">
         <h2
-            class="text-[27px] md:text-[38px] max-w-3xl font-extrabold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto">
+            class="text-[27px] md:text-[38px] max-w-3xl font-extrabold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto leading-tight">
             Find the perfect pricing plan that fits your investment needs.
         </h2>
 

@@ -2,38 +2,33 @@
     <div class="text-[#dfdfdf] text-center mt-16 lg:mt-32 mx-2 md:hidden">
         <div class="text-center">
             <p class="text-2xl sm:text-3xl md:text-[32px] lg:text-[38px] font-bold mx-auto text-white leading-tight">
-                Transform Your Trading Approach
+                You’re in Charge—Trade with Confidence
             </p>
             <p
                 class="text-[#dfdfdf] mb-8 sm:mb-12 md:mb-16 text-base sm:text-lg md:text-[16px] leading-relaxed w-[95%] max-w-6xl p-2 mx-auto mt-4 font-openSans">
-                Innovate your trading experience with ease and precision. Our platform provides powerful tools and
-                actionable insights to help you achieve your goals effortlessly.
+                Want to control your financial future? Our platform gives you the insights, speed, and flexibility to
+                trade on your terms and maximize your success.
             </p>
         </div>
 
         <main class=" mx-auto">
             <ul class="grid grid-cols-1 gap-4">
-                <li v-for="(tradeCard, index) in tradeCards" :key="tradeCard.id"
-                    >
+                <li v-for="(tradeCard, index) in tradeCards" :key="tradeCard.id">
                     <div
                         class=" border-[#2F2F2F] bg-gradient-to-r from-[#1D2125] to-[#1e1e1e] rounded-md overflow-hidden shadow-lg flex flex-col">
-                        <div
-                            class="ml-4 p-4 pt-8 flex flex-col justify-center ">
+                        <div class="ml-4 p-4 pt-8 flex flex-col justify-center ">
                             <div class="flex items-center gap-4 ">
                                 <img :src="tradeCard.icon" alt="" class="w-12  ">
                                 <div class="text-left">
-                                    <h3
-                                        class="text-white text-[19px] font-semibold">
+                                    <h3 class="text-white text-[19px] font-semibold">
                                         {{ tradeCard.title }}</h3>
-                                    <p
-                                        class="text-xs  text-[#dfdfdf] font-openSans">
+                                    <p class="text-xs  text-[#dfdfdf] font-openSans">
                                         {{ tradeCard.subtitle }}</p>
                                 </div>
                             </div>
                             <hr class="h-px my-4 mb-6 bg-[#373636] border-0">
                             <div class="text-left">
-                                <p
-                                    class="text-[#dfdfdf] text-base leading-relaxed font-openSans">
+                                <p class="text-[#dfdfdf] text-base leading-relaxed font-openSans">
                                     {{ tradeCard.description }}</p>
                             </div>
 
@@ -88,27 +83,42 @@ import indicatorCard from '/src/assets/img/indicatorcard.png'
 import algocard from '/src/assets/img/algocard.png'
 import screenerCard from '/src/assets/img/screenercard.png'
 import LottieComponent from '/src/home/utils/LottieComponent.vue'
+import webhookcard from '/src/assets/img/webhookcard.webp'
 
 const tradeCardsWrapper = ref(null);
 const tradeCards = ref([
     {
         id: 1,
-        title: 'Manual Trade',
-        icon: manualicon,
+        title: 'Algo Trading',
+        icon: algotradingicon,
         subtitle: 'Trade Your Way',
         features: [
             'Integrate with platform across your business',
-            'Integrate with platform across your business',
+            'Integrate with platform across your business ',
             'Integrate with platform across your business'
         ],
-        description: "Top-grade information makes a world of difference to a trader. That's why we work with the best institutional data partners on the world's most famous street, and far far beyond it.",
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        image: algocard
+    },
+    {
+        id: 4,
+        title: 'Manual Trade',
+        icon: manualicon,
+        subtitle: 'Execute trades your way, confidently.',
+        features: [
+            'Your Strategy, Your Rules – No bots, just your instincts and insights.',
+            'Fast Market Response – Stay ahead of trends and react instantly.',
+            'Skill & Experience Boost – The more you trade, the sharper you get.',
+            'No Extra Costs – No fancy software or coding required.'
+        ],
+        description: "Tired of relying on automated systems? Take control with Manual Trade, where you call the shots. Analyze trends, execute trades, and make decisions that fit your strategy.",
         image: homecard1
     },
     {
         id: 2,
         title: 'Signals',
         icon: signalicon,
-        subtitle: 'Trade Your Way',
+        subtitle: 'Act fast with real-time expert signals.',
         features: [
             'Integrate with platform across your business',
             'Integrate with platform across your business',
@@ -128,20 +138,7 @@ const tradeCards = ref([
             'Integrate with platform across your business'
         ],
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        image: homecard1
-    },
-    {
-        id: 4,
-        title: 'Algo Trading',
-        icon: algotradingicon,
-        subtitle: 'Trade Your Way',
-        features: [
-            'Integrate with platform across your business',
-            'Integrate with platform across your business ',
-            'Integrate with platform across your business'
-        ],
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
-        image: algocard
+        image: webhookcard
     },
     {
         id: 5,

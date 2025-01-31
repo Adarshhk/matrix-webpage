@@ -3,12 +3,11 @@
     <div class="mx-4 md:mx-10 ">
       <!-- Header Section -->
       <div class="text-center mb-16 w-full">
-        <h2 class="text-[28px] md:text-[34px] 2xl:text-[42px] font-bold text-white max-w-md mx-auto">
-          Why Traders Love Our Screener
+        <h2 class="text-[28px] md:text-[34px] font-extrabold text-white max-w-md mx-auto">
+          Why Choose Us for Manual Trading?
         </h2>
         <p class="text-[#BBB8B8] text-[16px] max-w-xl mx-auto mt-8 font-openSans ">
-          Our demo trading account can be your "secret weapon" to test out strategies
-          and hone your skills with zero risk. Here's how you'll benefit:
+          Unlike traditional platforms, we bring unmatched innovation and user-centric features that elevate your trading experience,
         </p>
       </div>
 
@@ -68,63 +67,7 @@ trading style.</p>
           </div>
         </div>
 
-
-
-        <!-- Analytics Card -->
-        <div :class="[containerClasses, 'group rounded-lg overflow-hidden bg-[#1d2125] transition-all duration-300 hover:scale-[1.02] flex flex-col border border-[#2f2f2f]']">
-          <div class="relative overflow-hidden flex-1 bg">
-            <img 
-              src="/src/assets/img/Analytics.png" 
-              alt="Interface clarity"
-              class="w-full object-cover p-4"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1d2125] opacity-95"></div>
-            <div class="absolute bottom-2 left-3 right-3 p-3">
-              <h3 class="text-lg md:text-xl font-bold text-white mb-1">Comprehensive Analytics</h3>
-              <p class="text-[#BBB8B8] text-xs md:text-sm mb-0 xl:mb-16 2xl:mb-10 font-openSans ">Track your performance with detailed
-analytics and gain insights to refine your
-strategies.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Connectivity Card -->
-        <div :class="[containerClasses, 'group rounded-lg overflow-hidden bg-[#1d2125] transition-all duration-300 hover:scale-[1.02] flex flex-col border border-[#2f2f2f]']">
-          <div class="relative overflow-hidden flex-1 bg">
-            <img 
-              src="/src/assets/img/Connectivity.png" 
-              alt="Interface clarity"
-              class="w-full object-cover p-4"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1d2125] opacity-95"></div>
-            <div class="absolute bottom-2 left-3 right-3 p-3">
-              <h3 class="text-lg md:text-xl font-bold text-white mb-1">Seamless Broker Connectivity</h3>
-              <p class="text-[#BBB8B8] text-xs md:text-sm mb-0 xl:mb-16 2xl:mb-10 font-openSans ">Enjoy direct integration with multiple brokers
-for smooth trade execution without platform-
-switching.</p>
-            </div>
-          </div>
-        </div>
-
-
-
-        <!-- Risk Management Card -->
-        <div :class="[containerClasses, 'group rounded-lg overflow-hidden bg-[#1d2125] transition-all duration-300 hover:scale-[1.02] flex flex-col border border-[#2f2f2f]']">
-          <div class="relative overflow-hidden flex-1  ">
-            <img 
-              src="/src/assets/img/Management.png" 
-              alt="Interface clarity"
-              class="w-full object-cover p-4"
-            />
-            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1d2125] opacity-95"></div>
-            <div class="absolute bottom-2 left-3 right-3 p-3">
-              <h3 class="text-lg md:text-xl font-bold text-white mb-1">Built-In Risk Management</h3>
-              <p class="text-[#BBB8B8] text-xs md:text-sm mb-0 xl:mb-16 2xl:mb-10 font-openSans ">Set stop-loss, take-profit, and other
-                parameters to safeguard your trades.</p>
-            </div>
-          </div>
-        </div>
-
+        
 
       </div>
     </div>

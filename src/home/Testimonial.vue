@@ -1,7 +1,7 @@
 <template>
-    <div class="my-32 ">
+    <div class="my-32 w-[95%] mx-auto">
         <div class="text-center">
-            <p class="lg:text-[38px] font-bold mx-auto text-white text-[27px]">Know Why People Trust Us?</p>
+            <p class="lg:text-[38px] font-extrabold mx-auto text-white text-[27px]">Know Why People Trust Us?</p>
 
             <p class="font-openSans text-[#BBB8B8] lg:text-[18px] max-w-4xl mx-auto mb-16 mt-8 text-[16px] px-2">  Our platform is trusted by traders worldwide for its commitment to innovation, transparency, and delivering results. Designed with your success in mind, it’s built to help you achieve your goals.</p>
         </div>

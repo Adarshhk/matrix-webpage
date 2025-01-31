@@ -3,7 +3,7 @@
         
         <div class="pt-24 pb-16 w-[95%] mx-auto text-center ">
             
-            <h2 class="md:text-[38px] text-[27px] font-bold text-white">
+            <h2 class="md:text-[38px] text-[27px] font-extrabold text-white">
                 Steps to Access Your Account
             </h2>
             <p class="font-openSans text-[#dfdfdf] text-[16px] md:text-[18px] md:mt-4 mt-8 text-center"> Follow these simple steps to quickly and securely log into your account and start your trading journey without any hassle.</p>
