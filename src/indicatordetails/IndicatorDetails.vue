@@ -1,9 +1,9 @@
 <template>
   <div class="w-[95%] mx-auto">
-  <Hero1 v-if="param == 0" />
+  <!-- <Hero1 v-if="param == 0" />
   <Hero1 v-if="param == 1" />
-  <Hero2 v-if="param == 3"/>
-  <Hero3 v-if="param == 2"/>
+  <Hero2 v-if="param == 3"/> -->
+  <Hero3/>
   <Community />
   <Testimonial />
   <Plans />

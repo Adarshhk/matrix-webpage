@@ -78,7 +78,7 @@
             class="h-8 md:h-12" />
 
           <div class="bg-[#1d2125] rounded-full p-1.5 inline-flex">
-            <button v-for="period in ['Quarterly', 'Yearly']" :key="period" :class="[
+            <button v-for="period in ['Monthly' , 'Quarterly', 'Yearly']" :key="period" :class="[
               'px-4 font-openSans text-[16px]  md:px-6 py-2 rounded-full transition-all whitespace-nowrap text-sm md:text-base min-w-[80px] md:min-w-[100px]',
               billingPeriod === period ? 'bg-[#00B852] text-[#dfdfdf]' : 'text-gray-400',
             ]" @click="billingPeriod = period">
@@ -163,42 +163,18 @@
             <!-- plan list -->
             <div class="flex flex-col justify-evenly gap-2 ">
 
-              <!-- plan 1 -->
-
-              <!-- <div @click="changePlan('indicator' , 0)"
-                class="flex justify-between items-center gap-3 rounded  p-2 py-4 border"
-                :class="{'border-[#dfdfdf]': activePlan.name == 'indicator' , 'border-[#ffffff22]' : activePlan.name != 'indicator' }">
-                
-                <div class="flex items-center gap-2">
-
-                  <div class="flex flex-col items-start">
-                    <h3 class="text-white text-[20px] font-bold">Indicator</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
-                    </div>
-
-                  </div>
-                </div>
-                
-                <div class="flex flex-col items-end">
-                  <p class="text-[22px] font-bold text-white ">
-                    FREE
-                  </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] ">In-app Purchase</p>
-                </div> 
-
-              </div>-->
+             
 
               <!-- second item -->
               <div @click="changePlan('signals', 1000)"
-                class="relative  flex justify-between items-center gap-3 rounded p-2 py-4 pt-8 border "
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'signals', 'border-[#ffffff22]': activePlan.name != 'signals' }">
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{ 'border-[#FFEB00] bg-[#FFEB0022] ': activePlan.name === 'signals', 'border-[#ffffff22]': activePlan.name != 'signals' }">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Signals</h3>
-                    <div class="bg-[#E3DB98] top-0 left-2 rounded-b absolute px-2">
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b absolute px-2">
                       <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
@@ -206,59 +182,83 @@
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting from</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span class="text-[14px] text-[#ffffff55] font-bold ">
-                      Starting from
-                    </span>₹300
+                    ₹300
                   </p>
 
                 </div>
               </div>
 
 
-              <div @click="changePlan('screener', 2000)"
-                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'screener', 'border-[#ffffff22]': activePlan.name != 'screener' }">
+              <div @click="changePlan('screener', 1000)"
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{  'border-[#ffffff22]': activePlan.name != 'screener' }">
                 <!-- Radio div and Indicator Section -->
-                <div class="flex items-center gap-2">
+                <div class="flex items-end gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Screener</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b opacity-0 absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
                   </div>
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold line-through">₹3000</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span>₹</span>10,740
+                    Free
                   </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+
                 </div>
               </div>
 
-              <div @click="changePlan('webhook', 4000)"
-                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'webhook', 'border-[#ffffff22]': activePlan.name != 'webhook' }">
+              <div @click="changePlan('webhook', 1000)"
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{  'border-[#ffffff22]': activePlan.name != 'webhook' }">
                 <!-- Radio div and Indicator Section -->
-                <div class="flex items-center gap-2">
+                <div class="flex items-end gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Webhook</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b opacity-0 absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
                   </div>
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting From</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span>₹</span>10,740
+                    ₹300
                   </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+
+                </div>
+              </div>
+              <div @click="changePlan('indicator', 1000)"
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{  'border-[#ffffff22]': activePlan.name != 'indicator' }">
+                <!-- Radio div and Indicator Section -->
+                <div class="flex items-end gap-2">
+
+                  <div class="flex flex-col items-start">
+                    <h3 class="text-white text-[20px] font-bold">Indicator</h3>
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b opacity-0 absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- Pricing Section -->
+                <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting From</p>
+                  <p class="text-[22px] font-bold text-white ">
+                    ₹300
+                  </p>
+
                 </div>
               </div>
 
@@ -277,6 +277,9 @@
 
           <div class="col-span-2 lg:px-4 lg:border-l border-[#ffffff22] mx-2">
             <SignalPlan v-if="activePlan.name === 'signals'" />
+            <ScreenerPlan v-if="activePlan.name === 'screener'" />
+            <WebhookPlan v-if="activePlan.name === 'webhook'" />
+            <IndicatorPlan v-if="activePlan.name === 'indicator'"/>
           </div>
 
 
@@ -326,14 +329,14 @@
 
               <!-- second item -->
               <div @click="changePlan('essential', 1000)"
-                class="relative  flex justify-between items-center gap-3 rounded p-2 py-4 pt-8 border "
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'essential', 'border-[#ffffff22]': activePlan.name != 'essential' }">
+                class="relative  flex justify-between items-end gap-3 rounded p-2 pt-8 border "
+                :class="{ 'border-[#FFEB00] bg-[#FFEB0022]': activePlan.name === 'essential', 'border-[#ffffff22]': activePlan.name != 'essential' }">
                 <!-- Radio div and Indicator Section -->
                 <div class="flex items-center gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Essential</h3>
-                    <div class="bg-[#E3DB98] top-0 left-2 rounded-b absolute px-2">
+                    <div class="bg-[#FFEB00]  top-0 left-2 rounded-b absolute px-2">
                       <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
@@ -341,81 +344,83 @@
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting From</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span class="text-[14px] text-[#ffffff55] font-bold ">
-                      Starting from
-                    </span>₹17000
+                    ₹300
                   </p>
 
                 </div>
               </div>
 
 
-              <div @click="changePlan('evaluation', 2000)"
-                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'evaluation', 'border-[#ffffff22]': activePlan.name != 'evaluation' }">
-                <!-- Radio div and Indicator Section -->
-                <div class="flex items-center gap-2">
+              <div @click="changePlan('evaluation', 1000)"
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{  'border-[#ffffff22]': activePlan.name != 'evaluation' }">
+                <!-- Radio div and evaluation Section -->
+                <div class="flex items-end gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Evaluation</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b opacity-0 absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
                   </div>
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting From</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span>₹</span>10,740
+                    ₹300
                   </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+
                 </div>
               </div>
 
-              <div @click="changePlan('elite', 4000)"
-                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'elite', 'border-[#ffffff22]': activePlan.name != 'elite' }">
-                <!-- Radio div and Indicator Section -->
-                <div class="flex items-center gap-2">
+              <div @click="changePlan('elite', 1000)"
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{  'border-[#ffffff22]': activePlan.name != 'elite' }">
+                <!-- Radio div and elite Section -->
+                <div class="flex items-end gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">Elite</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b opacity-0 absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
                   </div>
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting From</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span>₹</span>10,740
+                    ₹300
                   </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+
                 </div>
               </div>
-              <div @click="changePlan('hni', 4000)"
-                class="flex justify-between items-center gap-3 rounded p-2 py-4 border"
-                :class="{ 'border-[#dfdfdf]': activePlan.name === 'hni', 'border-[#ffffff22]': activePlan.name != 'hni' }">
-                <!-- Radio div and Indicator Section -->
-                <div class="flex items-center gap-2">
+              <div @click="changePlan('hni', 1000)"
+                class="relative flex justify-between items-end gap-3 rounded p-2 py-2 pt-8 border transition-all duration-100 "
+                :class="{  'border-[#ffffff22]': activePlan.name != 'hni' }">
+                <!-- Radio div and HNI Section -->
+                <div class="flex items-end gap-2">
 
                   <div class="flex flex-col items-start">
                     <h3 class="text-white text-[20px] font-bold">HNI</h3>
-                    <div class="bg-[#E3DB98] rounded-full px-2">
-                      <span class="font-semibold text-xs">50% Off</span>
+                    <div class="bg-[#FFEB00] top-0 left-2 rounded-b opacity-0 absolute px-2">
+                      <span class=" text-xs uppercase font-extrabold">Top Selling</span>
                     </div>
 
                   </div>
                 </div>
                 <!-- Pricing Section -->
                 <div class="flex flex-col items-end">
+                  <p class="text-[14px] text-[#ffffff55] font-bold ">Starting From</p>
                   <p class="text-[22px] font-bold text-white ">
-                    <span>₹</span>10,740
+                    ₹300
                   </p>
-                  <p class="text-sm font-semibold text-[#BBB8B8] line-through">₹20,000</p>
+
                 </div>
               </div>
 
@@ -453,7 +458,7 @@
 
 <script setup>
 import { ref } from "vue";
-import Indicator from './Plans/Indicator.vue'
+import Indicator from './Plans/IndicatorPlan.vue'
 const selectedPlan = ref("Matrix ONE");
 const billingPeriod = ref("Quarterly");
 import Breadcrumb from '/src/component/Breadcrumb.vue'
@@ -462,6 +467,9 @@ import Essential from "./Plans/Essential.vue";
 import Evaluation from "./Plans/Evaluation.vue";
 import Elite from "./Plans/Elite.vue";
 import HNI from "./Plans/HNI.vue";
+import ScreenerPlan from "./Plans/ScreenerPlan.vue";
+import WebhookPlan from "./Plans/WebhookPlan.vue";
+import IndicatorPlan from "./Plans/IndicatorPlan.vue";
 
 const props = defineProps({
   addToCart: Function,

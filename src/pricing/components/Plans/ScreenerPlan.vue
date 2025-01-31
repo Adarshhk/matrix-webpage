@@ -1,11 +1,12 @@
 <template>
 
-    <div class="w-full my-4">
-
-
+    <div class="">
         <h3 class="text-white text-xl font-bold mb-4">
-            Whats For You
+            What's Inside It
         </h3>
+
+        <hr class="border-[#ffffff22] my-4" />
+        
         <ul class="space-y-4 ">
             <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
                 <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
@@ -19,8 +20,8 @@
         <button
             class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">
 
-            <img src="/src/assets/svg/add.svg" alt="" class="w-4">
-            <p class="font-openSans text-white">Add To Cart</p>
+       
+            <p class="font-openSans text-white">Explore Screener</p>
 
         </button>
         <hr class="border-[#ffffff22] my-8" />
@@ -32,27 +33,7 @@
             Free For You*
         </h3>
         <ul class="flex flex-wrap gap-4">
-            <li class="">
-                <Tippy content_title="Webhook with partail access"
-                    content_desc="Note : This is a premium feature, you will get partial access."
-                    class="bg-[#272b2f] text-white p-2 rounded-lg">
-                    <img src="/pricingproduct/Logo 1.svg" alt="" class="w-16 h-16" />
-                </Tippy>
-            </li>
-            <li>
-                <Tippy content_title="Webhook with partail access"
-                    content_desc="Note : This is a premium feature, you will get partial access."
-                    class="bg-[#272b2f] text-white p-2 rounded-lg">
-                    <img src="/pricingproduct/Logo 2.svg" alt="" class="w-16 h-16" />
-                </Tippy>
-            </li>
-            <li>
-                <Tippy content_title="Webhook with partail access"
-                    content_desc="Note : This is a premium feature, you will get partial access."
-                    class="bg-[#272b2f] text-white p-2 rounded-lg">
-                    <img src="/pricingproduct/Logo 3.svg" alt="" class="w-16 h-16" />
-                </Tippy>
-            </li>
+            
 
             <li>
                 <Tippy content_title="Webhook with partail access"
@@ -70,14 +51,6 @@
                 </Tippy>
             </li>
 
-            <li>
-                <Tippy content_title="Webhook with partail access"
-                    content_desc="Note : This is a premium feature, you will get partial access."
-                    class="bg-[#272b2f] text-white p-2 rounded-lg">
-                    <img src="/pricingproduct/Logo 6.svg" alt="" class="w-16 h-16" />
-                </Tippy>
-            </li>
-
         </ul>
     </div>
 </template>
@@ -87,11 +60,44 @@ import { ref } from 'vue';
 import Tippy from '../../../component/Tippy.vue';
 
 
-const active = ref('core')
+const active = ref('individual')
 
 const toggleActive = (name) => {
     active.value = name;
 }
+
+const activeIndividualPlan = ref('F&O')
+
+const individualPlans = [
+    {
+        title : 'F&O',
+        price : '2000',
+        cutprice : '3000',
+        img : '/src/assets/svg/option.svg',
+        discount : '50% OFF'
+    },
+    {
+        title : 'Equity',
+        price : '2000',
+        cutprice : '3000',
+        img : '/src/assets/svg/equity.svg',
+        discount : ''
+    },
+    {
+        title : 'Commodity',
+        price : '2000',
+        cutprice : '3000',
+        img : '/src/assets/svg/gold.svg',
+        discount : ''
+    },
+    {
+        title : 'Stocks',
+        price : '2000',
+        cutprice : '3000',
+        img : '/src/assets/svg/stock.svg',
+        discount : ''
+    },
+]
 
 const features = {
     column1: [
@@ -111,16 +117,4 @@ const features = {
         { text: "Custom reporting", active: false },
     ],
 };
-
-const activeButton = ref("Capital");
-const plans = ["Capital", "Risk Reward"];
-
-const toggleActiveButton = (name) => {
-    activeButton.value = name;
-};
-
-const getButtonClass = (plan) => ({
-    "text-black font-semibold bg-[white] ": activeButton.value === plan,
-    "text-[#F9F2F2] ": activeButton.value !== plan,
-});
 </script>
