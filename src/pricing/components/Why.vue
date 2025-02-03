@@ -48,7 +48,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="max-w-[1360px] mx-auto px-4 relative">
+    <div class="max-w-[1360px] mx-auto lg:px-4 relative">
       <!-- Matrix Toggle -->
       <div class="absolute left-1/2 -translate-x-1/2 -top-[22px] w-full max-w-fit">
         <div class=" rounded-full p-1 inline-flex">

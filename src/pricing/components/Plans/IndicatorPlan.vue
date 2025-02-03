@@ -1,6 +1,6 @@
 <template>
 
-    <div class=" h-full flex flex-col justify-center items-center px-24">
+    <div class=" h-full flex flex-col justify-center items-center lg:px-24">
         
 
         <h3 class="text-white text-[32px] text-center leading-tight font-bold mb-4">
@@ -11,15 +11,6 @@
             Access millions of premium indicators in one marketplace. Compare, buy, and enhance your trading strategy effortlessly. Stop searching across multiple platforms—everything you need is here to trade smarter and faster! 🚀
         </p>
 
-        <!-- <ul class="space-y-4 ">
-            <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
-                <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
-                    {{ feature.text }}
-                </span>
-            </li>
-        </ul> -->
 
         <button
             class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">

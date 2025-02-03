@@ -177,22 +177,22 @@ call Correctly
                 <button >
                     Services
                 </button>
-                <button @click="changeRoute('/disclosure')">
+                <button @click="changeRoute('/terms/disclosure')">
                     Disclosure
                 </button>
-                <button @click="changeRoute('/t&c')">
+                <button @click="changeRoute('/terms/t&c')">
                     Terms & Conditions
                 </button>
-                <button @click="changeRoute('/disclaimer')">
+                <button @click="changeRoute('/terms/disclaimer')">
                     Disclaimer
                 </button>
                 <button >
                     Grievance Redressal
                 </button>
-                <button @click="changeRoute('/refund-policy')">
+                <button @click="changeRoute('/terms/refund-policy')">
                     Refund Policy
                 </button>
-                <button @click="changeRoute('/privacy-policy')">
+                <button @click="changeRoute('/terms/privacy-policy')">
                     Privacy Policy
                 </button>
 

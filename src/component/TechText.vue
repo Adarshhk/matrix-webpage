@@ -3,7 +3,7 @@ import { ref, onMounted } from 'vue'
 
 class TextScrambler {
   constructor(updateText) {
-    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.chars = '!<>-_\\/[]{}—=+*^?#________$%^&*(@)'
     this.update = this.update.bind(this)
     this.updateText = updateText
   }
@@ -66,10 +66,10 @@ class TextScrambler {
 
 const phrases = [
   'Start small with,',
-  'algo trading,',
-  'but dream big. ',
-  'Each strategy you refine',
-  'brings you closer to',
+  'algo trading, but dream',
+  'big. Each strategy',
+  'you refine brings ',
+  '  you closer to ',
   'mastering the market!'
 ]
 
@@ -95,7 +95,7 @@ onMounted(() => {
 <template>
   <div class=" w-full py-10 flex items-center justify-center ">
     <div 
-      class="text-[44px] lg:text-[84px] text-gray-100 font-bold"
+      class="text-center text-[44px] lg:text-[84px] text-gray-100 font-bold"
       v-html="displayText"
     ></div>
 

@@ -66,7 +66,7 @@ const brokerImages = ref([
     </div>
 
     <div class="mt-10 xl:mt-16 grid grid-cols-1 lg:grid-cols-2">
-      <div class="flex flex-col items-center space-y-6 md:space-y-10 p-10">
+      <div class="flex flex-col items-center space-y-6 md:space-y-10 lg:p-10">
         <ul class="font-openSans font-normal text-[#dfdfdf] text-[16px] xl:text-[20px] space-y-4">
           <li class="flex items-center gap-2 text-[16px]">
             <img src="/images/svg/GreenCloud.svg" alt="" />
@@ -124,7 +124,7 @@ const brokerImages = ref([
         </div>
       </div>
 
-      <div class=" h-full p-10">
+      <div class=" h-full lg:p-10">
         <Form/>
       </div>
     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="mt-32">
+    <div class="mt-32 mx-auto max-w-6xl">
 
         <h2 class="text-white text-[27px] lg:text-[38px] font-semibold text-center">
             Disclosure

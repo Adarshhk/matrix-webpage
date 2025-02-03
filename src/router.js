@@ -9,20 +9,20 @@ import Blogs from './blogs/Blogs.vue';
 import About from './aboutus/About.vue';
 import Indicators from './indicators/Indicators.vue';
 import ManualTrade from './manualtrade/ManualTrade.vue';
-import Disclosure from './termsandcondition/disclosure/Disclosure.vue';
-import TermsandCondition from './termsandcondition/t&c/TermsandCondition.vue';
-import Disclaimer from './termsandcondition/disclaimer/Disclaimer.vue';
-import RefundPolicy from './termsandcondition/refundpolicy/RefundPolicy.vue';
-import PrivacyPolicy from './termsandcondition/privacypolicy/PrivacyPolicy.vue';
 import Contact from './component/Contact.vue';
 import AlgoTrading from './algotrading/AlgoTrading.vue';
 import Pricing from './pricing/Pricing.vue';
 import BlogDetails from './blog details/BlogDetails.vue';
-import { Signal } from 'lucide-vue-next';
 import Signals from './signals/Signals.vue';
 import Webinar from './webinar/Webinar.vue';
 import Demo from './demo/Demo.vue';
 import IndicatorDetails from './indicatordetails/IndicatorDetails.vue';
+import TermsLayout from './termsandcondition/termsandcondition/TermsLayout.vue';
+import Disclosure from './termsandcondition/termsandcondition/disclosure/Disclosure.vue';
+import TermsandCondition from './termsandcondition/termsandcondition/t&c/TermsandCondition.vue';
+import Disclaimer from './termsandcondition/termsandcondition/disclaimer/Disclaimer.vue';
+import RefundPolicy from './termsandcondition/termsandcondition/refundpolicy/RefundPolicy.vue';
+import PrivacyPolicy from './termsandcondition/termsandcondition/privacypolicy/PrivacyPolicy.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -30,26 +30,30 @@ const routes = [
   { path: '/trader', component: Trader },
   { path: '/screener', component: Screener },
   { path: '/investor', component: Investor },
-  { path : '/webhook' , component : Webhook},
-  { path : '/about' , component : About},
-  { path : '/blogs' , component : Blogs},
-  { path : '/indicator' , component : Indicators},
-  { path : '/manualtrade' , component : ManualTrade},
-  { path : '/disclosure' , component : Disclosure},
-  { path : '/t&c' , component : TermsandCondition},
-  { path : '/disclaimer' , component : Disclaimer},
-  { path : '/refund-policy' , component : RefundPolicy},
-  { path : '/privacy-policy' , component : PrivacyPolicy},
-  { path : '/contact' , component : Contact},
-  { path : '/algo-trading' , component : AlgoTrading},
-  { path : '/pricing' , component : Pricing},
-  { path : '/blog-details/:id' , component : BlogDetails},
-  { path : '/signals' , component : Signals},
-  { path : '/webinar' , component : Webinar},
-  { path : '/demo' , component : Demo},
-  { path : '/indicator-details/:id' , component : IndicatorDetails},
-
-
+  { path: '/webhook', component: Webhook },
+  { path: '/about', component: About },
+  { path: '/blogs', component: Blogs },
+  { path: '/indicator', component: Indicators },
+  { path: '/manualtrade', component: ManualTrade },
+  { path: '/contact', component: Contact },
+  { path: '/algo-trading', component: AlgoTrading },
+  { path: '/pricing', component: Pricing },
+  { path: '/blog-details/:id', component: BlogDetails },
+  { path: '/signals', component: Signals },
+  { path: '/webinar', component: Webinar },
+  { path: '/demo', component: Demo },
+  { path: '/indicator-details/:id', component: IndicatorDetails },
+  {
+    path: '/terms',
+    component: TermsLayout,
+    children: [
+      { path: 'disclosure', component: Disclosure },
+      { path: 't&c', component: TermsandCondition },
+      { path: 'disclaimer', component: Disclaimer },
+      { path: 'refund-policy', component: RefundPolicy },
+      { path: 'privacy-policy', component: PrivacyPolicy },
+    ]
+  },
 ]
 
 const router = createRouter({

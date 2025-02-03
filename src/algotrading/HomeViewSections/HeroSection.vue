@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-48 mb-16 lg:mb-32  grid grid-cols-1 lg:grid-cols-12 lg:gap-20 ">
+  <div class="md:mt-48 mb-16 lg:mb-32  grid grid-cols-1 lg:grid-cols-12 lg:gap-20 ">
       <div class="grid-background hidden lg:block ">
           <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
           <img src="/src/assets/img/grid1.png" class="grid-image" alt="">

@@ -29,7 +29,7 @@
             </div>
             <!-- Image on the right -->
             <img src="/src/assets/svg/savemore.svg" alt="Info Icon"
-                class="absolute right-[-55px] md:right-[-100px] top-3 md:top-6 transform -translate-y-1/2 w-28 md:w-32 -rotate-12 md:rotate-0" />
+                class="absolute right-[-50px] md:right-[-100px] top-3 md:top-6 transform -translate-y-1/2 w-24 md:w-32 -rotate-12 md:rotate-0" />
         </div>
 
 
