@@ -6,7 +6,9 @@
   <Chatbot />
   
   <div class="max-w-[90%] mx-auto">
+    
     <RouterView />
+
     <FAQ />
     <Sebi/>
     <Footer />

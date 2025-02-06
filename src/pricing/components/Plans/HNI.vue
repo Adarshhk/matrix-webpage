@@ -7,11 +7,11 @@
             Whats For You
         </h3>
         <ul class="space-y-4 ">
-            <li v-for="(feature, i) in features.column1" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
+            <li v-for="(feature, i) in plan.features" :key="i" class="flex items-center gap-3">
+                <img v-if="feature.is_enable" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
                 <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
-                    {{ feature.text }}
+                <span class="text-[16px] font-openSans" :class="feature.is_enable ? 'text-white' : 'text-gray-400'">
+                    {{ feature.title }}
                 </span>
             </li>
         </ul>
@@ -31,30 +31,29 @@
         <h3 class="text-white text-xl font-bold mb-4">
             Free For You*
         </h3>
-        <ul class="flex flex-wrap gap-4">
-            <li class="">
+        <ul class="flex flex-wrap gap-4" >
+            <li v-if="plan.products.includes('wehook')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 1.svg" alt="" class="w-16 h-16" />
                 </Tippy>
             </li>
-            <li>
+            <li v-if="plan.products.includes('signals')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 2.svg" alt="" class="w-16 h-16" />
                 </Tippy>
             </li>
-            <li>
+            <li v-if="plan.products.includes('manual_trade')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 3.svg" alt="" class="w-16 h-16" />
                 </Tippy>
             </li>
-
-            <li>
+            <li v-if="plan.products.includes('screener')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
@@ -62,7 +61,8 @@
                 </Tippy>
             </li>
 
-            <li>
+
+            <li v-if="plan.products.includes('indicator')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
@@ -70,7 +70,7 @@
                 </Tippy>
             </li>
 
-            <li>
+            <li v-if="plan.products.includes('algo_trading')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
@@ -83,44 +83,17 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import Tippy from '../../../component/Tippy.vue';
+import usePricingStore from '../../../store/pricing';
+import { storeToRefs } from 'pinia';
 
+const pricingStore = usePricingStore();
+const {algoPricing} = storeToRefs(pricingStore);
 
-const active = ref('core')
+const props = defineProps({
+    id : Number
+})
 
-const toggleActive = (name) => {
-    active.value = name;
-}
-
-const features = {
-    column1: [
-        { text: "20,000+ of PNG & SVG graphics", active: true },
-        { text: "Switch or cancel anytime", active: true },
-        { text: "Scalable plans for beginners to pros", active: true },
-        { text: "Advanced analytics tools", active: false },
-        { text: "Custom integrations", active: false },
-        { text: "Priority support", active: false },
-    ],
-    column2: [
-        { text: "Real-time market data", active: true },
-        { text: "Multi-device sync", active: true },
-        { text: "API access", active: true },
-        { text: "White-label solutions", active: false },
-        { text: "Dedicated account manager", active: false },
-        { text: "Custom reporting", active: false },
-    ],
-};
-
-const activeButton = ref("Capital");
-const plans = ["Capital", "Risk Reward"];
-
-const toggleActiveButton = (name) => {
-    activeButton.value = name;
-};
-
-const getButtonClass = (plan) => ({
-    "text-black font-semibold bg-[white] ": activeButton.value === plan,
-    "text-[#F9F2F2] ": activeButton.value !== plan,
-});
+const plan = computed(() => algoPricing.value[props.id]);
 </script>

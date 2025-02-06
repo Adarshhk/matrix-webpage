@@ -6,6 +6,7 @@ import Tools from './component/Tools.vue';
 import Tutorial from './component/Tutorial.vue';
 import Community from './component/Community.vue'
 import Display from './component/Display.vue';
+import Pricing from './component/Pricing.vue';
 
 </script>
 
@@ -16,6 +17,7 @@ import Display from './component/Display.vue';
     <Feature/>
     <Tutorial/>
     <Tools/>
+    <Pricing/>
     <Community />
     <Testimonials/>
     </div>

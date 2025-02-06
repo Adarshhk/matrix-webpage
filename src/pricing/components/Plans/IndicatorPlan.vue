@@ -27,65 +27,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import Tippy from '../../../component/Tippy.vue';
+import { computed, ref } from 'vue';
+import usePricingStore from '../../../store/pricing';
+import { storeToRefs } from 'pinia';
 
+const pricingStore = usePricingStore();
+const {edgePricing} = storeToRefs(pricingStore);
 
-const active = ref('first')
-
-const toggleActive = (name) => {
-    active.value = name;
-}
-
-const activeIndividualPlan = ref('F&O')
-
-const individualPlans = [
-    {
-        title: 'F&O',
-        price: '2000',
-        cutprice: '3000',
-        img: '/src/assets/svg/option.svg',
-        discount: '50% OFF'
-    },
-    {
-        title: 'Equity',
-        price: '2000',
-        cutprice: '3000',
-        img: '/src/assets/svg/equity.svg',
-        discount: ''
-    },
-    {
-        title: 'Commodity',
-        price: '2000',
-        cutprice: '3000',
-        img: '/src/assets/svg/gold.svg',
-        discount: ''
-    },
-    {
-        title: 'Stocks',
-        price: '2000',
-        cutprice: '3000',
-        img: '/src/assets/svg/stock.svg',
-        discount: ''
-    },
-]
-
-const features = {
-    column1: [
-        { text: "20,000+ of PNG & SVG graphics", active: true },
-        { text: "Switch or cancel anytime", active: true },
-        { text: "Scalable plans for beginners to pros", active: true },
-        { text: "Advanced analytics tools", active: false },
-        { text: "Custom integrations", active: false },
-        { text: "Priority support", active: false },
-    ],
-    column2: [
-        { text: "Real-time market data", active: true },
-        { text: "Multi-device sync", active: true },
-        { text: "API access", active: true },
-        { text: "White-label solutions", active: false },
-        { text: "Dedicated account manager", active: false },
-        { text: "Custom reporting", active: false },
-    ],
-};
+const indicatorPlan = computed(() => edgePricing.value[2]);
 </script>
