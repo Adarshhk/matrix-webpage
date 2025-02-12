@@ -1,5 +1,5 @@
 <template>
-  <div v-if="props.cart.length > 0" class="fixed bottom-10 left-0 right-0 mx-auto w-[90%] max-w-3xl z-40">
+  <div v-if="cart.length > 0" class="fixed bottom-10 left-0 right-0 mx-auto w-[90%] max-w-3xl z-40">
     <div 
       :class="[
         'px-1 bg-[#1d2125] border border-[#ffffff22] overflow-hidden ',
@@ -13,27 +13,27 @@
             <p class="font-extrabold text-[#dfdfdf] text-[19px]">Plans:</p>
             <!-- Desktop view: show all products -->
             <div class="hidden lg:flex items-center">
-              <div v-for="item in props.cart" :key="item.id" class="flex items-center bg-[#dfdfdf] rounded-full py-1 px-3 flex-shrink-0 mr-2">
+              <div v-for="item in cart" :key="item.id" class="flex items-center bg-[#dfdfdf] rounded-full py-1 px-3 flex-shrink-0 mr-2">
                 <p class="text-black text-[14px] font-openSans font-semibold">{{ item.name }}</p>
-                <button @click="removeFromCart(item)" class="text-xs ml-2">
-                  <img src="/src/assets/svg/X.svg" class="w-3" alt="">
+                <button @click="cartStore.removeFromCart(item)" class="text-xs ml-2 text-black font-bold">
+                  X
                 </button>
               </div>
             </div>
             <!-- Mobile view: show first product and +X button -->
             <div class="flex lg:hidden items-center">
-              <div v-if="props.cart.length > 0" class="flex items-center bg-[#dfdfdf] rounded-full py-1 px-3 flex-shrink-0">
-                <p class="text-black text-[14px] font-openSans font-semibold">{{ props.cart[0].name }}</p>
-                <button @click="removeFromCart(props.cart[0])" class="text-xs ml-2">
+              <div v-if="cart.length > 0" class="flex items-center bg-[#dfdfdf] rounded-full py-1 px-3 flex-shrink-0">
+                <p class="text-black text-[14px] font-openSans font-semibold">{{ cart[0].name }}</p>
+                <button @click="cartStore.removeFromCart(cart[0])" class="text-xs ml-2">
                   <img src="/src/assets/svg/X.svg" class="w-3" alt="">
                 </button>
               </div>
               <button 
-                v-if="props.cart.length > 1" 
+                v-if="cart.length > 1" 
                 @click="toggleExpand" 
                 class="ml-2 bg-[#dfdfdf] rounded-full py-1 px-3 text-black text-[14px] font-openSans font-semibold"
               >
-                +{{ props.cart.length - 1 }}
+                +{{ cart.length - 1 }}
               </button>
             </div>
           </div>
@@ -53,9 +53,9 @@
           </button>
         </div>
         <div class="flex-grow overflow-y-auto space-y-2 mb-4">
-          <div v-for="item in props.cart" :key="item.id" class="flex items-center justify-between bg-[#dfdfdf] rounded-full py-2 px-4">
+          <div v-for="item in cart" :key="item.id" class="flex items-center justify-between bg-[#dfdfdf] rounded-full py-2 px-4">
             <p class="text-black text-[14px] font-openSans font-semibold">{{ item.name }}</p>
-            <button @click="removeFromCart(item)" class="text-xs">
+            <button @click="cartStore.removeFromCart(item)" class="text-xs">
               <img src="/src/assets/svg/X.svg" class="w-3" alt="">
             </button>
           </div>
@@ -69,32 +69,23 @@
 </template>
 
 <script setup>
-import { computed, defineProps, ref } from 'vue'
+import { computed, ref } from 'vue'
+import useCartStore from '../../store/cart'
+import { storeToRefs } from 'pinia';
 
-const props = defineProps({
-  cart: {
-    type: Array,
-    required: true
-  },
-  addToCart: Function
-})
+const cartStore = useCartStore();
+const {cart } = storeToRefs(cartStore);
 
 const isExpanded = ref(false)
 
 const totalPrice = computed(() => {
-  return props.cart.reduce((sum, item) => sum + (item.price || 0), 0)
+  return cart.value.reduce((sum, item) => sum + (item.price || 0), 0)
 })
 
 const toggleExpand = () => {
   isExpanded.value = !isExpanded.value
 }
 
-const removeFromCart = (item) => {
-  props.addToCart(item)
-  if (props.cart.length <= 1) {
-    isExpanded.value = false
-  }
-}
 </script>
 
 <style scoped>

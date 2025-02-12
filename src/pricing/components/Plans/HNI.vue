@@ -16,7 +16,7 @@
             </li>
         </ul>
 
-        <button
+        <button @click="props.add"
             class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">
 
             <img src="/src/assets/svg/add.svg" alt="" class="w-4">
@@ -92,7 +92,8 @@ const pricingStore = usePricingStore();
 const {algoPricing} = storeToRefs(pricingStore);
 
 const props = defineProps({
-    id : Number
+    id : Number,
+    add : Function
 })
 
 const plan = computed(() => algoPricing.value[props.id]);

@@ -41,7 +41,7 @@
 
           <div class="col-span-2 px-4 lg:border-l border-[#ffffff22] mx-2">
             
-            <HNI :id="propId" />
+            <HNI :id="propId" :add="add" />
           </div>
         </div>
 
@@ -53,6 +53,7 @@ import usePricingStore from '../store/pricing';
 
 import HNI from './components/Plans/HNI.vue';
 import { ref } from 'vue';
+import useCartStore from '../store/cart';
 
 const pricingStore = usePricingStore();
 
@@ -60,6 +61,8 @@ const {algoPricing} = storeToRefs(pricingStore);
 
 const activePlan = ref(algoPricing.value[0]);
 const propId = ref(0);
+
+const cartStore = useCartStore();
 
 const changePlan = (plan) => {
     activePlan.value = plan;
@@ -72,5 +75,12 @@ const changePlan = (plan) => {
 
     propId.value = planMapping[activePlan.value.name] ?? 3;
 };
+
+const add = () => {
+  
+  cartStore.addToCart({name : activePlan.value.name , price : activePlan.value.price})
+}
+
+
 
 </script>

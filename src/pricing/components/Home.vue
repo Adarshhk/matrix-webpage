@@ -1,16 +1,13 @@
 <template>
   <!-- <Hero id="hero" /> -->
    <SnowFall/>
-  <Why :addToCart="toggleCartItem" :cart="cart" :isInCart="isInCart"/>
+  <Why/>
   <Tutorial />
   <Features id="features" />
   <Comparison />
   <Globe />
   <Insights />
-  <Cart :cart="cart" :addToCart="toggleCartItem"/>
-
-
-
+  <Cart />
 </template>
 
 <script setup>

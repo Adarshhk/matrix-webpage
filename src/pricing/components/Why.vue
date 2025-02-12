@@ -122,11 +122,7 @@ import MatrixEdge from "../MatrixEdge.vue";
 import MatrixAlgo from "../MatrixAlgo.vue";
 import { storeToRefs } from "pinia";
 
-const props = defineProps({
-  addToCart: Function,
-  cart: Array,
-  isInCart: Function
-})
+
 const selectedPlan = ref("Matrix ONE");
 const billingPeriod = ref("Quarterly");
 const pricingStore = usePricingStore();

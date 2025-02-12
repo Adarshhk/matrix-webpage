@@ -50,7 +50,7 @@
             </h3>
             <!-- tags -->
             <div v-if="active.name === 'Individual'" class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                <div @click="() => {activeIndividualPlan = item; nowActive = item}" v-for="item in active.plans"
+                <div @click="() => { activeIndividualPlan = item; nowActive = item }" v-for="item in active.plans"
                     class=" flex flex-col items-center space-y-3 rounded pb-2 border"
                     :class="{ 'border-[#16C47F] bg-[#16C47F22]': item.tag != '' && activeIndividualPlan.name == item.name, 'border-[#ffffff22]': activeIndividualPlan.name != item.name }">
                     <!-- Radio div and Indicator Section -->
@@ -113,7 +113,7 @@
             </li>
         </ul>
 
-        <button
+        <button @click="add"
             class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">
 
             <img src="/src/assets/svg/add.svg" alt="" class="w-4">
@@ -128,7 +128,7 @@
         <h3 class="text-white text-xl font-bold mb-4">
             Free For You*
         </h3>
-        <ul class="flex flex-wrap gap-4" >
+        <ul class="flex flex-wrap gap-4">
             <li v-if="nowActive.products.includes('wehook')">
                 <Tippy content_title="Webhook with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
@@ -184,9 +184,10 @@ import { computed, ref } from 'vue';
 import Tippy from '../../../component/Tippy.vue';
 import usePricingStore from '../../../store/pricing';
 import { storeToRefs } from 'pinia';
+import useCartStore from '../../../store/cart';
 
 const pricingStore = usePricingStore();
-
+const cartStore = useCartStore();
 const { edgePricing } = storeToRefs(pricingStore);
 
 const signalPlans = computed(() => edgePricing.value[0].plans);
@@ -198,8 +199,13 @@ const activeIndividualPlan = ref(active.value.plans[0])
 const nowActive = ref(active.value.plans[0]);
 const toggleActive = (name) => {
     active.value = name;
-    if(active.value.name === 'Individual') nowActive.value = active.value.plans[0];
+    if (active.value.name === 'Individual') nowActive.value = active.value.plans[0];
     else nowActive.value = name;
+}
+
+
+const add = () => {
+    cartStore.addToCart({ name: `Signals : ${nowActive.value.name}`, price: nowActive.value.price })
 }
 
 
