@@ -57,7 +57,7 @@
                     <div class="bg-[#16C47F] rounded-b px-2" :class="{ 'opacity-0': item.tag == '' }">
                         <span class=" text-xs uppercase font-extrabold">{{ item.tag || '.' }}</span>
                     </div>
-                    <img v-if="item.name == 'F&0'" src="/src/assets/svg/option.svg" alt="">
+                    <img v-if="item.name == 'F&O'" src="/src/assets/svg/option.svg" alt="">
                     <img v-if="item.name == 'Equity'" src="/src/assets/svg/equity.svg" alt="">
                     <img v-if="item.name == 'Commodity'" src="/src/assets/svg/gold.svg" alt="">
                     <img v-if="item.name == 'Stocks'" src="/src/assets/svg/stock.svg" alt="">
@@ -105,10 +105,10 @@
         <ul class="space-y-4">
 
             <li v-for="(feature, i) in nowActive.features" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.is_enable" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
+                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
                 <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.is_enable ? 'text-white' : 'text-gray-400'">
-                    {{ feature.title }}
+                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
+                    {{ feature.text }}
                 </span>
             </li>
         </ul>

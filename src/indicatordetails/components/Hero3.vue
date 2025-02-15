@@ -10,7 +10,7 @@
       href: '/'
     },
     {
-      title: `${indicatorStore.selectedIndicator?.title}`,
+      title: `${indicator?.name}`,
       disabled: false,
       href: '/indicators'
     },
@@ -26,17 +26,16 @@
           <div class="">
             <h1 class="text-[40px] font-extrabold leading-tight mb-4">
               <span class="bg-gradient-to-r from-[#00b853] to-[#2fc1a7] bg-clip-text text-transparent">
-                {{ indicatorStore.selectedIndicator?.title }}
+                {{ indicator?.name }}
 
               </span>
             </h1>
 
-            <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: {{ indicatorStore.selectedIndicator?.date }}</p>
+            <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: {{ indicator?.created_at }}</p>
 
-            <img :src="indicatorStore.selectedIndicator?.img" alt="" class="my-8">
+            <img :src="indicator?.img" alt="" class="my-8">
             <p class="text-[#dfdfdf] text-[16px] font-openSans">
-              {{ indicatorStore.selectedIndicator?.description }}
-
+              {{ indicator?.description }}
             </p>
             <h2 class="text-white text-[27px] font-semibold  font-openSans mt-8">
               What is Option Trading?
@@ -64,7 +63,7 @@
         </div> -->
 
           <div class="mb-8">
-            <h2 class="text-white text-[27px] font-openSans font-semibold font-openSans mt-8">
+            <h2 class="text-white text-[27px] font-semibold font-openSans mt-8">
               Features of Options
 
             </h2>
@@ -205,8 +204,10 @@
 
 
       <div class=" col-span-1 text-center h-min sticky top-24 bg-[#2d98ef] px-4 rounded-lg">
-
-        <Countdown/>
+       
+        <Countdown :isSaleLive="indicator?.is_sale_live"
+            :saleStartDate="indicator?.sale_start_date"
+            :saleEndDate="indicator?.sale_end_date"/>
 
 
         <div class="mx-auto w-min flex justify-center items-end relative">
@@ -229,11 +230,13 @@
 
             <div class="flex justify-center items-center gap-1 ">
               <p class="text-[44px] font-bold text-white ">
-                <span class="text-[24px]">₹</span>6000
+                <span class="text-[24px]">₹</span>{{ indicator.offer_price }}
               </p>
               <div class="flex flex-col justify-start h-full ">
-                <p class="text-[10px] bg-[#E3DB98] p-1 px-2 rounded-3xl font-semibold">50% Off</p>
-                <p class="text-[#dfdfdf] text-[18px] font-semibold font-openSans line-through">₹12000</p>
+                <p class="text-[10px] bg-[#E3DB98] p-1 px-2 rounded-3xl font-semibold">
+                  {{ indicator?.discountPercentage }}% Off
+                </p>
+                <p class="text-[#dfdfdf] text-[18px] font-semibold font-openSans line-through">₹{{ indicator.price }}</p>
               </div>
             </div>
 
@@ -259,13 +262,15 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from 'vue';
 import Breadcrumb from '../../component/Breadcrumb.vue';
 import Countdown from '../../component/Countdown.vue';
 import useIndicatorStore from '../../store/indicator.js'
 import { useRoute } from 'vue-router';
+import { storeToRefs } from 'pinia';
 
 const indicatorStore = useIndicatorStore();
+const {indicators} = storeToRefs(indicatorStore);
 const active = ref("Yearly");
 const plans = [ "Yearly" , "Lifetime"];
 
@@ -273,11 +278,30 @@ const toggleActive = (name) => {
   active.value = name;
 };
 
-const id = useRoute().params.id
-onMounted(async () => {
-  indicatorStore.selectedIndicator = await indicatorStore.getIndicatorById(id);
+const indicatorId = useRoute().params.id
+const indicator = computed(() => {
+  if (indicatorId) {
+    const ind = indicators.value.find(
+      (item) => item.id === Number(indicatorId)
+    ); // Assuming the ID is a number
+    if (ind) {
+      const price = parseFloat(ind.price); // Ensure it's a number
+      const offerPrice = parseFloat(ind.offer_price); // Ensure it's a number
 
-})
+      if (!isNaN(price) && !isNaN(offerPrice) && price > 0 && offerPrice > 0) {
+        // Calculate discount percentage
+        ind.discountPercentage = Math.round(
+          ((price - offerPrice) / price) * 100
+        );
+      } else {
+        // Set default value if price/offerPrice is invalid
+        ind.discountPercentage = 0;
+      }
+    }
+    return ind;
+  }
+}
+)
 
 const getButtonClass = (plan) => ({
   "text-black font-semibold bg-[white] ": active.value === plan,

@@ -134,7 +134,7 @@ import { useRoute } from 'vue-router';
 
 const route = useRoute()
 
-const routes = ['/indicators' , '/manualtrade' , '/screener' , '/algo-trading' , '/signals' , '/screener']
+const routes = ['/terms/disclosure' , '/terms/complain-board' , '/terms/t&c' , '/terms/disclaimer' , '/terms/refund-policy' , '/terms/investor-charter' , '/indicators' , '/manualtrade' , '/screener' , '/algo-trading' , '/signals' , '/screener']
 
 const faqs = ref([
   {

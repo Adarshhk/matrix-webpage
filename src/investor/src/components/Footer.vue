@@ -74,24 +74,24 @@ call Correctly
                 <ul class="">
                     <li class="text-white text-[19px] font-bold mb-8 ">Explore More</li>
 
-                    <li class="text-[#dfdfdf]  font-light mb-2 hover:underline hover:cursor-pointer font-openSans">
+                    <!-- <li class="text-[#dfdfdf]  font-light mb-2 hover:underline hover:cursor-pointer font-openSans">
                         <a href="#" target="_blank" class="font-openSans text-[14px]">Get Free Demo</a>
-                    </li>
-                    <li class="text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a
-                            href="#features" class="font-openSans text-[14px]">Algo Trading</a></li>
-                    <li class="text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a
-                            href="#pricing" class="font-openSans text-[14px]">Signals</a></li>
-                    <li class="text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a href="#why"
-                            class="font-openSans text-[14px]">Screeners</a></li>
-                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a href="#why"
-                            class="font-openSans text-[14px]">Webhooks</a></li>
-                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a href="#why"
-                            class="font-openSans text-[14px]">Manual Trading</a></li>
-                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a
-                            href="#why">
-                            About Us</a></li>
-                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><a href="#why"
-                            class="font-openSans text-[14px]">Contact Us</a></li>
+                    </li> -->
+                    <li class="text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink
+                            to="/algo-trading" class="font-openSans text-[14px]">Algo Trading</RouterLink></li>
+                    <li class="text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink
+                            to="/signals" class="font-openSans text-[14px]">Signals</RouterLink></li>
+                    <li class="text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink to="/screener"
+                            class="font-openSans text-[14px]">Screeners</RouterLink></li>
+                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink to="/webhook"
+                            class="font-openSans text-[14px]">Webhooks</RouterLink></li>
+                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink to="/manualtrade"
+                            class="font-openSans text-[14px]">Manual Trading</RouterLink></li>
+                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink
+                            to="/about">
+                            About Us</RouterLink></li>
+                    <li class=" text-[#dfdfdf] font font-light mb-2 hover:underline hover:cursor-pointer"><RouterLink to="/contact"
+                            class="font-openSans text-[14px]">Contact Us</RouterLink></li>
                 </ul>
 
             </div>
@@ -100,9 +100,14 @@ call Correctly
                 <ul class="text-wrap">
                     <li class="text-white mb-8 font-bold text-[19px]  ">Get in touch with us</li>
                     <li
-                        class="text-[#dfdfdf] flex gap-3 items-center font-light mb-2 hover:underline hover:cursor-pointer font-openSans text-[14px]">
+                        class="text-[#dfdfdf] flex gap-3 items-center font-light mb-2  font-openSans text-[14px]">
                         <img src="/src/assets/svg/call.svg" alt="">
-                        +91 8962336003
+                        <div class="hover:underline hover:cursor-pointer">
+                            <span class="font-bold text-[#00B852]">Sales:</span> +91 9109316249 
+                        </div>
+                        <div class="hover:underline hover:cursor-pointer">
+                            <span class="font-bold text-[#00B852]">Support:</span> +91 9109185132 
+                        </div>
                     </li>
                     <li
                         class="text-[#dfdfdf] flex gap-3 items-center font-light mb-3 hover:underline hover:cursor-pointer">
@@ -123,15 +128,18 @@ call Correctly
             <div class="flex flex-col md:items-start justify-start col-span-12 lg:col-span-2">
                 <p class="text-white  mb-8 font-bold">Follow Us On</p>
                 <div class="flex gap-2">
-                    <button class="p-1 rounded-full border-2 border-[#ffffff11]">
-                        <img src="/src/assets/svg/linkedin.svg" alt="" class="w-5">
-                    </button>
-                    <button class="p-1 rounded-full border-2 border-[#ffffff11]">
+                    <a target="_blank" href="https://www.youtube.com/@MatrixTradingTech" class="p-1 rounded-full border-2 border-[#ffffff11]">
+                        <img src="/src/assets/svg/youtube.svg" alt="" class="w-5">
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/matrixtradingtech/" class="p-1 rounded-full border-2 border-[#ffffff11]">
                         <img src="/src/assets/svg/instagram.svg" alt="" class="w-5">
-                    </button>
-                    <button class="p-1 rounded-full border-2 border-[#ffffff11]">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61569887255498" class="p-1 rounded-full border-2 border-[#ffffff11]">
                         <img src="/src/assets/svg/facebook.svg" alt="" class="w-5">
-                    </button>
+                    </a>
+                    <a target="_blank" href="https://telegram.me/+cuoUg1tBcDc5OGM1" class="p-1 rounded-full border-2 border-[#ffffff11]">
+                        <img src="/src/assets/svg/telegram.svg" alt="" class="w-5">
+                    </a>
                 </div>
             </div>
 

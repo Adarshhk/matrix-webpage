@@ -1,5 +1,5 @@
 <template>
-  <!-- <Social/> -->
+  <Social />
   
   <Navbar />
   <MouseEffect />

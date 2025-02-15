@@ -43,10 +43,10 @@
 
         <ul class="space-y-4 ">
             <li v-for="(feature, i) in activePlan.features" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.is_enable" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
+                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
                 <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.is_enable ? 'text-white' : 'text-gray-400'">
-                    {{ feature.title }}
+                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
+                    {{ feature.text }}
                 </span>
             </li>
         </ul>

@@ -38,7 +38,7 @@
             </div>  
             </div>
           </div>
-
+          
           <div class="col-span-2 lg:px-4 lg:border-l border-[#ffffff22] mx-2">
             <SignalPlan v-if="activePlan.name === 'Signals'" />
             <ScreenerPlan v-if="activePlan.name === 'Screener'" />
@@ -61,13 +61,11 @@ import IndicatorPlan from './components/Plans/IndicatorPlan.vue';
 import ScreenerPlan from './components/Plans/ScreenerPlan.vue';
 import SignalPlan from './components/Plans/SignalPlan.vue';
 import WebhookPlan from './components/Plans/WebhookPlan.vue';
-import { computed } from 'vue';
 
 
 const pricingStore = usePricingStore();
 
-const {activePlan , edgePricing} = storeToRefs(pricingStore);
-
+const {activePlan , edgePricing , screener} = storeToRefs(pricingStore);
 
 const changePlan = (plan) => {
     activePlan.value = plan;

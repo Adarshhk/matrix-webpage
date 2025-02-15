@@ -1,31 +1,33 @@
 <template>
     <div class="w-[95%] mx-auto">
         <!-- button -->
-        <div class="flex gap-1 lg:gap-2 ">
+        <!-- <div class="flex gap-1 lg:gap-2 ">
             <button v-for="cat in indicatorCategory" :key="cat.id" :aria-label="plan + ' Plan'"
                 :class="getButtonClass(cat)" @click="toggleActive(cat.id)"
                 class="transition-all duration-200 py-1 lg:px-4 rounded-3xl text-[12px] lg:text-[16px] font-openSans">
                 {{ cat.name }}
             </button>
-        </div>
+        </div> -->
 
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-10 xl:gap-8">
 
-            <RouterLink :to="`/indicator-details/${item.id}`" v-for="item in filteredIndicators" :key="item.id"
+            <RouterLink :to="`/indicator-details/${item.id}`" v-for="item in indicators" :key="item.id"
                 class="space-y-3 group relative">
                 
                 <div>
-                    <img :src="item.img" alt="" class="aspect-video" />
+                    <img v-if="item.image" :src="item.image" alt="" class="aspect-video" />
+                    <img v-else src="/src/assets/img/trade.png" alt="" class="aspect-video" />
+                    
                 </div>
 
                 <h1
                     class="font-CabinetGrotesk text-white font-bold text-[19px] group-hover:text-[#00b852] transition-all duration-150 text-left">
-                    {{ item.title }}
+                    {{ item.name }}
                 </h1>
 
                 <hr class="border-dashed border-[#FFFFFF30]" />
 
-                <p class="text-left text-white text-[14px] md:text-[16px]">{{ item.date }}</p>
+                <p class="text-left text-white text-[14px] md:text-[16px]">{{ item.created_at }}</p>
             </RouterLink>
 
         </div>
@@ -54,11 +56,7 @@ const getButtonClass = (cat) => ({
     "text-white border border-[#4F4F4F]": selectedIndicatorCategory.value !== cat.id,
 });
 
-const filteredIndicators = computed(() => {
-    return selectedIndicatorCategory.value
-        ? indicators.value.filter(indicator => indicator.categoryId === selectedIndicatorCategory.value)
-        : indicators.value;
-});
+
 </script>
 
 <style></style>

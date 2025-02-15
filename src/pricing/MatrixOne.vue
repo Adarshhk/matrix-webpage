@@ -2,8 +2,9 @@
 
 <div class="bg-[#1d2125] rounded-lg p-6 grid grid-cols-1 md:grid-cols-3">
           <!-- Pricing Card -->
+           
           <div>
-            <h3 class="text-[#dfdfdf] text-2xl font-bold mb-2">{{ onePricing.title }}</h3>
+            <h3 class="text-[#dfdfdf] text-2xl font-bold mb-2">{{ matrixOne.product_name }}</h3>
             <p class="text-gray-400 text-[16px] mb-4">
               {{ onePricing.description }}
             </p>
@@ -14,7 +15,7 @@
             </div>
 
             <div class="flex items-baseline mb-6">
-              <span class="text-4xl font-bold text-[#dfdfdf]">₹{{ onePricing.price }}</span>
+              <span class="text-4xl font-bold text-[#dfdfdf]">₹{{ matrixOne.offer_price }}</span>
               <span class="text-gray-400 ml-2 text-sm">/ Month</span>
             </div>
 
@@ -28,13 +29,15 @@
             <h3 class="text-white text-xl font-bold mb-4">
               Featured Products
             </h3>
+              <!-- {{ matrixOne.description }} -->
             <ul class="space-y-4 ">
-              <li v-for="(feature, i) in onePricing.features" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.is_enable" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
+              <li v-if="matrixOne.description" v-for="(feature, i) in JSON.parse(matrixOne.description)" class="flex items-center gap-3">
+                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
                 <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
                 <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
-                  {{ feature.title }}
+                  {{ feature.text }}
                 </span>
+                
               </li>
             </ul>
           </div>
@@ -64,7 +67,7 @@ import usePricingStore from '../store/pricing';
 
 
 const pricingStore = usePricingStore();
-const { onePricing } = storeToRefs(pricingStore);
+const { matrixOne , onePricing} = storeToRefs(pricingStore);
 
 const includes = (prod) => {
     return onePricing.value.products.includes(prod);

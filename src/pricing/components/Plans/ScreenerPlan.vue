@@ -9,21 +9,21 @@
         
         <ul class="space-y-4 ">
             <li v-for="(feature, i) in screenerPlan.features" :key="i" class="flex items-center gap-3">
-                <img v-if="feature.is_enable" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
+                <img v-if="feature.active" src="/src/assets/svg/cloud-green.svg" alt="Active Icon" class="w-5 h-5" />
                 <img v-else src="/src/assets/svg/cloud-gray.svg" alt="Inactive Icon" class="w-5 h-5" />
-                <span class="text-[16px] font-openSans" :class="feature.is_enable ? 'text-white' : 'text-gray-400'">
-                    {{ feature.title }}
+                <span class="text-[16px] font-openSans" :class="feature.active ? 'text-white' : 'text-gray-400'">
+                    {{ feature.text }}
                 </span>
             </li>
         </ul>
 
-        <button
+        <RouterLink to="/screener"
             class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">
 
        
             <p class="font-openSans text-white">Explore Screener</p>
 
-        </button>
+        </RouterLink>
         <hr class="border-[#ffffff22] my-8" />
     </div>
 
