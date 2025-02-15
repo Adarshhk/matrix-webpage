@@ -29,7 +29,7 @@
 
 
       <p class="text-[#dfdfdf] text-[1rem] max-w-4xl mx-auto md:mt-8 w-[90%] font-openSans ">
-        Empowering your growth with smart financial solutions. From seamless trading to intelligent tools, we simplify decisions and maximize opportunities—making every move count."
+        Imagine a trading journey where every decision is yours to make, every move is guided by your insight, and every win is a result of your hard work and skill. It's just you, your expertise, and the market. Make every trade count, and turn your passion for trading into tangible achievements.
       </p>
       
       

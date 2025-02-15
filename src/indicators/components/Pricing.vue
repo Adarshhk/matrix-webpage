@@ -4,12 +4,11 @@
     <div class="text-center mt-24 lg:mt-32 w-[95%] mx-auto">
         <h2
             class="text-[27px] md:text-[38px] max-w-3xl font-extrabold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent mx-auto leading-tight">
-            Find the perfect pricing plan that fits your investment needs.
+            Find the Right Plan for Your Journey
         </h2>
 
         <p class="text-[16px] lg:text-[18px] w-[90%] mt-8 font-normal text-white font-openSans max-w-4xl mx-auto">
-            Choose a flexible and affordable plan for our stock screener, designed to help you maximize your investment
-            potential without breaking the bank.
+            Your trading needs are unique, and so should be the tools you use. Choose an affordable, flexible plan customized to your style, giving you access to the perfect set of indicators designed to empower your strategy.
         </p>
 
         <div class="mx-auto mt-10 w-min flex justify-center h-20 items-end relative">

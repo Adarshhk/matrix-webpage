@@ -33,9 +33,9 @@
                 
                 <h2
                     class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-[27px] lg:text-[38px] font-extrabold mb-6">
-                    List of indicator you may to boost your trading skills</h2>
+                    Discover Your Full Trading Potential with the Right Indicators</h2>
                 <p class="text-[#BBB8B8] text-[16px] lg:text-[18px] max-w-3xl mb-5">
-                    Navigating the stock market can be overwhelming, but Screener simplifies the process. Whether you’re a beginner or a seasoned investor, our tools are designed to help you make informed decisions and find the best opportunities in the market.
+                    Trading isn’t just about numbers; it’s about understanding the market’s story and using the right tools to navigate it with confidence. The right indicators are your guide, helping you see opportunities before they happen and trade with clarity
                 </p>
         </div>
     </div>

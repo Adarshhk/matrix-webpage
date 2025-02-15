@@ -7,9 +7,7 @@
                     Learn, Trade, and Grow with Expert Insights
                 </h1>
                 <p class="text-[16px] mb-8 text-center md:text-left font-openSans ">
-                    Explore our curated videos for trading strategies, market
-                    trends, and tips to maximize your success. Watch and
-                    empower your journey.
+                    Every trader starts somewhere—explore our videos for insights and strategies to empower you.Learn at your pace, gain confidence, and take control of your trading journey.
                 </p>
                 <a target="_blank"  href="https://www.youtube.com/@MatrixTradingTech"
                     class="cursor-pointer btn btn-anim text-[#F3F8F9] text-sm w-[95%] py-2 rounded-full bg-[#00B852] max-w-48">

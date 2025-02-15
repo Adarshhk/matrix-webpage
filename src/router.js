@@ -20,9 +20,12 @@ import IndicatorDetails from './indicatordetails/IndicatorDetails.vue';
 import TermsLayout from './termsandcondition/termsandcondition/TermsLayout.vue';
 import Disclosure from './termsandcondition/termsandcondition/disclosure/Disclosure.vue';
 import TermsandCondition from './termsandcondition/termsandcondition/t&c/TermsandCondition.vue';
+import ComplainBoard from './component/ComplainBoard.vue';
 import Disclaimer from './termsandcondition/termsandcondition/disclaimer/Disclaimer.vue';
 import RefundPolicy from './termsandcondition/termsandcondition/refundpolicy/RefundPolicy.vue';
 import PrivacyPolicy from './termsandcondition/termsandcondition/privacypolicy/PrivacyPolicy.vue';
+
+import InvestorCharter from './termsandcondition/termsandcondition/InvestorCharter.vue';
 
 const routes = [
   { path: '/', component: Home },
@@ -43,6 +46,7 @@ const routes = [
   { path: '/webinar', component: Webinar },
   { path: '/demo', component: Demo },
   { path: '/indicator-details/:id', component: IndicatorDetails },
+  { path: '/complain-board', component: ComplainBoard },
   {
     path: '/terms',
     component: TermsLayout,
@@ -52,6 +56,7 @@ const routes = [
       { path: 'disclaimer', component: Disclaimer },
       { path: 'refund-policy', component: RefundPolicy },
       { path: 'privacy-policy', component: PrivacyPolicy },
+      { path: 'investor-charter', component: InvestorCharter },
     ]
   },
 ]

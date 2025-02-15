@@ -4,32 +4,23 @@
   <section class="">
     <div class="grid grid-cols-1 xl:grid-cols-2 place-items-center mb-10 md:mt-0">
       <div class="text-white space-y-8">
-        <h1
-          class="font-CabinetGrotesk font-semibold text-center xl:text-left text-[27px] md:text-[38px]"
-        >
+        <h1 class="font-CabinetGrotesk font-semibold text-center xl:text-left text-[27px] md:text-[38px]">
           Our Mission
         </h1>
-        <p
-          class="font-openSans text-[#dfdfdf] text-center xl:text-left md:text-[16px] text-[14px]"
-        >
-          At SpeedBot, we see a future in which everything is systematic and
-          automated by bots and when it comes to systematic trading, there will
-          be only one place to go: SpeedBot . Founded in 2019 by a college group
-          of 3 Entrepreneurs under the guidance of a very successful and serial
-          Entrepreneur from India.
+        <p class="font-openSans text-[#dfdfdf] text-center xl:text-left md:text-[16px] text-[14px]">
+          At Matrix Trading Tech, we’re not just about technology, we bridge the gap between technology and trust,
+          equipping you with tools that enhance your decisions, protect your investments, and give you the confidence to
+          act. Our mission is to make trading smarter, simpler, and more accessible for you by offering intelligent,
+          data-driven solutions that ease the complexities of the market. Whether you're managing risk or seizing
+          opportunities, we stand by you every step of the way, making trading more than just a task—it’s a path to
+          achieving your financial goals.
+          
+
         </p>
-        <p
-          class="font-openSans text-[#dfdfdf] mt-10 text-center xl:text-left md:text-[16px] text-[14px]"
-        >
-          SpeedBot is a platform focusing on algorithmic trading for all. From
-          an idea brought by our team of expert traders and successful business
-          professionals, we learned that many people like you want to invest but
-          don't have the tools or time or even fear the volatility of the
-          market. We decided to do something about it by building a platform
-          anyone can use. So we created a simple interface that lets you decide
-          what, when, and how much you want to trade and lets you follow other
-          "Robo-advisors" - also known as algorithmic traders - who are already
-          making money in the market.
+        <p class="font-openSans text-[#dfdfdf] mt-10 text-center xl:text-left md:text-[16px] text-[14px]">
+          Since 2018, over 10,000 traders have trusted us. And we’re here for you too, to help you take control and
+          trade with precision. We’re committed to transparency, innovation, and providing the support you need to
+          navigate the market with certainty.
         </p>
       </div>
       <div class="hidden md:block">

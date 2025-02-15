@@ -8,7 +8,8 @@
             Explore our dashboard assets and
             markets          </h2>
           <p class="text-black text-[16px] mt-8 font-openSans">
-              Be a part of a vibrant community where people live the markets! Engage with like-minded users and request features that you want
+              Step into a community where passion for the markets comes alive! Connect, share, and grow with others who are just as dedicated as you. Your voice matters—together, we shape the future.
+
           </p>
           <button class="bg-black rounded w-80 mt-10 font-bold text-white py-3">
               Try Free Demo

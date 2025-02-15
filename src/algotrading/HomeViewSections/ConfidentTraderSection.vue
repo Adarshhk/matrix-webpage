@@ -49,15 +49,14 @@ onMounted(() => {
     <div class="col-span-7  pt-10">
       <div class="space-y-4 text-white text-left md:text-center xl:text-left fade-on-scroll">
         <h1 class="font-CabinetGrotesk font-semibold text-[27px] md:text-[31px] xl:text-[38px] leading-[30px] md:leading-[50px]">
-          Designed to make you a confident trader
+          Powered by Automation, Crafted for Your Success.
         </h1>
         <p class="font-openSans font-normal text-[16px] md:text-[18px] text-[#dfdfdf]">
-          Empower your trading journey with confidence. Our platform equips you
-          with insights and tools for financial triumph.
+          Empower your journey in algo trading, take control of your financial future with a platform designed to give you the insights and tools for algorithmic trading success—trading with confidence, precision, and ease.
         </p>
       </div>
 
-      <ul class=" text-[#dfdfdf] mt-10 space-y-6">
+      <ul class="text-[#dfdfdf] mt-10 space-y-6">
         <li v-for="item in features" :key="item.title" class="flex gap-4 items-center fade-on-scroll">
           <img :src="item.img" alt="" class="w-[35px] md:w-[40px] xl:w-[50px]">
           <div>
@@ -68,7 +67,7 @@ onMounted(() => {
       </ul>
     </div>
 
-    <div class="flex items-center justify-center  fade-on-scroll col-span-5">
+    <div class="flex items-center justify-center fade-on-scroll col-span-5">
       <img src="/src/assets/img/Sardarji.webp" alt="">
        <!-- <galleryComponent/> -->
     </div>

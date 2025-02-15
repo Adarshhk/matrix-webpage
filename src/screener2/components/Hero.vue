@@ -32,11 +32,9 @@
             <div class="flex flex-col justify-end mt-16 2xl:mt-0 text-center lg:text-left">
                 <h2
                     class="bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-[27px] lg:text-[38px] font-extrabold mb-6">
-                    Here’s How Screener Can Help You</h2>
+                    Here’s How Screener Can Help You!</h2>
                 <p class="text-[#BBB8B8] text-[16px] lg:text-[18px] max-w-3xl mb-5">
-                    Navigating the stock market can be overwhelming, but Screener simplifies the process. Whether you’re
-                    a beginner or a seasoned investor, our tools are designed to help you make informed decisions and
-                    find the best opportunities in the market.
+                    Navigating the stock market can be overwhelming,but with our Screener, you’re never alone. Whether you’re a beginner or a seasoned investor, our tools guide you with clarity, helping you spot opportunities and make confident decisions on your journey to success.
                 </p>
 
                 <div class="mt-3">
@@ -45,7 +43,7 @@
                         <div>
                             <h3 class="text-white font-bold text-[18px] text-left">Real-Time Data</h3>
                             <p class="text-[#BBB8B8] text-[16px] font-openSans text-left">
-                                Access up-to-date stock information and insights to stay ahead in the market.
+                                Stay ahead with up-to-date market insights for confident decision-making.
                             </p>
                         </div>
                     </div>
@@ -73,7 +71,7 @@
                         <div>
                             <h3 class="text-white font-bold text-[18px] text-left">Save Time</h3>
                             <p class="text-[#BBB8B8] text-[16px] font-openSans text-left">
-                                Eliminate hours of research with automated screening tools tailored to your preferences.
+                                Eliminate hours of research with automation and focus on what matters.
                             </p>
                         </div>
                     </div>

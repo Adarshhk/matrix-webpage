@@ -140,42 +140,14 @@ call Correctly
 
         <div class="lg:p-10 lg:pt-0 border-t border-b border-[#FFFFFF1A] mt-4">
             <p class="text-[#dfdfdf] font-light text-[14px] mt-10 text-center font-openSans">
-                Message From Regulator: No need to issue cheques by investors while subscribing to IPO. Just write the
-                bank account number and sign in the application form to authorise your bank to make payment in case of
-                allotment. No worries for refund as the money remains in investor's account. 1) Message from
-                Exchange(s): Prevent Unauthorised transactions in your account --> Update your mobile numbers/email IDs
-                with your stock brokers. Receive information of your transactions directly from Exchange on your
-                mobile/email at the end of the day. Issued in the interest of investors. 2) Message from Depositories:
-                a) Prevent Unauthorized Transactions in your demat account --> Update your mobile number with your
-                Depository Participant. Receive alerts on your registered mobile for all debit and other important
-                transactions in your demat account directly from NSDL on the same day issued in the interest of
-                investors. b) KYC is one time exercise while dealing in securities markets - once KYC is done through a
-                SEBI registered intermediary (broker, DP, Mutual Fund etc.), you need not undergo the same process again
-                when you approach another intermediary.
-                Company Identification Number (CIN): Sharekhan Ltd: U99999MH1995PLC087498; Sharekhan Commodities Pvt
-                Ltd: U67120MH2000PTC127261; SHAREKHAN BNP PARIBAS FINANCIAL SERVICES LIMITED: U65920MH2004PLC149518;
-                Sharekhan.com India Pvt Ltd: U80904MH2000PTC126954; Sharekhan Consultants Pvt. Ltd:
-                U67190MH2000PTC127257
-                Disclaimer: Investment in securities market are subject to market risks, read all the related documents
-                carefully before investing.Brokerage will not exceed SEBI prescribed limit.Please refer the Risk
-                Disclosure Document issued by SEBI and go through the Rights and Obligations and Do's and Dont's issued
-                by Stock Exchanges and Depositories before trading on the Stock Exchanges. For commodities derivatives
-                please note that Commodities Derivatives are highly leveraged instruments. PMS is not offered in
-                Commodity Derivative Segment by Sharekhan Limited. Before investing in the asset class consider your
-                investment objectives, level of experience and risk appetite carefully.
-                Mutual funds disclaimer: Mutual Fund investment are subject to market risk. Read all the scheme related
-                documents carefully before investing. For more details, click here. Quantities, amounts, figures, graphs
-                and rates shown / displayed are exemplary and not recommendatory or actual. For scheme-related
-                information, please refer to the Scheme Information Document available on the relevant AMC's website for
-                detailed Risk Factors, assets allocation, investment strategy, etc.
-                Click here to check out the Shareshop near you.
+                Matrix Trading Tech is a sophisticated algotrading platform, uniquely integrated with TradingView and custom strategies, offering a seamless API connection to your broker. Tailored for retail traders and investors, our platform is dedicated to elevating wealth management practices. While we strive to ensure flawless operation, we recommend consulting a financial advisor before trading or investing through our platform. Please be aware that Matrix Trading Tech cannot be held accountable for any losses resulting from market volatility or any platform-related issues.
             </p>
             
         </div>
         <div class="py-2 border-b border-[#FFFFFF1A]">
             <div class="w-full text-[#ffffff55] font-openSans text-[14px] flex flex-wrap gap-2 justify-evenly">
-                <button >
-                    Services
+                <button @click="changeRoute('/complain-board')">
+                    Complain Board
                 </button>
                 <button @click="changeRoute('/terms/disclosure')">
                     Disclosure
@@ -186,8 +158,8 @@ call Correctly
                 <button @click="changeRoute('/terms/disclaimer')">
                     Disclaimer
                 </button>
-                <button >
-                    Grievance Redressal
+                <button @click="changeRoute('/terms/investor-charter')">
+                    Investor Charter
                 </button>
                 <button @click="changeRoute('/terms/refund-policy')">
                     Refund Policy

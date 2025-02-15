@@ -7,9 +7,7 @@
           Trade with Confidence, Built on Trust
         </h1>
         <p class="text-[#BBB8B8] text-lg max-w-3xl mx-auto">
-          Experience transparency, security, and reliability in every trade.
-          Backed by advanced technology, dedicated support, and a proven track
-          record.
+          Feel confident in every trade, as we provide you with the security, support, and technology to make your journey smoother. You’re never alone in this, your success is our priority.
         </p>
       </div>
 
@@ -27,7 +25,7 @@
             </div>
             <h3 class="text-white text-xl font-semibold mb-4">Support</h3>
             <p class="text-[#BBB8B8]">
-              Access advanced tools and features that empower you to make
+              You're never alone in your trading journey. Whether you're facing doubts or need guidance, we’re here to help you every step of the way.
             </p>
           </div>
           <div
@@ -54,7 +52,7 @@
               Your Success is Our Priority
             </h3>
             <p class="text-[#BBB8B8]">
-              Access advanced tools and features that empower you to make
+              Your wins matter to us. We want to see you grow, make confident decisions, and trade without fear. When you succeed, we succeed.
             </p>
           </div>
           <div
@@ -81,7 +79,7 @@
               Reliable Trading Tools
             </h3>
             <p class="text-[#BBB8B8]">
-              Access advanced tools and features that empower you to make
+              The market can be unpredictable, but your tools shouldn’t be. Trade with confidence knowing you have a trusted companion guiding you through every move.
             </p>
           </div>
         </div>
@@ -108,7 +106,7 @@
               Reliable Tools
             </h3>
             <p class="text-[#BBB8B8]">
-              Access advanced tools and features that empower you to make
+              In a world full of uncertainty, you need something you can count on. Our tools are designed to be your steady support, helping you navigate the ups and downs with ease.
             </p>
           </div>
           <div
@@ -133,7 +131,7 @@
             </div>
             <h3 class="text-white text-xl font-semibold mb-4">Easy to Use</h3>
             <p class="text-[#BBB8B8]">
-              Access advanced tools and features that empower you to make
+              Trading doesn’t have to be complicated. We’ve made it simple, so you can focus on what really matters—your journey, your growth, and your success.
             </p>
           </div>
         </div>

@@ -29,8 +29,8 @@ const features = [
     <section class="mt-10">
         <div class=" text-center mx-auto space-y-5">
             <p class="font-openSans text-[#dfdfdf] uppercase text-[16px]">Why Join Us</p>
-            <h1 class="text-white font-semibold text-[27px] md:text-[35px]">Do your life's best work with Matrix</h1>
-            <p class="font-openSans text-[#dfdfdf] mx-auto font-medium text-[16px]">It doesn't matter if you are a fresher or less experienced than others or working on fintech product for the first time. You get complete ownership of your deliverables from Day 1. You experiment and innovate, apply yourself and work as a leader! You dream and create possibilities that no one has thought about. You make it happen!</p>
+            <h1 class="text-white font-semibold text-[27px] md:text-[35px]">To make the best decision for your success.</h1>
+            <p class="font-openSans text-[#dfdfdf] mx-auto font-medium text-[16px]">It doesn’t matter if you’re just starting out or new to fintech—what matters is your passion and drive. From Day 1, you’ll own your journey, with the freedom to experiment, innovate, and lead. You’ll push boundaries, turn dreams into reality, and create possibilities no one has imagined yet. Here, you have the power to make them happen!</p>
         </div>
         <ul class=" mt-16 grid grid-cols-1 lg:grid-cols-5 w-full mx-auto gap-3 ">
             <li v-for="item in features" class="mx-auto text-center">

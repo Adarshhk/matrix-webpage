@@ -21,10 +21,7 @@
                 <h1
                     class="text-[27px] md:text-[55px] font-bold bg-gradient-to-r from-[#00B852] to-[#5BC9F9] bg-clip-text text-transparent text-center">
                     Contact Us</h1>
-                <p class="max-w-[700px] mx-auto font-openSans text-[#dfdfdf] text-[14px] md:text-[16px]">During the
-                    COVID-19 pandemic,
-                    online learning has become commonplace and, quite often, the only possible way to improve the
-                    expertise of company's employees. However, this learning format has a number of disadvantages
+                <p class="max-w-[700px] mx-auto font-openSans text-[#dfdfdf] text-[14px] md:text-[16px]">At Matrix Trading Tech, we’re more than just a platform – we’re here to support you on your trading journey. Have questions or need help? Our team is ready to guide you with personalized, prompt support. Reach out today and let’s make your trading experience even better.
                 </p>
             </div>
 

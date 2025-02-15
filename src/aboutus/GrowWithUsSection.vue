@@ -12,14 +12,7 @@
         We are growing , come grow with us!
       </h1>
       <p class="font-openSans text-[16px] xl:text-[18px] w-[95%] xl:w-[80%] mx-auto mb-12">
-        The Product team's focus is turning Matrix Trading vision into reality,
-        every day! In the last 6 years, we have helped our users smartly invest
-        in mutual funds, NPS and FD. We have also built Genius, which is our
-        unique advisory based portfolio investment solution. We make products
-        that are mobile-first, paperless, and easy-to-understand even for a
-        beginner. Product team is 7+ members, demystifying the financial
-        products for our users that are otherwise perceived to be complex and
-        cumbersome.
+        The Product team works to turn your vision of smart investing into reality, every day. Over the past 6 years, you’ve trusted Matrix Trading to guide your investments in mutual funds, NPS, and FDs. With Genius, you have a unique, advisory-based portfolio solution that makes investing simple and personalized. The tools are designed to be mobile-first, paperless, and easy to understand—so you can feel confident, whether you're just starting out or have years of experience. Our goal is to make complex financial products easy to navigate, so you can focus on what matters most: growing your future.
       </p>
       <button
         class="bg-white text-[#00B852] font-bold rounded-3xl px-12 py-2 "

@@ -96,14 +96,10 @@
       path: '/terms/refund-policy',
       icon: RefreshCw
     },
+    
     { 
-      name: 'Contact Us', 
-      path: '/contact',
-      icon: MessageSquare
-    },
-    { 
-      name: 'About Us', 
-      path: '/about',
+      name: 'Investor Charter', 
+      path: '/terms/investor-charter',
       icon: Users
     },
     {

@@ -53,19 +53,19 @@ const details = [
     {
         title: 'Expert Support',
         img: img1,
-        description: 'Receive personalized assistance from specialists for setup, troubleshooting, and strategy optimization, ensuring you’re always supported.',
+        description: 'Get the guidance you need, not just for setup and fixes, but to truly thrive. Our experts are here to make your journey smoother, ensuring you trade with confidence.',
         btn: 'Schedule a call'
     },
     {
         title: 'Free Demo',
         img: img3,
-        description: 'A risk-free demo allows you to test strategies, explore features, and gain confidence before diving into live trading.',
+        description: "Take your first step into trading without the fear of losing. Our free demo lets you explore, experiment, and build confidence—so when you're ready, you trade with certainty, not hesitation.",
         btn: 'Get Started'
     },
     {
         title: 'Live Sessions',
         img: img2,
-        description: 'You get access to real-time webinars and workshops with expert insights, tips, and strategy refinements to enhance your trading skills.',
+        description: 'Join live sessions where experts don’t just share strategies—they help you grow. Gain confidence, refine your skills, and be part of a community that wants to see you win.',
         btn: 'Book a Webinar',
         func : openWebinar
     }

@@ -23,9 +23,8 @@
           <img src="/src/assets/img/grid1.png" class="grid-image" alt="">
         </div>
         <div class="text-white">
-          <h1 class="font-extrabold text-[47px] text-center leading-[60px]">Choose the Plan That Fits Your <br />
-            Trading
-            Goals</h1>
+          <h1 class="font-extrabold text-[47px] text-center leading-[60px]">Choose the plan that fits<br/> your
+            goal!</h1>
 
 
           <div class="flex items-center justify-center gap-4 mt-4 ">

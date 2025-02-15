@@ -61,7 +61,7 @@ const brokerImages = ref([
   <section class=" mt-16 lg:mt-24">
     <div class="">
       <h1 class=" font-bold text-center text-white text-[31px] xl:text-[38px]">
-        Improve the way you do trading
+        Improve the way you trade!
       </h1>
     </div>
 

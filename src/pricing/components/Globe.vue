@@ -2,10 +2,11 @@
 
 <div class="text-center mt-24">
         <h2 class="text-[27px] md:text-[38px] font-bold text-white mb-4">
-          Partner with Trusted Brokers
+          Next-Gen Trading Solutions for a Global Market
+
         </h2>
         <p class="text-[#BBB8B8] text-md md:text-lg max-w-3xl mx-auto">
-          Collaborate with experienced brokers who provide the tools, support, and expertise to help you succeed in the market.
+          Step into a world where technology works with you, helping you make smarter moves, embrace new opportunities, and feel confident in every trade you make.
         </p>
       </div>
     <div

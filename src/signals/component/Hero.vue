@@ -14,8 +14,7 @@
 
 
             <p class=" text-center md:text-left text-[#dfdfdf] font-openSans text-[14px] lg:text-[16px] ">
-                Receive expert-verified trading calls with precise entry and exit points. guesswork—just
-                actionable insights.
+                Feel assured with expert-backed trading calls, providing you with clear, actionable steps to take—no guesswork, just smart decisions for your success.
             </p>
 
             <div

@@ -4,7 +4,7 @@
         <div class="mx-auto justify-center flex lg:gap-4 max-w-4xl items-center w-[95%]">
             <!-- <img src="/src/assets/svg/Diamond.svg" alt="" class="w-20 "> -->
             <h2 class="lg:text-[38px] text-[27px] font-extrabold text-white ">
-                For Whom This Platform Is Designed
+                Discover Who This Platform is Crafted For
             </h2>
         </div>
 
@@ -58,22 +58,22 @@ const handleChange = (path) => {
 }
 const intendedUsers = [
     {
-        name: 'The Scalper',
+        name: 'For a Scalper:',
         img : s,
-        description: "Get precision and speed with real-time insights and seamless execution to keep you ahead in fast-moving markets.",
+        description: "Fast moves can be overwhelming, but the right tools keep you in control. In the rush, stay calm and confident with the right support.",
         path : '/scalper'
     },
 
     {
-        name: 'The Traders',
+        name: 'For a Trader',
         img : t,
-        description: "Get strategic insights and automation so you can navigate market volatility and seize short-term opportunities.",
+        description: "The fear of losing grip is real, but the right guidance keeps you steady. In chaos, find clarity and confidence with the right strategy.",
         path : '/trader'
     },
     {
-        name: 'The Investors',
+        name: 'For an Investor',
         img : i,
-        description: "Get the tools to assess opportunities, manage risks, and achieve steady, long-term portfolio growth with confidence.",
+        description: "Market unpredictability is tough, but the right strategy keeps you secure. Stay grounded and confident, no matter the market’s swings.",
         path : '/investor'
     },
 

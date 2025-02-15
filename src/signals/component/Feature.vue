@@ -27,40 +27,34 @@ const features = [
     {
         img : img1,
         title : 'Proven Track Record of Success',
-        description : 'Our signals aren’t just guesses—they’re backed by data, expertise, and years of trading experience. We consistently deliver high-win rate calls, helping traders achieve their goals faster.',
-
+        description : 'Our signals come with confidence, not guesswork—crafted from data, expertise, and years of experience. Trade smarter, move faster, and get closer to your financial goals with every call.',
     },
     {
         img : img2,
         title : 'Instant Alerts, Zero Delays',
-        description : 'Markets move fast, and so do our signals. Receive real-time notifications the moment opportunities arise, ensuring you stay ahead.',
-        
+        description : 'Opportunities don’t wait, and neither should you. Get real-time alerts the moment the market moves, keeping you ready to act with confidence.',
     },
     {
         img : img3,
         title : 'Risk Management Built-In',
-        description : 'We prioritize your capital with carefully calculated stop-loss levels, keeping your risk minimal while maximizing reward potential.',
-        
+        description : 'Your hard-earned capital deserves protection. With thoughtfully placed stop-loss levels, we help you minimize risk while keeping your profit potential alive—so you can trade with confidence and peace of mind.',
     },
     {
         img : img4,
         title : 'One-Click Trade Execution',
-        description : 'Place trades directly from the signals with a single click, ensuring precise entry and exit points without the hassle of manual calculations.',
-        
+        description : 'Trade effortlessly with a single click. No more guesswork, just precise entries and exits so you stay focused on what truly matters—your success.',
     },
     {
         img : img5,
         title : 'Accessible Anytime, Anywhere',
-        description : 'Stay connected to the markets wherever you are. Access signals seamlessly on your desktop, tablet, or mobile app, so you never miss a trade.',
-        
+        description : 'Stay in tune with the markets, no matter where life takes you. With seamless access on your desktop, tablet, or mobile, you’ll never miss an opportunity to make your next move.',
     },
     {
         img : img6,
         title : 'No Guesswork, Just Results',
-        description : 'Say goodbye to emotional trading. Our signals remove the guesswork, empowering you to trade with discipline and focus.',
-        
+        description : 'Say goodbye to the stress of emotional trading. With our signals, you’ll find clarity and confidence, allowing you to trade with calm, focus, and discipline.',
     }
-]
+];
 
 
 

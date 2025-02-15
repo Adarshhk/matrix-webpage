@@ -12,7 +12,8 @@
                 Join our Matrix Community
             </h2>
             <p class="text-[#F3F8F9] text-[16px] font-openSans">
-                Be a part of a vibrant community where people live the markets! Engage with like-minded users and request features that you want
+                Step into a community where passion for the markets comes alive! Connect, share, and grow with others who are just as dedicated as you. Your voice matters—together, we shape the future.
+
             </p>
             <button class="bg-white rounded w-[80%] max-w-60 mt-10 font-bold text-[#00B852] py-3">
                 <div class="content vertical flex justify-center">

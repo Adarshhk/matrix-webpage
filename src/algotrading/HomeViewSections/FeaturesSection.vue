@@ -10,7 +10,7 @@ const features = [
   {
     id: "paperTrading",
     title: "Dive into Paper Trading",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    description: "Take your first steps with confidence! Paper trading lets you explore, practice, and grow without any fear. It's your safe space to experiment and refine your strategies, so when you're ready, you'll know exactly what to do.",
     buttonText: "Explore Paper Trading",
     animationPath: "/json/PaperTrading.json",
     imagePath: "/src/assets/img/algotrading (2).png",
@@ -18,53 +18,54 @@ const features = [
   {
     id: "multipleAccount",
     title: "Multiple Account Management",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    description: "Keep your trading life organized and in one place. With multiple accounts at your fingertips, you're always in control, staying on top of your goals and feeling empowered to manage your investments with ease.",
     animationPath: "/json/MultipleAccounts.json",
     imagePath: "/src/assets/img/algotrading (3).png",
   },
   {
     id: "demoAccount",
     title: "Demo Account",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    description: "Learn, grow, and explore without the pressure. Your demo account is there to help you practice and gain confidence, giving you the freedom to test and refine your strategies at your own pace.",
     animationPath: "/json/UI_07.json",
     imagePath: "/src/assets/img/algotrading (4).png",
   },
   {
     id: "createStrategies",
     title: "Create Strategies",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    description: "This is your journey, your path. Customize your strategies and make them your own—knowing that every decision is made with your goals and dreams in mind, giving you the power to shape your future.",
     animationPath: "/json/CreateStrategies.json",
     imagePath: "/src/assets/img/algotrading (5).png",
   },
   {
     id: "definedStrategies",
-    title: "Pre Defined Strategies",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    title: "Predefined Strategies",
+    description: "Start strong with strategies that have already been tested and proven. Feel the comfort of having a roadmap as you build your trading confidence—knowing you're walking a path of smart, informed decisions.",
     animationPath: "/json/PredefinedStrategies.json",
     imagePath: "/src/assets/img/algotrading (6).png",
   },
   {
     id: "notifications",
     title: "Notifications",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    description: "Stay connected to your trading world with real-time notifications. Whether it's a moment to act or just an update, you'll always feel informed and in control, bringing peace of mind to every step you take.",
     animationPath: "/json/Notifications.json",
     imagePath: "/src/assets/img/algotrading (7).png",
   },
   {
     id: "support",
     title: "Constant Support",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    description: "You're never alone in this. No matter the challenge or victory, our constant support is here to guide you, celebrate with you, and help you stay on track, ensuring you always feel backed and empowered.",
     animationPath: "/json/ConstantSupport.json",
     imagePath: "/src/assets/img/algotrading (8).png",
   },
   {
     id: "setup",
-    title: "One Time Setup",
-    description: "Paper trading is like a practice round for investing in the stock market. It lets you trade stocks with fake money so you can learn the ropes without risking your own cash. It's a great way to try out different strategies and get comfortable with the mechanics of buying and selling.",
+    title: "One-Time Setup",
+    description: "Set it up once, and then let the journey unfold. No need for constant tweaking—just smooth sailing as you focus on what truly matters: your growth and success.",
     animationPath: "/src/assets/img/algotrading (1).png",
     imagePath: "/src/assets/img/algotrading (1).png",
   },
 ];
+
 
 const filteredFeatures = computed(() => {
   return features.filter(feature => feature.id === selectedFeature.value);
@@ -139,8 +140,7 @@ watch(selectedFeature, () => {
         </h1>
       </div>
       <p class="font-openSans text-[#dfdfdf] text-[18px]">
-        Empower your trading journey with confidence. Our platform equips you
-        with insights and tools for financial triumph.
+        Algo trading makes your journey smoother and more confident. With automation, precision, and personalized strategies, you can focus on what matters most—your success. No stress, just smart trading.
       </p>
     </div>
 

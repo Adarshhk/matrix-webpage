@@ -5,13 +5,13 @@ import { ref } from 'vue';
 const content = ref('deliver');
 
 const mapping = {
-  'deliver' : "We outperform ourselves everyday. With strong bias to action and personal accountability for work delivery, there is an immense difference we make to ourselves, the company's vision and the financial lives of Matrix Trading users.",
+  'deliver' : "At Matrix, we don't just meet expectations; we go above and beyond. Every action we take is driven by a desire to make a real impact and create value, making each accomplishment feel meaningful.",
 
-  'grow' : "outperform ourselves everyday. With strong bias to action and personal accountability for work delivery, there is an immense difference we make to ourselves, the company's vision and the financial lives of Matrix Trading users.",
+  'grow' : "Growth is a journey we take together. Here, you're empowered to learn, evolve, and unlock your full potential. Every step forward is a victory, and we’re here to support your personal and professional growth every step of the way.",
 
-  'together' : "ourselves everyday. With strong bias to action and personal accountability for work delivery, there is an immense difference we make to ourselves, the company's vision and the financial lives of Matrix Trading users.",
+  'together' : "We believe in the power of unity. At Matrix, we’re more than just colleagues—we're a family, lifting each other up and achieving greatness together. Every challenge becomes easier when we face it as one.",
 
-  'fun' : "With strong bias to action and personal accountability for work delivery, there is an immense difference we make to ourselves, the company's vision and the financial lives of Matrix Trading users.",
+  'fun' : "We make work feel like an adventure. Innovation, creativity, and excitement fuel our days, and we believe having fun is the secret to making great things happen. Every moment is an opportunity to enjoy the journey as we build something amazing.",
 }
 
 </script>

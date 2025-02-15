@@ -9,27 +9,24 @@
 
       <div class=" space-y-4 text-white">
         <p class="font-openSans">
-          Take the guesswork out of trading with our
-          <span class=" text-[#F2DC33] font-openSans">customizable watchlists</span>. Track your favorite stocks, segments, or indices,
-          and get
-          real-time updates so you never miss an opportunity. Whether you're focusing on
+          Say goodbye to uncertainty with
+          <span class=" text-[#F2DC33] font-openSans">customizable watchlists</span>that keep you connected to your favorite stocks, segments, or indices. Get real-time updates and insights, so you never miss an opportunity to act. Whether it’s
           <span class="text-[#F2DC33] font-openSans">Nifty</span>, <span class="text-[#F2DC33] font-openSans">Bank Nifty</span>, or
-          <span class="text-[#F2DC33] font-openSans">individual stocks</span>, we've got you covered with detailed insights.
+          <span class="text-[#F2DC33] font-openSans">individual stocks</span>,we’ve got your back every step of the way.
+
         </p>
 
         <p class="font-openSans">
-          Enjoy the flexibility of <span class="text-[#F2DC33] font-openSans">multi-broker integration</span>. Connect your accounts
-          from
-          different brokers and place trades with a single click.
-          <span class="text-[#F2DC33] font-openSans">No more switching between apps</span>—everything you need is in one place.
+          Feel empowered with <span class="text-[#F2DC33] font-openSans">multi-broker integration</span>,letting you manage all your accounts and make trades with just one click—
+          <span class="text-[#F2DC33] font-openSans">no more juggling apps</span>. Matrix gives you everything you need in one place, making your trading journey seamless and stress-free.
         </p>
 
         <p class="font-openSans">
-          Our platform is designed to help you move quickly. With
+          Designed for speed, our platform helps you make smarter decisions quickly. With
           <span class="text-[#F2DC33] font-openSans">live data</span>, <span class="text-[#F2DC33] font-openSans">instant order execution</span>,
           and
-          <span class="text-[#F2DC33] font-openSans">easy-to-read</span> charts, you'll make smarter, faster trading decisions—all
-          from a unified interface.
+          <span class="text-[#F2DC33] font-openSans">easy-to-read</span> , you’ll feel in control, moving with confidence toward your financial goals. Every trade, every moment, was made simpler with the Matrix.
+
         </p>
       </div>
 

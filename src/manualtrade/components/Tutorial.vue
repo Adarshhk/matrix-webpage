@@ -4,7 +4,8 @@
         Key Features of our manual trading
       </h2>
       <p class="text-[#dfdfdf] text-[1rem] max-w-2xl mx-auto md:mt-8 w-[90%] font-openSans ">
-        Empower your trading journey with confidence. Our platform equips you with insights and tools for financial triumph.
+        With the right tools in hand, you can navigate the market with confidence, turning every trade into a step toward your financial growth.
+
       </p>
 
       <div class="grid grid-cols-1 lg:grid-cols-4  md:grid-cols-2 gap-4 my-16 lg:my-24">
@@ -29,25 +30,25 @@ const features = [
   {
       img : img1,
       title : 'Custom Watchlists',
-      description : 'To Stay Informed, Track Your Favorite Stocks, and Gain Insights into Market Trends Effortlessly.',
+      description : 'Custom Watchlists let you stay close to your goals, keeping the stocks that matter most right at your fingertips.',
 
   },
   {
       img : img2,
       title : 'Instant Order Execution',
-      description : 'Experience Seamless Trading with One-Click Execution for Fast and Efficient Transactions.',
+      description : 'Experience the freedom of trading with ease, where every decision flows effortlessly with just one click, bringing you closer to your goals in no time.',
       
   },
   {
       img : img3,
       title : 'Real-Time Data ',
-      description : 'Empowering You to Monitor Live Market Trends and Make Swift, Informed Decisions as the Market Moves.',
+      description : 'Stay in sync with the market’s rhythm, giving you the confidence to act swiftly and make decisions that drive your success.',
       
   },
   {
       img : img4,
       title : 'Multi-Broker Support ',
-      description : 'Manage All Your Trading Accounts in One Dashboard for Easy, Streamlined Access to Multiple Brokers.',
+      description : 'Take control of your trading journey with everything you need in one place, effortlessly managing all your accounts and brokers in a single, smooth experience.',
       
   },
   

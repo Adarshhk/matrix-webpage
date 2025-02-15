@@ -6,7 +6,7 @@
             <h2 class="md:text-[38px] text-[27px] font-extrabold text-white">
                 Steps to Access Your Account
             </h2>
-            <p class="font-openSans text-[#dfdfdf] text-[16px] md:text-[18px] md:mt-4 mt-8 text-center"> Follow these simple steps to quickly and securely log into your account and start your trading journey without any hassle.</p>
+            <p class="font-openSans text-[#dfdfdf] text-[16px] md:text-[18px] md:mt-4 mt-8 text-center">Follow these simple steps to quickly and securely log into your account and start your hassle-free trading journey.</p>
         </div>
 
         <div class="gap-4 mx-auto w-[95%] py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  ">
@@ -48,7 +48,7 @@ const intendedUsers = [
         name: 'Register', 
         img : login,
         bg : bg1,
-        description : " Sign up quickly and securely to kickstart your trading journey." ,
+        description : "Join us in just a few clicks and start your journey with confidence." ,
         btn : 'Sign Up Now'
     },
 
@@ -63,7 +63,7 @@ const intendedUsers = [
         name: 'Trade',
         img : rocket,
         bg : bg3,
-        description: "Begin executing trades and using powerful tools to make confident market decisions.",
+        description: "Start trading with powerful tools to help you make smart moves.",
         btn : 'Get Started'
     },
     

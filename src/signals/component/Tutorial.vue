@@ -33,15 +33,15 @@ const tutorial = [
 
     {
         title: 'Get Notified',
-        description: 'Stay ahead with instant alerts. You’ll receive signals as soon as opportunities arise.',
+        description: 'Stay ahead with instant alerts. When opportunities arise, you’ll be ready to seize them with confidence.',
     },
     {
         title: 'Execute Trades',
-        description: 'Use our one-click trading option to act on signals instantly, ensuring the same price levels as recommended.'
+        description: 'With one-click trading, act instantly on signals and secure the recommended price making every move count.'
     },
     {
         title: 'Track Performance',
-        description: 'Monitor the success of your trades and adjust your strategy as needed.Monitor the success of your trades.'
+        description: 'Track your progress, learn from each trade, and fine-tune your strategy to keep moving forward with confidence.'
     }
 ]
 </script>

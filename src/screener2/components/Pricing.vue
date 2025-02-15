@@ -16,8 +16,7 @@
         </h2>
 
         <p class="text-[16px] lg:text-[18px] w-[90%] mt-8 font-normal text-white font-openSans max-w-4xl mx-auto">
-            Choose a flexible and affordable plan for our stock screener, designed to help you maximize your investment
-            potential without breaking the bank.
+            Choose a flexible, affordable plan that helps you unlock your investment potential—without stretching your budget. We're here to support your growth every step of the way.
         </p>
 
         <div class="mx-auto mt-10 w-min flex justify-center h-20 items-end relative">

@@ -8,7 +8,7 @@
           <div  class="text-container ">
               <h1
               class=" text-center text-gradient md:text-left outer-heading text-[38px] md:text-[64px] max-w-3xl font-extrabold mx-auto leading-tight">
-              Let Your Trades Work While You Relax!
+              Work While You Relax!
           </h1>
           </div>
 
