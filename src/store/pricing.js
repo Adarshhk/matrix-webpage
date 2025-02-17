@@ -5,7 +5,7 @@ import { ref } from "vue";
 
 const usePricingStore = defineStore('pricing', () => {
     const authToken = localStorage.getItem('token');
-    const url = ref('https://vlqf88cf-8082.inc1.devtunnels.ms/user/products');
+    const url = ref('https://usermatrixv3.punchmyorders.in/user/web/products');
     const edgePricing = ref([
         {
             name: 'Signals',
@@ -490,11 +490,11 @@ const usePricingStore = defineStore('pricing', () => {
         const res = await axios.get(url.value, { headers: { Authorization: authToken } });
 
         plans.value = res.data.data;
-        matrixOne.value = plans.value.filter(plan => plan.category_name == 'matrix one')[0];
+        matrixOne.value = plans.value.filter(plan => plan.category_name == 'matrix one' && plan)[1];
         matrixAlgo.value = plans.value.filter(plan => plan.base_category_name == 'Matrix ALGO');
         matrixEdge.value = plans.value.filter(plan => plan.base_category_name == 'Matrix EDGE');
 
-        console.log(matrixAlgo.value)
+        
         webhook.value = plans.value.filter(plan => plan.category_name == 'webhook')
         indicators.value = plans.value.filter(plan => plan.category_name == 'indicator')
         signals.value = plans.value.filter(plan => plan.category_name == 'signals')
@@ -506,13 +506,21 @@ const usePricingStore = defineStore('pricing', () => {
         edgePricing.value[2].price = Math.min(...indicators.value.map(item => item.offer_price));
         edgePricing.value[3].price = Math.min(...webhook.value.map(item => item.offer_price));
 
+        console.log(webhook.value)
 
-        for (let i = 0; i <= 2; i++) {
+        for (let i = 0; i < webhook.value.length; i++) {
             edgePricing.value[3].plans[i] = {
                 name: `Upto ${webhook.value[i].max_webhook_strategies} strategies`,
                 tag : webhook.value[i].is_recommended ? 'Recommended' : '',
                 price: webhook.value[i].offer_price,
-                features: JSON.parse(webhook.value[i].description),
+                features: () => {
+                    try {
+                            return JSON.parse(webhook.value[i].description)
+                        }
+                        catch{
+                            return []
+                        }
+                },
                 products: edgePricing.value[3].plans[i].products
             };
         }
@@ -521,7 +529,14 @@ const usePricingStore = defineStore('pricing', () => {
             const matchingData = signals.value.find(data => data.product_name === plan.name);
             if (matchingData) {
                 
-                plan.features = JSON.parse(matchingData.description);
+                plan.features = () => {
+                    try {
+                            return JSON.parse(matchingData.description)
+                        }
+                        catch{
+                            return []
+                        }
+                };
                 plan.price = matchingData.offer_price
                 plan.actual_price = matchingData.price
                 plan.tag = matchingData.is_recommended ? 'Recommended' : ''
@@ -535,7 +550,14 @@ const usePricingStore = defineStore('pricing', () => {
             if(matchingData)
             {
                 plan.price = matchingData.offer_price;
-                plan.features = JSON.parse(matchingData.description)
+                plan.features = () => {
+                    try {
+                            return JSON.parse(matchingData.description)
+                        }
+                        catch{
+                            return []
+                        }
+                };
                 plan.tag = matchingData.is_recommended ? 'Recommended' : ''
             }
 
@@ -555,7 +577,15 @@ const usePricingStore = defineStore('pricing', () => {
             return p;
         });
         
-        edgePricing.value[1].features = JSON.parse(screener.value[0].description);
+        edgePricing.value[1].features = () => {
+            try {
+                    return JSON.parse(screener.value[0].description)
+                }
+                catch{
+                    return []
+                }
+        };
+        
         edgePricing.value[1].price = screener.value[0].offer_price;
 
 
@@ -565,7 +595,14 @@ const usePricingStore = defineStore('pricing', () => {
             if(matchingData)
             {
                 plan.price = matchingData.offer_price;
-                plan.features = JSON.parse(matchingData.description)
+                plan.features = () => {
+                    try {
+                            return JSON.parse(matchingData.description)
+                        }
+                        catch{
+                            return []
+                        }
+                };
                 plan.tag = matchingData.is_recommended ? 'Recommended' : ''
             }
 
