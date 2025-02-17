@@ -29,7 +29,7 @@ const question = [
       <h1 class="font-CabinetGrotesk font-extrabold text-[30px] md:text-[38px]">
         Frequently asked question's
       </h1>
-      <p class="font-ProximaNova text-[16px] md:text-[18px]">Let our bot do trading for you, you just chill and relax</p>
+      <p class=" text-[16px] md:text-[18px]">Let our bot do trading for you, you just chill and relax</p>
     </div>
 
     <div class="card mt-10 md:mt-16">

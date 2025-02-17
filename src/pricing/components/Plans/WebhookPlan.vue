@@ -51,11 +51,11 @@
             </li>
         </ul>
 
-        <button @click="add"
-            class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">
+        <button :disabled="purchased" @click="add"
+            class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150" :class="{'text-[#ffffff22] hover:bg-transparent' : purchased}">
 
-            <img src="/src/assets/svg/add.svg" alt="" class="w-4">
-            <p class="font-openSans text-white">Add To Cart</p>
+            <img v-if="!purchased" src="/src/assets/svg/add.svg" alt="" class="w-4">
+            <p class="font-openSans text-white">{{ purchased ? 'Already Purchased' : 'Add To Cart' }}</p>
 
         </button>
         <hr class="border-[#ffffff22] my-8" />
@@ -123,6 +123,7 @@ import Tippy from '../../../component/Tippy.vue';
 import usePricingStore from '../../../store/pricing';
 import { storeToRefs } from 'pinia';
 import useCartStore from '../../../store/cart';
+import useProductsStore from '../../../store/subscription';
 
 const pricingStore = usePricingStore();
 const {edgePricing} = storeToRefs(pricingStore);
@@ -139,6 +140,9 @@ const toggleActive = (plan) => {
 const add = () => {
     cartStore.addToCart({name : `Webhooks: ${activePlan.value.name}` , price : activePlan.value.price})
 }
+
+const subscriptionStore = useProductsStore();
+const purchased = computed(() => subscriptionStore.isPurchased(activePlan.value.product_id));
 
 
 </script>

@@ -16,11 +16,11 @@
             </li>
         </ul>
 
-        <button @click="props.add"
-            class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150">
+        <button :disabled="purchased" @click="props.add" 
+            class="text-[#272727] font-openSans font-bold  rounded border-[#ffffff] p-2 py-4 border w-full mt-4 flex items-center justify-center gap-2 hover:bg-[#ffffff11] transition-all duration-150" :class="{'text-[#ffffff22] hover:bg-transparent' : purchased}">
 
-            <img src="/src/assets/svg/add.svg" alt="" class="w-4">
-            <p class="font-openSans text-white">Add To Cart</p>
+            <img v-if="!purchased" src="/src/assets/svg/add.svg" alt="" class="w-4">
+            <p class="font-openSans text-white">{{ purchased ? 'Already Purchased' : 'Add To Cart' }}</p>
 
         </button>
         <hr class="border-[#ffffff22] my-8" />
@@ -87,6 +87,7 @@ import { computed, ref } from 'vue';
 import Tippy from '../../../component/Tippy.vue';
 import usePricingStore from '../../../store/pricing';
 import { storeToRefs } from 'pinia';
+import useProductsStore from '../../../store/subscription';
 
 const pricingStore = usePricingStore();
 const {algoPricing} = storeToRefs(pricingStore);
@@ -94,6 +95,11 @@ const {algoPricing} = storeToRefs(pricingStore);
 const props = defineProps({
     id : Number,
     add : Function
+})
+const subscriptionStore = useProductsStore();
+const {isPurchased} = subscriptionStore
+const purchased = computed(() => {
+    return isPurchased(plan.value.product_id)
 })
 
 const plan = computed(() => algoPricing.value[props.id]);

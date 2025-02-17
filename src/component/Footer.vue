@@ -68,7 +68,7 @@
                     Matrix Trading Tech is a sophisticated algotrading platform, uniquely integrated with TradingView and custom strategies, offering a seamless API connection to your broker. Tailored for retail traders and investors, our platform is dedicated to elevating wealth management practices. While we strive to ensure flawless operation, we recommend consulting a financial advisor before trading or investing through our platform. Please be aware that Matrix Trading Tech cannot be held accountable for any losses resulting from market volatility or any platform-related issues.
                 </p>
 
-                <p class="font-ProximaNova text-center text-white py-5 text-[14px]">
+                <p class=" text-center text-white py-5 text-[14px]">
                     Proudly designed and developed by
                     <span class="text-matrix-green">Xtention-crew</span>
                 </p>

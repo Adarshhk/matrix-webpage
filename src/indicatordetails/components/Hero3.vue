@@ -30,13 +30,16 @@
 
               </span>
             </h1>
-
-            <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: {{ indicator?.created_at }}</p>
-
-            <img :src="indicator?.img" alt="" class="my-8">
-            <p class="text-[#dfdfdf] text-[16px] font-openSans">
+            
+            <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: {{ indicator ? formatDate(indicator.updated_at) : "Loading..." }}</p>
+            
+            
+            <img :src="indicator?.image" alt="" class="my-8">
+            <!-- <p class="text-[#dfdfdf] text-[16px] font-openSans">
               {{ indicator?.description }}
-            </p>
+            </p> -->
+            
+            <div v-if="indicator?.info" v-html="indicator.info"></div>
         </div>
         </div>
       </div>
@@ -117,6 +120,13 @@ const toggleActive = (name) => {
   active.value = name;
 };
 
+// Function to format date (async version)
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = { day: "2-digit", month: "short", year: "numeric" };
+  return new Intl.DateTimeFormat("en-GB", options).format(date);
+}
+
 const indicatorId = useRoute().params.id
 const indicator = computed(() => {
   if (indicatorId) {
@@ -141,6 +151,7 @@ const indicator = computed(() => {
   }
 }
 )
+
 
 const getButtonClass = (plan) => ({
   "text-black font-semibold bg-[white] ": active.value === plan,

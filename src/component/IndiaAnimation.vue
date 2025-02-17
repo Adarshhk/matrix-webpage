@@ -41,7 +41,7 @@ onUnmounted(() => {
           :style="{ top: card.top, left: card.left }"
         >
           <img src="/images/svg/GmailIcon.svg" alt="" class="w-4 midmobiles:w-5 xl:w-7" />
-          <p class="font-ProximaNova text-black text-[7px] sm:text-[9px] md:text-[10px] 2xl:text-[13px]">
+          <p class=" text-black text-[7px] sm:text-[9px] md:text-[10px] 2xl:text-[13px]">
             Matrix Trading tech helped me invest with discipline via timely
             reminders and one tap payments.
           </p>

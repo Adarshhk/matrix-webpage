@@ -75,13 +75,13 @@
             class="h-8 md:h-12" />
           <img v-if="selectedPlan === 'Matrix EDGE'" src="/src/assets/img/EDGE.png" alt="Matrix Logo"
             class="h-8 md:h-12" />
-
+        
           <div class="bg-[#1d2125] rounded-full p-1.5 inline-flex">
-            <button v-for="period in ['Monthly' , 'Quarterly', 'Yearly']" :key="period" :class="[
+            <button v-for="period in periods" :key="period.value" :class="[
               'px-4 font-openSans text-[16px]  md:px-6 py-2 rounded-full transition-all whitespace-nowrap text-sm md:text-base min-w-[80px] md:min-w-[100px]',
-              billingPeriod === period ? 'bg-[#00B852] text-[#dfdfdf]' : 'text-gray-400',
-            ]" @click="billingPeriod = period">
-              {{ period }}
+              selectedPriceType === period.value ? 'bg-[#00B852] text-[#dfdfdf]' : 'text-gray-400',
+            ]" @click="selectedPriceType = period.value">
+              {{ period.name }}
             </button>
           </div>
         </div>
@@ -121,11 +121,13 @@ import MatrixEdge from "../MatrixEdge.vue";
 import MatrixAlgo from "../MatrixAlgo.vue";
 import { storeToRefs } from "pinia";
 
+const periods = [{name : 'Monthly' , value:'monthly'} , {name : 'Quaterly' , value:'quaterly'} , {name : 'Yearly' , value:'yearly'}]
+
 
 const selectedPlan = ref("Matrix ONE");
-const billingPeriod = ref("Quarterly");
 const pricingStore = usePricingStore();
-const {activePlan , algoPricing , edgePricing} = storeToRefs(pricingStore);
+
+const {activePlan , algoPricing , edgePricing , selectedPriceType} = storeToRefs(pricingStore);
 
 const changeActive = (plan) => {
 

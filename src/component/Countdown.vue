@@ -1,5 +1,6 @@
 <template>
   <div class="flex items-center justify-center overflow-hidden p-4">
+    
     <canvas ref="snowCanvas" class="absolute inset-0 w-full h-full"></canvas>
     <div class="text-center z-10 mt-4">
       <div class="flex justify-center gap-2 md:gap-4 text-white">
@@ -17,11 +18,9 @@
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue';
 
-
 const snowCanvas = ref(null);
 const remainingTime = ref([0, 0, 0, 0]); 
 const timeUnits = ['Days', 'Hours', 'Minutes', 'Seconds'];
-
 
 let snowflakes = [];
 let animationId = null;
@@ -94,19 +93,21 @@ function getTrueNumber(num) {
 function calculateRemainingTime() {
   if (!props.isSaleLive || !props.saleStartDate || !props.saleEndDate) {
     remainingTime.value = [0, 0, 0, 0];
+    console.log("Sale not live or dates missing");
     return;
   }
-
+  
   const now = new Date();
   const startDate = new Date(props.saleStartDate);
   const endDate = new Date(props.saleEndDate);
-
+  
   // If current time is before the sale start date, set timer to 00:00:00:00
   if (now < startDate) {
+  
     remainingTime.value = [0, 0, 0, 0];
     return;
   }
-
+  
   // If the sale has ended, set timer to 00:00:00:00
   if (now >= endDate) {
     remainingTime.value = [0, 0, 0, 0];
@@ -120,6 +121,7 @@ function calculateRemainingTime() {
   const secs = Math.floor((remainingTimeMs % (1000 * 60)) / 1000);
 
   remainingTime.value = [days, hours, mins, secs];
+ 
 }
 
 // Start countdown
@@ -146,6 +148,7 @@ onMounted(() => {
   createSnowflakes();
   updateSnow();
   calculateRemainingTime();
+  
   startCountdown();
 
   window.addEventListener('resize', () => {

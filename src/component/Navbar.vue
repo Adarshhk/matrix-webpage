@@ -3,7 +3,7 @@
     :class="{ 'bg-gradient-to-b from-[#161a1e] to-[#161a1e]': !showProductMenu, 'bg-[#161a1e]': showProductMenu }">
     <!-- Left section -->
     <RouterLink to="/">
-      <img src="/src/assets/svg/matrix-logo.svg" alt="logo" class="w-28 md:w-32">
+      <img :src="logo" alt="logo" class="w-28 md:w-32">
     </RouterLink>
 
 
@@ -25,14 +25,45 @@
           </a>
         </li>
       </ul>
-
-      <a href="https://app.hifiinvesting.com/" target="_blank"
+      
+      <a v-if="!logged" href="#" target="_blank"
         class="text-[#F3F8F9] btn btn-anim text-sm px-6 py-2 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
         <div class="content vertical flex justify-center">
           <div class="text font-openSans">Sign Up / Login</div>
           <div class="hover-text font-openSans">Sign Up / Login</div>
         </div>
       </a>
+      <div v-else>
+        <div
+            class="w-[36px] h-[36px] bg-[#00B852] flex items-center rounded-full p-4 justify-center text-white font-normal text-[10px] text-lg cursor-pointer"
+            @click="toggleDropdown"
+          >
+            {{
+              profileData?.user_name
+                ? profileData?.user_name.charAt(0)
+                : "U"
+            }}
+          </div>
+          <div
+            @click="onClickOutside"
+            class="absolute text-white sm-text bg-[#00B852] top-20 right-5 p-2 rounded-md w-[180px]"
+            v-show="isDropdownOpen"
+          >
+           
+            <button href="#"
+              
+              class="w-full text-left p-2 rounded-lg hover:bg-[#222222] hover:bg-opacity-25 transition-all"
+            >
+              Dashboard
+        </button >
+            <button
+              @click="handleLogout"
+              class="w-full text-left p-2 rounded-lg hover:bg-[#222222] hover:bg-opacity-25 transition-all"
+            >
+              Logout
+            </button>
+          </div>
+      </div>
     </div>
 
     <!-- Product Dropdown (Desktop) -->
@@ -124,6 +155,8 @@
         :class="isNavOpen ? 'w-4' : 'w-7'">
     </button>
   </nav>
+
+  
 </template>
 
 <script setup>
@@ -135,7 +168,13 @@ import icon3 from '/src/assets/producticons/producticon (3).svg'
 import icon4 from '/src/assets/producticons/producticon (4).svg'
 import icon5 from '/src/assets/producticons/producticon (5).svg'
 import icon6 from '/src/assets/producticons/producticon (6).svg'
+import useProfileStore from '../store/profile'
+import { storeToRefs } from 'pinia'
+import logo from '/src/assets/svg/matrix-logo.svg'
 
+
+const profileStore = useProfileStore();
+const {profileData , logged} = storeToRefs(profileStore)
 // Navigation data
 const navItems = [
   { name: 'Product', path: '#features' },
@@ -144,7 +183,14 @@ const navItems = [
   { name: 'Contact Us', path: '/contact' },
   { name: 'Blogs & Insights', path: '/blogs' },
   { name: 'About Us', path: '/about' },
+  
 ]
+
+const isDropdownOpen = ref(false);
+const toggleDropdown = () => {
+  isDropdownOpen.value = !isDropdownOpen.value
+}
+
 
 const productItems = [
   {
@@ -286,6 +332,12 @@ router.beforeEach(() => {
   closeAllMenus()
   return true
 })
+
+const handleLogout = () => {
+  profileData.value = {};
+  logged.value = false;
+  localStorage.removeItem('token');
+}
 </script>
 
 <style scoped>

@@ -4,7 +4,8 @@
           <!-- Pricing Card -->
            
           <div>
-            <h3 class="text-[#dfdfdf] text-2xl font-bold mb-2">{{ matrixOne.product_name }}</h3>
+            
+            <h3 class="text-[#dfdfdf] text-2xl font-bold mb-2">{{ onePricing.title }}</h3>
             <p class="text-gray-400 text-[16px] mb-4">
               {{ onePricing.description }}
             </p>
@@ -18,9 +19,9 @@
               <span class="text-4xl font-bold text-[#dfdfdf]">₹{{ matrixOne.offer_price }}</span>
               <span class="text-gray-400 ml-2 text-sm">/ Month</span>
             </div>
-
-            <button class="w-[60%] py-2 rounded-lg mb-8 bg-[#dfdfdf] text-black hover:bg-gray-100 transition-all">
-              Buy Now
+        
+            <button :disabled="purchased" :class="['w-[60%] py-2 rounded-lg mb-8 bg-[#dfdfdf] text-black hover:bg-gray-100 transition-all' , purchased ? 'bg-[#ffffff44] text-[#ffffff]' : '']">
+              {{ purchased ? 'Purchased' : 'Buy Now' }}
             </button>
           </div>
 
@@ -64,12 +65,23 @@
 <script setup>
 import { storeToRefs } from 'pinia';
 import usePricingStore from '../store/pricing';
+import useProductsStore from '../store/subscription';
+import { computed } from 'vue';
 
 
 const pricingStore = usePricingStore();
-const { matrixOne , onePricing} = storeToRefs(pricingStore);
+const subscriptionStore = useProductsStore();
+const {isPurchased} = subscriptionStore
+const { matrixOne , onePricing , selectedPriceType } = storeToRefs(pricingStore);
 
 const includes = (prod) => {
     return onePricing.value.products.includes(prod);
 }
+
+
+
+const purchased = computed(() => {
+  return isPurchased(onePricing.value.product_id)
+})
+
 </script>
