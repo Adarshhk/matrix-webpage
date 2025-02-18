@@ -18,7 +18,7 @@ const useProductsStore = defineStore('products', () => {
             
             if (res.data) {
                 products.value = res.data.data || [];
-                console.log(products.value)
+                
                 logged.value = true
             }
             
