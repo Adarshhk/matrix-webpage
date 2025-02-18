@@ -16,28 +16,29 @@
         </h2>
 
         <p class="text-[16px] lg:text-[18px] w-[90%] mt-8 font-normal text-white font-openSans max-w-4xl mx-auto">
-            Choose a flexible, affordable plan that helps you unlock your investment potential—without stretching your budget. We're here to support your growth every step of the way.
+            Choose a flexible, affordable plan that helps you unlock your investment potential—without stretching your
+            budget. We're here to support your growth every step of the way.
         </p>
 
-        <div class="mx-auto mt-10 w-min flex justify-center h-20 items-end relative">
+        <!-- <div class="mx-auto mt-10 w-min flex justify-center h-20 items-end relative">
             <div class="bg-[#373838] rounded-3xl px-2 py-1 flex justify-evenly gap-4 text-[18px]">
                 <button v-for="plan in plans" :key="plan" :aria-label="plan + ' Plan'" :class="getButtonClass(plan)"
                     @click="toggleActive(plan)" class="transition-all duration-200 py-1 px-3 rounded-3xl text-[16px]">
                     {{ plan }}
                 </button>
             </div>
-            <!-- Image on the right -->
+           
             <img src="/src/assets/svg/savemore.svg" alt="Info Icon"
                 class="absolute right-[-50px] md:right-[-100px] top-3 md:top-6 transform -translate-y-1/2 w-24 md:w-32 -rotate-12 md:rotate-0" />
-        </div>
+        </div> -->
 
 
 
-        <div class="mt-16 w-[95%] lg:w-[80%] grid grid-cols-10 gap-3 mx-auto flex-wrap">
-            <div class="border col-span-10 lg:col-span-4 bg-[#1D2125] rounded-lg border-[#2F2F2F] text-center">
+        <div class="mt-16 w-[95%] mx-auto flex-wrap ">
+            <div class="border bg-[#1D2125] rounded-lg border-[#2F2F2F] text-center pb-8 max-w-lg mx-auto">
                 <h2
                     class="text-[18px] font-openSans text-white font-bold py-6 tracking-widest border-b border-[#2f2f2f]">
-                    FREE</h2>
+                    IT'S FREE</h2>
 
 
                 <div class="px-6">
@@ -50,20 +51,20 @@
                         <span class="text-[24px]">₹</span>0
                     </p>
 
-                    <button
-                        class="border w-[95%] mx-auto py-4 border-white rounded font-bold tracking-wider text-[16px] font-openSans text-white mt-8">
-                        Subscribe
+                    <button @click="redirectToLogin"
+                        class="hover:bg-[#ffffff11] duration-150 transition-colors border w-[95%] mx-auto py-4 border-white rounded font-bold tracking-wider text-[16px] font-openSans text-white mt-8">
+                        Start Now
                     </button>
 
 
-                    <div
+                    <!-- <div
                         class="mt-8 text-[#FFF5A8] text-[14px] pb-10  flex gap-2 items-center justify-center font-bold">
                         <p class="font-openSans">or</p>
                         <a href="" class="underline font-openSans">Start my Free Trial</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div
+            <!-- <div
                 class="border col-span-10 lg:col-span-6 bg-[#1D2125] rounded-lg border-[#FFF5A8] border-t-[16px] text-center">
                 <div class="bg-[#FFF5A8] rounded-b-xl">
                     <h2
@@ -102,31 +103,16 @@
                         <a href="" class="underline font-openSans">Start my Free Trial</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
 </template>
 
 
-<script>
-import { ref, computed } from "vue";
+<script setup>
 
-export default {
-    setup() {
-        const active = ref("Monthly");
-        const plans = ["Monthly", "Quarterly", "Yearly"];
-
-        const toggleActive = (name) => {
-            active.value = name;
-        };
-
-        const getButtonClass = (plan) => ({
-            "text-white font-semibold bg-[#00B852] ": active.value === plan,
-            "text-[#F9F2F2] ": active.value !== plan,
-        });
-
-        return { active, plans, toggleActive, getButtonClass };
-    },
-};
+const redirectToLogin = () => {
+   window.open('https://v3.matrixtradingtech.com/' , "_blank")
+}
 </script>

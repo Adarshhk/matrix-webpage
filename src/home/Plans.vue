@@ -19,19 +19,8 @@
             </p>
         </div>
 
-    
-        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
-           
-                <img src="/src/assets/svg/plan/plan (1).svg" alt="" class="w-56 mx-4">
-                <img src="/src/assets/svg/plan/plan (2).svg" alt="" class="w-56 mx-4">
-                <img src="/src/assets/svg/plan/plan (3).svg" alt="" class="w-56 mx-4">
-                <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
-                <img src="/src/assets/svg/plan/plan (5).svg" alt="" class="w-56 mx-4">
-                <img src="/src/assets/svg/plan/plan (6).svg" alt="" class="w-56 mx-4">
-                <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
-  
-        </Vue3Marquee>
-        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse" class="mt-10">
+        <div class="flex flex-col gap-12">
+            <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
            
            <img src="/src/assets/svg/plan/plan (1).svg" alt="" class="w-56 mx-4">
            <img src="/src/assets/svg/plan/plan (2).svg" alt="" class="w-56 mx-4">
@@ -39,10 +28,23 @@
            <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
            <img src="/src/assets/svg/plan/plan (5).svg" alt="" class="w-56 mx-4">
            <img src="/src/assets/svg/plan/plan (6).svg" alt="" class="w-56 mx-4">
-           <img src="/src/assets/svg/plan/plan (3).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
 
-   </Vue3Marquee>
-    
+        </Vue3Marquee>
+
+        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse">
+                
+                <img src="/src/assets/svg/plan/plan (1).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (2).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (3).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (5).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (6).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
+                
+            </Vue3Marquee>
+
+        </div>
 
         <div class="w-full flex justify-center mt-16 pb-10 ">
             <RouterLink class="relative" to="/pricing">

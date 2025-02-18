@@ -26,7 +26,7 @@
         </li>
       </ul>
       
-      <a v-if="!logged" href="#" target="_blank"
+      <a v-if="!logged" href="https://v3.matrixtradingtech.com/" target="_blank"
         class="text-[#F3F8F9] btn btn-anim text-sm px-6 py-2 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
         <div class="content vertical flex justify-center">
           <div class="text font-openSans">Sign Up / Login</div>
@@ -50,7 +50,7 @@
             v-show="isDropdownOpen"
           >
            
-            <button href="#"
+            <button @click="changeLocation"
               
               class="w-full text-left p-2 rounded-lg hover:bg-[#222222] hover:bg-opacity-25 transition-all"
             >
@@ -137,7 +137,7 @@
             </li>
           </ul>
           <div class="flex mt-4">
-            <a href="#" target="_blank"
+            <a href="https://v3.matrixtradingtech.com/" target="_blank"
               class="text-[#F3F8F9] text-sm px-6 py-3 rounded-full bg-[#00B852] hover:bg-[#00a048] transition-all duration-300">
               <div class="content vertical flex justify-center ">
                 <div class="text ">Sign Up / Login</div>
@@ -151,7 +151,7 @@
 
     <!-- Mobile Toggle Button -->
     <button @click="toggleNav" class="lg:hidden">
-      <img :src="isNavOpen ? '/src/assets/svg/X.svg' : '/src/assets/svg/ham.svg'" :alt="isNavOpen ? 'Close' : 'Menu'"
+      <img :src="isNavOpen ? X_svg : ham" :alt="isNavOpen ? 'Close' : 'Menu'"
         :class="isNavOpen ? 'w-4' : 'w-7'">
     </button>
   </nav>
@@ -162,6 +162,8 @@
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
+import X_svg from '/src/assets/svg/X.svg';
+import ham from '/src/assets/svg/ham.svg'
 import icon1 from '/src/assets/producticons/producticon (1).svg'
 import icon2 from '/src/assets/producticons/producticon (2).svg'
 import icon3 from '/src/assets/producticons/producticon (3).svg'
@@ -225,6 +227,11 @@ const productItems = [
     path: "/signals"
   },
 ]
+
+
+const changeLocation = () => {
+  window.location.href = 'https://v3.matrixtradingtech.com/';
+}
 
 // State
 const router = useRouter()

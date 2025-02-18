@@ -130,7 +130,7 @@
                   <!-- <button class="w-full bg-[#00C853] hover:bg-[#00B84D] text-white font-semibold py-3 px-6 rounded-full transition-colors shadow-lg">
                     Get a Free Demo
                   </button> -->
-                  <button class="w-full bg-[#00C853] hover:bg-[#00B84D] text-white font-semibold py-3 px-6 rounded-full transition-colors shadow-lg">
+                  <button @click="redirectToLogin" class="w-full bg-[#00C853] hover:bg-[#00B84D] text-white font-semibold py-3 px-6 rounded-full transition-colors shadow-lg">
                 <div class="content vertical flex justify-center">
                         <div class="text">Get a Free Demo</div>
                         <div class="hover-text">Click Here</div>
@@ -180,6 +180,10 @@
 import { ref } from 'vue';
 
 import Breadcrumb from '/src/component/Breadcrumb.vue'
+
+const redirectToLogin = () => {
+  window.open('https://v3.matrixtradingtech.com/' , "_blank");
+}
 
 const showPopup = ref(false);
 </script>

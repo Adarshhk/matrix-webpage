@@ -27,7 +27,7 @@
 
                 <hr class="border-dashed border-[#FFFFFF30]" />
 
-                <p class="text-left text-white text-[14px] md:text-[16px]">{{ item.created_at }}</p>
+                <p class="text-left text-white text-[14px] md:text-[16px]">{{ formatDate(item.created_at) }}</p>
             </RouterLink>
 
         </div>
@@ -35,27 +35,20 @@
 </template>
 
 <script setup>
-import { computed } from "vue";
+
 import { RouterLink } from "vue-router";
 import useIndicatorStore from "../../store/indicator";
 import { storeToRefs } from "pinia";
-import useIndicatorCategoryStore from "../../store/indicatorcategory";
 
 const indicatorStore = useIndicatorStore();
-const indicatorCategoryStore = useIndicatorCategoryStore();
 
 const { indicators } = storeToRefs(indicatorStore);
-const { indicatorCategory, selectedIndicatorCategory } = storeToRefs(indicatorCategoryStore);
 
-const toggleActive = (categoryId) => {
-    selectedIndicatorCategory.value = categoryId;
-};
-
-const getButtonClass = (cat) => ({
-    "text-[#46BA4B] border border-[#46BA4B] bg-[#46BA4B33]": selectedIndicatorCategory.value === cat.id,
-    "text-white border border-[#4F4F4F]": selectedIndicatorCategory.value !== cat.id,
-});
-
+function formatDate(dateString) {
+  const date = new Date(dateString);
+  const options = { day: "2-digit", month: "short", year: "numeric" };
+  return new Intl.DateTimeFormat("en-GB", options).format(date);
+}
 
 </script>
 

@@ -10,7 +10,7 @@ import WhyJoinUsSection from './WhyJoinUsSection.vue';
 
 <template>
     
-    <main class="">
+    <main class="w-[95%] mx-auto">
         <AboutUsHeroSection/>
         <MissionSection/>
         <CultureSection/>

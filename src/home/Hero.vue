@@ -63,7 +63,7 @@
       </p>
       
       
-        <button 
+        <button @click="changeLocation"
           class="z-40 mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48 ">
           <div class="content vertical flex justify-center">
             <div class="text font-semibold text-base font-openSans">Get Started</div>
@@ -133,8 +133,8 @@ import LottieComponent from './utils/LottieComponent.vue';
 import "swiper/css";
 import "swiper/css/pagination";
 import { computed, ref, watch } from 'vue';
-import AnimatedHero from './utils/AnimatedHero.vue';
 import AnimatedHero2 from './utils/AnimatedHero2.vue';
+import { routerKey } from 'vue-router';
 
 
 // Register the modules to be used in the Swiper
@@ -169,6 +169,9 @@ const features = [
 
 ];
 
+const changeLocation = () => {
+  window.open('https://v3.matrixtradingtech.com/' , "_blank");
+}
 
 </script>
 

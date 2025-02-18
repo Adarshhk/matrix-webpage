@@ -39,7 +39,7 @@ const makeRequest = async (endpoint, params = {}, id = null) => {
   createStateForEndpoint(endpoint);
   try {
     const url = getApiUrl(endpoint, id);
-    console.log(url);
+   
     const response = await axios.get(url, { params });
     return handleApiResponse(response, endpoint);
   } catch (error) {

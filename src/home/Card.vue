@@ -28,8 +28,8 @@
               <div class="flex items-center gap-4 ">
                 <img :src="tradeCard.icon" alt="" class="w-12  ">
                 <div class="text-left">
-                  <h3 class="text-white text-lg sm:text-xl md:text-[18px] lg:text-[20px] font-cabinet-grotesk">{{ tradeCard.title }}</h3>
-                  <p class="text-xs sm:text-sm md:text-[13px] lg:text-[14px] text-[#F9F2F2] font-normal font-proxima">{{ tradeCard.subtitle }}</p>
+                  <h3 class="text-white text-lg sm:text-xl md:text-[18px] lg:text-[20px] ">{{ tradeCard.title }}</h3>
+                  <p class="text-xs sm:text-sm md:text-[13px] lg:text-[14px] text-[#F9F2F2] font-normal font-openSans">{{ tradeCard.subtitle }}</p>
                 </div>
               </div>
               <hr class="h-px my-4 mb-6 bg-[#373636] border-0">
@@ -57,9 +57,9 @@
               </div>
               
               <div class="flex justify-start">
-                <button class="rounded-3xl border border-white py-2 px-6 max-w-48 w-full text-white font-proxima text-sm sm:text-base md:text-[15px] lg:text-[16px] mt-4 sm:mt-6 hover:bg-white hover:text-black transition-colors duration-300">
+                <a href="https://v3.matrixtradingtech.com/" target="_blank"  class="rounded-3xl border border-white py-2 px-6 max-w-48 w-full text-white font-openSans text-sm sm:text-base md:text-[15px] lg:text-[16px] mt-4 sm:mt-6 hover:bg-white hover:text-black transition-colors duration-300">
                   Sign Up
-                </button>
+                </a>
               </div>
             </div>
             <div class="trade-card__image md:w-[60%] h-auto px-4 md:px-0">
@@ -90,6 +90,7 @@ import algocard from '/src/assets/img/algocard.png'
 import screenerCard from '/src/assets/img/screenercard.png'
 import LottieComponent from '/src/home/utils/LottieComponent.vue'
 import webhookcard from '/src/assets/img/webhookcard.webp'
+
 
 const tradeCardsWrapper = ref(null);
 const tradeCards = ref([ 
@@ -222,19 +223,9 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-@font-face {
-  font-family: 'Proxima Nova';
-  src: url('/path/to/proxima-nova.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Cabinet Grotesk';
-  src: url('/path/to/cabinet-grotesk.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
+
+
 
 :root {
   --trade-card-height: 40vw;
@@ -242,16 +233,8 @@ onUnmounted(() => {
   --trade-card-top-offset: 1.5em;
 }
 
-.font-proxima {
-  font-family: 'Proxima Nova', sans-serif !important;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
 
-.font-cabinet-grotesk {
-  font-family: 'Cabinet Grotesk', sans-serif;
-  font-weight: 700;
-}
+
 
 #trade-cards {
   grid-template-rows: repeat(var(--numtradeCards), var(--trade-card-height));

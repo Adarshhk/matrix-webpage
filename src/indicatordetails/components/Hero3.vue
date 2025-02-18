@@ -39,7 +39,7 @@
               {{ indicator?.description }}
             </p> -->
             
-            <div v-if="indicator?.info" v-html="indicator.info"></div>
+            <div v-if="indicator?.info" v-html="indicator.info" class="text-[white]"></div>
         </div>
         </div>
       </div>

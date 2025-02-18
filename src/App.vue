@@ -25,12 +25,11 @@ import MouseEffect from './component/MouseEffect.vue';
 import Footer from './investor/src/components/Footer.vue';
 import Navbar from './component/Navbar.vue';
 import Social from './home/Social.vue';
-import LottieComponent from './home/utils/LottieComponent.vue';
-import Test from './Test.vue';
+
 import Sebi from './component/Sebi.vue';
-import TechText from './component/TechText.vue';
+
 import Chatbot from './component/Chatbot.vue';
-import { ref } from 'vue';
+
 
 
 </script>

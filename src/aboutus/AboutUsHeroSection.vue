@@ -1,21 +1,30 @@
 <script setup>
 import { Vue3Marquee } from "vue3-marquee";
 import Breadcrumb from '/src/component/Breadcrumb.vue'
+import c1 from '/src/assets/img/about/c1 (5).png'
+import c2 from '/src/assets/img/about/c1 (6).png'
+import c3 from '/src/assets/img/about/c1 (7).png'
+import c4 from '/src/assets/img/about/c1 (8).png'
+import c5 from '/src/assets/img/about/c1 (5).png'
+import c6 from '/src/assets/img/about/c1 (6).png'
+import c7 from '/src/assets/img/about/c1 (7).png'
+import c8 from '/src/assets/img/about/c1 (8).png'
 const imgArray = [
-  "/src/assets/img/about/c1 (5).png",
-  "/src/assets/img/about/c1 (6).png",
-  "/src/assets/img/about/c1 (7).png",
-  "/src/assets/img/about/c1 (8).png",
-  "/src/assets/img/about/c1 (5).png",
-  "/src/assets/img/about/c1 (6).png",
-  "/src/assets/img/about/c1 (7).png",
-  "/src/assets/img/about/c1 (8).png",
+  c1,
+  c2,
+  c3,
+  c4,
+  c5,
+  c6,
+  c7,
+  c8,
+
   ];
 </script>
 
 <template>
 
-  <section class="w-[95%] mx-auto mt-20 px-4">
+  <section class=" mt-20">
     <Breadcrumb :items="[{
             title: 'Home',
             disabled: false,

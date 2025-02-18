@@ -36,7 +36,7 @@ const features = [
             <li v-for="item in features" class="mx-auto text-center">
                 <img :src="item.img" alt="" class="mx-auto">
                 <p class="text-white mt-10 font-CabinetGrotesk text-center text-[15.5px] xl:text-[19px]">{{ item.title }}</p>
-                <
+                
             </li>
         </ul>
     </section>

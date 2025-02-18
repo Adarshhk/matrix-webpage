@@ -1,11 +1,23 @@
-import { defineStore } from "pinia";
+import axios from "axios";
+import { defineStore, storeToRefs } from "pinia";
 import { ref } from "vue";
+import usePricingStore from "./pricing";
 
 const useCartStore = defineStore('cart', () => {
+    const loading = ref(false);
     const cart = ref([]);
+    const authToken = localStorage.getItem('token');
+    const pricingStore = usePricingStore();
+    const { selectedPriceType } = storeToRefs(pricingStore)
+
+    const isInCart = (productName) => {
+        return cart.value.some((item) => item.name === productName);
+    };
 
     const addToCart = (product) => {
-        cart.value.push(product)
+       
+        if (isInCart(product.name)) return;
+        else cart.value.push(product)
     }
 
     const removeFromCart = (product) => {
@@ -13,11 +25,10 @@ const useCartStore = defineStore('cart', () => {
         cart.value = cart.value.filter(p => p.name != product.name);
     }
 
-    const isInCart = (productName) => {
-        return cart.value.some((item) => item.name === productName);
-    };
-
+    
     return {
+        loading,
+        
         cart,
         isInCart,
         addToCart,

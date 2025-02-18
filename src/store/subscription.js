@@ -7,13 +7,13 @@ const useProductsStore = defineStore('products', () => {
 
     const logged = ref(false);
     const authToken = localStorage.getItem('token')
-    const url = ref('https://usermatrixv3.punchmyorders.in/user/products')
+    const url = ref('https://v3.matrixtradingtech.com/user/subscriptions')
     const products = ref([]);
 
     const getProducts = async () => {
 
         try {
-            if (authToken == '') return;
+            if (authToken == null) return;
             const res = await axios.get(url.value, { headers: { Authorization: authToken } });
             
             if (res.data) {

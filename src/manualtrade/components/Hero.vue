@@ -33,7 +33,7 @@
       </p>
       
       
-        <button 
+        <button @click="redirectToLogin"
           class="z-40 mt-8 btn btn-anim text-[#F3F8F9] text-sm w-[95%] md:w-1/2 lg:w-1/5 py-2 rounded-full bg-[#00B852] max-w-48 ">
           <div class="content vertical flex justify-center">
             <div class="text font-semibold text-base font-openSans">Try Free Demo</div>
@@ -56,7 +56,9 @@
 
 <script setup>
 
-
+const redirectToLogin = () =>{
+  window.open('https://v3.matrixtradingtech.com/' , "_blank");
+}
 
 // Register the modules to be used in the Swiper
 

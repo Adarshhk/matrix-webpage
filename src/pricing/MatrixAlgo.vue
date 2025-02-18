@@ -77,8 +77,8 @@ const changePlan = (plan) => {
 };
 
 const add = () => {
-  
-  cartStore.addToCart({name : activePlan.value.name , price : activePlan.value.price})
+
+  cartStore.addToCart({name : activePlan.value.name , price : activePlan.value.price , id: activePlan.value.product_id})
 }
 
 

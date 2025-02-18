@@ -75,21 +75,21 @@
                 </Tippy>
             </li>
             <li v-if="activePlan.products.includes('signals')">
-                <Tippy content_title="Webhook with partail access"
+                <Tippy content_title="Signals with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 2.svg" alt="" class="w-16 h-16" />
                 </Tippy>
             </li>
             <li v-if="activePlan.products.includes('manual_trade')">
-                <Tippy content_title="Webhook with partail access"
+                <Tippy content_title="Manual Trade with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 3.svg" alt="" class="w-16 h-16" />
                 </Tippy>
             </li>
             <li v-if="activePlan.products.includes('screener')">
-                <Tippy content_title="Webhook with partail access"
+                <Tippy content_title="Screener with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 4.svg" alt="" class="w-16 h-16" />
@@ -98,7 +98,7 @@
 
 
             <li v-if="activePlan.products.includes('indicator')">
-                <Tippy content_title="Webhook with partail access"
+                <Tippy content_title="Indicators with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 5.svg" alt="" class="w-16 h-16" />
@@ -106,7 +106,7 @@
             </li>
 
             <li v-if="activePlan.products.includes('algo_trading')">
-                <Tippy content_title="Webhook with partail access"
+                <Tippy content_title="Algo Trading with partail access"
                     content_desc="Note : This is a premium feature, you will get partial access."
                     class="bg-[#272b2f] text-white p-2 rounded-lg">
                     <img src="/pricingproduct/Logo 6.svg" alt="" class="w-16 h-16" />
@@ -138,7 +138,7 @@ const toggleActive = (plan) => {
 }
 
 const add = () => {
-    cartStore.addToCart({name : `Webhooks: ${activePlan.value.name}` , price : activePlan.value.price})
+    cartStore.addToCart({name : `Webhooks: ${activePlan.value.name}` , price : activePlan.value.price , id: activePlan.value.product_id})
 }
 
 const subscriptionStore = useProductsStore();

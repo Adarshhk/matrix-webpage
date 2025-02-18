@@ -76,8 +76,8 @@
           <img v-if="selectedPlan === 'Matrix EDGE'" src="/src/assets/img/EDGE.png" alt="Matrix Logo"
             class="h-8 md:h-12" />
         
-          <div class="bg-[#1d2125] rounded-full p-1.5 inline-flex">
-            <button v-for="period in periods" :key="period.value" :class="[
+          <div v-if="selectedPlan != 'Matrix ONE'" class="bg-[#1d2125] rounded-full p-1.5 inline-flex">
+            <button  v-for="period in periods" :key="period.value" :class="[
               'px-4 font-openSans text-[16px]  md:px-6 py-2 rounded-full transition-all whitespace-nowrap text-sm md:text-base min-w-[80px] md:min-w-[100px]',
               selectedPriceType === period.value ? 'bg-[#00B852] text-[#dfdfdf]' : 'text-gray-400',
             ]" @click="selectedPriceType = period.value">
@@ -130,8 +130,12 @@ const pricingStore = usePricingStore();
 const {activePlan , algoPricing , edgePricing , selectedPriceType} = storeToRefs(pricingStore);
 
 const changeActive = (plan) => {
-
+  if(plan == 'Matrix ONE')
+  {
+    selectedPlan.value = 'yearly'
+  }
   selectedPlan.value = plan
+  
 
   if (selectedPlan.value === 'Matrix ALGO') {
     activePlan.value = algoPricing.value[0];
@@ -171,14 +175,6 @@ const changeActive = (plan) => {
   }
 }
 
-@font-face {
-  font-family: "Proxima Nova";
-  src: url("/path-to-your-font/proximanova-regular.woff2") format("woff2");
-}
-
-.font-proxima-nova {
-  font-family: "Proxima Nova", sans-serif;
-}
 
 body {
   overflow-x: hidden;

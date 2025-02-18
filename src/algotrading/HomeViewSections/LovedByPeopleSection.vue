@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount } from "vue";
 import IndiaAnimation from "/src/component/IndiaAnimation.vue";
 import Vue3Autocounter from "vue3-autocounter";
+import LottieComponent from "../../home/utils/LottieComponent.vue";
 
 const observedSection = ref(null);
 const isInView = ref(false);
@@ -10,7 +11,7 @@ let observer;
 
 const handleIntersection = (entries) => {
   entries.forEach((entry) => {
-    console.log("Intersection observed:", entry.isIntersecting); // Debug log
+    
     isInView.value = entry.isIntersecting;
   });
 };
@@ -22,7 +23,7 @@ onMounted(() => {
 
   if (observedSection.value) {
     observer.observe(observedSection.value);
-    console.log("Observer set up on", observedSection.value); // Debug log
+    
   }
 });
 
@@ -34,22 +35,22 @@ onBeforeUnmount(() => {
 
 const reviews = [
   {
-    img: "/images/svg/review1.svg",
+    img: "/images/svg/review1.json",
     title: 7256,
     desc: "Registered users",
   },
   {
-    img: "/images/svg/review2.svg",
+    img: "/images/svg/review2.json",
     title: 1288,
     desc: "Cities covered",
   },
   {
-    img: "/images/svg/review3.svg",
+    img: "/images/svg/review3.json",
     title: 8,
     desc: "Countries covered",
   },
   {
-    img: "/images/svg/review4.svg",
+    img: "/images/svg/review4.json",
     title: 12,
     desc: "Years of experience",
   },
@@ -86,7 +87,7 @@ const reviews = [
       :key="item.desc"
       class="flex items-center gap-1 py-7 justify-between"
     >
-      <img :src="item.img" alt="" class="w-[31px] md:w-[52px] xl:w-[40px]"/>
+      <LottieComponent :animationPath="item.img" />
       <div>
         <p
           class="font-bold text-[#dfdfdf] text-[27px] md:text-[34px]"

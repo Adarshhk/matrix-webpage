@@ -1,81 +1,56 @@
+
+
 <template>
-    <div class="w-[95%] bg-[#161a1e] card rounded-lg mt-24 mx-auto relative ">
+    <div class="w-[90%] bg-[#161a1e] card rounded-lg mt-24 mx-auto relative ">
         <div class=" overflow-hidden w-full h-full absolute flex justify-center">
             <div class="absolute bottom-44 bg-[#EDA54E] rounded-full w-[10rem] h-[10rem]  md:w-[36rem] md:h-[36rem] blurit opacity-20">
             </div>
         </div>
         <div class="w-full flex justify-center relative overflow-hidden z-30  ">
             <img src="/src/assets/svg/notch.svg" alt="">
-            <img src="/src/assets/svg/planlogo.svg" alt="" class="absolute top-4 w-36">
+            <img src="/src/assets/svg/planlogo.svg" alt="" class="absolute top-3 w-36">
         </div>
 
         
         <div class="text-center mt-10 px-3">
-            <p class="text-2xl md:text-[38px] font-bold mx-auto text-white">6 Power Packed Plan in a Single Place</p>
+            <p class="text-2xl md:text-[38px] font-extrabold mx-auto text-white">6 Power Packed Plan in a Single Place</p>
 
-            <p class="font-openSans text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-24 mt-4">Explore a range of powerful solutions designed to meet your trading needs—all in one single platform.
+            <p class="font-openSans text-[#BBB8B8] text-md md:text-[18px] max-w-4xl mx-auto mb-16 mt-4">Explore a range of powerful solutions designed to meet your trading needs—all in one single platform.
             </p>
         </div>
 
-    
-        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
-            <div class="flex min-w-52 mr-4 items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/indicator.svg" alt="" class="w-10">
-                <p>Indicators</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/manualtrading.svg" alt="" class="w-12">
-                <p>Manual Trading</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/screener.svg" alt="" class="w-12">
-                <p>Screeners</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/algo.svg" alt="" class="w-12">
-                <p>Algo Trading</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/webhook.svg" alt="" class="w-12">
-                <p>Webhook</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] gap-2 py-1 px-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/signals.svg" alt="" class="w-12">
-                <p>Signals</p>
-            </div>
-        </Vue3Marquee>
-        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse" class="mt-4">
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/indicator.svg" alt="" class="w-12">
-                <p>Indicators</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/manualtrading.svg" alt="" class="w-12">
-                <p>Manual Trading</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/screener.svg" alt="" class="w-12">
-                <p>Screeners</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/algo.svg" alt="" class="w-12">
-                <p>Algo Trading</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/webhook.svg" alt="" class="w-12">
-                <p>Webhook</p>
-            </div>
-            <div class="flex min-w-52 mr-4  items-center bg-[#FFFFFF1A] px-1 gap-2 py-1 text-white font-bold rounded-md ">
-                <img src="/src/assets/svg/signals.svg" alt="" class="w-12">
-                <p>Signals</p>
-            </div>
+        <div class="flex flex-col gap-12">
+            <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]">
+           
+           <img src="/src/assets/svg/plan/plan (1).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (2).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (3).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (5).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (6).svg" alt="" class="w-56 mx-4">
+           <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
+
         </Vue3Marquee>
 
-        <div class="w-full flex justify-center mt-12 pb-10 ">
-            <button class="relative">
+        <Vue3Marquee :duration="30" :gradient="true" :gradientColor="[22, 26, 30, 1]" direction="reverse">
+                
+                <img src="/src/assets/svg/plan/plan (1).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (2).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (3).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (5).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (6).svg" alt="" class="w-56 mx-4">
+                <img src="/src/assets/svg/plan/plan (4).svg" alt="" class="w-56 mx-4">
+                
+            </Vue3Marquee>
+
+        </div>
+
+        <div class="w-full flex justify-center mt-16 pb-10 ">
+            <RouterLink class="relative" to="/pricing">
                 <img src="/src/assets/svg/plansbutton.svg" alt="">
-                <p class=" absolute top-3 left-16 text-[20px] text-[#222222] font-bold">Explore Plans</p>
-            </button>
+                <p class=" absolute top-3 left-10 text-[20px] text-[#222222] font-bold">Explore Other Plans</p>
+            </RouterLink>
         </div>
 
 
@@ -83,10 +58,8 @@
 </template>
 
 <script>
-
+import { RouterLink, useRouter } from 'vue-router';
 import { Vue3Marquee } from 'vue3-marquee';
-import { onMounted, ref } from 'vue';
-
 
 </script>
 
@@ -96,7 +69,7 @@ import { onMounted, ref } from 'vue';
 }
 
 .background {
-    background-image: url('/src/assets/svg/plansbutton.svg');
+    background-image: url('../assets/svg/plansbutton.svg');
     background-size: cover;
 }
 

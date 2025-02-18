@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@img-comparison-slider/vue": "^8.0.0",
     "@primevue/themes": "^4.2.5",
     "@vueuse/core": "^12.5.0",
     "axios": "^1.7.9",

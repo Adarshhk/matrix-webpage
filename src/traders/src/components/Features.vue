@@ -30,8 +30,8 @@
           Trade with precision,<br> trade with us
         </h1>
         
-        <button class="bg-white rounded w-80 font-bold text-[#00B852] py-3">
-                <div class="content vertical flex justify-center">
+        <button @click="redirectToTelegram" class="bg-white rounded w-80 font-bold text-[#00B852] py-3">
+               <div class="content vertical flex justify-center">
                         <div class="text">Trade Smarter Today</div>
                         
                     </div>
@@ -42,5 +42,8 @@
 </template>
 
 <script setup>
+const redirectToTelegram = () => {
+    window.open("https://t.me/+cuoUg1tBcDc5OGM1", "_blank");
+};
 // Component logic can be added here if needed
 </script>

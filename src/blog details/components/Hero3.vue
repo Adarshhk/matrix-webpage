@@ -22,7 +22,7 @@
 
           <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: 23 Oct 2023</p>
 
-          <img src="/src/assets/img/blog3.jpeg" alt="" class="my-8">
+          <img :src="blog3" alt="" class="my-8">
           <p class="text-[#dfdfdf] text-[16px] font-openSans">
             Trading in financial markets has evolved significantly over the years. What once required hours of manual effort and analysis can now be streamlined with the power of technology. This brings us to the age-old debate: algo trading vs manual trading. Both approaches have their pros and cons, and choosing the right one depends on your goals, experience, and preferences
 
@@ -154,6 +154,8 @@
 
 <script setup>
 import { ref } from 'vue';
+
+import blog3 from '/src/assets/img/blog3.jpeg'
 
 const showPopup = ref(false);
 

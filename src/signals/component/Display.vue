@@ -12,7 +12,7 @@
         </div> -->
     </div>
     <div class="bg-mobile md:hidden h-[80vh] my-16 flex justify-center">
-        <img src="/src/assets/img/successfull.gif" alt="" class="w-14 h-14 mt-56 mr-4">
+        <img src="/src/assets/img/successfull.gif" alt="" class="w-14 h-14 mt-44 mr-6 lg:mt-56 lg:mr-4">
     </div>
 
 </template>

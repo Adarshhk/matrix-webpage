@@ -7,7 +7,7 @@ const useIndicatorStore = defineStore('indicator', () => {
 
     const loading = ref(false);
     const authToken = localStorage.getItem('token')
-    const url = ref('https://usermatrixv3.punchmyorders.in/user/web/indicators')
+    const url = ref('https://v3.matrixtradingtech.com/user/web/indicators')
     const indicators = ref([]);
     const selectedIndicator = ref(null);
     const indicatorBlog = ref('No details');

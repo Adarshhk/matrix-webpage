@@ -25,7 +25,7 @@
       </div>
   
       <!-- Desktop Sidebar -->
-      <div class="hidden lg:block sidebar p-6 w-72 mt-32">
+      <div class="hidden lg:block sticky top-12 sidebar p-6 w-72 mt-32">
         <h2 class="text-xl font-bold mb-6 bg-gradient-to-r from-[#4CC3FD] to-[#00a048] bg-clip-text text-transparent">
           Legal Information
         </h2>

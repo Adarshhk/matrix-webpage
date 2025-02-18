@@ -19,7 +19,7 @@
           </h1>
           <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: 23 Oct 2023</p>
 
-          <img src="/src/assets/img/blog2.jpeg" alt="" class="my-8">
+          <img :src="blog2" alt="" class="my-8">
           <p class="text-[#dfdfdf] text-[16px] font-openSans">
             Have you ever thought about earning some extra cash without multiple jobs or compromising your free time? If the answer is yes, let’s talk about algo (algorithmic) trading — a game-changing way to generate extra income with the help of technology. Whether you’re a seasoned trader or someone who’s never touched the stock market, algo trading could be your new best friend.
 
@@ -275,6 +275,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import blog2 from '/src/assets/img/blog2.jpeg'
+
 
 const showPopup = ref(false);
 

@@ -3,7 +3,7 @@
         <Hero id="hero" />
         <Why id="why" />
         <Features id="features" />
-        <!-- <Media id="media" /> -->
+        
         <Card/>
         <CardMobile/>
         <Pricing id="pricing" />

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#00B852] rounded-lg mt-32 mx-auto flex h-[60vh] md:h-[40vh] lg:h-[60vh] flex-wrap items-center xl:justify-between justify-center">
+    <div class="bg-[#00B852] w-[95%] rounded-lg mt-24 mx-auto flex h-[60vh] md:h-[40vh] lg:h-[60vh] flex-wrap items-center xl:justify-between justify-center">
         <div class="text-center xl:text-left xl:px-10 px-4 xl:ml-10 xl:w-[50%]">
             
             <div class=" flex xl:justify-start items-center justify-center">
@@ -15,7 +15,7 @@
                 Step into a community where passion for the markets comes alive! Connect, share, and grow with others who are just as dedicated as you. Your voice matters—together, we shape the future.
 
             </p>
-            <button class="bg-white rounded w-[80%] max-w-60 mt-10 font-bold text-[#00B852] py-3">
+            <button @click="redirectToTelegram"  class="bg-white rounded w-[80%] max-w-60 mt-10 font-bold text-[#00B852] py-3">
                 <div class="content vertical flex justify-center">
                         <div class="text font-openSans">Join Now</div>
                         <div class="hover-text font-openSans">Click Here</div>
@@ -100,8 +100,12 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import { Vue3Marquee } from 'vue3-marquee';
+
+const redirectToTelegram = () => {
+    window.open("https://t.me/+cuoUg1tBcDc5OGM1", "_blank");
+};
 
 </script>
 

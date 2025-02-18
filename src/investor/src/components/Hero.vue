@@ -33,7 +33,7 @@
             fast signals to one-click execution, we ensure you never miss a beat in the fast-moving market.
           </p>
 
-          <button
+          <button @click="changeLocation"
             class="mt-12 btn btn-anim text-[#F3F8F9] text-sm w-1/2 lg:w-1/5 py-3 rounded-full bg-[#00B852] shadow-md shadow-[#00b8539e]">
             <div class="content vertical flex justify-center">
               <div class="text font-semibold text-base">Get Started</div>
@@ -52,6 +52,10 @@
 <script setup>
 // No additional script needed
 import  Breadcrumb  from '/src/component/Breadcrumb.vue';
+
+const changeLocation = () => {
+  window.open('https://v3.matrixtradingtech.com/' , "_blank");
+}
 </script>
 
 <style scoped>

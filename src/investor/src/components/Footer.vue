@@ -45,7 +45,7 @@ call Correctly
             <div class=" col-span-12 md:col-span-4 ">
                 <img src="/src/assets/svg/matrix-logo.svg" alt="" class="w-40">
 
-                <img src="/src/assets/img/footerbanner.png" alt="" class="mt-6 hover:cursor-pointer">
+                <img @click="redirectToCalendly" src="/src/assets/img/footerbanner.png" alt="" class="mt-6 hover:cursor-pointer">
             </div>
 
 
@@ -182,7 +182,7 @@ call Correctly
             
             <p class="text-[#F3F8F9] text-[14px] ">
                 © 2025 All rights reserved by Matrix Trading Tech &nbsp; | &nbsp; Proudly Developed with ❤️‍🔥 by 
-                <span class="text-[#00B852]">X-tention crew technologies</span></p>
+                <a href="https://www.xtentioncrew.tech/" target="_blank" class="text-[#00B852]">X-tention crew technologies</a></p>
         </div>
 
 
@@ -192,6 +192,10 @@ call Correctly
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+
+const redirectToCalendly = () => {
+    window.open('https://calendly.com/metaalgomatrix01/new-meeting' , "_blank")
+}
 
 
 const isOpen = ref(false);

@@ -5,7 +5,7 @@ import { ref, watch } from "vue";
 
 const usePricingStore = defineStore('pricing', () => {
     const authToken = localStorage.getItem('token');
-    const url = ref('https://usermatrixv3.punchmyorders.in/user/web/products');
+    const url = ref('https://v3.matrixtradingtech.com/user/web/products');
     const selectedPriceType = ref('yearly');
 
     // Store raw response data
@@ -655,9 +655,9 @@ const usePricingStore = defineStore('pricing', () => {
 
             // Find and set matrix one data
             matrixOne.value = rawPlans.value.filter(plan =>
-                plan.category_name == 'matrix one' &&
-                plan.price_type === selectedPriceType.value
-            )[1];
+                plan.category_name == 'matrix one'
+               
+            )[0];
 
             if (matrixOne.value) {
                 onePricing.value.product_id = matrixOne.value.product_id;
@@ -674,6 +674,7 @@ const usePricingStore = defineStore('pricing', () => {
     getPricing();
 
     return {
+        rawPlans,
         onePricing,
         edgePricing,
         algoPricing,

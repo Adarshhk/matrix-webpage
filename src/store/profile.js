@@ -7,13 +7,13 @@ const useProfileStore = defineStore('profile', () => {
 
     const logged = ref(false);
     const authToken = localStorage.getItem('token')
-    const url = ref('https://usermatrixv3.punchmyorders.in/user/profile')
+    const url = ref('https://v3.matrixtradingtech.com/user/profile')
     const profileData = ref({});
 
     const getProfile = async () => {
-
+       
         try {
-            if (authToken == '') return;
+            if (authToken == '' || authToken == null) return;
             const res = await axios.get(url.value, { headers: { Authorization: authToken } });
             
             if (res.data) {
@@ -24,6 +24,7 @@ const useProfileStore = defineStore('profile', () => {
             
         } catch (error) {
             console.log('error occured in profileStore', error);
+            logged.value = false
         } 
     }
 

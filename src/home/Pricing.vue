@@ -43,31 +43,28 @@ import {  useRouter } from 'vue-router';
 import img1 from '/src/assets/img/pricing1.png';
 import img2 from '/src/assets/img/pricing2.png';
 import img3 from '/src/assets/img/pricing3.png';
-const router = useRouter();
-
-const openWebinar = () => {
-    router.push('/webinar');
-}
 
 const details = [
     {
         title: 'Expert Support',
         img: img1,
         description: 'Get the guidance you need, not just for setup and fixes, but to truly thrive. Our experts are here to make your journey smoother, ensuring you trade with confidence.',
-        btn: 'Schedule a call'
+        btn: 'Schedule a call',
+        func : () => window.open('https://calendly.com/metaalgomatrix01/new-meeting' , "_blank")
     },
     {
         title: 'Free Demo',
         img: img3,
         description: "Take your first step into trading without the fear of losing. Our free demo lets you explore, experiment, and build confidence—so when you're ready, you trade with certainty, not hesitation.",
-        btn: 'Get Started'
+        btn: 'Get Started',
+        func : () => window.open('https://v3.matrixtradingtech.com/' , "_blank")
     },
     {
         title: 'Live Sessions',
         img: img2,
         description: 'Join live sessions where experts don’t just share strategies—they help you grow. Gain confidence, refine your skills, and be part of a community that wants to see you win.',
         btn: 'Book a Webinar',
-        func : openWebinar
+        func : () => window.open('https://calendly.com/metaalgomatrix01/new-meeting' , "_blank")
     }
 ]
 

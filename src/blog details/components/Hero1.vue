@@ -21,7 +21,7 @@
 
           <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: 23 Oct 2023</p>
 
-          <img src="/src/assets/img/blog1.jpeg" alt="" class="my-8">
+          <img :src="blog1" alt="" class="my-8">
           <p class="text-[#dfdfdf] text-[16px] font-openSans">
             Option trading is a very helpful tool for traders and investors in the realm of financial markets. Options
             offer a variety of ways to reach your financial goals. Whether you want to hedge your risks, speculate on
@@ -177,6 +177,7 @@
 
 <script setup>
 import { ref } from 'vue';
+import blog1 from '/src/assets/img/blog1.jpeg'
 
 const showPopup = ref(false);
 

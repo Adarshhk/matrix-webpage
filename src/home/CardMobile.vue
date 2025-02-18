@@ -51,10 +51,10 @@
                             </div>
 
                             <div class="flex justify-start">
-                                <button
+                                <a href="https://v3.matrixtradingtech.com/" target="_blank"
                                     class="rounded-3xl border border-white py-2 px-6 max-w-48 w-full text-white font-openSans text-sm  mt-4 hover:bg-white hover:text-black transition-colors duration-300">
                                     Sign Up
-                                </button>
+                            </a>
                             </div>
                         </div>
                         <div class="h-auto">

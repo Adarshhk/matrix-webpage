@@ -1,12 +1,15 @@
 <script setup>
 import { RouterLink } from 'vue-router';
+import blog1 from '/src/assets/img/blog1.jpeg'
+import blog2 from '/src/assets/img/blog2.jpeg'
+import blog3 from '/src/assets/img/blog3.jpeg'
 
 // import { LottieAnimation } from "lottie-web-vue";
 // import logo from "../../public/Animations/ring_with_logo.json";
 
 const articles = [
   {
-    img: "/src/assets/img/blog1.jpeg",
+    img: blog1,
     tag: ["Finance", "AutoMobile"],
     title:
       "Understanding Option Trading: A Guide to Navigating the Market",
@@ -15,7 +18,7 @@ const articles = [
   },
  
   {
-    img: "/src/assets/img/blog2.jpeg",
+    img: blog2,
     tag: ["Finance", "AutoMobile"],
     title:
       "Know How Algo Trading Can Be a Source Of Your Extra Income",
@@ -23,7 +26,7 @@ const articles = [
     date: "May 20, 2024",
   },
   {
-    img: "/src/assets/img/blog3.jpeg",
+    img: blog3,
     tag: ["Finance", "AutoMobile"],
     title:
       "Algo Trading vs Manual Trading: Which One is Right for You?",

@@ -19,7 +19,7 @@
             <h2 class="font-bold text-[16px]">
               {{ content_title }}
             </h2>
-            <p class="text-[#ffffff55] font-openSans text-[14px]">{{ content_desc }}</p>
+            <!-- <p class="text-[#ffffff55] font-openSans text-[14px]">{{ content_desc }}</p> -->
           </div>
           <!-- <div class="tooltip-arrow"></div> -->
         </div>

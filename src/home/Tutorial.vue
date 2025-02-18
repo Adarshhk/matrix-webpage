@@ -19,12 +19,12 @@
                 <p class="text-[#dfdfdf] max-w-96 text-[16px] group-hover:-translate-y-4 transition-all duration-200 font-openSans">
                     {{ user.description }}
                 </p>
-                <button
+                <button @click="user.func"
                     class="hidden  lg:flex translate-y-4 opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 text-[#00B852] font-bold gap-1">
                     {{ user.btn }}
                     <img src="/src/assets/svg/arrow.svg" alt="">
                 </button>
-                <button class="lg:hidden text-[#00B852] flex gap-1 font-bold mt-3">
+                <button @click="user.func" class="lg:hidden text-[#00B852] flex gap-1 font-bold mt-3">
                     {{ user.btn }}
                     <img src="/src/assets/svg/arrow.svg" alt="">
                 </button>
@@ -49,7 +49,8 @@ const intendedUsers = [
         img : login,
         bg : bg1,
         description : "Join us in just a few clicks and start your journey with confidence." ,
-        btn : 'Sign Up Now'
+        btn : 'Sign Up Now',
+        func : () => window.open('https://v3.matrixtradingtech.com/' , "_blank")
     },
 
     { 
@@ -57,14 +58,16 @@ const intendedUsers = [
         img : link,
         bg : bg2,
         description: "Easily connect your broker for automatic trading and smooth integration.",
-        btn : 'Know how it works'
+        btn : 'Know how it works',
+        func : () => window.open('https://www.youtube.com/@MatrixTradingTech' , "_blank")
     },
     { 
         name: 'Trade',
         img : rocket,
         bg : bg3,
         description: "Start trading with powerful tools to help you make smart moves.",
-        btn : 'Get Started'
+        btn : 'Get Started',
+        func : () => window.open('https://v3.matrixtradingtech.com/' , "_blank")
     },
     
 ]

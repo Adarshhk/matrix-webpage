@@ -56,9 +56,7 @@
                     </fieldset>
                 </form>
             </div>
-            <div>
-                b
-            </div>
+            
         </div>
     </div>
 
@@ -67,6 +65,7 @@
 <script setup>
 import { ref } from 'vue';
 import Breadcrumb from '/src/component/Breadcrumb.vue'
+import axios from 'axios';
 
 
 const form = ref({
@@ -74,13 +73,13 @@ const form = ref({
         name: '',
         email: '',
         phone: '',
-        website: '',
+       
         message: ''
     }
 });
 
-const handleSubmit = () => {
-    console.log("Form submitted:", this.form);
+const handleSubmit = async () => {
+    await axios.post('https://v3landing.matrixtradingtech.com/contact-us' , form.value)
     // Add form submission logic here
 }
 </script>

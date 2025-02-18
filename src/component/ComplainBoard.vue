@@ -1,204 +1,137 @@
 <script setup>
-const monthlyData = [
-  {
-    month: 'December, 2024',
-    carriedForward: 0,
-    received: 0,
-    resolved: 0,
-    pending: 0
-  },
-  {
-    month: 'November, 2024',
-    carriedForward: 0,
-    received: 0,
-    resolved: 0,
-    pending: 0
-  },
-  {
-    month: 'October, 2024',
-    carriedForward: 0,
-    received: 0,
-    resolved: 0,
-    pending: 0
-  }
-]
+import { ref } from "vue";
 
-const sourceData = [
-  {
-    source: 'Directly from Investors',
-    pendingLastMonth: 0,
-    received: 0,
-    resolved: 0,
-    totalPending: 0,
-    pendingOver3Months: 0,
-    avgResolutionDays: 0
-  },
-  {
-    source: 'SEBI (SCORES)',
-    pendingLastMonth: 0,
-    received: 0,
-    resolved: 0,
-    totalPending: 0,
-    pendingOver3Months: 0,
-    avgResolutionDays: 0
-  },
-  {
-    source: 'Other Sources (If Any)',
-    pendingLastMonth: 0,
-    received: 0,
-    resolved: 0,
-    totalPending: 0,
-    pendingOver3Months: 0,
-    avgResolutionDays: 0
-  }
-]
+// Sample data (Replace with API data if needed)
+const monthData = ref([
+  { id: 1, source: "Directly from Investors", pendingLastMonth: 0, received: 0, resolved: 0, totalPending: 0, pending3Months: 0, resolutionTime: 0 },
+  { id: 2, source: "SEBI (SCORES)", pendingLastMonth: 0, received: 0, resolved: 0, totalPending: 0, pending3Months: 0, resolutionTime: 0 },
+  { id: 3, source: "Other Sources (If Any)", pendingLastMonth: 0, received: 0, resolved: 0, totalPending: 0, pending3Months: 0, resolutionTime: 0 },
+]);
 
-const annualData = [
-  {
-    year: '2024-25',
-    carriedForward: 0,
-    received: 0,
-    resolved: 0,
-    pending: 0
-  }
-]
+const monthlyTrend = ref([
+  { id: 1, month: "January, 2025", carriedForward: 0, received: 0, resolved: 0, pending: 0 },
+  { id: 2, month: "December, 2024", carriedForward: 0, received: 0, resolved: 0, pending: 0 },
+  { id: 3, month: "November, 2024", carriedForward: 0, received: 0, resolved: 0, pending: 0 },
+]);
+
+const annualTrend = ref([
+  { id: 1, year: "2024-25", carriedForward: 0, received: 0, resolved: 0, pending: 0 },
+]);
 </script>
 
 <template>
-  <div class="min-h-screen  text-gray-100 mt-24">
-    <div class="container mx-auto p-4">
-      <!-- Header -->
-      <div class="bg-yellow-900/50 p-4 rounded-lg mb-6 shadow-lg">
-        <h1 class="text-lg md:text-xl font-bold">
-          Data For The Month Ending: DECEMBER, 2024 
-          <span class="block mt-2 text-sm md:text-base text-yellow-400">
-            SEBI Reg Number: | INH000019035
-          </span>
-        </h1>
-      </div>
+  <div class="">
+    <!-- Header -->
+    <h2 class="text-lg font-bold p-2">
+      Data For The Month Ending: <span class="text-white">DECEMBER, 2024</span> | SEBI Reg Number: 
+      <span class="text-white font-bold">INH000019035</span>
+    </h2>
 
-      <!-- Source Data Table -->
-      <div class="mb-8">
-        <div class="overflow-x-auto rounded-lg shadow-lg">
-          <table class="min-w-full bg-gray-800 border-collapse">
-            <thead>
-              <tr class="bg-gray-700">
-                <th class="p-3 text-left text-xs md:text-sm">Sr.No</th>
-                <th class="p-3 text-left text-xs md:text-sm">Received From</th>
-                <th class="p-3 text-center text-xs md:text-sm">Pending at the End of Last Month</th>
-                <th class="p-3 text-center text-xs md:text-sm">Received</th>
-                <th class="p-3 text-center text-xs md:text-sm">Resolved</th>
-                <th class="p-3 text-center text-xs md:text-sm">Total Pending</th>
-                <th class="p-3 text-center text-xs md:text-sm">Pending > 3 Months</th>
-                <th class="p-3 text-center text-xs md:text-sm">Avg Resolution Days</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-700">
-              <tr v-for="(item, index) in sourceData" :key="index" 
-                  class="hover:bg-gray-700/50 transition-colors">
-                <td class="p-3 text-xs md:text-sm">{{ index + 1 }}</td>
-                <td class="p-3 text-xs md:text-sm">{{ item.source }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.pendingLastMonth }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.received }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.resolved }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.totalPending }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.pendingOver3Months }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.avgResolutionDays }}</td>
-              </tr>
-              <tr class="bg-yellow-900/30 font-bold">
-                <td class="p-3 text-xs md:text-sm">Grand Total</td>
-                <td class="p-3"></td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <!-- Monthly Complaints Table -->
+    <div class="overflow-x-auto mt-4">
+      <table class="w-full border-collapse border border-gray-300 sm-text overflow-x-auto min-w-[800px]">
+        <thead class=" text-black bg-[#F4B084]">
+          <tr>
+            <th class="border p-2">Sr.No</th>
+            <th class="border p-2">Received From</th>
+            <th class="border p-2">Pending at End of Last Month</th>
+            <th class="border p-2">Received</th>
+            <th class="border p-2">Resolved</th>
+            <th class="border p-2">Total Pending</th>
+            <th class="border p-2">Pending Complaint > 3 Months</th>
+            <th class="border p-2">Avg Resolution Time (Days)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in monthData" :key="item.id" class="text-center text-white">
+            <td class="border p-2">{{ item.id }}</td>
+            <td class="border p-2">{{ item.source }}</td>
+            <td class="border p-2">{{ item.pendingLastMonth }}</td>
+            <td class="border p-2">{{ item.received }}</td>
+            <td class="border p-2">{{ item.resolved }}</td>
+            <td class="border p-2">{{ item.totalPending }}</td>
+            <td class="border p-2">{{ item.pending3Months }}</td>
+            <td class="border p-2">{{ item.resolutionTime }}</td>
+          </tr>
+          <tr class=" font-bold text-black bg-[#FFD966]">
+            <td class="border p-2" colspan="2">Grand Total</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      <!-- Monthly Disposal Table -->
-      <div class="mb-8">
-        <h2 class="text-lg md:text-xl font-bold bg-yellow-900/50 p-4 rounded-lg mb-4 shadow-lg">
-          Trend of Monthly Disposal of Complaints
-        </h2>
-        <div class="overflow-x-auto rounded-lg shadow-lg">
-          <table class="min-w-full bg-gray-800">
-            <thead>
-              <tr class="bg-gray-700">
-                <th class="p-3 text-left text-xs md:text-sm">Sr.No</th>
-                <th class="p-3 text-left text-xs md:text-sm">Month</th>
-                <th class="p-3 text-center text-xs md:text-sm">Carried Forward</th>
-                <th class="p-3 text-center text-xs md:text-sm">Received</th>
-                <th class="p-3 text-center text-xs md:text-sm">Resolved</th>
-                <th class="p-3 text-center text-xs md:text-sm">Pending</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-700">
-              <tr v-for="(item, index) in monthlyData" :key="index"
-                  class="hover:bg-gray-700/50 transition-colors">
-                <td class="p-3 text-xs md:text-sm">{{ index + 1 }}</td>
-                <td class="p-3 text-xs md:text-sm">{{ item.month }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.carriedForward }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.received }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.resolved }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.pending }}</td>
-              </tr>
-              <tr class="bg-yellow-900/30 font-bold">
-                <td class="p-3 text-xs md:text-sm">Grand Total</td>
-                <td class="p-3"></td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <!-- Monthly Trend -->
+    <h2 class="text-lg font-bold  p-2 mt-6 text-white">Trend of Monthly Disposal of Complaints</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse border border-gray-300 sm-text overflow-x-auto min-w-[800px]">
+        <thead class=" text-black bg-[#F4B084]">
+          <tr>
+            <th class="border p-2">Sr.No</th>
+            <th class="border p-2">Month</th>
+            <th class="border p-2">Carried Forward</th>
+            <th class="border p-2">Received</th>
+            <th class="border p-2">Resolved</th>
+            <th class="border p-2">Pending</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in monthlyTrend" :key="item.id" class="text-center text-white">
+            <td class="border p-2">{{ item.id }}</td>
+            <td class="border p-2">{{ item.month }}</td>
+            <td class="border p-2">{{ item.carriedForward }}</td>
+            <td class="border p-2">{{ item.received }}</td>
+            <td class="border p-2">{{ item.resolved }}</td>
+            <td class="border p-2">{{ item.pending }}</td>
+          </tr>
+          <tr class=" font-bold text-black bg-[#FFD966]">
+            <td class="border p-2" colspan="2">Grand Total</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-      <!-- Annual Disposal Table -->
-      <div>
-        <h2 class="text-lg md:text-xl font-bold bg-yellow-900/50 p-4 rounded-lg mb-4 shadow-lg">
-          Trend of Annual Disposal of Complaints
-        </h2>
-        <div class="overflow-x-auto rounded-lg shadow-lg">
-          <table class="min-w-full bg-gray-800">
-            <thead>
-              <tr class="bg-gray-700">
-                <th class="p-3 text-left text-xs md:text-sm">Sr.No</th>
-                <th class="p-3 text-left text-xs md:text-sm">Year</th>
-                <th class="p-3 text-center text-xs md:text-sm">Carried Forward</th>
-                <th class="p-3 text-center text-xs md:text-sm">Received</th>
-                <th class="p-3 text-center text-xs md:text-sm">Resolved</th>
-                <th class="p-3 text-center text-xs md:text-sm">Pending</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-gray-700">
-              <tr v-for="(item, index) in annualData" :key="index"
-                  class="hover:bg-gray-700/50 transition-colors">
-                <td class="p-3 text-xs md:text-sm">{{ index + 1 }}</td>
-                <td class="p-3 text-xs md:text-sm">{{ item.year }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.carriedForward }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.received }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.resolved }}</td>
-                <td class="p-3 text-center text-xs md:text-sm">{{ item.pending }}</td>
-              </tr>
-              <tr class="bg-yellow-900/30 font-bold">
-                <td class="p-3 text-xs md:text-sm">Grand Total</td>
-                <td class="p-3"></td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-                <td class="p-3 text-center text-xs md:text-sm">0</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
+    <!-- Annual Trend -->
+    <h2 class="text-lg font-bold  p-2 mt-6 text-white">Trend of Annual Disposal of Complaints</h2>
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse border border-gray-300 sm-text overflow-x-auto min-w-[800px]">
+        <thead class=" text-black bg-[#F4B084]">
+          <tr>
+            <th class="border p-2">Sr.No</th>
+            <th class="border p-2">Year</th>
+            <th class="border p-2">Carried Forward</th>
+            <th class="border p-2">Received</th>
+            <th class="border p-2">Resolved</th>
+            <th class="border p-2">Pending</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="item in annualTrend" :key="item.id" class="text-center text-white">
+            <td class="border p-2">{{ item.id }}</td>
+            <td class="border p-2">{{ item.year }}</td>
+            <td class="border p-2">{{ item.carriedForward }}</td>
+            <td class="border p-2">{{ item.received }}</td>
+            <td class="border p-2">{{ item.resolved }}</td>
+            <td class="border p-2">{{ item.pending }}</td>
+          </tr>
+          <tr class=" font-bold text-black bg-[#FFD966]">
+            <td class="border p-2" colspan="2">Grand Total</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+            <td class="border p-2">0</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
