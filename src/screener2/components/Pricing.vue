@@ -4,7 +4,7 @@
             <div class="flex gap-2 items-center">
                 <img src="/src/assets/img/play.png" alt="Play Icon" class="w-5 h-5" />
                 <p class="text-white text-[14px] md:text-[16px] font-openSans">Know How to use screener?</p>
-                <a href="#" class="text-[#E3E093] text-[14px] md:text-[16px] underline font-openSans">Watch Now</a>
+                <a href="https://www.youtube.com/@MatrixTradingTech" target="_blank" class="text-[#E3E093] text-[14px] md:text-[16px] underline font-openSans">Watch Now</a>
             </div>
         </div>
     </div>
