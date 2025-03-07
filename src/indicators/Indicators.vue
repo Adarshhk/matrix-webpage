@@ -3,8 +3,8 @@
     <Hero />
     <Products />
     <!-- <Pricing/> -->
-    <Animation :beforeImage="firstImg" :afterImage="secondImg"/>
- 
+    <!-- <Animation :beforeImage="firstImg" :afterImage="secondImg"/> -->
+    <Animation />
     <Community />
 </template>
 

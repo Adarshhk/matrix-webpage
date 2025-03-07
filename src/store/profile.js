@@ -1,19 +1,20 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import { makeRequest } from "../request/requests";
+import { makeRequest, baseApiUrl } from "../request/requests";
 import axios from "axios";
 
 const useProfileStore = defineStore('profile', () => {
 
     const logged = ref(false);
     const authToken = localStorage.getItem('token')
-    const url = ref('https://v3.matrixtradingtech.com/user/profile')
+    const url = ref(`${baseApiUrl.value}/user/profile`)
     const profileData = ref({});
-
+    axios.defaults.withCredentials = true;
+    
     const getProfile = async () => {
-       
+       console.log(authToken)
+        if (authToken == '' || authToken == null) return;
         try {
-            if (authToken == '' || authToken == null) return;
             const res = await axios.get(url.value, { headers: { Authorization: authToken } });
             
             if (res.data) {
@@ -26,6 +27,7 @@ const useProfileStore = defineStore('profile', () => {
             console.log('error occured in profileStore', error);
             logged.value = false
         } 
+        
     }
 
     getProfile();

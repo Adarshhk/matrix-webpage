@@ -98,7 +98,7 @@ const brokerImages = ref([
           <LottieComponent animationPath="/json/LaptopCounter.json"/>
         </div>
 
-        <div class=" w-[90%] mx-auto ">
+        <!-- <div class=" w-[90%] mx-auto ">
           <Vue3Marquee :duration="30" :gradientColor="[22, 26, 30, 1]" class="w-full">
         <div 
           v-for="(image, index) in brokerImages" 
@@ -121,7 +121,7 @@ const brokerImages = ref([
           />
         </div>
       </Vue3Marquee>
-        </div>
+        </div> -->
       </div>
 
       <div class=" h-full lg:p-10">

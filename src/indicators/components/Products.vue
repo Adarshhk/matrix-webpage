@@ -11,7 +11,7 @@
 
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4 gap-10 xl:gap-8">
 
-            <RouterLink :to="`/indicator-details/${item.id}`" v-for="item in indicators" :key="item.id"
+            <RouterLink :to="`/indicator-details/${item.product_id}`" v-for="item in indicators" :key="item.id"
                 class="space-y-3 group relative">
                 
                 <div>

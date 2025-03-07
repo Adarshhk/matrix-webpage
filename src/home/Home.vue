@@ -2,7 +2,7 @@
     <div class="">
         <Hero id="hero" />
         <Why id="why" />
-        <Features id="features" />
+        <!-- <Features id="features" /> -->
         
         <Card/>
         <CardMobile/>

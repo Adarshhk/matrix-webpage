@@ -29,8 +29,7 @@
 </template>
 
 <script setup>
-import Cart from '../../pricing/components/Cart.vue';
-import SignalPlan from '../../pricing/components/Plans/SignalPlan.vue';
+
 import useCartStore from '../../store/cart';
 import usePricingStore from '../../store/pricing';
 

@@ -1,23 +1,17 @@
 <script setup>
 import { onClickOutside } from "@vueuse/core";
-import { ref, nextTick, watch } from "vue";
+import { ref, nextTick, watch, computed } from "vue";
 import LottieComponent from "../home/utils/LottieComponent.vue";
 import useCartStore from "../store/cart";
 import { storeToRefs } from "pinia";
 
 const showChatbox = ref(false);
-const showBot = ref(true);
 const chatContainer = ref(null);
 
 const cartStore = useCartStore();
 const { cart } = storeToRefs(cartStore);
+const showBot = computed(() => cart.value.length === 0 ? true : false);
 
-watch(cart.value, () => {
-    if (cart.value.length > 0) {
-        showBot.value = false;
-    }
-    else showBot.value = true;
-})
 
 const toggleChatbox = () => {
 
@@ -149,7 +143,7 @@ watch(showChatbox, async (newValue) => {
     </div>
 
     <button v-if="showBot" @click="toggleChatbox" class="z-50 fixed bottom-5 right-5">
-        <div class="w-32 flex flex-col justify-center items-center">
+        <div class="w-24 md:w-32 flex flex-col justify-center items-center">
             <LottieComponent animationPath="/json/chatbot.json" />
             <img src="/src/assets/svg/advisor.svg" alt="">
         </div>

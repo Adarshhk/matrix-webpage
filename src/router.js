@@ -11,7 +11,7 @@ import Indicators from './indicators/Indicators.vue';
 import ManualTrade from './manualtrade/ManualTrade.vue';
 import Contact from './component/Contact.vue';
 import AlgoTrading from './algotrading/AlgoTrading.vue';
-import Pricing from './pricing/Pricing.vue';
+import Pricing from './pricing3/Pricing.vue';
 import BlogDetails from './blog details/BlogDetails.vue';
 import Signals from './signals/Signals.vue';
 import Webinar from './webinar/Webinar.vue';
@@ -26,39 +26,49 @@ import RefundPolicy from './termsandcondition/termsandcondition/refundpolicy/Ref
 import PrivacyPolicy from './termsandcondition/termsandcondition/privacypolicy/PrivacyPolicy.vue';
 
 import InvestorCharter from './termsandcondition/termsandcondition/InvestorCharter.vue';
+import HomeLayout from './HomeLayout.vue';
+import Main from './matrix-one/Main.vue';
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/scalper', component: Scalper },
-  { path: '/trader', component: Trader },
-  { path: '/screener', component: Screener },
-  { path: '/investor', component: Investor },
-  { path: '/webhook', component: Webhook },
-  { path: '/about', component: About },
-  { path: '/blogs', component: Blogs },
-  { path: '/indicator', component: Indicators },
-  { path: '/manualtrade', component: ManualTrade },
-  { path: '/contact', component: Contact },
-  { path: '/algo-trading', component: AlgoTrading },
-  { path: '/pricing', component: Pricing },
-  { path: '/blog-details/:id', component: BlogDetails },
-  { path: '/signals', component: Signals },
-  { path: '/webinar', component: Webinar },
-  { path: '/demo', component: Demo },
-  { path: '/indicator-details/:id', component: IndicatorDetails },
-  { path: '/complain-board', component: ComplainBoard },
-  {
-    path: '/terms',
-    component: TermsLayout,
-    children: [
-      { path: 'disclosure', component: Disclosure },
-      { path: 't&c', component: TermsandCondition },
-      { path: 'disclaimer', component: Disclaimer },
-      { path: 'refund-policy', component: RefundPolicy },
-      { path: 'privacy-policy', component: PrivacyPolicy },
-      { path: 'investor-charter', component: InvestorCharter },
+  {path : '/' , component : HomeLayout , 
+    children : [
+      { path: '/', component: Home },
+      { path: '/scalper', component: Scalper },
+      { path: '/trader', component: Trader },
+      { path: '/screener', component: Screener },
+      { path: '/investor', component: Investor },
+      { path: '/webhook', component: Webhook },
+      { path: '/about', component: About },
+      { path: '/blogs', component: Blogs },
+      { path: '/indicator', component: Indicators },
+      { path: '/manualtrade', component: ManualTrade },
+      { path: '/contact', component: Contact },
+      { path: '/algo-trading', component: AlgoTrading },
+      { path: '/pricing', component: Pricing },
+      { path: '/blog-details/:id', component: BlogDetails },
+      { path: '/signals', component: Signals },
+      { path: '/webinar', component: Webinar },
+      { path: '/demo', component: Demo },
+      { path: '/indicator-details/:id', component: IndicatorDetails },
+      { path: '/complain-board', component: ComplainBoard },
+      {
+        path: '/terms',
+        component: TermsLayout,
+        children: [
+          { path: 'disclosure', component: Disclosure },
+          { path: 't&c', component: TermsandCondition },
+          { path: 'disclaimer', component: Disclaimer },
+          { path: 'refund-policy', component: RefundPolicy },
+          { path: 'privacy-policy', component: PrivacyPolicy },
+          { path: 'investor-charter', component: InvestorCharter },
+        ]
+      },
     ]
   },
+  {
+    path : '/matrix-one' , component : Main
+  }
+  
 ]
 
 const router = createRouter({

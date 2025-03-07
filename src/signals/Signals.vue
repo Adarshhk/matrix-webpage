@@ -17,7 +17,7 @@ import Pricing from './component/Pricing.vue';
     <Feature/>
     <Tutorial/>
     <Tools/>
-    <Pricing/>
+    <!-- <Pricing/> -->
     <Community />
     <Testimonials/>
     </div>

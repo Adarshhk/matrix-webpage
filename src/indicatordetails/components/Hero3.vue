@@ -31,7 +31,7 @@
               </span>
             </h1>
             
-            <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: {{ indicator ? formatDate(indicator.updated_at) : "Loading..." }}</p>
+            <p class="text-[#dfdfdf] text-[14px] font-openSans mb-8">UPDATED ON: {{ indicator ? formatDate(indicator?.updated_at) : "Loading..." }}</p>
             
             
             <img :src="indicator?.image" alt="" class="my-8">
@@ -39,7 +39,7 @@
               {{ indicator?.description }}
             </p> -->
             
-            <div v-if="indicator?.info" v-html="indicator.info" class="text-[white]"></div>
+            <div v-if="indicator?.info" v-html="indicator?.info" class="text-[white]"></div>
         </div>
         </div>
       </div>
@@ -54,8 +54,8 @@
 
         <div class="mx-auto w-min flex justify-center items-end relative">
           <div class="bg-[#ffffff22] rounded-3xl p-1 flex justify-evenly gap-0 text-[18px]">
-            <button v-for="plan in plans" :key="plan" :aria-label="plan + ' Plan'" :class="getButtonClass(plan)"
-              @click="toggleActive(plan)" class="transition-all duration-200 py-1 px-3 rounded-3xl text-[16px] font-openSans">
+            <button v-for="plan in ['monthly' , 'quarterly', 'yearly', 'Lifetime']" :key="plan" :aria-label="plan + ' Plan'" :class="getButtonClass(plan)"
+              @click="toggleActive(plan)" class="capitalize transition-all duration-200 py-1 px-3 rounded-3xl text-[16px] font-openSans">
               {{ plan }}
             </button>
           </div>
@@ -70,21 +70,37 @@
               tracking—perfect for serious traders aiming to level up their investments.
             </h2>
 
-            <div class="flex justify-center items-center gap-1 ">
-              <p class="text-[44px] font-bold text-white ">
-                <span class="text-[24px]">₹</span>{{ indicator.offer_price }}
+            <div v-if="indicator?.timely_price && indicator?.timely_price[billingPeriod]" class="flex justify-center items-center gap-1">
+              <p class="text-[44px] font-bold text-white">
+                <span class="text-[24px]">₹</span>{{  indicator?.timely_price[billingPeriod]?.offer_price }}
               </p>
-              <div class="flex flex-col justify-start h-full ">
-                <p class="text-[10px] bg-[#E3DB98] p-1 px-2 rounded-3xl font-semibold">
-                  {{ indicator?.discountPercentage }}% Off
+              <div class="flex flex-col justify-start h-full">
+                <p v-if="indicator?.timely_price && indicator?.timely_price[billingPeriod]"
+                  class="text-[12px] text-black bg-[#E3DB98] p-1 px-2 rounded-full font-bold"
+                >
+                  {{ findPercentage(indicator?.timely_price[billingPeriod]?.offer_price, indicator?.timely_price[billingPeriod]?.price) }}% Off
                 </p>
-                <p class="text-[#dfdfdf] text-[18px] font-semibold font-openSans line-through">₹{{ indicator.price }}</p>
+                <p v-else
+                  class="text-[12px] text-black bg-[#E3DB98] p-1 px-2 rounded-full font-bold"
+                >
+                  0% Off
+                </p>
+                <p
+                  class="text-[#dfdfdf] text-[18px] font-semibold font-openSans line-through"
+                >
+                  ₹{{ indicator?.timely_price[billingPeriod]?.offer_price || indicator?.timely_price[billingPeriod]?.price }}
+                </p>
               </div>
             </div>
 
 
-            <button
+            <button v-if="indicator?.timely_price && indicator?.timely_price[billingPeriod] && indicator?.timely_price[billingPeriod]?.price" @click="showBuy(indicator)" :disabled="!indicator?.timely_price[billingPeriod]?.price" :class="[ !indicator?.timely_price[billingPeriod]?.price ? 'cursor-not-allowed' : 'cursor-pointer' ]"
               class="border w-[95%] mx-auto py-4 border-white rounded font-bold tracking-wider text-[16px] font-openSans bg-white text-[#161A1E] mt-4">
+              Buy Now
+            </button>
+
+            <button v-else 
+              class="cursor-not-allowed border w-[95%] mx-auto py-4 border-white rounded font-bold tracking-wider text-[16px] font-openSans bg-white text-[#161A1E] mt-4">
               Buy Now
             </button>
 
@@ -99,7 +115,7 @@
 
 
     </div>
-
+    <Cart v-if="openSummaryModal"/>
   </div>
 </template>
 
@@ -110,30 +126,37 @@ import Countdown from '../../component/Countdown.vue';
 import useIndicatorStore from '../../store/indicator.js'
 import { useRoute } from 'vue-router';
 import { storeToRefs } from 'pinia';
+import Cart from './Cart.vue';
 
 const indicatorStore = useIndicatorStore();
-const {indicators} = storeToRefs(indicatorStore);
-const active = ref("Yearly");
+const {cart, indicators, openSummaryModal, billingPeriod} = storeToRefs(indicatorStore);
+const active = ref("monthly");
 const plans = [ "Yearly" , "Lifetime"];
 
 const toggleActive = (name) => {
   active.value = name;
+  billingPeriod.value = name
 };
 
 // Function to format date (async version)
-function formatDate(dateString) {
+function formatDate(dateString="") {
   const date = new Date(dateString);
   const options = { day: "2-digit", month: "short", year: "numeric" };
-  return new Intl.DateTimeFormat("en-GB", options).format(date);
+  try {
+    let temp = new Intl.DateTimeFormat("en-GB", options).format(date) || "Loading...";
+    return temp;
+  } catch (error) {
+    return "Loading...";
+  }
 }
 
 const indicatorId = useRoute().params.id
 const indicator = computed(() => {
   if (indicatorId) {
     const ind = indicators.value.find(
-      (item) => item.id === Number(indicatorId)
-    ); // Assuming the ID is a number
-    if (ind) {
+      (item) => item.product_id === Number(indicatorId)
+    ) || {}// Assuming the ID is a number
+    if (Object.keys(ind).length) {
       const price = parseFloat(ind.price); // Ensure it's a number
       const offerPrice = parseFloat(ind.offer_price); // Ensure it's a number
 
@@ -158,7 +181,24 @@ const getButtonClass = (plan) => ({
   "text-[#F9F2F2] ": active.value !== plan,
 });
 
+const showBuy = (indicator) => {
+  if(!indicator?.timely_price[billingPeriod.value]?.price) return;
 
+  const isExist = cart.value.find((item) => item.id === indicator.id);
+  if(!isExist) {
+    cart.value.push(indicator)
+  }
+  
+  openSummaryModal.value = true
+}
+
+const findPercentage  = (offerPrice=0, price=0) => {
+    if(offerPrice && price) {
+        let percentage = (((price - offerPrice) / price) * 100)
+        return percentage ? percentage.toFixed(2) : 0
+    }
+    return 0
+}
 </script>
 
 <style scoped>

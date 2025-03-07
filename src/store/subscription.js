@@ -1,19 +1,19 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
-import { makeRequest } from "../request/requests";
+import { makeRequest, baseApiUrl } from "../request/requests";
 import axios from "axios";
 
 const useProductsStore = defineStore('products', () => {
 
     const logged = ref(false);
     const authToken = localStorage.getItem('token')
-    const url = ref('https://v3.matrixtradingtech.com/user/subscriptions')
+    const url = ref(`${baseApiUrl.value}/user/subscriptions`)
     const products = ref([]);
 
     const getProducts = async () => {
 
         try {
-            if (authToken == null) return;
+            if (authToken == '' || authToken == null) return;
             const res = await axios.get(url.value, { headers: { Authorization: authToken } });
             
             if (res.data) {

@@ -2,10 +2,11 @@
 import axios from "axios";
 import { defineStore } from "pinia";
 import { ref, watch } from "vue";
+import { baseApiUrl } from "../request/requests";
 
 const usePricingStore = defineStore('pricing', () => {
     const authToken = localStorage.getItem('token');
-    const url = ref('https://v3.matrixtradingtech.com/user/web/products');
+    const url = ref(`${baseApiUrl.value}/user/web/products`);
     const selectedPriceType = ref('yearly');
 
     // Store raw response data
@@ -671,7 +672,7 @@ const usePricingStore = defineStore('pricing', () => {
         }
     };
 
-    getPricing();
+    // getPricing();
 
     return {
         rawPlans,

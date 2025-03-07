@@ -65,19 +65,19 @@ onUnmounted(() => {
       Your browser does not support the video tag.
     </video>
     
+    <!-- Always visible close button -->
+    <div class="absolute top-0 right-0 p-2">
+      <button @click="closeVideo" class="text-white hover:text-gray-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
     <!-- Custom controls that appear on hover -->
     <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30 flex flex-col justify-between">
-      <!-- Close button -->
-      <div class="self-end p-2">
-        <button @click="closeVideo" class="text-white hover:text-gray-300">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-      </div>
-      
       <!-- Fullscreen and Mute buttons -->
-      <div class="flex justify-start p-2 space-x-2">
+      <div class="flex justify-start p-2 space-x-2 mt-8"> <!-- Added mt-8 to account for close button -->
         <button @click="toggleFullscreen" class="text-white hover:text-gray-300">
           <svg v-if="!isFullscreen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
@@ -99,7 +99,6 @@ onUnmounted(() => {
     </div>
   </div>
 </template>
-
 <style scoped>
 /* Add any additional styles here if needed */
 </style>

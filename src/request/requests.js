@@ -4,6 +4,8 @@ import axios from 'axios';
 const state = reactive({});
 
 const baseUrl = ref("http://localhost:3008");
+const baseApiUrl = ref("https://v3.matrixtradingtech.com");
+// const baseApiUrl = ref("https://xvlg0zv7-8082.inc1.devtunnels.ms");
 
 const endpoints = ref({
   blogs: '/api/blogs',
@@ -49,4 +51,4 @@ const makeRequest = async (endpoint, params = {}, id = null) => {
   }
 };
 
-export { makeRequest, state };
+export { makeRequest, state, baseApiUrl };
