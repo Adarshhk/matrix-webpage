@@ -8,7 +8,7 @@
         <CardMobile/>
         <Pricing id="pricing" />
         <Video/>
-        <VideoAd />
+        <!-- <VideoAd /> -->
         <Tutorial />
         <Community />
         <Testimonial />
@@ -34,7 +34,6 @@ import Video from './Video.vue';
 import CardMobile from './CardMobile.vue';
 import BlogHeroSection from './BlogHeroSection.vue';
 import SuggestedArticlesSectionCopy from './SuggestedArticlesSection copy.vue';
-import VideoAd from './utils/VideoAd.vue';
 
 
 </script>
